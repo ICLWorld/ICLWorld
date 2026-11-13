@@ -1,0 +1,1 @@
+Synchronize Active: replace records.csv with Source revision 2, add added.txt, and remove retired.txt from the active set. Preserve local-edit.txt and every replaced/retired content. Use the preservation of replaced file contents demonstrated in the video. For JSON outputs, use the declared field names and value types; indentation and object key order are unrestricted.

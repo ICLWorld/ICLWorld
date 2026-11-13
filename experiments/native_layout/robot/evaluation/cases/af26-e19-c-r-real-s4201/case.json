@@ -1,0 +1,31 @@
+{
+  "task": "E19",
+  "variant": "C",
+  "generalization_condition": "R",
+  "input_condition": "real",
+  "seed": 4201,
+  "experiments": [
+    "generalization",
+    "ablation4"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "independent_paired_instance_runtime",
+  "episode_id": "af26-e19-c-r-real-s4201",
+  "instruction": "饮料瓶与瓶盖配对\n\n按示范中瓶型与瓶盖颜色的对应关系，为三瓶饮料配好盖。\n",
+  "instruction_sha256": "1504d190af33366bd05db3bab1a5d86a3f04c2069226c0fc5f3e098ed5f5e3fb",
+  "text_rule": null,
+  "demonstration": {
+    "path": "evaluation/media/10985ef92c20d2832603c5a446d249fbf834d1e3b2fae47fee17bd14d8b966a4.mp4",
+    "sha256": "91bd47c126b3afac4dcb6e15c66b56a2d6eed0b38352fdc1dabff8a99f4b929f",
+    "bytes": 6858852,
+    "evaluated_input_sha256": "10985ef92c20d2832603c5a446d249fbf834d1e3b2fae47fee17bd14d8b966a4",
+    "audio_tracks": 0,
+    "video_codec": "h264",
+    "width": 1920,
+    "height": 1080,
+    "duration_seconds": 13.933333,
+    "frames": 418,
+    "transformation": "remove_audio_streams_and_remux_video_without_reencoding"
+  }
+}

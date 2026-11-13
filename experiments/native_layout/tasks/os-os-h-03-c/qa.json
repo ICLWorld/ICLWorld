@@ -1,0 +1,10 @@
+{
+  "question": "视频中，示范者对多组对象反复使用的是下面哪一种具体处理方法？",
+  "options": {
+    "A": "项目下 Recovery/Restored，报告放其 Reports。",
+    "B": "项目下 Recovered，报告放其 Reports。",
+    "C": "直接在项目根目录恢复文件和保存报告，不创建恢复子目录。",
+    "D": "项目下 Restored/Workspace，报告放其 Reports。"
+  },
+  "correct_answer": "B"
+}

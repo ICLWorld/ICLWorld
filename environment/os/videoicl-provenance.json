@@ -1,0 +1,7 @@
+{
+  "repository": "peilin717/OS-ICL",
+  "commit": "97a47cf491f8d8793b7b78aa4b814b77e246cac8",
+  "design_version": "videoicl-os36-human-1",
+  "implementation_fingerprint": "ccfeb9b31de10396f509a5ec83f419ba6b5aa25f8b03405862599589210f82b5",
+  "demonstrations": "human browser capture; independent persistent library"
+}

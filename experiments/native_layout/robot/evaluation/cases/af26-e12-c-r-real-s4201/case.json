@@ -1,0 +1,30 @@
+{
+  "task": "E12",
+  "variant": "C",
+  "generalization_condition": "R",
+  "input_condition": "real",
+  "seed": 4201,
+  "experiments": [
+    "main"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e12-c-r-real-s4201",
+  "instruction": "插排孔位选择\n\n按示范相对于电线端的插位选择，将两个充电器插入四位插排。\n",
+  "instruction_sha256": "486c9b426e31af3c6bccec7dd459474d2a26e11ea74686d961118af423b07f84",
+  "text_rule": null,
+  "demonstration": {
+    "path": "evaluation/media/e361b09fce294de6f0baf4e6173f179b8550b5d894072b1f9b73cbfd4cd182c9.mp4",
+    "sha256": "2ca6592878c9b048473f6a51c9ac2dc92339bf9d15698947ee57524dd5b02b03",
+    "bytes": 3187286,
+    "evaluated_input_sha256": "e361b09fce294de6f0baf4e6173f179b8550b5d894072b1f9b73cbfd4cd182c9",
+    "audio_tracks": 0,
+    "video_codec": "h264",
+    "width": 1920,
+    "height": 1080,
+    "duration_seconds": 5.933333,
+    "frames": 178,
+    "transformation": "remove_audio_streams_and_remux_video_without_reencoding"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "task": "E42",
+  "variant": "C",
+  "generalization_condition": "I",
+  "input_condition": "text_rule",
+  "seed": 4201,
+  "experiments": [
+    "main"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e42-c-i-text-s4201",
+  "instruction": "用铲沿推球到图形区域\n\n用平铲的侧沿，把两个球推到示范选择的图形标记纸区域。\n",
+  "instruction_sha256": "e6b5c10be80561831435eebacad05f82ab1782b4dcb3fd1f83188caf779991bf",
+  "text_rule": "把两球推到方标记纸区域",
+  "demonstration": null
+}

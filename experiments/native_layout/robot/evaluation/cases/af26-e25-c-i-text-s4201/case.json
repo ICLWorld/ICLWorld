@@ -1,0 +1,18 @@
+{
+  "task": "E25",
+  "variant": "C",
+  "generalization_condition": "I",
+  "input_condition": "text_rule",
+  "seed": 4201,
+  "experiments": [
+    "main"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e25-c-i-text-s4201",
+  "instruction": "按视频展示的餐具相对餐盘的位置和柄端、工作端朝向，布置这套勺、刀、叉；以你的用餐侧判断方向。\n",
+  "instruction_sha256": "0fa9468926c2117b12774d58f064cc0ae38e2b418415d8cf0be55cf73f1b9dbf",
+  "text_rule": "刀放盘左侧，勺和叉放盘右侧，柄朝操作者",
+  "demonstration": null
+}

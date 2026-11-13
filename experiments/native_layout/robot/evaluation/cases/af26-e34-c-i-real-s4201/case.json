@@ -1,0 +1,30 @@
+{
+  "task": "E34",
+  "variant": "C",
+  "generalization_condition": "I",
+  "input_condition": "real",
+  "seed": 4201,
+  "experiments": [
+    "main"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e34-c-i-real-s4201",
+  "instruction": "选出视频中那一类别的餐具，把柄端放到收纳盘左上格，其余餐具不动。\n",
+  "instruction_sha256": "3a7d42fe71a258444ae2c4076d68fd8733f4067a8396b5e662af3f84be870884",
+  "text_rule": null,
+  "demonstration": {
+    "path": "evaluation/media/831cc8938be54f741cec9b3ebf924cab2325e91b7a3178905ec9dafbbec170ef.mp4",
+    "sha256": "69139d834fca561e373f58a28c28fbb13071e82ea8bbb4efc38cb01dadd5a1e2",
+    "bytes": 2296040,
+    "evaluated_input_sha256": "831cc8938be54f741cec9b3ebf924cab2325e91b7a3178905ec9dafbbec170ef",
+    "audio_tracks": 0,
+    "video_codec": "h264",
+    "width": 1920,
+    "height": 1080,
+    "duration_seconds": 3.966667,
+    "frames": 119,
+    "transformation": "remove_audio_streams_and_remux_video_without_reencoding"
+  }
+}

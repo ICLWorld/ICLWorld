@@ -1,0 +1,18 @@
+{
+  "task": "E14",
+  "variant": "C",
+  "generalization_condition": "I",
+  "input_condition": "text_rule",
+  "seed": 4201,
+  "experiments": [
+    "main"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e14-c-i-text-s4201",
+  "instruction": "按视频展示的层序调整方式，重新叠好这四本书。\n",
+  "instruction_sha256": "efb9e14f52e157eeb3b7a3e2ebeb102e839137667d2a7c8d488ddc43d6cdab09",
+  "text_rule": "整塔层序上下反转",
+  "demonstration": null
+}

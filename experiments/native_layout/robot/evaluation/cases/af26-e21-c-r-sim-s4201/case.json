@@ -1,0 +1,31 @@
+{
+  "task": "E21",
+  "variant": "C",
+  "generalization_condition": "R",
+  "input_condition": "sim",
+  "seed": 4201,
+  "experiments": [
+    "generalization",
+    "ablation4"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e21-c-r-sim-s4201",
+  "instruction": "按颜色顺序装四格盘\n\n按示范的颜色先后顺序，依次将四块积木装进四格盘。\n",
+  "instruction_sha256": "9c01472cca62371d2fa70a71f9760386788162cfe1af35e3edb6c842c5c298cc",
+  "text_rule": null,
+  "demonstration": {
+    "path": "evaluation/media/a6e0ab0db4204e0ba8cae437f4c5f95dc1f9960650b4c8d19e62b7bdb8ac911d.mp4",
+    "sha256": "c8c0def0f29698f9c069b1020f5050f65f7b0c277b5cc81baf7989f2de351492",
+    "bytes": 1922624,
+    "evaluated_input_sha256": "a6e0ab0db4204e0ba8cae437f4c5f95dc1f9960650b4c8d19e62b7bdb8ac911d",
+    "audio_tracks": 0,
+    "video_codec": "h264",
+    "width": 640,
+    "height": 480,
+    "duration_seconds": 70.24,
+    "frames": 1756,
+    "transformation": "remove_audio_streams_and_remux_video_without_reencoding"
+  }
+}

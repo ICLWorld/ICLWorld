@@ -1,0 +1,18 @@
+{
+  "task": "E07",
+  "variant": "C",
+  "generalization_condition": "I",
+  "input_condition": "text_rule",
+  "seed": 4201,
+  "experiments": [
+    "main"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e07-c-i-text-s4201",
+  "instruction": "按视频展示的尺寸排序，把五个套娃沿远到近方向排成一列。\n",
+  "instruction_sha256": "80bd9466d196a6f104bed714677efbc7da9ec98cf97e52d7f6f36e694cb3c103",
+  "text_rule": "从远到近：中等、次小、最小、次大、最大",
+  "demonstration": null
+}

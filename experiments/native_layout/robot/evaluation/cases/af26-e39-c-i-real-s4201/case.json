@@ -1,0 +1,30 @@
+{
+  "task": "E39",
+  "variant": "C",
+  "generalization_condition": "I",
+  "input_condition": "real",
+  "seed": 4201,
+  "experiments": [
+    "main"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e39-c-i-real-s4201",
+  "instruction": "参照工装校正与成品交付\n\n为指定订单校正工装并交付。按视频所示的校正范围处理工作盘，对照上方参照盘；不属于校正范围的属性保持不变。参照盘不能动，合格工作盘装进保护盒后送往订单指定检验位。\n本次公开订单：批次 2，交付到 2 号目标工位。\n\n本轮对应物体为方向明确的箭头形磁贴；上文完整任务流程及交付要求保持不变。\n",
+  "instruction_sha256": "300f7f6a8a218b7dc1ebb75d8172088fab5075b7a2b03e13ce3d10ceaf0b9bbd",
+  "text_rule": null,
+  "demonstration": {
+    "path": "evaluation/media/cb873745cfbe3fc26c3de4d98a63b70168e70c2998edd96a9f752a71ea9b3c64.mp4",
+    "sha256": "0de576622e362dccbdb844791f6f1744f15eb1d8d2a5ddaddffa855284d8b4c7",
+    "bytes": 5037952,
+    "evaluated_input_sha256": "cb873745cfbe3fc26c3de4d98a63b70168e70c2998edd96a9f752a71ea9b3c64",
+    "audio_tracks": 0,
+    "video_codec": "h264",
+    "width": 1920,
+    "height": 1080,
+    "duration_seconds": 9.6,
+    "frames": 288,
+    "transformation": "remove_audio_streams_and_remux_video_without_reencoding"
+  }
+}

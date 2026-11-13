@@ -1,0 +1,30 @@
+{
+  "task": "E26",
+  "variant": "C",
+  "generalization_condition": "I",
+  "input_condition": "real",
+  "seed": 4201,
+  "experiments": [
+    "main"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "independent_paired_instance_runtime",
+  "episode_id": "af26-e26-c-i-real-s4201",
+  "instruction": "数字牌与按铃次数\n\n根据示范展示的数字牌与左右按铃次数之间的对应方式，完成按铃。\n",
+  "instruction_sha256": "9b8b5da1500bd105c40518516da94e44858810d9153478409689fc99984a3b2c",
+  "text_rule": null,
+  "demonstration": {
+    "path": "evaluation/media/b9c2d2e4adbff5d2c420a7f7bdcf52ceab452a65023421327cbf3ac757990ae4.mp4",
+    "sha256": "70b113c339b563c677d0fbe2afa1b84657b81beb336a583bacb82d1228f5cc45",
+    "bytes": 6102654,
+    "evaluated_input_sha256": "b9c2d2e4adbff5d2c420a7f7bdcf52ceab452a65023421327cbf3ac757990ae4",
+    "audio_tracks": 0,
+    "video_codec": "h264",
+    "width": 1920,
+    "height": 1080,
+    "duration_seconds": 12.466667,
+    "frames": 374,
+    "transformation": "remove_audio_streams_and_remux_video_without_reencoding"
+  }
+}

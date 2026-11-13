@@ -1,0 +1,30 @@
+{
+  "task": "E24",
+  "variant": "B",
+  "generalization_condition": "I",
+  "input_condition": "real",
+  "seed": 4201,
+  "experiments": [
+    "ablation_abc"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "independent_paired_instance_runtime",
+  "episode_id": "af26-e24-b-i-real-s4201",
+  "instruction": "彩杯按序装盒并盖盖\n\n按示范的颜色顺序把三个杯子装入盒中，最后盖好盒盖。\n",
+  "instruction_sha256": "5d5de33a4d495bca695988e334a4e2454320000ff2e59414c831646eb69b9681",
+  "text_rule": null,
+  "demonstration": {
+    "path": "evaluation/media/841367f4f327e3a1012534d1ada5cf07c3fb0cd7fc4b732e1a3e1e7455696514.mp4",
+    "sha256": "e3871e2e28c09e5e89a6bb8d717d563a2b2994630641449e2fa6464457c1824d",
+    "bytes": 8577726,
+    "evaluated_input_sha256": "841367f4f327e3a1012534d1ada5cf07c3fb0cd7fc4b732e1a3e1e7455696514",
+    "audio_tracks": 0,
+    "video_codec": "h264",
+    "width": 1920,
+    "height": 1080,
+    "duration_seconds": 10.833333,
+    "frames": 325,
+    "transformation": "remove_audio_streams_and_remux_video_without_reencoding"
+  }
+}

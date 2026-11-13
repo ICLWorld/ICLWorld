@@ -1,0 +1,20 @@
+{
+  "task": "E16",
+  "variant": "C",
+  "generalization_condition": "I",
+  "input_condition": "text_rule",
+  "seed": 4201,
+  "experiments": [
+    "main",
+    "generalization",
+    "ablation4"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e16-c-i-text-s4201",
+  "instruction": "按视频展示的相对布局与单件朝向变换，把三辆玩具车搬进托盘；以车头辨认朝向。\n",
+  "instruction_sha256": "0d582e59262cbe4803ea28c3ba0b76b4461434ca864be0ddca6cc4341d5b4208",
+  "text_rule": "相对位置上下镜像、各件朝向不变后搬入",
+  "demonstration": null
+}

@@ -1,0 +1,30 @@
+{
+  "task": "E43",
+  "variant": "C",
+  "generalization_condition": "I",
+  "input_condition": "real",
+  "seed": 4201,
+  "experiments": [
+    "main"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "independent_paired_instance_runtime",
+  "episode_id": "af26-e43-c-i-real-s4201",
+  "instruction": "用导向条让球经过图形区域\n\n按示范选择的图形区域布置导向条，使释放后的球经过该区域。\n",
+  "instruction_sha256": "8d26cb80826c8a4311d3dfa33b37d7b699f00e0077bde5a94379f651f0c6a3af",
+  "text_rule": null,
+  "demonstration": {
+    "path": "evaluation/media/d7a41207d0e6b168033fa9d3e9038ca1e67a102975ef554f077701dd319f80b7.mp4",
+    "sha256": "6c0593fdd0ea5ebbc552f57fce8e6e8673be91e47ea2f84898285de53adb26e1",
+    "bytes": 5160920,
+    "evaluated_input_sha256": "d7a41207d0e6b168033fa9d3e9038ca1e67a102975ef554f077701dd319f80b7",
+    "audio_tracks": 0,
+    "video_codec": "h264",
+    "width": 1920,
+    "height": 1080,
+    "duration_seconds": 7.133333,
+    "frames": 214,
+    "transformation": "remove_audio_streams_and_remux_video_without_reencoding"
+  }
+}

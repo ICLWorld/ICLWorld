@@ -1,0 +1,10 @@
+{
+  "question": "视频中，示范者对多组对象反复使用的是下面哪一种具体处理方法？",
+  "options": {
+    "A": "step{序号两位}_{operation}。",
+    "B": "{operation}-{序号两位}。",
+    "C": "{序号两位}-{operation}。",
+    "D": "仅用 operation 作为阶段名称，不附加编号。"
+  },
+  "correct_answer": "C"
+}

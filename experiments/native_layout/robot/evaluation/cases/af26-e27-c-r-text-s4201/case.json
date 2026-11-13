@@ -1,0 +1,19 @@
+{
+  "task": "E27",
+  "variant": "C",
+  "generalization_condition": "R",
+  "input_condition": "text_rule",
+  "seed": 4201,
+  "experiments": [
+    "generalization",
+    "ablation4"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e27-c-r-text-s4201",
+  "instruction": "盘旁勺叉摆放\n\n按示范中勺叉相对于餐盘的位置关系摆放餐具。左右以你的用餐侧为准。\n",
+  "instruction_sha256": "f06efde07d350a8912c90d65e1feab5a0408c6b0cfe020f470243206436f28df",
+  "text_rule": "勺叉都放盘左侧，靠盘为勺，外侧为叉",
+  "demonstration": null
+}

@@ -1,0 +1,30 @@
+{
+  "task": "E45",
+  "variant": "C",
+  "generalization_condition": "I",
+  "input_condition": "real",
+  "seed": 4201,
+  "experiments": [
+    "main"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e45-c-i-real-s4201",
+  "instruction": "把杯中球倒入指定图形格\n\n把杯中的球全部倒入示范选择的图形格，空杯放回桌上。\n",
+  "instruction_sha256": "1ffef19286a6aaf383e91078419ed57b228195abaa3e94a9c21f5d79b786f9c9",
+  "text_rule": null,
+  "demonstration": {
+    "path": "evaluation/media/6a51160e8a4a51904f40292bb5f11a291434c52c10bbb55a710925368493f49f.mp4",
+    "sha256": "90bb05dd4b0ec61b604983ada32fb29b6ca0e114962d9c25a0096283df9fdb69",
+    "bytes": 2941838,
+    "evaluated_input_sha256": "6a51160e8a4a51904f40292bb5f11a291434c52c10bbb55a710925368493f49f",
+    "audio_tracks": 0,
+    "video_codec": "h264",
+    "width": 1920,
+    "height": 1080,
+    "duration_seconds": 4.766667,
+    "frames": 143,
+    "transformation": "remove_audio_streams_and_remux_video_without_reencoding"
+  }
+}

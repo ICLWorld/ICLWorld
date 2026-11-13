@@ -1,0 +1,1 @@
+Migrate the nested workspace, preserve original sources and local destination edits, retain preferences, and pass workspace-open. Use the demonstrated collision-preservation method. Use the local file conflict preservation demonstrated in the video. For JSON outputs, use the declared field names and value types; indentation and object key order are unrestricted.

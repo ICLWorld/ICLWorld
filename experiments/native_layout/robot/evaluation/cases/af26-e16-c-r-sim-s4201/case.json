@@ -1,0 +1,31 @@
+{
+  "task": "E16",
+  "variant": "C",
+  "generalization_condition": "R",
+  "input_condition": "sim",
+  "seed": 4201,
+  "experiments": [
+    "generalization",
+    "ablation4"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e16-c-r-sim-s4201",
+  "instruction": "三件布局搬入托盘\n\n按示范的布局与单件朝向变换，把三件T形块搬进托盘。\n",
+  "instruction_sha256": "2543bdb73e5ef924c8b9cca7ddc6f0846b2da4f66189ca5f7a5ed96bed8660db",
+  "text_rule": null,
+  "demonstration": {
+    "path": "evaluation/media/69e91623c3112600fbfd9f989af5ebc77dd21c86e0678927645762dadb375c5b.mp4",
+    "sha256": "c985572e61d019c96d7d1da86cc2f9922e5dae6867dbbe16d24beb2ffcf9e9bd",
+    "bytes": 1398082,
+    "evaluated_input_sha256": "69e91623c3112600fbfd9f989af5ebc77dd21c86e0678927645762dadb375c5b",
+    "audio_tracks": 0,
+    "video_codec": "h264",
+    "width": 640,
+    "height": 480,
+    "duration_seconds": 51.84,
+    "frames": 1296,
+    "transformation": "remove_audio_streams_and_remux_video_without_reencoding"
+  }
+}

@@ -1,0 +1,1 @@
+For each document group, copy exactly one approved version into its Selected folder. Preserve all originals. Use the approved-version selection criterion demonstrated in the video. For JSON outputs, use the declared field names and value types; indentation and object key order are unrestricted.

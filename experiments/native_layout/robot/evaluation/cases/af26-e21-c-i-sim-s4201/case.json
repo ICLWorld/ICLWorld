@@ -1,0 +1,31 @@
+{
+  "task": "E21",
+  "variant": "C",
+  "generalization_condition": "I",
+  "input_condition": "sim",
+  "seed": 4201,
+  "experiments": [
+    "generalization",
+    "ablation4"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e21-c-i-sim-s4201",
+  "instruction": "按视频展示的颜色先后顺序，依次把四支蜡烛放入四格盘的左上、右上、左下、右下格。\n",
+  "instruction_sha256": "f9b993bd7fde2a00dfd8812242c613090c83ae68f5083da0b63f1b9c030fb91b",
+  "text_rule": null,
+  "demonstration": {
+    "path": "evaluation/media/a6e0ab0db4204e0ba8cae437f4c5f95dc1f9960650b4c8d19e62b7bdb8ac911d.mp4",
+    "sha256": "c8c0def0f29698f9c069b1020f5050f65f7b0c277b5cc81baf7989f2de351492",
+    "bytes": 1922624,
+    "evaluated_input_sha256": "a6e0ab0db4204e0ba8cae437f4c5f95dc1f9960650b4c8d19e62b7bdb8ac911d",
+    "audio_tracks": 0,
+    "video_codec": "h264",
+    "width": 640,
+    "height": 480,
+    "duration_seconds": 70.24,
+    "frames": 1756,
+    "transformation": "remove_audio_streams_and_remux_video_without_reencoding"
+  }
+}

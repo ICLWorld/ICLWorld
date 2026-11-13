@@ -1,0 +1,60 @@
+name: iclworld
+x-platform: &platform
+  image: iclworld-web-os:local
+  build:
+    context: environment
+  init: true
+  shm_size: 2gb
+services:
+  control:
+    <<: *platform
+    ports: ["127.0.0.1:${ICLWORLD_PORT:-8765}:8765"]
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8765/healthz', timeout=3).read()"]
+      interval: 5s
+      timeout: 5s
+      retries: 24
+      start_period: 10s
+    environment:
+      VIC_ADMIN_TOKEN: ${ICLWORLD_ADMIN_TOKEN:?Run scripts/init_env.py}
+      VIC_APP_RUNTIME_TOKEN: ${ICLWORLD_APP_TOKEN:?Run scripts/init_env.py}
+      VIC_APPLICATION_BASE: http://applications:8771
+      VIC_APPLICATION_PUBLIC_BASE: http://applications:8771
+      VIC_OS_BASE: http://os:8790
+      VIC_OS_SOURCE: /opt/os-icl
+      VIC_PUBLIC_BASE: http://control:8765
+      ICLWORLD_DATASET: /dataset
+    volumes:
+      - control-data:/data
+      - ${ICLWORLD_DATASET:?Set dataset directory}:/dataset:ro
+    depends_on:
+      applications: {condition: service_healthy}
+      os: {condition: service_healthy}
+  applications:
+    <<: *platform
+    command: ["uvicorn","vic_apps.server:create_app","--factory","--host","0.0.0.0","--port","8771","--workers","1"]
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8771/healthz', timeout=3).read()"]
+      interval: 5s
+      timeout: 5s
+      retries: 24
+      start_period: 10s
+    environment:
+      VIC_APP_RUNTIME_TOKEN: ${ICLWORLD_APP_TOKEN}
+      VIC_APP_DATA: /data
+      VIC_CONTROL_BASE: http://control:8765
+    volumes: ["application-data:/data"]
+  os:
+    <<: *platform
+    command: ["python","/opt/os-icl/server.py","--host","0.0.0.0","--port","8790"]
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8790/api/health', timeout=3).read()"]
+      interval: 5s
+      timeout: 5s
+      retries: 24
+      start_period: 10s
+    volumes: ["os-data:/opt/os-icl/data"]
+volumes:
+  control-data:
+  application-data:
+  os-data:

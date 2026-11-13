@@ -1,0 +1,20 @@
+{
+  "task": "E24",
+  "variant": "C",
+  "generalization_condition": "I",
+  "input_condition": "text_rule",
+  "seed": 4201,
+  "experiments": [
+    "main",
+    "generalization",
+    "ablation4"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "independent_paired_instance_runtime",
+  "episode_id": "af26-e24-c-i-text-s4201",
+  "instruction": "彩杯按序装盒并盖盖\n\n按示范的颜色顺序把三个杯子装入盒中，最后盖好盒盖。\n",
+  "instruction_sha256": "5d5de33a4d495bca695988e334a4e2454320000ff2e59414c831646eb69b9681",
+  "text_rule": "蓝→红→绿依次装盒，盖上盒盖",
+  "demonstration": null
+}

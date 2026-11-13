@@ -1,0 +1,10 @@
+{
+  "question": "视频中，示范者对多组对象反复使用的是下面哪一种具体处理方法？",
+  "options": {
+    "A": "contact 值替换为 Contact-{operator_id}，operator_id 保留。",
+    "B": "删除 contact 字段。",
+    "C": "contact 值替换为 [REDACTED]，保留字段。",
+    "D": "保留 contact 字段及其原始值，不做脱敏。"
+  },
+  "correct_answer": "C"
+}

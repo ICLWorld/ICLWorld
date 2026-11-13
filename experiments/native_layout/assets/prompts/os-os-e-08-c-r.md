@@ -1,0 +1,1 @@
+Export one independent file for each channel anchor: Channel 0: 2026-10-15T08:09:00, Channel 1: 2026-10-15T09:09:00, Channel 2: 2026-10-15T10:09:00. Intervals are closed; all times use the same local timezone. Use the anchor-relative time window with inclusive endpoints demonstrated in the video.

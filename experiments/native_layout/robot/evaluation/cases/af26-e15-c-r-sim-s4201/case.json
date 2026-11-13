@@ -1,0 +1,31 @@
+{
+  "task": "E15",
+  "variant": "C",
+  "generalization_condition": "R",
+  "input_condition": "sim",
+  "seed": 4201,
+  "experiments": [
+    "generalization",
+    "ablation4"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e15-c-r-sim-s4201",
+  "instruction": "T形块属性交换\n\n按照示范中位置与朝向的交换方式，调整这两个T形块。\n",
+  "instruction_sha256": "59d84468bee770c7599b31e50676fbda122f84e1debe0c8b904d6e5d72dfd15f",
+  "text_rule": null,
+  "demonstration": {
+    "path": "evaluation/media/52c8a086cc17cbf7f4dbac28d88bc31d26c03710ac396d3e1b369ce4c45fe8d5.mp4",
+    "sha256": "a0b8ea50655dacb0dcbc20303f4732c4ed84029d32a335e48d1e5c48f98b33b9",
+    "bytes": 1362465,
+    "evaluated_input_sha256": "52c8a086cc17cbf7f4dbac28d88bc31d26c03710ac396d3e1b369ce4c45fe8d5",
+    "audio_tracks": 0,
+    "video_codec": "h264",
+    "width": 640,
+    "height": 480,
+    "duration_seconds": 54.36,
+    "frames": 1359,
+    "transformation": "remove_audio_streams_and_remux_video_without_reencoding"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "question": "视频中，示范者对多组对象反复使用的是下面哪一种具体处理方法？",
+  "options": {
+    "A": "JSON 数组每项含 request_id 和 accepted，批准映射 true，否则 false。",
+    "B": "JSON 数组每项保留 request_id 和原 approved 布尔字段。",
+    "C": "JSON 数组每项含 request_id 和 status，批准映射 ok，否则 error。",
+    "D": "JSON 数组每项含 request_id 和 decision，批准映射 Approved，否则 Rejected。"
+  },
+  "correct_answer": "A"
+}

@@ -1,0 +1,10 @@
+{
+  "question": "视频中，示范者对多组对象反复使用的是下面哪一种具体处理方法？",
+  "options": {
+    "A": "带列头 key,before,after 的 CSV。",
+    "B": "JSON 数组，每项含 key、before、after。",
+    "C": "使用 JSON 对象，以 key 为对象键，直接映射到 after 值，不记录 before。",
+    "D": "每行 key: before -> after。"
+  },
+  "correct_answer": "B"
+}

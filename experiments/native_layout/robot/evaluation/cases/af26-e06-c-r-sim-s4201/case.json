@@ -1,0 +1,31 @@
+{
+  "task": "E06",
+  "variant": "C",
+  "generalization_condition": "R",
+  "input_condition": "sim",
+  "seed": 4201,
+  "experiments": [
+    "generalization",
+    "ablation4"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e06-c-r-sim-s4201",
+  "instruction": "蛋托孔位布局\n\n按示范的孔位布局，把三枚球放入六孔托盘。左右以你面对托盘的方向为准。\n",
+  "instruction_sha256": "ea58c4c0014415d2c8e08a8b8ca289e715412778e5e897718123a99502cea4a9",
+  "text_rule": null,
+  "demonstration": {
+    "path": "evaluation/media/17f73cdcd51337a530bd30e4a471f64ff2e844ef276c39b693ccf5c9d995104e.mp4",
+    "sha256": "c34f55077271c55c19f11477c017f6dfb180c7ad120a593cdf593540a536ab09",
+    "bytes": 613473,
+    "evaluated_input_sha256": "17f73cdcd51337a530bd30e4a471f64ff2e844ef276c39b693ccf5c9d995104e",
+    "audio_tracks": 0,
+    "video_codec": "h264",
+    "width": 640,
+    "height": 480,
+    "duration_seconds": 28.64,
+    "frames": 716,
+    "transformation": "remove_audio_streams_and_remux_video_without_reencoding"
+  }
+}

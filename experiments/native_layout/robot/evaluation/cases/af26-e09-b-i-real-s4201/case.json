@@ -1,0 +1,30 @@
+{
+  "task": "E09",
+  "variant": "B",
+  "generalization_condition": "I",
+  "input_condition": "real",
+  "seed": 4201,
+  "experiments": [
+    "ablation_abc"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e09-b-i-real-s4201",
+  "instruction": "分类教具配套出库\n\n为本次课堂准备完整三包教具，分组对应关系按视频。每包有三件且放入独立透明盒，盒内不得混组；将三盒装入订单指定的周转箱并送到对应领取区，备用件留在原架。\n本次公开订单：批次 2，交付到 2 号目标工位。\n\n本轮对应物体为颜色与形状均清楚可辨的仿真饼干；上文完整任务流程及交付要求保持不变。\n",
+  "instruction_sha256": "ab00ded9e9db530db89c359766e8cfebf10a37dd4fdbb70461ccd47d4f67fb32",
+  "text_rule": null,
+  "demonstration": {
+    "path": "evaluation/media/0b00307d563dfbe8abb1370f8e8607ac703727907415c06c6aa0f21f8a73f8a0.mp4",
+    "sha256": "40c5a7e5f0f332329dd31b740df7587378f2e0a3fbd534b259abe5d12d306fa1",
+    "bytes": 10096530,
+    "evaluated_input_sha256": "0b00307d563dfbe8abb1370f8e8607ac703727907415c06c6aa0f21f8a73f8a0",
+    "audio_tracks": 0,
+    "video_codec": "h264",
+    "width": 1920,
+    "height": 1080,
+    "duration_seconds": 21.5,
+    "frames": 645,
+    "transformation": "remove_audio_streams_and_remux_video_without_reencoding"
+  }
+}

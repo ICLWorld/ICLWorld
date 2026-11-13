@@ -1,0 +1,18 @@
+{
+  "task": "E28",
+  "variant": "C",
+  "generalization_condition": "I",
+  "input_condition": "text_rule",
+  "seed": 4201,
+  "experiments": [
+    "main"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e28-c-i-text-s4201",
+  "instruction": "用平铲选取食物装盘\n\n按示范的食物选择方式，用平铲将相应食物送到餐盘里。\n",
+  "instruction_sha256": "526fb1084d654c3391f3f7ad84f0b7467388c67d64289f4fdbe307906de36851",
+  "text_rule": "两块食物都铲入盘中",
+  "demonstration": null
+}

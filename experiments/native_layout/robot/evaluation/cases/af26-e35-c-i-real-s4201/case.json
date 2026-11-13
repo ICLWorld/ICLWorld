@@ -1,0 +1,30 @@
+{
+  "task": "E35",
+  "variant": "C",
+  "generalization_condition": "I",
+  "input_condition": "real",
+  "seed": 4201,
+  "experiments": [
+    "main"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e35-c-i-real-s4201",
+  "instruction": "按视频展示的大小层序，把三本书叠成稳定的一摞。\n",
+  "instruction_sha256": "6fd68864dba56529c5bccd4dd8671ba577c34d3a1733fab9fe6a14a2ced82255",
+  "text_rule": null,
+  "demonstration": {
+    "path": "evaluation/media/377c49f0ee6bb9ad8ebeee8980d63eb717913e77902d0fd944016f213a909756.mp4",
+    "sha256": "be980ee3f2d5d2ddaa1d86f61c0c4787287fdef4c7561f74a1cfab45f5aa9549",
+    "bytes": 3007235,
+    "evaluated_input_sha256": "377c49f0ee6bb9ad8ebeee8980d63eb717913e77902d0fd944016f213a909756",
+    "audio_tracks": 0,
+    "video_codec": "h264",
+    "width": 1920,
+    "height": 1080,
+    "duration_seconds": 6.566667,
+    "frames": 197,
+    "transformation": "remove_audio_streams_and_remux_video_without_reencoding"
+  }
+}

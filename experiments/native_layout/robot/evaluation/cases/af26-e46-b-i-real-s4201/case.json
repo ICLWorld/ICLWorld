@@ -1,0 +1,30 @@
+{
+  "task": "E46",
+  "variant": "B",
+  "generalization_condition": "I",
+  "input_condition": "real",
+  "seed": 4201,
+  "experiments": [
+    "ablation_abc"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e46-b-i-real-s4201",
+  "instruction": "平铲承托送至图形区域\n\n用平铲将黄色块送到示范选择的图形标记纸上。\n",
+  "instruction_sha256": "c0c99e2c89fd077182884da9ceda0e71a41e57a69f4f3ca6da3bbcb6d82cf610",
+  "text_rule": null,
+  "demonstration": {
+    "path": "evaluation/media/e1cc3a44c4c932eae48fa539fd63eb8024c68ad3766b936bdc0c18fa702f5c9d.mp4",
+    "sha256": "1451bddedb5174a8bfde64b820ae55596733b57825e5768e0d9b5db04b2f1cd9",
+    "bytes": 3556690,
+    "evaluated_input_sha256": "e1cc3a44c4c932eae48fa539fd63eb8024c68ad3766b936bdc0c18fa702f5c9d",
+    "audio_tracks": 0,
+    "video_codec": "h264",
+    "width": 1920,
+    "height": 1080,
+    "duration_seconds": 5.839167,
+    "frames": 175,
+    "transformation": "remove_audio_streams_and_remux_video_without_reencoding"
+  }
+}

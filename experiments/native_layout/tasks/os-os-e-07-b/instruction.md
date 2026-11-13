@@ -1,0 +1,1 @@
+Set connection states for the six unit devices using the demonstrated device-category policy; preserve other device properties. Use the device-category connection policy demonstrated in the video. For JSON outputs, use the declared field names and value types; indentation and object key order are unrestricted.

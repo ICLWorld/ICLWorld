@@ -1,0 +1,2 @@
+逐行 key: value。key: value lines 公共字段顺序为 build_artifact、passed、assertions；所有值保留源 JSON 类型与引号。C 的数据行由三个 JSON 值用逗号连接，不做 CSV 双重转义。 三行依次为 build_artifact: 值、passed: 值、assertions: 值。冒号后的每个值都使用 JSON：build_artifact 是带双引号的字符串，passed 是不带引号的 true/false，assertions 是 JSON 数组；每个断言保留 name、expected、actual、passed 及其类型。assertions 数组必须放在同一物理行。
+这是纯文本，不加 JSON 外壳或 Markdown 代码围栏；一条结果一行，顺序对应输入。允许 CRLF/LF、行首尾空白和末尾换行不同；字段名、值、单位、精度及有意义的标点必须正确。

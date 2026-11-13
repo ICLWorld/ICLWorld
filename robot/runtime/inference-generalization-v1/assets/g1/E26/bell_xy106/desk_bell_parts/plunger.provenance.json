@@ -1,0 +1,164 @@
+{
+  "schema": "videoicl-derived-source-bell-instance-v1",
+  "original_conversion": {
+    "schema": "videoicl-source-mesh-conversion-v1",
+    "visual": "source-file:plunger.glb",
+    "collision": "source-file:plunger.glb",
+    "collision_fallback_to_visual": true,
+    "collision_approximation": "convexHull",
+    "output": "source-file:plunger.usda",
+    "output_sha256": "1926255534a5309a69118ab878c80fe587df9ad89b27e2233ab11bb9b32a747b",
+    "default_prim": "/Asset",
+    "source_modified": false,
+    "coordinate_policy": "All source node transforms baked; no additional axis rotation, scaling, centering or simplification.",
+    "meters_per_unit_metadata": 1.0,
+    "up_axis_metadata_authored": false,
+    "rigid_body_authored": false,
+    "textures": [
+      {
+        "path": "plunger_textures/16602d1b47b9926f47d8ffbab5e1305f40453c98ef4cc7152cfc573eae0b975b.png",
+        "sha256": "16602d1b47b9926f47d8ffbab5e1305f40453c98ef4cc7152cfc573eae0b975b",
+        "bytes": 1444391,
+        "source_image_mode": "RGB"
+      }
+    ],
+    "meshes": [
+      {
+        "role": "visual",
+        "source": "source-file:plunger.glb",
+        "source_node": "geometry_0",
+        "source_geometry": "geometry_0",
+        "prim": "/Asset/Visuals/mesh_0_geometry_0",
+        "node_transform_baked": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "vertices": 2009,
+        "triangles": 3008,
+        "bounds": [
+          [
+            -0.24821999669075012,
+            1.0981919765472412,
+            -0.24802899360656738
+          ],
+          [
+            0.2482369989156723,
+            1.2893420457839966,
+            0.2481510043144226
+          ]
+        ]
+      },
+      {
+        "role": "collision",
+        "source": "source-file:plunger.glb",
+        "source_node": "geometry_0",
+        "source_geometry": "geometry_0",
+        "prim": "/Asset/Collisions/mesh_0_geometry_0",
+        "node_transform_baked": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "vertices": 2009,
+        "triangles": 3008,
+        "bounds": [
+          [
+            -0.24821999669075012,
+            1.0981919765472412,
+            -0.24802899360656738
+          ],
+          [
+            0.2482369989156723,
+            1.2893420457839966,
+            0.2481510043144226
+          ]
+        ]
+      }
+    ],
+    "materials": [
+      {
+        "prim": "/Asset/Visuals/mesh_0_geometry_0_Material",
+        "source_alpha_mode": null,
+        "effective_alpha_mode": "OPAQUE",
+        "base_color_factor": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "image_mode": "RGB",
+        "alpha_range": null,
+        "texture_opacity_connected": false
+      }
+    ],
+    "sources": [
+      {
+        "path": "source-file:plunger.glb",
+        "bytes": 4717064,
+        "sha256": "0d9a78c7c55145746b41e68d2655ffe3c0b7f7898fde75b16fa42def903b84bb"
+      }
+    ],
+    "unresolved_dependency_declarations": [],
+    "warnings": [
+      "Only base-color texture/factor, opacity, metallic/roughness factors and vertex/face colors are exported; other PBR channels are listed when omitted.",
+      "Collision approximation is authored for PhysX cooking; this CPU conversion does not verify cooked collision quality or task success.",
+      "/Asset/Visuals/mesh_0_geometry_0_Material: omitted normalTexture",
+      "/Asset/Visuals/mesh_0_geometry_0_Material: omitted metallicRoughnessTexture"
+    ],
+    "trimesh_version": "4.5.1",
+    "usd_version": [
+      0,
+      25,
+      5
+    ],
+    "validation": "CPU USD reopen and source hashes only; no PhysX cooking or GPU render test"
+  },
+  "original_source_modified": false,
+  "new_scan_claimed": false,
+  "source_sha256": "1926255534a5309a69118ab878c80fe587df9ad89b27e2233ab11bb9b32a747b",
+  "derived_sha256": "a001fbbda2eb9a0e243b05c10f58a07239c6acf2f7efbfc64d3c0cc80a31e525",
+  "derivation": "sourceX/Z baked1.06; sourceY/Z-worldheight retained; normals inverse-transpose; topology/materials unchanged"
+}

@@ -1,0 +1,30 @@
+{
+  "task": "E04",
+  "variant": "C",
+  "generalization_condition": "I",
+  "input_condition": "real",
+  "seed": 4201,
+  "experiments": [
+    "main"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e04-c-i-real-s4201",
+  "instruction": "按视频展示的物体颜色与目标图形对应关系，把苹果、梨和蓝色收纳罐分别放到相应标记上。\n",
+  "instruction_sha256": "c1553ca12f59f247ec4778e04b82bfd94dced46eea67f4ffefa28c623a0dd915",
+  "text_rule": null,
+  "demonstration": {
+    "path": "evaluation/media/c059c6dd4059f63a97b022d5edb11b13bf363762b453dcca12672dea4814df39.mp4",
+    "sha256": "e68bdfe0d518d524f77c17e5bd6b2f1efe09b3f0a266b9e6e95789141efe9995",
+    "bytes": 4197123,
+    "evaluated_input_sha256": "c059c6dd4059f63a97b022d5edb11b13bf363762b453dcca12672dea4814df39",
+    "audio_tracks": 0,
+    "video_codec": "h264",
+    "width": 1920,
+    "height": 1080,
+    "duration_seconds": 9.366667,
+    "frames": 281,
+    "transformation": "remove_audio_streams_and_remux_video_without_reencoding"
+  }
+}

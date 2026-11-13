@@ -1,0 +1,10 @@
+{
+  "kind": "os",
+  "task_id": "OS-M-10",
+  "variant": "B",
+  "seed": 4201,
+  "generalization": "I",
+  "backend": "iclworld-web-os",
+  "codebase": "https://github.com/ICLWorld/ICLWorld",
+  "demo_sha256": "4a2d97f78ac6eabb1d957891a179278fd37cc0ca6c78f7bd5a6e8942c9a68d25"
+}

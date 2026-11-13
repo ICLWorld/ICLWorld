@@ -1,0 +1,19 @@
+{
+  "task": "E06",
+  "variant": "C",
+  "generalization_condition": "R",
+  "input_condition": "text_rule",
+  "seed": 4201,
+  "experiments": [
+    "generalization",
+    "ablation4"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e06-c-r-text-s4201",
+  "instruction": "蛋托孔位布局\n\n按示范的孔位布局，把三枚球放入六孔托盘。左右以你面对托盘的方向为准。\n",
+  "instruction_sha256": "ea58c4c0014415d2c8e08a8b8ca289e715412778e5e897718123a99502cea4a9",
+  "text_rule": "左列两端、右列中间各放一球",
+  "demonstration": null
+}

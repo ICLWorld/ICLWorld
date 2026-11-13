@@ -1,0 +1,30 @@
+{
+  "task": "E42",
+  "variant": "C",
+  "generalization_condition": "I",
+  "input_condition": "real",
+  "seed": 4201,
+  "experiments": [
+    "main"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e42-c-i-real-s4201",
+  "instruction": "用铲沿推球到图形区域\n\n用平铲的侧沿，把两个球推到示范选择的图形标记纸区域。\n",
+  "instruction_sha256": "e6b5c10be80561831435eebacad05f82ab1782b4dcb3fd1f83188caf779991bf",
+  "text_rule": null,
+  "demonstration": {
+    "path": "evaluation/media/2108bdbbf9520e2c86dd9c88356633acbb93863f3839497419043a2646837ef9.mp4",
+    "sha256": "8f6518ef573647735769e160b80f1b331d0d6285b83498d23a053c567c5eba8e",
+    "bytes": 5175842,
+    "evaluated_input_sha256": "2108bdbbf9520e2c86dd9c88356633acbb93863f3839497419043a2646837ef9",
+    "audio_tracks": 0,
+    "video_codec": "h264",
+    "width": 1920,
+    "height": 1080,
+    "duration_seconds": 12.533333,
+    "frames": 376,
+    "transformation": "remove_audio_streams_and_remux_video_without_reencoding"
+  }
+}

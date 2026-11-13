@@ -1,0 +1,31 @@
+{
+  "task": "E27",
+  "variant": "C",
+  "generalization_condition": "R",
+  "input_condition": "sim",
+  "seed": 4201,
+  "experiments": [
+    "generalization",
+    "ablation4"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e27-c-r-sim-s4201",
+  "instruction": "盘旁勺叉摆放\n\n按示范中勺叉相对于餐盘的位置关系摆放餐具。左右以你的用餐侧为准。\n",
+  "instruction_sha256": "f06efde07d350a8912c90d65e1feab5a0408c6b0cfe020f470243206436f28df",
+  "text_rule": null,
+  "demonstration": {
+    "path": "evaluation/media/a3131ec0c20c29e4a5b3c83d37c9f87973a25061e0326dcd5f87959db4532d19.mp4",
+    "sha256": "20bf63025ccd8878ac4e9af6f2d658d4e692d5a86c97c01a28c3f92bace54ed2",
+    "bytes": 1550624,
+    "evaluated_input_sha256": "a3131ec0c20c29e4a5b3c83d37c9f87973a25061e0326dcd5f87959db4532d19",
+    "audio_tracks": 0,
+    "video_codec": "h264",
+    "width": 640,
+    "height": 480,
+    "duration_seconds": 58.28,
+    "frames": 1457,
+    "transformation": "remove_audio_streams_and_remux_video_without_reencoding"
+  }
+}

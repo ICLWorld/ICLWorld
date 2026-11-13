@@ -1,0 +1,1 @@
+Deliver K0 with its required K1 and K2 attachments, using each latest approved revision. Preserve all source versions and local edits. Create the collection in Output. Use the handoff folder grouping demonstrated in the video. For JSON outputs, use the declared field names and value types; indentation and object key order are unrestricted.

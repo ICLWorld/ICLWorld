@@ -1,0 +1,30 @@
+{
+  "task": "E40",
+  "variant": "C",
+  "generalization_condition": "I",
+  "input_condition": "real",
+  "seed": 4201,
+  "experiments": [
+    "main"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e40-c-i-real-s4201",
+  "instruction": "在指定图形处夹长尾夹\n\n按照示范的图形选择，在对应盘边夹上长尾夹。\n",
+  "instruction_sha256": "87934deac50285f43d408e3ba706cd79f49a0fe15a3552c57e4cc242bbb69ab6",
+  "text_rule": null,
+  "demonstration": {
+    "path": "evaluation/media/a21b43b2639bfe414227166692a91e0d796dd704e94efaa27cb6b4485a5551af.mp4",
+    "sha256": "68542a33f98d065268608e5ee4afa7273e717c7526f0a5df43b6dd1e68f46bd6",
+    "bytes": 4679681,
+    "evaluated_input_sha256": "a21b43b2639bfe414227166692a91e0d796dd704e94efaa27cb6b4485a5551af",
+    "audio_tracks": 0,
+    "video_codec": "h264",
+    "width": 1920,
+    "height": 1080,
+    "duration_seconds": 10.0,
+    "frames": 300,
+    "transformation": "remove_audio_streams_and_remux_video_without_reencoding"
+  }
+}

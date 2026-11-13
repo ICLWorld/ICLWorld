@@ -1,0 +1,31 @@
+{
+  "task": "E16",
+  "variant": "C",
+  "generalization_condition": "R",
+  "input_condition": "real",
+  "seed": 4201,
+  "experiments": [
+    "generalization",
+    "ablation4"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e16-c-r-real-s4201",
+  "instruction": "三件布局搬入托盘\n\n按示范的布局与单件朝向变换，把三件T形块搬进托盘。\n",
+  "instruction_sha256": "2543bdb73e5ef924c8b9cca7ddc6f0846b2da4f66189ca5f7a5ed96bed8660db",
+  "text_rule": null,
+  "demonstration": {
+    "path": "evaluation/media/c7e6541f189ca7d4077022eba082e053c0dc93c7ab37c02c7c441d7fde3c9bbe.mp4",
+    "sha256": "c1bb48422c8cfea2d6bcd5b3c7a0168ae0801dfb3df28fc77e49b2347fad2f8e",
+    "bytes": 6116408,
+    "evaluated_input_sha256": "c7e6541f189ca7d4077022eba082e053c0dc93c7ab37c02c7c441d7fde3c9bbe",
+    "audio_tracks": 0,
+    "video_codec": "h264",
+    "width": 1920,
+    "height": 1080,
+    "duration_seconds": 9.966667,
+    "frames": 299,
+    "transformation": "remove_audio_streams_and_remux_video_without_reencoding"
+  }
+}

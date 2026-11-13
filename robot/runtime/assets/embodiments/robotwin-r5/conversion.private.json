@@ -1,0 +1,288 @@
+[
+  {
+    "name": "franka-panda",
+    "source": "/home/descfly/robotwin-eval/assets-shared/embodiments/franka-panda/panda.urdf",
+    "source_sha256": "be80276223ca90363197d4316230173815b5ea45b1733ac514eb572ff1db786f",
+    "resolved_urdf": "assets/embodiments/robotwin-r5/franka-panda/source.resolved.urdf",
+    "usd": "/home/descfly/VideoICL/isaaclab_tasks_20261016/assets/embodiments/robotwin-r5/franka-panda/robot.usd",
+    "meshes": [
+      "/home/descfly/VideoICL/isaaclab_tasks_20261016/assets/embodiments/robotwin-r5/franka-panda/baked_meshes/b0f8ae71e7_link0.glb",
+      "/home/descfly/robotwin-eval/assets-shared/embodiments/franka-panda/franka_description/meshes/collision/link0.stl",
+      "/home/descfly/VideoICL/isaaclab_tasks_20261016/assets/embodiments/robotwin-r5/franka-panda/baked_meshes/d2d718fc83_link1.glb",
+      "/home/descfly/robotwin-eval/assets-shared/embodiments/franka-panda/franka_description/meshes/collision/link1.stl",
+      "/home/descfly/VideoICL/isaaclab_tasks_20261016/assets/embodiments/robotwin-r5/franka-panda/baked_meshes/d261491ac2_link2.glb",
+      "/home/descfly/robotwin-eval/assets-shared/embodiments/franka-panda/franka_description/meshes/collision/link2.stl",
+      "/home/descfly/VideoICL/isaaclab_tasks_20261016/assets/embodiments/robotwin-r5/franka-panda/baked_meshes/c5b1617076_link3.glb",
+      "/home/descfly/robotwin-eval/assets-shared/embodiments/franka-panda/franka_description/meshes/collision/link3.stl",
+      "/home/descfly/VideoICL/isaaclab_tasks_20261016/assets/embodiments/robotwin-r5/franka-panda/baked_meshes/aaea5c79a6_link4.glb",
+      "/home/descfly/robotwin-eval/assets-shared/embodiments/franka-panda/franka_description/meshes/collision/link4.stl",
+      "/home/descfly/VideoICL/isaaclab_tasks_20261016/assets/embodiments/robotwin-r5/franka-panda/mesh_aliases/_2202c3148_link5.glb",
+      "/home/descfly/robotwin-eval/assets-shared/embodiments/franka-panda/franka_description/meshes/collision/link5.stl",
+      "/home/descfly/VideoICL/isaaclab_tasks_20261016/assets/embodiments/robotwin-r5/franka-panda/mesh_aliases/_6c46e1d9a_link6.glb",
+      "/home/descfly/robotwin-eval/assets-shared/embodiments/franka-panda/franka_description/meshes/collision/link6.stl",
+      "/home/descfly/VideoICL/isaaclab_tasks_20261016/assets/embodiments/robotwin-r5/franka-panda/mesh_aliases/_59d96407d_link7.glb",
+      "/home/descfly/robotwin-eval/assets-shared/embodiments/franka-panda/franka_description/meshes/collision/link7.stl",
+      "/home/descfly/VideoICL/isaaclab_tasks_20261016/assets/embodiments/robotwin-r5/franka-panda/mesh_aliases/_b8ce1b204_hand.glb",
+      "/home/descfly/robotwin-eval/assets-shared/embodiments/franka-panda/franka_description/meshes/collision/hand.stl",
+      "/home/descfly/VideoICL/isaaclab_tasks_20261016/assets/embodiments/robotwin-r5/franka-panda/baked_meshes/d82da8e256_camera_base.glb",
+      "/home/descfly/robotwin-eval/assets-shared/embodiments/franka-panda/franka_description/meshes/visual/d435.dae",
+      "/home/descfly/VideoICL/isaaclab_tasks_20261016/assets/embodiments/robotwin-r5/franka-panda/baked_meshes/b672a60eea_finger.glb",
+      "/home/descfly/robotwin-eval/assets-shared/embodiments/franka-panda/franka_description/meshes/collision/finger.stl",
+      "/home/descfly/VideoICL/isaaclab_tasks_20261016/assets/embodiments/robotwin-r5/franka-panda/baked_meshes/b672a60eea_finger.glb",
+      "/home/descfly/robotwin-eval/assets-shared/embodiments/franka-panda/franka_description/meshes/collision/finger.stl"
+    ],
+    "merge_fixed_joints": false,
+    "source_modified": false,
+    "baked_meshes": [
+      {
+        "source": "/home/descfly/robotwin-eval/assets-shared/embodiments/franka-panda/franka_description/meshes/visual/link0.glb",
+        "source_sha256": "672626c2bbf38cd2ea28837e5dafdc2f264959761200177e9e256d532b9be4f9",
+        "converted": "/home/descfly/VideoICL/isaaclab_tasks_20261016/assets/embodiments/robotwin-r5/franka-panda/baked_meshes/b0f8ae71e7_link0.glb",
+        "mesh_nodes_baked": 1,
+        "source_bytes": 1519800,
+        "converted_bytes": 2915808
+      },
+      {
+        "source": "/home/descfly/robotwin-eval/assets-shared/embodiments/franka-panda/franka_description/meshes/visual/link1.glb",
+        "source_sha256": "8376fac9a80cd04767a3749a723a68809c5b85fe34110f056e83b9c984c1f052",
+        "converted": "/home/descfly/VideoICL/isaaclab_tasks_20261016/assets/embodiments/robotwin-r5/franka-panda/baked_meshes/d2d718fc83_link1.glb",
+        "mesh_nodes_baked": 1,
+        "source_bytes": 970348,
+        "converted_bytes": 1864932
+      },
+      {
+        "source": "/home/descfly/robotwin-eval/assets-shared/embodiments/franka-panda/franka_description/meshes/visual/link2.glb",
+        "source_sha256": "bbab9909c2b0572d256cd60e6a9c1b63ca9b55047ac3da7124a99b8b1fe6b8fc",
+        "converted": "/home/descfly/VideoICL/isaaclab_tasks_20261016/assets/embodiments/robotwin-r5/franka-panda/baked_meshes/d261491ac2_link2.glb",
+        "mesh_nodes_baked": 1,
+        "source_bytes": 983620,
+        "converted_bytes": 1890336
+      },
+      {
+        "source": "/home/descfly/robotwin-eval/assets-shared/embodiments/franka-panda/franka_description/meshes/visual/link3.glb",
+        "source_sha256": "f904d2d91255086a5706ca9c039cac62de4b7877b4a91b8ef387f461b9fa915b",
+        "converted": "/home/descfly/VideoICL/isaaclab_tasks_20261016/assets/embodiments/robotwin-r5/franka-panda/baked_meshes/c5b1617076_link3.glb",
+        "mesh_nodes_baked": 1,
+        "source_bytes": 1105564,
+        "converted_bytes": 2124820
+      },
+      {
+        "source": "/home/descfly/robotwin-eval/assets-shared/embodiments/franka-panda/franka_description/meshes/visual/link4.glb",
+        "source_sha256": "3e301a20f05f81d007741c2f8e199452a705ec4a489b729ff389ef14769c2283",
+        "converted": "/home/descfly/VideoICL/isaaclab_tasks_20261016/assets/embodiments/robotwin-r5/franka-panda/baked_meshes/aaea5c79a6_link4.glb",
+        "mesh_nodes_baked": 1,
+        "source_bytes": 1131436,
+        "converted_bytes": 2174192
+      },
+      {
+        "source": "/home/descfly/robotwin-eval/assets-shared/embodiments/franka-panda/franka_description/meshes/visual/link5.glb",
+        "source_sha256": "80d620e7d92b38a90a9ff2536e2d278cf2d0fa665f6bf4982e7069589b5cbb02",
+        "converted": "/home/descfly/VideoICL/isaaclab_tasks_20261016/assets/embodiments/robotwin-r5/franka-panda/baked_meshes/82202c3148_link5.glb",
+        "mesh_nodes_baked": 1,
+        "source_bytes": 1423144,
+        "converted_bytes": 2735432
+      },
+      {
+        "source": "/home/descfly/robotwin-eval/assets-shared/embodiments/franka-panda/franka_description/meshes/visual/link6.glb",
+        "source_sha256": "20f04024218fdafdf41926143e9038b970e27f0c84f574d34c2dd05df6a7a74f",
+        "converted": "/home/descfly/VideoICL/isaaclab_tasks_20261016/assets/embodiments/robotwin-r5/franka-panda/baked_meshes/16c46e1d9a_link6.glb",
+        "mesh_nodes_baked": 1,
+        "source_bytes": 1666640,
+        "converted_bytes": 3201856
+      },
+      {
+        "source": "/home/descfly/robotwin-eval/assets-shared/embodiments/franka-panda/franka_description/meshes/visual/link7.glb",
+        "source_sha256": "a207703b9d6d28c186949619e5c424072ee8331b8d51d6256ace975816a94a15",
+        "converted": "/home/descfly/VideoICL/isaaclab_tasks_20261016/assets/embodiments/robotwin-r5/franka-panda/baked_meshes/859d96407d_link7.glb",
+        "mesh_nodes_baked": 1,
+        "source_bytes": 930244,
+        "converted_bytes": 1786960
+      },
+      {
+        "source": "/home/descfly/robotwin-eval/assets-shared/embodiments/franka-panda/franka_description/meshes/visual/hand.glb",
+        "source_sha256": "3c2de5514714f7f8232a51b008eadb2eb421d290bfdc7341e5a12887cb70b661",
+        "converted": "/home/descfly/VideoICL/isaaclab_tasks_20261016/assets/embodiments/robotwin-r5/franka-panda/baked_meshes/3b8ce1b204_hand.glb",
+        "mesh_nodes_baked": 1,
+        "source_bytes": 590608,
+        "converted_bytes": 1134080
+      },
+      {
+        "source": "/home/descfly/robotwin-eval/assets-shared/embodiments/franka-panda/franka_description/meshes/visual/camera_base.glb",
+        "source_sha256": "5852ad73d6ab5a5699191df1b0b8f211516ebdb35ccf3356c049a115b06ee431",
+        "converted": "/home/descfly/VideoICL/isaaclab_tasks_20261016/assets/embodiments/robotwin-r5/franka-panda/baked_meshes/d82da8e256_camera_base.glb",
+        "mesh_nodes_baked": 1,
+        "source_bytes": 77420,
+        "converted_bytes": 130012
+      },
+      {
+        "source": "/home/descfly/robotwin-eval/assets-shared/embodiments/franka-panda/franka_description/meshes/visual/finger.glb",
+        "source_sha256": "0a71d057c0afb3e8587129539ec4161b726cf55dcb8935c4e6094f2b13558ed3",
+        "converted": "/home/descfly/VideoICL/isaaclab_tasks_20261016/assets/embodiments/robotwin-r5/franka-panda/baked_meshes/b672a60eea_finger.glb",
+        "mesh_nodes_baked": 1,
+        "source_bytes": 50032,
+        "converted_bytes": 95468
+      }
+    ],
+    "mesh_count": 24,
+    "joints": [
+      "/panda/joints/panda_joint1",
+      "/panda/joints/panda_joint2",
+      "/panda/joints/panda_joint3",
+      "/panda/joints/panda_joint4",
+      "/panda/joints/panda_joint5",
+      "/panda/joints/panda_joint6",
+      "/panda/joints/panda_joint7",
+      "/panda/joints/panda_joint8",
+      "/panda/joints/panda_hand_joint",
+      "/panda/joints/hand_to_camera_mount",
+      "/panda/joints/camera_joint",
+      "/panda/joints/panda_finger_joint1",
+      "/panda/joints/panda_finger_joint2",
+      "/panda/root_joint"
+    ],
+    "notes": [
+      "Mesh paths resolved to absolute paths",
+      "GLB node transforms baked into conversion-copy vertex attributes; original images/materials retained",
+      "Duplicate URDF limit attributes consolidated",
+      "Invalid mesh filename stems copied under USD-safe aliases; mesh bytes unchanged"
+    ]
+  },
+  {
+    "name": "ur5-wsg",
+    "source": "/home/descfly/robotwin-eval/assets-shared/embodiments/ur5-wsg/ur5_wsg_gripper.urdf",
+    "source_sha256": "3fb7a965dd5c2d04f9f6ffbda7a3c67d88fe1d7362bc6be1f57f3dbe4efe8cb4",
+    "resolved_urdf": "assets/embodiments/robotwin-r5/ur5-wsg/source.resolved.urdf",
+    "usd": "/home/descfly/VideoICL/isaaclab_tasks_20261016/assets/embodiments/robotwin-r5/ur5-wsg/robot.usd",
+    "meshes": [
+      "/home/descfly/VideoICL/isaaclab_tasks_20261016/assets/embodiments/robotwin-r5/ur5-wsg/mesh_aliases/_6e3bdb821_base.glb",
+      "/home/descfly/robotwin-eval/assets-shared/embodiments/ur5-wsg/meshes/ur5/collision/base.stl",
+      "/home/descfly/VideoICL/isaaclab_tasks_20261016/assets/embodiments/robotwin-r5/ur5-wsg/mesh_aliases/_4682421fa_shoulder.glb",
+      "/home/descfly/robotwin-eval/assets-shared/embodiments/ur5-wsg/meshes/ur5/collision/shoulder.stl",
+      "/home/descfly/VideoICL/isaaclab_tasks_20261016/assets/embodiments/robotwin-r5/ur5-wsg/mesh_aliases/_2afab89f0_upperarm.glb",
+      "/home/descfly/robotwin-eval/assets-shared/embodiments/ur5-wsg/meshes/ur5/collision/upperarm.stl",
+      "/home/descfly/VideoICL/isaaclab_tasks_20261016/assets/embodiments/robotwin-r5/ur5-wsg/baked_meshes/bf37213900_forearm.glb",
+      "/home/descfly/robotwin-eval/assets-shared/embodiments/ur5-wsg/meshes/ur5/collision/forearm.stl",
+      "/home/descfly/VideoICL/isaaclab_tasks_20261016/assets/embodiments/robotwin-r5/ur5-wsg/mesh_aliases/_b5c18bec3_wrist1.glb",
+      "/home/descfly/robotwin-eval/assets-shared/embodiments/ur5-wsg/meshes/ur5/collision/wrist1.stl",
+      "/home/descfly/VideoICL/isaaclab_tasks_20261016/assets/embodiments/robotwin-r5/ur5-wsg/mesh_aliases/_0d20da9ac_wrist2.glb",
+      "/home/descfly/robotwin-eval/assets-shared/embodiments/ur5-wsg/meshes/ur5/collision/wrist2.stl",
+      "/home/descfly/VideoICL/isaaclab_tasks_20261016/assets/embodiments/robotwin-r5/ur5-wsg/baked_meshes/b640d1b2a9_wrist3.glb",
+      "/home/descfly/robotwin-eval/assets-shared/embodiments/ur5-wsg/meshes/ur5/collision/wrist3.stl",
+      "/home/descfly/VideoICL/isaaclab_tasks_20261016/assets/embodiments/robotwin-r5/ur5-wsg/baked_meshes/e0f42cb083_camera_base_ur5.glb",
+      "/home/descfly/VideoICL/isaaclab_tasks_20261016/assets/embodiments/robotwin-r5/ur5-wsg/baked_meshes/ac10b3865d_camera.glb",
+      "/home/descfly/robotwin-eval/assets-shared/embodiments/ur5-wsg/meshes/gripper/WSG50_110.stl",
+      "/home/descfly/robotwin-eval/assets-shared/embodiments/ur5-wsg/meshes/gripper/WSG50_110.stl",
+      "/home/descfly/robotwin-eval/assets-shared/embodiments/ur5-wsg/meshes/gripper/GUIDE_WSG50_110.stl",
+      "/home/descfly/robotwin-eval/assets-shared/embodiments/ur5-wsg/meshes/gripper/GUIDE_WSG50_110.stl",
+      "/home/descfly/VideoICL/isaaclab_tasks_20261016/assets/embodiments/robotwin-r5/ur5-wsg/mesh_aliases/WSG_FMF.stl",
+      "/home/descfly/VideoICL/isaaclab_tasks_20261016/assets/embodiments/robotwin-r5/ur5-wsg/mesh_aliases/WSG_FMF.stl",
+      "/home/descfly/robotwin-eval/assets-shared/embodiments/ur5-wsg/meshes/gripper/GUIDE_WSG50_110.stl",
+      "/home/descfly/robotwin-eval/assets-shared/embodiments/ur5-wsg/meshes/gripper/GUIDE_WSG50_110.stl",
+      "/home/descfly/VideoICL/isaaclab_tasks_20261016/assets/embodiments/robotwin-r5/ur5-wsg/mesh_aliases/WSG_FMF.stl",
+      "/home/descfly/VideoICL/isaaclab_tasks_20261016/assets/embodiments/robotwin-r5/ur5-wsg/mesh_aliases/WSG_FMF.stl"
+    ],
+    "merge_fixed_joints": false,
+    "source_modified": false,
+    "baked_meshes": [
+      {
+        "source": "/home/descfly/robotwin-eval/assets-shared/embodiments/ur5-wsg/meshes/ur5/visual/base.glb",
+        "source_sha256": "b0e03173219a57c7d637ae023d7b562d3999b8c5e13ea0a0fcb8a8b8073b07a9",
+        "converted": "/home/descfly/VideoICL/isaaclab_tasks_20261016/assets/embodiments/robotwin-r5/ur5-wsg/baked_meshes/66e3bdb821_base.glb",
+        "mesh_nodes_baked": 1,
+        "source_bytes": 63188,
+        "converted_bytes": 113892
+      },
+      {
+        "source": "/home/descfly/robotwin-eval/assets-shared/embodiments/ur5-wsg/meshes/ur5/visual/shoulder.glb",
+        "source_sha256": "769a903a4242dae02bb001f75e4f20aae43eb46eddfc624f9cf609b97593bbd7",
+        "converted": "/home/descfly/VideoICL/isaaclab_tasks_20261016/assets/embodiments/robotwin-r5/ur5-wsg/baked_meshes/84682421fa_shoulder.glb",
+        "mesh_nodes_baked": 2,
+        "source_bytes": 368960,
+        "converted_bytes": 655756
+      },
+      {
+        "source": "/home/descfly/robotwin-eval/assets-shared/embodiments/ur5-wsg/meshes/ur5/visual/upperarm.glb",
+        "source_sha256": "a09674de4d5ef9713be9d5156c8e1a0aef450cc29b00d1f3967145b7ed09dedd",
+        "converted": "/home/descfly/VideoICL/isaaclab_tasks_20261016/assets/embodiments/robotwin-r5/ur5-wsg/baked_meshes/32afab89f0_upperarm.glb",
+        "mesh_nodes_baked": 5,
+        "source_bytes": 730188,
+        "converted_bytes": 1282756
+      },
+      {
+        "source": "/home/descfly/robotwin-eval/assets-shared/embodiments/ur5-wsg/meshes/ur5/visual/forearm.glb",
+        "source_sha256": "f4a6ce1aae94b92515a4926f3275ed67ced3ede32f794b201d0b7abeb52b962b",
+        "converted": "/home/descfly/VideoICL/isaaclab_tasks_20261016/assets/embodiments/robotwin-r5/ur5-wsg/baked_meshes/bf37213900_forearm.glb",
+        "mesh_nodes_baked": 4,
+        "source_bytes": 506792,
+        "converted_bytes": 885984
+      },
+      {
+        "source": "/home/descfly/robotwin-eval/assets-shared/embodiments/ur5-wsg/meshes/ur5/visual/wrist1.glb",
+        "source_sha256": "3efdaf42a8d21022b3b4baa4eb998a98209f4297e055e052c13e29fe5d386d3c",
+        "converted": "/home/descfly/VideoICL/isaaclab_tasks_20261016/assets/embodiments/robotwin-r5/ur5-wsg/baked_meshes/7b5c18bec3_wrist1.glb",
+        "mesh_nodes_baked": 2,
+        "source_bytes": 336024,
+        "converted_bytes": 586404
+      },
+      {
+        "source": "/home/descfly/robotwin-eval/assets-shared/embodiments/ur5-wsg/meshes/ur5/visual/wrist2.glb",
+        "source_sha256": "b9aeca40f33c804ee0e81cb5636370028e54c946c8157fff9eddb80a722b9582",
+        "converted": "/home/descfly/VideoICL/isaaclab_tasks_20261016/assets/embodiments/robotwin-r5/ur5-wsg/baked_meshes/80d20da9ac_wrist2.glb",
+        "mesh_nodes_baked": 2,
+        "source_bytes": 334984,
+        "converted_bytes": 584324
+      },
+      {
+        "source": "/home/descfly/robotwin-eval/assets-shared/embodiments/ur5-wsg/meshes/ur5/visual/wrist3.glb",
+        "source_sha256": "4879aa584ad8251706c44fcefd3ed0697345c4a85de894776e22345020cc0af6",
+        "converted": "/home/descfly/VideoICL/isaaclab_tasks_20261016/assets/embodiments/robotwin-r5/ur5-wsg/baked_meshes/b640d1b2a9_wrist3.glb",
+        "mesh_nodes_baked": 1,
+        "source_bytes": 52836,
+        "converted_bytes": 94784
+      },
+      {
+        "source": "/home/descfly/robotwin-eval/assets-shared/embodiments/ur5-wsg/meshes/ur5/visual/camera_base_ur5.glb",
+        "source_sha256": "99cf953850c73d0252fa43989d624e45397ad5fd7b35599d4e6cc9dca7825628",
+        "converted": "/home/descfly/VideoICL/isaaclab_tasks_20261016/assets/embodiments/robotwin-r5/ur5-wsg/baked_meshes/e0f42cb083_camera_base_ur5.glb",
+        "mesh_nodes_baked": 1,
+        "source_bytes": 54580,
+        "converted_bytes": 90972
+      },
+      {
+        "source": "/home/descfly/robotwin-eval/assets-shared/embodiments/ur5-wsg/meshes/ur5/visual/camera.glb",
+        "source_sha256": "9833e436988bcd83f3113ab1071428427c80d6a1392d9e0b7cf35d2b6e949d7c",
+        "converted": "/home/descfly/VideoICL/isaaclab_tasks_20261016/assets/embodiments/robotwin-r5/ur5-wsg/baked_meshes/ac10b3865d_camera.glb",
+        "mesh_nodes_baked": 18,
+        "source_bytes": 15899328,
+        "converted_bytes": 29205084
+      }
+    ],
+    "mesh_count": 26,
+    "joints": [
+      "/ur5/joints/world_joint",
+      "/ur5/joints/base_link_base_fixed_joint",
+      "/ur5/joints/shoulder_pan_joint",
+      "/ur5/joints/shoulder_lift_joint",
+      "/ur5/joints/elbow_joint",
+      "/ur5/joints/wrist_1_joint",
+      "/ur5/joints/wrist_2_joint",
+      "/ur5/joints/wrist_3_joint",
+      "/ur5/joints/ee_fixed_joint",
+      "/ur5/joints/wsg_base_joint",
+      "/ur5/joints/base_joint_gripper_left",
+      "/ur5/joints/guide_joint_finger_left",
+      "/ur5/joints/base_joint_gripper_right",
+      "/ur5/joints/guide_joint_finger_right",
+      "/ur5/joints/hand_to_camera_mount",
+      "/ur5/joints/camera_joint",
+      "/ur5/joints/wrist_3_link_tool0_fixed_joint",
+      "/ur5/root_joint"
+    ],
+    "notes": [
+      "Mesh paths resolved to absolute paths",
+      "GLB node transforms baked into conversion-copy vertex attributes; original images/materials retained",
+      "Duplicate URDF limit attributes consolidated",
+      "Invalid mesh filename stems copied under USD-safe aliases; mesh bytes unchanged"
+    ]
+  }
+]

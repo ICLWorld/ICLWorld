@@ -1,0 +1,30 @@
+{
+  "task": "E50",
+  "variant": "B",
+  "generalization_condition": "R",
+  "input_condition": "real",
+  "seed": 4201,
+  "experiments": [
+    "ablation_abc"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e50-b-r-real-s4201",
+  "instruction": "长尾夹夹牌送入彩盘\n\n翻开卡片，用长尾夹将它送到示范选择的彩盘，松开夹子并放回桌面。\n",
+  "instruction_sha256": "412de6b237ebc840a036b3cfd103bad1b4582a70dfc576416c7f4e9de062c05f",
+  "text_rule": null,
+  "demonstration": {
+    "path": "evaluation/media/cdc69883478c23c56cad7042f621db53c8f39b82e0ab48a4432c8338395aea5e.mp4",
+    "sha256": "af60fe9fff7ab0f5e21cb233c32d7aef1e74f9e3cce4128f34c79df23d44bfe0",
+    "bytes": 5722477,
+    "evaluated_input_sha256": "cdc69883478c23c56cad7042f621db53c8f39b82e0ab48a4432c8338395aea5e",
+    "audio_tracks": 0,
+    "video_codec": "h264",
+    "width": 1920,
+    "height": 1080,
+    "duration_seconds": 11.5,
+    "frames": 345,
+    "transformation": "remove_audio_streams_and_remux_video_without_reencoding"
+  }
+}

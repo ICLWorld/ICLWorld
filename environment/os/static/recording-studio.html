@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Demonstration Studio — OS-ICL</title>
+  <link rel="stylesheet" href="/desktop.css">
+</head>
+<body>
+  <main class="studio">
+    <header><h1>Demonstration Studio</h1><a href="/">Open desktop</a></header>
+    <p>The recording workspace keeps a 1280 × 720 operating surface and scales it to fit your browser. No screen-sharing permission is needed.</p>
+    <form id="record-form">
+      <label>Workflow<select name="case_id" id="cases" required></select></label>
+      <label>Demonstrated procedure<select name="convention"><option value="0">Interactive preparation</option><option value="1">Reversible preparation</option><option value="2">Audited delivery</option></select></label>
+      <label>Seed<input name="seed" type="number" value="1001" required></label>
+      <label>Demonstration plan<select name="plan_variant"><option value="standard">Standard preparation</option><option value="configure-first">Configure tools first</option><option value="reverse-sources">Process sources in reverse order</option></select></label>
+      <button type="submit" class="primary">Open recording workspace</button>
+    </form>
+    <p id="status" role="status">Loading workflows…</p>
+    <p>Read the private recorder instructions before starting. Finish from the desktop Start menu. The rendered replay is accepted only if it matches the recorded final state.</p>
+  </main>
+  <script>
+    const status=document.querySelector('#status');
+    fetch('/api/v2/cases').then(response=>response.json()).then(data=>{
+      for(const task of data.cases){const option=document.createElement('option');option.value=task.id;option.textContent=task.id+' — '+task.title;document.querySelector('#cases').append(option)}
+      status.textContent='';
+    }).catch(error=>status.textContent=error.message);
+    document.querySelector('#record-form').addEventListener('submit',async event=>{
+      event.preventDefault();const button=event.target.querySelector('button');button.disabled=true;status.textContent='Creating recording workspace…';
+      try{
+        const body={...Object.fromEntries(new FormData(event.target)),mode:'demo'};
+        const response=await fetch('/api/v2/sessions',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
+        const result=await response.json();if(!response.ok)throw new Error(result.error||'Session creation failed');
+        location.href='/recording.html?'+new URLSearchParams({session:result.id});
+      }catch(error){status.textContent=error.message;button.disabled=false}
+    });
+  </script>
+</body>
+</html>

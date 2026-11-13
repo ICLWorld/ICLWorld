@@ -1,0 +1,10 @@
+{
+  "task_id": "E27",
+  "variant": "A",
+  "real": {
+    "sha256": "9bfe699d2b9a44ff282f30b61475cb810dbdb57205af029f6aadecc43fa89ea5"
+  },
+  "sim": {
+    "sha256": "bfa97246fea5a0ac58bf65d2577ad0f0a25cd0ce1ee60a2358a9985686594832"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "task": "E36",
+  "variant": "C",
+  "generalization_condition": "I",
+  "input_condition": "real",
+  "seed": 4201,
+  "experiments": [
+    "main"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e36-c-i-real-s4201",
+  "instruction": "按视频展示的入盒数量，向空盒放入相同数量的苹果，其余留在外面。\n",
+  "instruction_sha256": "e99dfe0a2f18c2bba12f424642c96bb58a6d217801f819f6ff4015f319a8ada6",
+  "text_rule": null,
+  "demonstration": {
+    "path": "evaluation/media/53a46290961fac505efaa52e6d12fa69ed62f4490112bf706c09365afd1886eb.mp4",
+    "sha256": "08ff28d1d1e17fd5246eee70a94535456d176462e37ba7e729716e91b381e92c",
+    "bytes": 2858788,
+    "evaluated_input_sha256": "53a46290961fac505efaa52e6d12fa69ed62f4490112bf706c09365afd1886eb",
+    "audio_tracks": 0,
+    "video_codec": "h264",
+    "width": 1920,
+    "height": 1080,
+    "duration_seconds": 5.8,
+    "frames": 174,
+    "transformation": "remove_audio_streams_and_remux_video_without_reencoding"
+  }
+}

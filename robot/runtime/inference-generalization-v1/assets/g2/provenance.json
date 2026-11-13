@@ -1,0 +1,2421 @@
+{
+  "schema": "videoicl.g2-assets.v1",
+  "base_sha256": "fc9150d38f89d690b67591cc319b5ece76aa37371187e0b44a7a1c971fd53e4e",
+  "authorship": "Procedural rigid meshes from build_inference_g2_assets.py; no demo modifications.",
+  "tasks": {
+    "E04": [
+      {
+        "id": "green_cup",
+        "category": "pear",
+        "original_source": {
+          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "relative_path": "cup_handleless.usda",
+          "sha256": "fa7eef0598a2e2c619485ecfc8e10b770f6f1d3fb4b1b273cb5ac8414f3a8884",
+          "source_rotation": [
+            0.7071067811865476,
+            0.7071067811865476,
+            0,
+            0
+          ],
+          "dependencies": [
+            {
+              "relative_path": "cup_handleless_textures/bc59d4ac737100f9c0774784e076a47752b7c591ebe09887caafd91b888db427.png",
+              "sha256": "bc59d4ac737100f9c0774784e076a47752b7c591ebe09887caafd91b888db427"
+            }
+          ]
+        },
+        "asset": {
+          "root_env": "VIC_INFERENCE_ASSETS",
+          "relative_path": "g2/E04_green_cup.usda",
+          "sha256": "f95134c58cf6a581804828d5f818126c55c422b9b669bf7d8adae804f2f9afbb",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "original_half_extents": [
+          0.035,
+          0.034756,
+          0.03731
+        ],
+        "half_extents": [
+          0.035,
+          0.034756,
+          0.03731
+        ],
+        "collision": "closed convex rigid hull",
+        "native_validation": "pending"
+      },
+      {
+        "id": "blue_cup",
+        "category": "jar",
+        "original_source": {
+          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "relative_path": "cup_handleless.usda",
+          "sha256": "fa7eef0598a2e2c619485ecfc8e10b770f6f1d3fb4b1b273cb5ac8414f3a8884",
+          "source_rotation": [
+            0.7071067811865476,
+            0.7071067811865476,
+            0,
+            0
+          ],
+          "dependencies": [
+            {
+              "relative_path": "cup_handleless_textures/bc59d4ac737100f9c0774784e076a47752b7c591ebe09887caafd91b888db427.png",
+              "sha256": "bc59d4ac737100f9c0774784e076a47752b7c591ebe09887caafd91b888db427"
+            }
+          ]
+        },
+        "asset": {
+          "root_env": "VIC_INFERENCE_ASSETS",
+          "relative_path": "g2/E04_blue_cup.usda",
+          "sha256": "902c74519b32516cc1f241391089689523686463a623f6fcef1763b4b5b42607",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "original_half_extents": [
+          0.035,
+          0.034756,
+          0.03731
+        ],
+        "half_extents": [
+          0.035,
+          0.034756,
+          0.03731
+        ],
+        "collision": "closed convex rigid hull",
+        "native_validation": "pending"
+      },
+      {
+        "id": "red_cup",
+        "category": "apple",
+        "original_source": {
+          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "relative_path": "cup_handleless.usda",
+          "sha256": "fa7eef0598a2e2c619485ecfc8e10b770f6f1d3fb4b1b273cb5ac8414f3a8884",
+          "source_rotation": [
+            0.7071067811865476,
+            0.7071067811865476,
+            0,
+            0
+          ],
+          "dependencies": [
+            {
+              "relative_path": "cup_handleless_textures/bc59d4ac737100f9c0774784e076a47752b7c591ebe09887caafd91b888db427.png",
+              "sha256": "bc59d4ac737100f9c0774784e076a47752b7c591ebe09887caafd91b888db427"
+            }
+          ]
+        },
+        "asset": {
+          "root_env": "VIC_INFERENCE_ASSETS",
+          "relative_path": "g2/E04_red_cup.usda",
+          "sha256": "5ef0199c0bbbd66431b06c8268080dd24e5b25f635269301c00c35f7473f5d03",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "original_half_extents": [
+          0.035,
+          0.034756,
+          0.03731
+        ],
+        "half_extents": [
+          0.035,
+          0.034756,
+          0.03731
+        ],
+        "collision": "closed convex rigid hull",
+        "native_validation": "pending"
+      }
+    ],
+    "E05": [
+      {
+        "id": "cube",
+        "category": "gift",
+        "original_source": {
+          "root_env": "VIC_ROBODOJO_ASSETS",
+          "relative_path": "Object/RoboDojo/Rigid/small_cube/00007/object.usdz",
+          "sha256": "5e884b3ea23bca1706aabbc53f7d6cfe66cafc57fd70ddfc5ba031d5107ec583",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "dependencies": []
+        },
+        "asset": {
+          "root_env": "VIC_INFERENCE_ASSETS",
+          "relative_path": "g2/E05_cube.usda",
+          "sha256": "60bed81d98683a983ac577bce5100ef78d8176d2106a275f1a1dc862236fc081",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "original_half_extents": [
+          0.016,
+          0.016,
+          0.016
+        ],
+        "half_extents": [
+          0.016,
+          0.016,
+          0.016
+        ],
+        "collision": "closed convex rigid hull",
+        "native_validation": "pending"
+      },
+      {
+        "id": "sphere",
+        "category": "orange",
+        "original_source": {
+          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "relative_path": "sphere_white.usda",
+          "sha256": "257fb8afcd8eb2787aa4c59fd39314b036f78287e4d277f210168048f8becc1a",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "allow_nonuniform_scale": true,
+          "instance_adaptation": "Reviewed source-dimension scaling; same actual mesh in ABC"
+        },
+        "asset": {
+          "root_env": "VIC_INFERENCE_ASSETS",
+          "relative_path": "g2/E05_sphere.usda",
+          "sha256": "8cc880989caf8e0ae9357b51f579492e1169ce8ddd92a11ced64e8a4af455fa2",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "original_half_extents": [
+          0.014,
+          0.014,
+          0.014
+        ],
+        "half_extents": [
+          0.014,
+          0.014,
+          0.014
+        ],
+        "collision": "closed convex rigid hull",
+        "native_validation": "pending"
+      },
+      {
+        "id": "triangle",
+        "category": "pastry",
+        "original_source": {
+          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "relative_path": "e05_solid/ravens_triangle_02.usda",
+          "sha256": "8c86d186418e868214adf16b5c3d7ae5c82971103d3543eeaa3cd505cc08fa6b",
+          "source_rotation": [
+            0.7071067811865476,
+            0,
+            0,
+            0.7071067811865476
+          ],
+          "allow_nonuniform_scale": true,
+          "instance_adaptation": "Source triangular prism faces retained, normalized instance footprint 31.18mm along far/near x by36mm across y and22mm thickness; metric estimates pending source calibration.",
+          "dependencies": [
+            {
+              "relative_path": "e05_solid/ravens-02.obj",
+              "sha256": "bf2c99a0a99a7b2f3b7e2eb569c11c0144192adfbd484b32594f2032b570a8d5"
+            },
+            {
+              "relative_path": "e05_solid/LICENSE-Ravens-Apache-2.0.txt",
+              "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+            },
+            {
+              "relative_path": "e05_solid/provenance.json",
+              "sha256": "32c869792952cba1fc6884c15812456ae4038cf0d4f3d54efe40ad3bd7daf615"
+            }
+          ]
+        },
+        "asset": {
+          "root_env": "VIC_INFERENCE_ASSETS",
+          "relative_path": "g2/E05_triangle.usda",
+          "sha256": "b8793774dd64c04d00168ac60d498b7afc5071f5cd18d950d46ee92b61b2cfc9",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "original_half_extents": [
+          0.015588457268119894,
+          0.018,
+          0.011
+        ],
+        "half_extents": [
+          0.015588457268119894,
+          0.018,
+          0.011
+        ],
+        "collision": "closed convex rigid hull",
+        "native_validation": "pending"
+      }
+    ],
+    "E06": [
+      {
+        "id": "purple",
+        "category": "tangerine",
+        "original_source": {
+          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "relative_path": "sphere_white.usda",
+          "sha256": "257fb8afcd8eb2787aa4c59fd39314b036f78287e4d277f210168048f8becc1a",
+          "source_rotation": [
+            0.7071067811865476,
+            0.7071067811865476,
+            0,
+            0
+          ],
+          "dependencies": []
+        },
+        "asset": {
+          "root_env": "VIC_INFERENCE_ASSETS",
+          "relative_path": "g2/E06_purple.usda",
+          "sha256": "61b7c3dfd5b105dbbc9d6a2c7793027081a16f504883a6ed526527b43fd1f48a",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "original_half_extents": [
+          0.016090967143220888,
+          0.0165,
+          0.016331969851866544
+        ],
+        "half_extents": [
+          0.016090967143220888,
+          0.0165,
+          0.016331969851866544
+        ],
+        "collision": "closed convex rigid hull",
+        "native_validation": "pending"
+      },
+      {
+        "id": "pink",
+        "category": "tangerine",
+        "original_source": {
+          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "relative_path": "sphere_white.usda",
+          "sha256": "257fb8afcd8eb2787aa4c59fd39314b036f78287e4d277f210168048f8becc1a",
+          "source_rotation": [
+            0.7071067811865476,
+            0.7071067811865476,
+            0,
+            0
+          ],
+          "dependencies": []
+        },
+        "asset": {
+          "root_env": "VIC_INFERENCE_ASSETS",
+          "relative_path": "g2/E06_pink.usda",
+          "sha256": "61b7c3dfd5b105dbbc9d6a2c7793027081a16f504883a6ed526527b43fd1f48a",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "original_half_extents": [
+          0.016090967143220888,
+          0.0165,
+          0.016331969851866544
+        ],
+        "half_extents": [
+          0.016090967143220888,
+          0.0165,
+          0.016331969851866544
+        ],
+        "collision": "closed convex rigid hull",
+        "native_validation": "pending"
+      },
+      {
+        "id": "lightpink",
+        "category": "tangerine",
+        "original_source": {
+          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "relative_path": "sphere_white.usda",
+          "sha256": "257fb8afcd8eb2787aa4c59fd39314b036f78287e4d277f210168048f8becc1a",
+          "source_rotation": [
+            0.7071067811865476,
+            0.7071067811865476,
+            0,
+            0
+          ],
+          "dependencies": []
+        },
+        "asset": {
+          "root_env": "VIC_INFERENCE_ASSETS",
+          "relative_path": "g2/E06_lightpink.usda",
+          "sha256": "61b7c3dfd5b105dbbc9d6a2c7793027081a16f504883a6ed526527b43fd1f48a",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "original_half_extents": [
+          0.016090967143220888,
+          0.0165,
+          0.016331969851866544
+        ],
+        "half_extents": [
+          0.016090967143220888,
+          0.0165,
+          0.016331969851866544
+        ],
+        "collision": "closed convex rigid hull",
+        "native_validation": "pending"
+      }
+    ],
+    "E07": [
+      {
+        "id": "block1",
+        "category": "matryoshka",
+        "original_source": {
+          "root_env": "VIC_ROBODOJO_ASSETS",
+          "relative_path": "Object/RoboDojo/Rigid/small_cube/00007/object.usdz",
+          "sha256": "5e884b3ea23bca1706aabbc53f7d6cfe66cafc57fd70ddfc5ba031d5107ec583",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "dependencies": []
+        },
+        "asset": {
+          "root_env": "VIC_INFERENCE_ASSETS",
+          "relative_path": "g2/E07_block1.usda",
+          "sha256": "b161776efd64ef96282a5bbb417bebd68df20d2de0b502d80e96c43a62f148f3",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "original_half_extents": [
+          0.006,
+          0.006,
+          0.006
+        ],
+        "half_extents": [
+          0.006,
+          0.006,
+          0.006
+        ],
+        "collision": "closed convex rigid hull",
+        "native_validation": "pending"
+      },
+      {
+        "id": "block2",
+        "category": "matryoshka",
+        "original_source": {
+          "root_env": "VIC_ROBODOJO_ASSETS",
+          "relative_path": "Object/RoboDojo/Rigid/small_cube/00007/object.usdz",
+          "sha256": "5e884b3ea23bca1706aabbc53f7d6cfe66cafc57fd70ddfc5ba031d5107ec583",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "dependencies": []
+        },
+        "asset": {
+          "root_env": "VIC_INFERENCE_ASSETS",
+          "relative_path": "g2/E07_block2.usda",
+          "sha256": "4b600afb0493be0c454aa83939c9b009e9b6e87d1325cd1d7acd388ca988979f",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "original_half_extents": [
+          0.012,
+          0.012,
+          0.012
+        ],
+        "half_extents": [
+          0.012,
+          0.012,
+          0.012
+        ],
+        "collision": "closed convex rigid hull",
+        "native_validation": "pending"
+      },
+      {
+        "id": "block3",
+        "category": "matryoshka",
+        "original_source": {
+          "root_env": "VIC_ROBODOJO_ASSETS",
+          "relative_path": "Object/RoboDojo/Rigid/small_cube/00007/object.usdz",
+          "sha256": "5e884b3ea23bca1706aabbc53f7d6cfe66cafc57fd70ddfc5ba031d5107ec583",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "dependencies": []
+        },
+        "asset": {
+          "root_env": "VIC_INFERENCE_ASSETS",
+          "relative_path": "g2/E07_block3.usda",
+          "sha256": "1476cc090613830447b5a73816217f89a7941cb23301cfabe780b4ee5a6b2e05",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "original_half_extents": [
+          0.018,
+          0.018,
+          0.018
+        ],
+        "half_extents": [
+          0.018,
+          0.018,
+          0.018
+        ],
+        "collision": "closed convex rigid hull",
+        "native_validation": "pending"
+      },
+      {
+        "id": "block4",
+        "category": "matryoshka",
+        "original_source": {
+          "root_env": "VIC_ROBODOJO_ASSETS",
+          "relative_path": "Object/RoboDojo/Rigid/small_cube/00007/object.usdz",
+          "sha256": "5e884b3ea23bca1706aabbc53f7d6cfe66cafc57fd70ddfc5ba031d5107ec583",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "dependencies": []
+        },
+        "asset": {
+          "root_env": "VIC_INFERENCE_ASSETS",
+          "relative_path": "g2/E07_block4.usda",
+          "sha256": "8a689e1e8427f738ade69ade472d0118a99912a6dc959eedd5d3ac64b4b3bdbe",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "original_half_extents": [
+          0.024,
+          0.024,
+          0.024
+        ],
+        "half_extents": [
+          0.024,
+          0.024,
+          0.024
+        ],
+        "collision": "closed convex rigid hull",
+        "native_validation": "pending"
+      },
+      {
+        "id": "block5",
+        "category": "matryoshka",
+        "original_source": {
+          "root_env": "VIC_ROBODOJO_ASSETS",
+          "relative_path": "Object/RoboDojo/Rigid/small_cube/00007/object.usdz",
+          "sha256": "5e884b3ea23bca1706aabbc53f7d6cfe66cafc57fd70ddfc5ba031d5107ec583",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "dependencies": []
+        },
+        "asset": {
+          "root_env": "VIC_INFERENCE_ASSETS",
+          "relative_path": "g2/E07_block5.usda",
+          "sha256": "d4a2c8e33cc80cee99754d134a34ba2630ad8ceadf7e86c2fc9f8dd27c319eb3",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "original_half_extents": [
+          0.03,
+          0.03,
+          0.03
+        ],
+        "half_extents": [
+          0.03,
+          0.03,
+          0.03
+        ],
+        "collision": "closed convex rigid hull",
+        "native_validation": "pending"
+      }
+    ],
+    "E09": [
+      {
+        "id": "red_square",
+        "category": "cookie_square",
+        "original_source": {
+          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "relative_path": "source_four_hole_plate.usda",
+          "sha256": "fed57b9b0e69a5b8b98d75324ed6856c0cdb21ebc56c8f98cb372670255b61bb",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "dependencies": []
+        },
+        "asset": {
+          "root_env": "VIC_INFERENCE_ASSETS",
+          "relative_path": "g2/E09_red_square.usda",
+          "sha256": "4dc14a08ed887c65ea0d33e5a3ad6d38b2bd233acdc7c15f05590a1a2a0cce24",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "original_half_extents": [
+          0.02,
+          0.02,
+          0.003
+        ],
+        "half_extents": [
+          0.02,
+          0.02,
+          0.003
+        ],
+        "collision": "closed convex rigid hull",
+        "native_validation": "pending"
+      },
+      {
+        "id": "red_triangle",
+        "category": "cookie_triangle",
+        "original_source": {
+          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "relative_path": "source_three_hole_triangle_v2.usda",
+          "sha256": "caae5e783af9afae7ee6c1933e42a1654d746635873c7a1bb221ea4554a70e7b",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "dependencies": []
+        },
+        "asset": {
+          "root_env": "VIC_INFERENCE_ASSETS",
+          "relative_path": "g2/E09_red_triangle.usda",
+          "sha256": "36bf311d3351405c91f8c4baf156c193102f6b7af515af091e88154d8a8cc942",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "original_half_extents": [
+          0.02,
+          0.017320508,
+          0.003
+        ],
+        "half_extents": [
+          0.02,
+          0.017320508,
+          0.003
+        ],
+        "collision": "closed convex rigid hull",
+        "native_validation": "pending"
+      },
+      {
+        "id": "red_circle",
+        "category": "cookie_circle",
+        "original_source": {
+          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "relative_path": "native_ring.usdz",
+          "sha256": "df00d91f5ab3d172ad8699751be9a5b3b6115eb1702e8a6c65da29470151d550",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "dependencies": []
+        },
+        "asset": {
+          "root_env": "VIC_INFERENCE_ASSETS",
+          "relative_path": "g2/E09_red_circle.usda",
+          "sha256": "6f8fec49bc509f2e213b985fd388345ad61d0540d6310796c09f8e07f2f1340f",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "original_half_extents": [
+          0.02,
+          0.02,
+          0.004
+        ],
+        "half_extents": [
+          0.02,
+          0.02,
+          0.004
+        ],
+        "collision": "closed convex rigid hull",
+        "native_validation": "pending"
+      },
+      {
+        "id": "green_square",
+        "category": "cookie_square",
+        "original_source": {
+          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "relative_path": "source_four_hole_plate.usda",
+          "sha256": "fed57b9b0e69a5b8b98d75324ed6856c0cdb21ebc56c8f98cb372670255b61bb",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "dependencies": []
+        },
+        "asset": {
+          "root_env": "VIC_INFERENCE_ASSETS",
+          "relative_path": "g2/E09_green_square.usda",
+          "sha256": "1fd7f885f48f8fd65abb58431e222826d0d922747d87f10bcd3c68624f0888b6",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "original_half_extents": [
+          0.02,
+          0.02,
+          0.003
+        ],
+        "half_extents": [
+          0.02,
+          0.02,
+          0.003
+        ],
+        "collision": "closed convex rigid hull",
+        "native_validation": "pending"
+      },
+      {
+        "id": "green_triangle",
+        "category": "cookie_triangle",
+        "original_source": {
+          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "relative_path": "source_three_hole_triangle_v2.usda",
+          "sha256": "caae5e783af9afae7ee6c1933e42a1654d746635873c7a1bb221ea4554a70e7b",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "dependencies": []
+        },
+        "asset": {
+          "root_env": "VIC_INFERENCE_ASSETS",
+          "relative_path": "g2/E09_green_triangle.usda",
+          "sha256": "2cc50462dddc3fc6ac4a4fa899a2325434cf1f25a3e45725bbff394e6c76799b",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "original_half_extents": [
+          0.02,
+          0.017320508,
+          0.003
+        ],
+        "half_extents": [
+          0.02,
+          0.017320508,
+          0.003
+        ],
+        "collision": "closed convex rigid hull",
+        "native_validation": "pending"
+      },
+      {
+        "id": "green_circle",
+        "category": "cookie_circle",
+        "original_source": {
+          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "relative_path": "native_ring.usdz",
+          "sha256": "df00d91f5ab3d172ad8699751be9a5b3b6115eb1702e8a6c65da29470151d550",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "dependencies": []
+        },
+        "asset": {
+          "root_env": "VIC_INFERENCE_ASSETS",
+          "relative_path": "g2/E09_green_circle.usda",
+          "sha256": "f21700903a7cfc9eebf2c50cbe21ec8a1c2c24b0192c1132e0ca782c36ce664e",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "original_half_extents": [
+          0.02,
+          0.02,
+          0.004
+        ],
+        "half_extents": [
+          0.02,
+          0.02,
+          0.004
+        ],
+        "collision": "closed convex rigid hull",
+        "native_validation": "pending"
+      },
+      {
+        "id": "blue_square",
+        "category": "cookie_square",
+        "original_source": {
+          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "relative_path": "source_four_hole_plate.usda",
+          "sha256": "fed57b9b0e69a5b8b98d75324ed6856c0cdb21ebc56c8f98cb372670255b61bb",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "dependencies": []
+        },
+        "asset": {
+          "root_env": "VIC_INFERENCE_ASSETS",
+          "relative_path": "g2/E09_blue_square.usda",
+          "sha256": "427757c213eb41ac1da7b4adc21859dca2c51cdc094cd35b7b70ccdd0f0c703c",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "original_half_extents": [
+          0.02,
+          0.02,
+          0.003
+        ],
+        "half_extents": [
+          0.02,
+          0.02,
+          0.003
+        ],
+        "collision": "closed convex rigid hull",
+        "native_validation": "pending"
+      },
+      {
+        "id": "blue_triangle",
+        "category": "cookie_triangle",
+        "original_source": {
+          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "relative_path": "source_three_hole_triangle_v2.usda",
+          "sha256": "caae5e783af9afae7ee6c1933e42a1654d746635873c7a1bb221ea4554a70e7b",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "dependencies": []
+        },
+        "asset": {
+          "root_env": "VIC_INFERENCE_ASSETS",
+          "relative_path": "g2/E09_blue_triangle.usda",
+          "sha256": "b56037746e336119ece1de59ca9d67c42772dde6c34d166026500b39d6d71e39",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "original_half_extents": [
+          0.02,
+          0.017320508,
+          0.003
+        ],
+        "half_extents": [
+          0.02,
+          0.017320508,
+          0.003
+        ],
+        "collision": "closed convex rigid hull",
+        "native_validation": "pending"
+      },
+      {
+        "id": "blue_circle",
+        "category": "cookie_circle",
+        "original_source": {
+          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "relative_path": "native_ring.usdz",
+          "sha256": "df00d91f5ab3d172ad8699751be9a5b3b6115eb1702e8a6c65da29470151d550",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "dependencies": []
+        },
+        "asset": {
+          "root_env": "VIC_INFERENCE_ASSETS",
+          "relative_path": "g2/E09_blue_circle.usda",
+          "sha256": "48ba63f0d4757ec419e0943261efe7bc1dfd6def60c9e3d8e7bc6688f038a32d",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "original_half_extents": [
+          0.02,
+          0.02,
+          0.004
+        ],
+        "half_extents": [
+          0.02,
+          0.02,
+          0.004
+        ],
+        "collision": "closed convex rigid hull",
+        "native_validation": "pending"
+      }
+    ],
+    "E11": [
+      {
+        "id": "red_block",
+        "category": "apple",
+        "original_source": {
+          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "relative_path": "source_four_hole_plate.usda",
+          "sha256": "fed57b9b0e69a5b8b98d75324ed6856c0cdb21ebc56c8f98cb372670255b61bb",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "dependencies": []
+        },
+        "asset": {
+          "root_env": "VIC_INFERENCE_ASSETS",
+          "relative_path": "g2/E11_red_block.usda",
+          "sha256": "5dd409f3f7d55fffeac80cfd22809d102fa68f3dbaad8e44fe1d07a67a6e48eb",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "original_half_extents": [
+          0.02,
+          0.02,
+          0.003
+        ],
+        "half_extents": [
+          0.02,
+          0.02,
+          0.02
+        ],
+        "collision": "closed convex rigid hull",
+        "native_validation": "pending"
+      },
+      {
+        "id": "blue_block",
+        "category": "orange",
+        "original_source": {
+          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "relative_path": "source_four_hole_plate.usda",
+          "sha256": "fed57b9b0e69a5b8b98d75324ed6856c0cdb21ebc56c8f98cb372670255b61bb",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "dependencies": []
+        },
+        "asset": {
+          "root_env": "VIC_INFERENCE_ASSETS",
+          "relative_path": "g2/E11_blue_block.usda",
+          "sha256": "ec8ae7c96e431ff40e1fd794a110b9f661dac992cc030903a4f44ece4e965607",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "original_half_extents": [
+          0.02,
+          0.02,
+          0.003
+        ],
+        "half_extents": [
+          0.02,
+          0.02,
+          0.02
+        ],
+        "collision": "closed convex rigid hull",
+        "native_validation": "pending"
+      },
+      {
+        "id": "yellow_block",
+        "category": "lemon",
+        "original_source": {
+          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "relative_path": "source_four_hole_plate.usda",
+          "sha256": "fed57b9b0e69a5b8b98d75324ed6856c0cdb21ebc56c8f98cb372670255b61bb",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "dependencies": []
+        },
+        "asset": {
+          "root_env": "VIC_INFERENCE_ASSETS",
+          "relative_path": "g2/E11_yellow_block.usda",
+          "sha256": "bb68a16e4f2c6c39498846d0699b9101ee67f5afb731f05b50e9f0055dfd23ca",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "original_half_extents": [
+          0.02,
+          0.02,
+          0.003
+        ],
+        "half_extents": [
+          0.02,
+          0.02,
+          0.02
+        ],
+        "collision": "closed convex rigid hull",
+        "native_validation": "pending"
+      },
+      {
+        "id": "green_block",
+        "category": "pear",
+        "original_source": {
+          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "relative_path": "source_four_hole_plate.usda",
+          "sha256": "fed57b9b0e69a5b8b98d75324ed6856c0cdb21ebc56c8f98cb372670255b61bb",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "dependencies": []
+        },
+        "asset": {
+          "root_env": "VIC_INFERENCE_ASSETS",
+          "relative_path": "g2/E11_green_block.usda",
+          "sha256": "aeb50b47b7b10a266e1a9bedc30e00964970e8cdff68f0c1ff831e48236f0bb7",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "original_half_extents": [
+          0.02,
+          0.02,
+          0.003
+        ],
+        "half_extents": [
+          0.02,
+          0.02,
+          0.02
+        ],
+        "collision": "closed convex rigid hull",
+        "native_validation": "pending"
+      }
+    ],
+    "E20": [
+      {
+        "id": "yellow_supply_1",
+        "category": "button",
+        "original_source": {
+          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "relative_path": "coaster_disk.usda",
+          "sha256": "0a52a9c5b908277e7e408155316a3fc55f889405d6ab0331f0922e8bb4047120",
+          "source_rotation": [
+            0.7071067811865476,
+            0.7071067811865476,
+            0,
+            0
+          ],
+          "dependencies": [
+            {
+              "relative_path": "coaster_disk_textures/9b1b13803e79d4fc9ab3349b304aaa3a149bd716c3ec21b3d2bad6f70f6b78c3.png",
+              "sha256": "9b1b13803e79d4fc9ab3349b304aaa3a149bd716c3ec21b3d2bad6f70f6b78c3"
+            }
+          ]
+        },
+        "asset": {
+          "root_env": "VIC_INFERENCE_ASSETS",
+          "relative_path": "g2/E20_yellow_supply_1.usda",
+          "sha256": "1a771929959bd8bd52da702ad69b5df64f8494aeed3b6962bbe21dd18520519d",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "original_half_extents": [
+          0.016,
+          0.01603,
+          0.000988
+        ],
+        "half_extents": [
+          0.016,
+          0.01603,
+          0.000988
+        ],
+        "collision": "closed convex rigid hull",
+        "native_validation": "pending"
+      },
+      {
+        "id": "yellow_supply_2",
+        "category": "button",
+        "original_source": {
+          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "relative_path": "coaster_disk.usda",
+          "sha256": "0a52a9c5b908277e7e408155316a3fc55f889405d6ab0331f0922e8bb4047120",
+          "source_rotation": [
+            0.7071067811865476,
+            0.7071067811865476,
+            0,
+            0
+          ],
+          "dependencies": [
+            {
+              "relative_path": "coaster_disk_textures/9b1b13803e79d4fc9ab3349b304aaa3a149bd716c3ec21b3d2bad6f70f6b78c3.png",
+              "sha256": "9b1b13803e79d4fc9ab3349b304aaa3a149bd716c3ec21b3d2bad6f70f6b78c3"
+            }
+          ]
+        },
+        "asset": {
+          "root_env": "VIC_INFERENCE_ASSETS",
+          "relative_path": "g2/E20_yellow_supply_2.usda",
+          "sha256": "1a771929959bd8bd52da702ad69b5df64f8494aeed3b6962bbe21dd18520519d",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "original_half_extents": [
+          0.016,
+          0.01603,
+          0.000988
+        ],
+        "half_extents": [
+          0.016,
+          0.01603,
+          0.000988
+        ],
+        "collision": "closed convex rigid hull",
+        "native_validation": "pending"
+      },
+      {
+        "id": "yellow_supply_3",
+        "category": "button",
+        "original_source": {
+          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "relative_path": "coaster_disk.usda",
+          "sha256": "0a52a9c5b908277e7e408155316a3fc55f889405d6ab0331f0922e8bb4047120",
+          "source_rotation": [
+            0.7071067811865476,
+            0.7071067811865476,
+            0,
+            0
+          ],
+          "dependencies": [
+            {
+              "relative_path": "coaster_disk_textures/9b1b13803e79d4fc9ab3349b304aaa3a149bd716c3ec21b3d2bad6f70f6b78c3.png",
+              "sha256": "9b1b13803e79d4fc9ab3349b304aaa3a149bd716c3ec21b3d2bad6f70f6b78c3"
+            }
+          ]
+        },
+        "asset": {
+          "root_env": "VIC_INFERENCE_ASSETS",
+          "relative_path": "g2/E20_yellow_supply_3.usda",
+          "sha256": "1a771929959bd8bd52da702ad69b5df64f8494aeed3b6962bbe21dd18520519d",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "original_half_extents": [
+          0.016,
+          0.01603,
+          0.000988
+        ],
+        "half_extents": [
+          0.016,
+          0.01603,
+          0.000988
+        ],
+        "collision": "closed convex rigid hull",
+        "native_validation": "pending"
+      },
+      {
+        "id": "yellow_supply_4",
+        "category": "button",
+        "original_source": {
+          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "relative_path": "coaster_disk.usda",
+          "sha256": "0a52a9c5b908277e7e408155316a3fc55f889405d6ab0331f0922e8bb4047120",
+          "source_rotation": [
+            0.7071067811865476,
+            0.7071067811865476,
+            0,
+            0
+          ],
+          "dependencies": [
+            {
+              "relative_path": "coaster_disk_textures/9b1b13803e79d4fc9ab3349b304aaa3a149bd716c3ec21b3d2bad6f70f6b78c3.png",
+              "sha256": "9b1b13803e79d4fc9ab3349b304aaa3a149bd716c3ec21b3d2bad6f70f6b78c3"
+            }
+          ]
+        },
+        "asset": {
+          "root_env": "VIC_INFERENCE_ASSETS",
+          "relative_path": "g2/E20_yellow_supply_4.usda",
+          "sha256": "1a771929959bd8bd52da702ad69b5df64f8494aeed3b6962bbe21dd18520519d",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "original_half_extents": [
+          0.016,
+          0.01603,
+          0.000988
+        ],
+        "half_extents": [
+          0.016,
+          0.01603,
+          0.000988
+        ],
+        "collision": "closed convex rigid hull",
+        "native_validation": "pending"
+      },
+      {
+        "id": "red_supply_1",
+        "category": "button",
+        "original_source": {
+          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "relative_path": "coaster_disk.usda",
+          "sha256": "0a52a9c5b908277e7e408155316a3fc55f889405d6ab0331f0922e8bb4047120",
+          "source_rotation": [
+            0.7071067811865476,
+            0.7071067811865476,
+            0,
+            0
+          ],
+          "dependencies": [
+            {
+              "relative_path": "coaster_disk_textures/9b1b13803e79d4fc9ab3349b304aaa3a149bd716c3ec21b3d2bad6f70f6b78c3.png",
+              "sha256": "9b1b13803e79d4fc9ab3349b304aaa3a149bd716c3ec21b3d2bad6f70f6b78c3"
+            }
+          ]
+        },
+        "asset": {
+          "root_env": "VIC_INFERENCE_ASSETS",
+          "relative_path": "g2/E20_red_supply_1.usda",
+          "sha256": "6d09641c82ef069d4aedcd1bb59caa03aaf2d8b3ec31c97c97b2af7d63bfc0c8",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "original_half_extents": [
+          0.016,
+          0.01603,
+          0.000988
+        ],
+        "half_extents": [
+          0.016,
+          0.01603,
+          0.000988
+        ],
+        "collision": "closed convex rigid hull",
+        "native_validation": "pending"
+      },
+      {
+        "id": "red_supply_2",
+        "category": "button",
+        "original_source": {
+          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "relative_path": "coaster_disk.usda",
+          "sha256": "0a52a9c5b908277e7e408155316a3fc55f889405d6ab0331f0922e8bb4047120",
+          "source_rotation": [
+            0.7071067811865476,
+            0.7071067811865476,
+            0,
+            0
+          ],
+          "dependencies": [
+            {
+              "relative_path": "coaster_disk_textures/9b1b13803e79d4fc9ab3349b304aaa3a149bd716c3ec21b3d2bad6f70f6b78c3.png",
+              "sha256": "9b1b13803e79d4fc9ab3349b304aaa3a149bd716c3ec21b3d2bad6f70f6b78c3"
+            }
+          ]
+        },
+        "asset": {
+          "root_env": "VIC_INFERENCE_ASSETS",
+          "relative_path": "g2/E20_red_supply_2.usda",
+          "sha256": "6d09641c82ef069d4aedcd1bb59caa03aaf2d8b3ec31c97c97b2af7d63bfc0c8",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "original_half_extents": [
+          0.016,
+          0.01603,
+          0.000988
+        ],
+        "half_extents": [
+          0.016,
+          0.01603,
+          0.000988
+        ],
+        "collision": "closed convex rigid hull",
+        "native_validation": "pending"
+      },
+      {
+        "id": "red_supply_3",
+        "category": "button",
+        "original_source": {
+          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "relative_path": "coaster_disk.usda",
+          "sha256": "0a52a9c5b908277e7e408155316a3fc55f889405d6ab0331f0922e8bb4047120",
+          "source_rotation": [
+            0.7071067811865476,
+            0.7071067811865476,
+            0,
+            0
+          ],
+          "dependencies": [
+            {
+              "relative_path": "coaster_disk_textures/9b1b13803e79d4fc9ab3349b304aaa3a149bd716c3ec21b3d2bad6f70f6b78c3.png",
+              "sha256": "9b1b13803e79d4fc9ab3349b304aaa3a149bd716c3ec21b3d2bad6f70f6b78c3"
+            }
+          ]
+        },
+        "asset": {
+          "root_env": "VIC_INFERENCE_ASSETS",
+          "relative_path": "g2/E20_red_supply_3.usda",
+          "sha256": "6d09641c82ef069d4aedcd1bb59caa03aaf2d8b3ec31c97c97b2af7d63bfc0c8",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "original_half_extents": [
+          0.016,
+          0.01603,
+          0.000988
+        ],
+        "half_extents": [
+          0.016,
+          0.01603,
+          0.000988
+        ],
+        "collision": "closed convex rigid hull",
+        "native_validation": "pending"
+      },
+      {
+        "id": "red_supply_4",
+        "category": "button",
+        "original_source": {
+          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "relative_path": "coaster_disk.usda",
+          "sha256": "0a52a9c5b908277e7e408155316a3fc55f889405d6ab0331f0922e8bb4047120",
+          "source_rotation": [
+            0.7071067811865476,
+            0.7071067811865476,
+            0,
+            0
+          ],
+          "dependencies": [
+            {
+              "relative_path": "coaster_disk_textures/9b1b13803e79d4fc9ab3349b304aaa3a149bd716c3ec21b3d2bad6f70f6b78c3.png",
+              "sha256": "9b1b13803e79d4fc9ab3349b304aaa3a149bd716c3ec21b3d2bad6f70f6b78c3"
+            }
+          ]
+        },
+        "asset": {
+          "root_env": "VIC_INFERENCE_ASSETS",
+          "relative_path": "g2/E20_red_supply_4.usda",
+          "sha256": "6d09641c82ef069d4aedcd1bb59caa03aaf2d8b3ec31c97c97b2af7d63bfc0c8",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "original_half_extents": [
+          0.016,
+          0.01603,
+          0.000988
+        ],
+        "half_extents": [
+          0.016,
+          0.01603,
+          0.000988
+        ],
+        "collision": "closed convex rigid hull",
+        "native_validation": "pending"
+      },
+      {
+        "id": "blue_supply_1",
+        "category": "button",
+        "original_source": {
+          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "relative_path": "coaster_disk.usda",
+          "sha256": "0a52a9c5b908277e7e408155316a3fc55f889405d6ab0331f0922e8bb4047120",
+          "source_rotation": [
+            0.7071067811865476,
+            0.7071067811865476,
+            0,
+            0
+          ],
+          "dependencies": [
+            {
+              "relative_path": "coaster_disk_textures/9b1b13803e79d4fc9ab3349b304aaa3a149bd716c3ec21b3d2bad6f70f6b78c3.png",
+              "sha256": "9b1b13803e79d4fc9ab3349b304aaa3a149bd716c3ec21b3d2bad6f70f6b78c3"
+            }
+          ]
+        },
+        "asset": {
+          "root_env": "VIC_INFERENCE_ASSETS",
+          "relative_path": "g2/E20_blue_supply_1.usda",
+          "sha256": "e14395c1577a9b914586c2fbdd92dbab8ae4a024190601f535df71bb890f8be7",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "original_half_extents": [
+          0.016,
+          0.01603,
+          0.000988
+        ],
+        "half_extents": [
+          0.016,
+          0.01603,
+          0.000988
+        ],
+        "collision": "closed convex rigid hull",
+        "native_validation": "pending"
+      },
+      {
+        "id": "blue_supply_2",
+        "category": "button",
+        "original_source": {
+          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "relative_path": "coaster_disk.usda",
+          "sha256": "0a52a9c5b908277e7e408155316a3fc55f889405d6ab0331f0922e8bb4047120",
+          "source_rotation": [
+            0.7071067811865476,
+            0.7071067811865476,
+            0,
+            0
+          ],
+          "dependencies": [
+            {
+              "relative_path": "coaster_disk_textures/9b1b13803e79d4fc9ab3349b304aaa3a149bd716c3ec21b3d2bad6f70f6b78c3.png",
+              "sha256": "9b1b13803e79d4fc9ab3349b304aaa3a149bd716c3ec21b3d2bad6f70f6b78c3"
+            }
+          ]
+        },
+        "asset": {
+          "root_env": "VIC_INFERENCE_ASSETS",
+          "relative_path": "g2/E20_blue_supply_2.usda",
+          "sha256": "e14395c1577a9b914586c2fbdd92dbab8ae4a024190601f535df71bb890f8be7",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "original_half_extents": [
+          0.016,
+          0.01603,
+          0.000988
+        ],
+        "half_extents": [
+          0.016,
+          0.01603,
+          0.000988
+        ],
+        "collision": "closed convex rigid hull",
+        "native_validation": "pending"
+      },
+      {
+        "id": "blue_supply_3",
+        "category": "button",
+        "original_source": {
+          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "relative_path": "coaster_disk.usda",
+          "sha256": "0a52a9c5b908277e7e408155316a3fc55f889405d6ab0331f0922e8bb4047120",
+          "source_rotation": [
+            0.7071067811865476,
+            0.7071067811865476,
+            0,
+            0
+          ],
+          "dependencies": [
+            {
+              "relative_path": "coaster_disk_textures/9b1b13803e79d4fc9ab3349b304aaa3a149bd716c3ec21b3d2bad6f70f6b78c3.png",
+              "sha256": "9b1b13803e79d4fc9ab3349b304aaa3a149bd716c3ec21b3d2bad6f70f6b78c3"
+            }
+          ]
+        },
+        "asset": {
+          "root_env": "VIC_INFERENCE_ASSETS",
+          "relative_path": "g2/E20_blue_supply_3.usda",
+          "sha256": "e14395c1577a9b914586c2fbdd92dbab8ae4a024190601f535df71bb890f8be7",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "original_half_extents": [
+          0.016,
+          0.01603,
+          0.000988
+        ],
+        "half_extents": [
+          0.016,
+          0.01603,
+          0.000988
+        ],
+        "collision": "closed convex rigid hull",
+        "native_validation": "pending"
+      },
+      {
+        "id": "blue_supply_4",
+        "category": "button",
+        "original_source": {
+          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "relative_path": "coaster_disk.usda",
+          "sha256": "0a52a9c5b908277e7e408155316a3fc55f889405d6ab0331f0922e8bb4047120",
+          "source_rotation": [
+            0.7071067811865476,
+            0.7071067811865476,
+            0,
+            0
+          ],
+          "dependencies": [
+            {
+              "relative_path": "coaster_disk_textures/9b1b13803e79d4fc9ab3349b304aaa3a149bd716c3ec21b3d2bad6f70f6b78c3.png",
+              "sha256": "9b1b13803e79d4fc9ab3349b304aaa3a149bd716c3ec21b3d2bad6f70f6b78c3"
+            }
+          ]
+        },
+        "asset": {
+          "root_env": "VIC_INFERENCE_ASSETS",
+          "relative_path": "g2/E20_blue_supply_4.usda",
+          "sha256": "e14395c1577a9b914586c2fbdd92dbab8ae4a024190601f535df71bb890f8be7",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "original_half_extents": [
+          0.016,
+          0.01603,
+          0.000988
+        ],
+        "half_extents": [
+          0.016,
+          0.01603,
+          0.000988
+        ],
+        "collision": "closed convex rigid hull",
+        "native_validation": "pending"
+      },
+      {
+        "id": "yellow_initial",
+        "category": "button",
+        "original_source": {
+          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "relative_path": "coaster_disk.usda",
+          "sha256": "0a52a9c5b908277e7e408155316a3fc55f889405d6ab0331f0922e8bb4047120",
+          "source_rotation": [
+            0.7071067811865476,
+            0.7071067811865476,
+            0,
+            0
+          ],
+          "dependencies": [
+            {
+              "relative_path": "coaster_disk_textures/9b1b13803e79d4fc9ab3349b304aaa3a149bd716c3ec21b3d2bad6f70f6b78c3.png",
+              "sha256": "9b1b13803e79d4fc9ab3349b304aaa3a149bd716c3ec21b3d2bad6f70f6b78c3"
+            }
+          ]
+        },
+        "asset": {
+          "root_env": "VIC_INFERENCE_ASSETS",
+          "relative_path": "g2/E20_yellow_initial.usda",
+          "sha256": "1a771929959bd8bd52da702ad69b5df64f8494aeed3b6962bbe21dd18520519d",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "original_half_extents": [
+          0.016,
+          0.01603,
+          0.000988
+        ],
+        "half_extents": [
+          0.016,
+          0.01603,
+          0.000988
+        ],
+        "collision": "closed convex rigid hull",
+        "native_validation": "pending"
+      },
+      {
+        "id": "blue_initial",
+        "category": "button",
+        "original_source": {
+          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "relative_path": "coaster_disk.usda",
+          "sha256": "0a52a9c5b908277e7e408155316a3fc55f889405d6ab0331f0922e8bb4047120",
+          "source_rotation": [
+            0.7071067811865476,
+            0.7071067811865476,
+            0,
+            0
+          ],
+          "dependencies": [
+            {
+              "relative_path": "coaster_disk_textures/9b1b13803e79d4fc9ab3349b304aaa3a149bd716c3ec21b3d2bad6f70f6b78c3.png",
+              "sha256": "9b1b13803e79d4fc9ab3349b304aaa3a149bd716c3ec21b3d2bad6f70f6b78c3"
+            }
+          ]
+        },
+        "asset": {
+          "root_env": "VIC_INFERENCE_ASSETS",
+          "relative_path": "g2/E20_blue_initial.usda",
+          "sha256": "e14395c1577a9b914586c2fbdd92dbab8ae4a024190601f535df71bb890f8be7",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "original_half_extents": [
+          0.016,
+          0.01603,
+          0.000988
+        ],
+        "half_extents": [
+          0.016,
+          0.01603,
+          0.000988
+        ],
+        "collision": "closed convex rigid hull",
+        "native_validation": "pending"
+      }
+    ],
+    "E36": [
+      {
+        "id": "red",
+        "category": "apple",
+        "original_source": {
+          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "relative_path": "sphere_white.usda",
+          "sha256": "257fb8afcd8eb2787aa4c59fd39314b036f78287e4d277f210168048f8becc1a",
+          "source_rotation": [
+            0.7071067811865476,
+            0.7071067811865476,
+            0,
+            0
+          ],
+          "dependencies": []
+        },
+        "asset": {
+          "root_env": "VIC_INFERENCE_ASSETS",
+          "relative_path": "g2/E36_red.usda",
+          "sha256": "6ec0b25e6d1947b1f143ce5c569e9e3a9715175fb2bdbd0b3313458ca0b08ef3",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "original_half_extents": [
+          0.013652941818490449,
+          0.014,
+          0.013857428965220098
+        ],
+        "half_extents": [
+          0.013652941818490449,
+          0.014,
+          0.013857428965220098
+        ],
+        "collision": "closed convex rigid hull",
+        "native_validation": "pending"
+      },
+      {
+        "id": "pink",
+        "category": "apple",
+        "original_source": {
+          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "relative_path": "sphere_white.usda",
+          "sha256": "257fb8afcd8eb2787aa4c59fd39314b036f78287e4d277f210168048f8becc1a",
+          "source_rotation": [
+            0.7071067811865476,
+            0.7071067811865476,
+            0,
+            0
+          ],
+          "dependencies": []
+        },
+        "asset": {
+          "root_env": "VIC_INFERENCE_ASSETS",
+          "relative_path": "g2/E36_pink.usda",
+          "sha256": "6ec0b25e6d1947b1f143ce5c569e9e3a9715175fb2bdbd0b3313458ca0b08ef3",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "original_half_extents": [
+          0.013652941818490449,
+          0.014,
+          0.013857428965220098
+        ],
+        "half_extents": [
+          0.013652941818490449,
+          0.014,
+          0.013857428965220098
+        ],
+        "collision": "closed convex rigid hull",
+        "native_validation": "pending"
+      },
+      {
+        "id": "lightpink",
+        "category": "apple",
+        "original_source": {
+          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "relative_path": "sphere_white.usda",
+          "sha256": "257fb8afcd8eb2787aa4c59fd39314b036f78287e4d277f210168048f8becc1a",
+          "source_rotation": [
+            0.7071067811865476,
+            0.7071067811865476,
+            0,
+            0
+          ],
+          "dependencies": []
+        },
+        "asset": {
+          "root_env": "VIC_INFERENCE_ASSETS",
+          "relative_path": "g2/E36_lightpink.usda",
+          "sha256": "6ec0b25e6d1947b1f143ce5c569e9e3a9715175fb2bdbd0b3313458ca0b08ef3",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "original_half_extents": [
+          0.013652941818490449,
+          0.014,
+          0.013857428965220098
+        ],
+        "half_extents": [
+          0.013652941818490449,
+          0.014,
+          0.013857428965220098
+        ],
+        "collision": "closed convex rigid hull",
+        "native_validation": "pending"
+      },
+      {
+        "id": "blue",
+        "category": "apple",
+        "original_source": {
+          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "relative_path": "sphere_white.usda",
+          "sha256": "257fb8afcd8eb2787aa4c59fd39314b036f78287e4d277f210168048f8becc1a",
+          "source_rotation": [
+            0.7071067811865476,
+            0.7071067811865476,
+            0,
+            0
+          ],
+          "dependencies": []
+        },
+        "asset": {
+          "root_env": "VIC_INFERENCE_ASSETS",
+          "relative_path": "g2/E36_blue.usda",
+          "sha256": "6ec0b25e6d1947b1f143ce5c569e9e3a9715175fb2bdbd0b3313458ca0b08ef3",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "original_half_extents": [
+          0.013652941818490449,
+          0.014,
+          0.013857428965220098
+        ],
+        "half_extents": [
+          0.013652941818490449,
+          0.014,
+          0.013857428965220098
+        ],
+        "collision": "closed convex rigid hull",
+        "native_validation": "pending"
+      }
+    ],
+    "E41": [
+      {
+        "id": "short_ref",
+        "category": "eraser",
+        "original_source": {
+          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "relative_path": "native_wood_plank.usdz",
+          "sha256": "9e71af43eaa1afcf63198dfc5653f11472fae47d498264b065aa269aa26be611",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "allow_nonuniform_scale": true
+        },
+        "asset": {
+          "root_env": "VIC_INFERENCE_ASSETS",
+          "relative_path": "g2/E41_short_ref.usda",
+          "sha256": "85095adca95c6dcaf568901b110b7192c99b7182ae1e2a82f97db7843c090f65",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "original_half_extents": [
+          0.0375,
+          0.01,
+          0.002
+        ],
+        "half_extents": [
+          0.0375,
+          0.01,
+          0.002
+        ],
+        "collision": "closed convex rigid hull",
+        "native_validation": "pending"
+      },
+      {
+        "id": "medium_ref",
+        "category": "eraser",
+        "original_source": {
+          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "relative_path": "native_wood_plank.usdz",
+          "sha256": "9e71af43eaa1afcf63198dfc5653f11472fae47d498264b065aa269aa26be611",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "allow_nonuniform_scale": true
+        },
+        "asset": {
+          "root_env": "VIC_INFERENCE_ASSETS",
+          "relative_path": "g2/E41_medium_ref.usda",
+          "sha256": "e37189b5739af01f1f31dc7f2f7a99f1a10b08491cb8f478a416ab9b5d12e1c1",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "original_half_extents": [
+          0.0525,
+          0.01,
+          0.002
+        ],
+        "half_extents": [
+          0.0525,
+          0.01,
+          0.002
+        ],
+        "collision": "closed convex rigid hull",
+        "native_validation": "pending"
+      },
+      {
+        "id": "long_ref",
+        "category": "eraser",
+        "original_source": {
+          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "relative_path": "native_wood_plank.usdz",
+          "sha256": "9e71af43eaa1afcf63198dfc5653f11472fae47d498264b065aa269aa26be611",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "allow_nonuniform_scale": true
+        },
+        "asset": {
+          "root_env": "VIC_INFERENCE_ASSETS",
+          "relative_path": "g2/E41_long_ref.usda",
+          "sha256": "57148e972b15c5199ce2d5a9cef23c1d03189923cafdf69eca23eca5598f1743",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "original_half_extents": [
+          0.0725,
+          0.01,
+          0.002
+        ],
+        "half_extents": [
+          0.0725,
+          0.01,
+          0.002
+        ],
+        "collision": "closed convex rigid hull",
+        "native_validation": "pending"
+      },
+      {
+        "id": "long_piece",
+        "category": "eraser",
+        "original_source": {
+          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "relative_path": "native_wood_plank.usdz",
+          "sha256": "9e71af43eaa1afcf63198dfc5653f11472fae47d498264b065aa269aa26be611",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "allow_nonuniform_scale": true
+        },
+        "asset": {
+          "root_env": "VIC_INFERENCE_ASSETS",
+          "relative_path": "g2/E41_long_piece.usda",
+          "sha256": "57148e972b15c5199ce2d5a9cef23c1d03189923cafdf69eca23eca5598f1743",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "original_half_extents": [
+          0.0725,
+          0.01,
+          0.002
+        ],
+        "half_extents": [
+          0.0725,
+          0.01,
+          0.002
+        ],
+        "collision": "closed convex rigid hull",
+        "native_validation": "pending"
+      },
+      {
+        "id": "short_piece",
+        "category": "eraser",
+        "original_source": {
+          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "relative_path": "native_wood_plank.usdz",
+          "sha256": "9e71af43eaa1afcf63198dfc5653f11472fae47d498264b065aa269aa26be611",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "allow_nonuniform_scale": true
+        },
+        "asset": {
+          "root_env": "VIC_INFERENCE_ASSETS",
+          "relative_path": "g2/E41_short_piece.usda",
+          "sha256": "85095adca95c6dcaf568901b110b7192c99b7182ae1e2a82f97db7843c090f65",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "original_half_extents": [
+          0.0375,
+          0.01,
+          0.002
+        ],
+        "half_extents": [
+          0.0375,
+          0.01,
+          0.002
+        ],
+        "collision": "closed convex rigid hull",
+        "native_validation": "pending"
+      },
+      {
+        "id": "medium_piece",
+        "category": "eraser",
+        "original_source": {
+          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "relative_path": "native_wood_plank.usdz",
+          "sha256": "9e71af43eaa1afcf63198dfc5653f11472fae47d498264b065aa269aa26be611",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "dependencies": [],
+          "allow_nonuniform_scale": true
+        },
+        "asset": {
+          "root_env": "VIC_INFERENCE_ASSETS",
+          "relative_path": "g2/E41_medium_piece.usda",
+          "sha256": "e37189b5739af01f1f31dc7f2f7a99f1a10b08491cb8f478a416ab9b5d12e1c1",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "original_half_extents": [
+          0.0525,
+          0.01,
+          0.002
+        ],
+        "half_extents": [
+          0.0525,
+          0.01,
+          0.002
+        ],
+        "collision": "closed convex rigid hull",
+        "native_validation": "pending"
+      }
+    ],
+    "E49": [
+      {
+        "id": "card1",
+        "category": "photo",
+        "original_source": {
+          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "relative_path": "card_H_2.usda",
+          "sha256": "e6d4c721b74a3b6f3d273c987d06698c3b4f162de30189554de47ddee51b3f81",
+          "source_rotation": [
+            0.7071067811865476,
+            0,
+            0,
+            0.7071067811865476
+          ],
+          "dependencies": [
+            {
+              "relative_path": "card_H_2_textures/70d74d31b08b208b0c35e392c9a63d5bf8dc82765d19dd8094745a54a74093b7.png",
+              "sha256": "70d74d31b08b208b0c35e392c9a63d5bf8dc82765d19dd8094745a54a74093b7"
+            },
+            {
+              "relative_path": "card_H_2_textures/f16358f45c094b0bc93e18999870d6785eceb63766a60e8d33cb901543f0038e.png",
+              "sha256": "f16358f45c094b0bc93e18999870d6785eceb63766a60e8d33cb901543f0038e"
+            }
+          ]
+        },
+        "asset": {
+          "root_env": "VIC_INFERENCE_ASSETS",
+          "relative_path": "g2/E49_card1.usda",
+          "sha256": "21afb5c8a197d883f56f35c493c7a3c1eca7cd4ada5e3f8dad4e5d1cf553f331",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "dependencies": [
+            {
+              "relative_path": "g2/photo_sources/astronaut.png",
+              "sha256": "88431cd9653ccd539741b555fb0a46b61558b301d4110412b5bc28b5e3ea6cb5"
+            }
+          ]
+        },
+        "original_half_extents": [
+          0.04415271966527,
+          0.0315,
+          0.000175
+        ],
+        "half_extents": [
+          0.04415271966527,
+          0.0315,
+          0.000175
+        ],
+        "collision": "closed convex rigid hull",
+        "native_validation": "pending"
+      },
+      {
+        "id": "card2",
+        "category": "photo",
+        "original_source": {
+          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "relative_path": "card_S_2.usda",
+          "sha256": "6d421066b8c2ecfc51432478ff6cca05b07a3807c1ac22cc6d8ded18ac4f9a2c",
+          "source_rotation": [
+            0.7071067811865476,
+            0,
+            0,
+            0.7071067811865476
+          ],
+          "dependencies": [
+            {
+              "relative_path": "card_S_2_textures/70d74d31b08b208b0c35e392c9a63d5bf8dc82765d19dd8094745a54a74093b7.png",
+              "sha256": "70d74d31b08b208b0c35e392c9a63d5bf8dc82765d19dd8094745a54a74093b7"
+            },
+            {
+              "relative_path": "card_S_2_textures/59094db12bd37841783123103d57e504e2c09eac0f35f270e198e250126108fc.png",
+              "sha256": "59094db12bd37841783123103d57e504e2c09eac0f35f270e198e250126108fc"
+            }
+          ]
+        },
+        "asset": {
+          "root_env": "VIC_INFERENCE_ASSETS",
+          "relative_path": "g2/E49_card2.usda",
+          "sha256": "e8bc06925a6d832acaf35094b558fc2885e5afb06d36b849223d99eed661efbf",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "dependencies": [
+            {
+              "relative_path": "g2/photo_sources/camera.png",
+              "sha256": "b0793d2adda0fa6ae899c03989482bff9a42d3d5690fc7e3648f2795d730c23a"
+            }
+          ]
+        },
+        "original_half_extents": [
+          0.04415271966527,
+          0.0315,
+          0.000175
+        ],
+        "half_extents": [
+          0.04415271966527,
+          0.0315,
+          0.000175
+        ],
+        "collision": "closed convex rigid hull",
+        "native_validation": "pending"
+      },
+      {
+        "id": "card3",
+        "category": "photo",
+        "original_source": {
+          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "relative_path": "card_D_3.usda",
+          "sha256": "1334a3240acfd3e0843bb4778419adc11128d6733cf5278bdb54134ad4ba770c",
+          "source_rotation": [
+            0.7071067811865476,
+            0,
+            0,
+            0.7071067811865476
+          ],
+          "dependencies": [
+            {
+              "relative_path": "card_D_3_textures/70d74d31b08b208b0c35e392c9a63d5bf8dc82765d19dd8094745a54a74093b7.png",
+              "sha256": "70d74d31b08b208b0c35e392c9a63d5bf8dc82765d19dd8094745a54a74093b7"
+            },
+            {
+              "relative_path": "card_D_3_textures/dd2daecc8461113f0ea1c3c9711c50bc98a5acc06aeb0024a1239134d3b3656d.png",
+              "sha256": "dd2daecc8461113f0ea1c3c9711c50bc98a5acc06aeb0024a1239134d3b3656d"
+            }
+          ]
+        },
+        "asset": {
+          "root_env": "VIC_INFERENCE_ASSETS",
+          "relative_path": "g2/E49_card3.usda",
+          "sha256": "bc4f0c70fe051b840e37028d33152f7c75ad55bab771ee548b3f38619a357f02",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "dependencies": [
+            {
+              "relative_path": "g2/photo_sources/coins.png",
+              "sha256": "f8d773fc9cfa6f4d8e5942dc34d0a0788fcaed2a4fefbbed0aef5398d7ef4cba"
+            }
+          ]
+        },
+        "original_half_extents": [
+          0.04415271966527,
+          0.0315,
+          0.000175
+        ],
+        "half_extents": [
+          0.04415271966527,
+          0.0315,
+          0.000175
+        ],
+        "collision": "closed convex rigid hull",
+        "native_validation": "pending"
+      },
+      {
+        "id": "card4",
+        "category": "photo",
+        "original_source": {
+          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "relative_path": "card_C_3.usda",
+          "sha256": "e7e6ec6c5aaf72a7b8327d652c322117cf6ab992df21fcb9fd5fa47a552cf17c",
+          "source_rotation": [
+            0.7071067811865476,
+            0,
+            0,
+            0.7071067811865476
+          ],
+          "dependencies": [
+            {
+              "relative_path": "card_C_3_textures/70d74d31b08b208b0c35e392c9a63d5bf8dc82765d19dd8094745a54a74093b7.png",
+              "sha256": "70d74d31b08b208b0c35e392c9a63d5bf8dc82765d19dd8094745a54a74093b7"
+            },
+            {
+              "relative_path": "card_C_3_textures/c61f95200923c6f661ff9296969898a65b6596324064ba4a5d3400012b116557.png",
+              "sha256": "c61f95200923c6f661ff9296969898a65b6596324064ba4a5d3400012b116557"
+            }
+          ]
+        },
+        "asset": {
+          "root_env": "VIC_INFERENCE_ASSETS",
+          "relative_path": "g2/E49_card4.usda",
+          "sha256": "4073812f820dc8efa3af13f39a0a94e0c5903fa1217635c3b2078810daf965f7",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "dependencies": [
+            {
+              "relative_path": "g2/photo_sources/moon.png",
+              "sha256": "78739619d11f7eb9c165bb5d2efd4772cee557812ec847532dbb1d92ef71f577"
+            }
+          ]
+        },
+        "original_half_extents": [
+          0.04415271966527,
+          0.0315,
+          0.000175
+        ],
+        "half_extents": [
+          0.04415271966527,
+          0.0315,
+          0.000175
+        ],
+        "collision": "closed convex rigid hull",
+        "native_validation": "pending"
+      },
+      {
+        "id": "card5",
+        "category": "photo",
+        "original_source": {
+          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "relative_path": "card_H_2.usda",
+          "sha256": "e6d4c721b74a3b6f3d273c987d06698c3b4f162de30189554de47ddee51b3f81",
+          "source_rotation": [
+            0.7071067811865476,
+            0,
+            0,
+            0.7071067811865476
+          ],
+          "dependencies": [
+            {
+              "relative_path": "card_H_2_textures/70d74d31b08b208b0c35e392c9a63d5bf8dc82765d19dd8094745a54a74093b7.png",
+              "sha256": "70d74d31b08b208b0c35e392c9a63d5bf8dc82765d19dd8094745a54a74093b7"
+            },
+            {
+              "relative_path": "card_H_2_textures/f16358f45c094b0bc93e18999870d6785eceb63766a60e8d33cb901543f0038e.png",
+              "sha256": "f16358f45c094b0bc93e18999870d6785eceb63766a60e8d33cb901543f0038e"
+            }
+          ]
+        },
+        "asset": {
+          "root_env": "VIC_INFERENCE_ASSETS",
+          "relative_path": "g2/E49_card5.usda",
+          "sha256": "f26199d820554c8e9a258e7dcd55917db6a1bd1d1715336bf09a09ca6d42c330",
+          "source_rotation": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "dependencies": [
+            {
+              "relative_path": "g2/photo_sources/hubble_deep_field.jpg",
+              "sha256": "3a19c5dd8a927a9334bb1229a6d63711b1c0c767fb27e2286e7c84a3e2c2f5f4"
+            }
+          ]
+        },
+        "original_half_extents": [
+          0.04415271966527,
+          0.0315,
+          0.000175
+        ],
+        "half_extents": [
+          0.04415271966527,
+          0.0315,
+          0.000175
+        ],
+        "collision": "closed convex rigid hull",
+        "native_validation": "pending"
+      }
+    ]
+  },
+  "photos": [
+    {
+      "path": "g2/photo_sources/astronaut.png",
+      "sha256": "88431cd9653ccd539741b555fb0a46b61558b301d4110412b5bc28b5e3ea6cb5",
+      "upstream_url": "https://raw.githubusercontent.com/scikit-image/scikit-image/v0.19.3/skimage/data/astronaut.png"
+    },
+    {
+      "path": "g2/photo_sources/camera.png",
+      "sha256": "b0793d2adda0fa6ae899c03989482bff9a42d3d5690fc7e3648f2795d730c23a",
+      "upstream_url": "https://raw.githubusercontent.com/scikit-image/scikit-image/v0.19.3/skimage/data/camera.png"
+    },
+    {
+      "path": "g2/photo_sources/coins.png",
+      "sha256": "f8d773fc9cfa6f4d8e5942dc34d0a0788fcaed2a4fefbbed0aef5398d7ef4cba",
+      "upstream_url": "https://raw.githubusercontent.com/scikit-image/scikit-image/v0.19.3/skimage/data/coins.png"
+    },
+    {
+      "path": "g2/photo_sources/moon.png",
+      "sha256": "78739619d11f7eb9c165bb5d2efd4772cee557812ec847532dbb1d92ef71f577",
+      "upstream_url": "https://raw.githubusercontent.com/scikit-image/scikit-image/v0.19.3/skimage/data/moon.png"
+    },
+    {
+      "path": "g2/photo_sources/hubble_deep_field.jpg",
+      "sha256": "3a19c5dd8a927a9334bb1229a6d63711b1c0c767fb27e2286e7c84a3e2c2f5f4",
+      "upstream_url": "https://raw.githubusercontent.com/scikit-image/scikit-image/v0.19.3/skimage/data/hubble_deep_field.jpg"
+    }
+  ]
+}

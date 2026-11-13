@@ -1,0 +1,44 @@
+{
+  "gpt-6-astra": {
+    "engine": "codex",
+    "api_model": "YOUR_MODEL_ID",
+    "base_url": "https://YOUR_API_ENDPOINT",
+    "key_env": "YOUR_API_KEY_ENV"
+  },
+  "claude-opus-5-5": {
+    "engine": "claude",
+    "api_model": "YOUR_MODEL_ID",
+    "base_url": "https://YOUR_API_ENDPOINT",
+    "key_env": "YOUR_API_KEY_ENV"
+  },
+  "qwen3.8-max": {
+    "engine": "claude",
+    "api_model": "YOUR_MODEL_ID",
+    "base_url": "https://YOUR_API_ENDPOINT",
+    "key_env": "YOUR_API_KEY_ENV"
+  },
+  "kimi-k3": {
+    "engine": "kimi",
+    "api_model": "YOUR_MODEL_ID",
+    "base_url": "https://YOUR_API_ENDPOINT",
+    "key_env": "YOUR_API_KEY_ENV"
+  },
+  "glm-5.3-flash": {
+    "engine": "zcode",
+    "api_model": "YOUR_MODEL_ID",
+    "base_url": "https://YOUR_API_ENDPOINT",
+    "key_env": "YOUR_API_KEY_ENV"
+  },
+  "deepseek-v4.1-flash": {
+    "engine": "dsh",
+    "api_model": "YOUR_MODEL_ID",
+    "base_url": "https://YOUR_API_ENDPOINT",
+    "key_env": "YOUR_API_KEY_ENV"
+  },
+  "my-model": {
+    "engine": "codex",
+    "api_model": "YOUR_MODEL_ID",
+    "base_url": "https://YOUR_API_ENDPOINT",
+    "key_env": "YOUR_API_KEY_ENV"
+  }
+}

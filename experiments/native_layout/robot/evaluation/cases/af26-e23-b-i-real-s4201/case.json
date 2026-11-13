@@ -1,0 +1,30 @@
+{
+  "task": "E23",
+  "variant": "B",
+  "generalization_condition": "I",
+  "input_condition": "real",
+  "seed": 4201,
+  "experiments": [
+    "ablation_abc"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "independent_paired_instance_runtime",
+  "episode_id": "af26-e23-b-i-real-s4201",
+  "instruction": "按层位将彩杯套上杯架\n\n按示范的颜色高低次序，把三个杯子套到杯架的三个高度层。\n",
+  "instruction_sha256": "58b5b3cd4316355bf34749139cdc5282df0cb7494dffa3ce669397b938440b7e",
+  "text_rule": null,
+  "demonstration": {
+    "path": "evaluation/media/078378b92037a920a2ae6950e9d545461c9905eee536924b55fb2bedc4cbd7b9.mp4",
+    "sha256": "1ae5f785cf3e050ef6ceb54d5ae5eb49796e719c66e65601e3df4f9751c56136",
+    "bytes": 4256046,
+    "evaluated_input_sha256": "078378b92037a920a2ae6950e9d545461c9905eee536924b55fb2bedc4cbd7b9",
+    "audio_tracks": 0,
+    "video_codec": "h264",
+    "width": 1920,
+    "height": 1080,
+    "duration_seconds": 8.3,
+    "frames": 249,
+    "transformation": "remove_audio_streams_and_remux_video_without_reencoding"
+  }
+}

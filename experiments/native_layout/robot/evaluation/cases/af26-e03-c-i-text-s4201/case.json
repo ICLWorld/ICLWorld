@@ -1,0 +1,18 @@
+{
+  "task": "E03",
+  "variant": "C",
+  "generalization_condition": "I",
+  "input_condition": "text_rule",
+  "seed": 4201,
+  "experiments": [
+    "main"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "independent_paired_instance_runtime",
+  "episode_id": "af26-e03-c-i-text-s4201",
+  "instruction": "三色杯套叠\n\n按示范中的颜色内外次序，把三个杯子套在一起。\n",
+  "instruction_sha256": "251f99680faa61ec83a561d919ccd713839e74bf44b9131c8724689da2eb9c6f",
+  "text_rule": "外层到内层：蓝、红、绿",
+  "demonstration": null
+}

@@ -1,0 +1,27 @@
+.env
+.venv/
+.runtime/
+work/
+outputs/
+__pycache__/
+*.pyc
+*.private.json
+*.token
+node_modules/
+.DS_Store
+
+# Frozen evaluator bindings and simulator asset manifests.
+!/experiments/native_layout/robot/environment/bindings/E-paired-reviewed-complete.private.json
+!/experiments/native_layout/robot/environment/bindings/I-canonical-v3.private.json
+!/experiments/native_layout/robot/environment/bindings/I-reviewed-objects-e41-explicit-scale-v2.private.json
+!/experiments/native_layout/robot/environment/bindings/I-reviewed-objects.private.json
+!/experiments/native_layout/robot/environment/bindings/R-original.private.json
+!/robot/runtime/assets/embodiments/robotwin-r5/conversion.private.json
+!/robot/runtime/assets/embodiments/robotwin-r5/franka-panda/conversion.private.json
+!/robot/runtime/assets/embodiments/robotwin-r5/ur5-wsg/conversion.private.json
+!/robot/runtime/execution-design-v2/catalog.private.json
+!/robot/runtime/execution-design-v3/assets/E30/instances.private.json
+!/robot/runtime/execution-design-v3/assets/E40/instances.private.json
+!/robot/runtime/execution-design-v3/catalog.private.json
+!/robot/runtime/inference-generalization-v1/catalog.private.json
+!/robot/runtime/scenes/manifest.private.json

@@ -1,0 +1,30 @@
+{
+  "task": "E03",
+  "variant": "C",
+  "generalization_condition": "I",
+  "input_condition": "real",
+  "seed": 4201,
+  "experiments": [
+    "main"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "independent_paired_instance_runtime",
+  "episode_id": "af26-e03-c-i-real-s4201",
+  "instruction": "三色杯套叠\n\n按示范中的颜色内外次序，把三个杯子套在一起。\n",
+  "instruction_sha256": "251f99680faa61ec83a561d919ccd713839e74bf44b9131c8724689da2eb9c6f",
+  "text_rule": null,
+  "demonstration": {
+    "path": "evaluation/media/0bc0f994960ebd41ce1edcf701c8053b011fd7b73a8bda0ad8ea90ae56626309.mp4",
+    "sha256": "61305d4c356c27788d0df9806afbdb7fe1d1b28f32e2f2087905982a71ec7207",
+    "bytes": 4857332,
+    "evaluated_input_sha256": "0bc0f994960ebd41ce1edcf701c8053b011fd7b73a8bda0ad8ea90ae56626309",
+    "audio_tracks": 0,
+    "video_codec": "h264",
+    "width": 1920,
+    "height": 1080,
+    "duration_seconds": 12.633333,
+    "frames": 379,
+    "transformation": "remove_audio_streams_and_remux_video_without_reencoding"
+  }
+}

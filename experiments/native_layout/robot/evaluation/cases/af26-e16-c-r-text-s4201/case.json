@@ -1,0 +1,19 @@
+{
+  "task": "E16",
+  "variant": "C",
+  "generalization_condition": "R",
+  "input_condition": "text_rule",
+  "seed": 4201,
+  "experiments": [
+    "generalization",
+    "ablation4"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e16-c-r-text-s4201",
+  "instruction": "三件布局搬入托盘\n\n按示范的布局与单件朝向变换，把三件T形块搬进托盘。\n",
+  "instruction_sha256": "2543bdb73e5ef924c8b9cca7ddc6f0846b2da4f66189ca5f7a5ed96bed8660db",
+  "text_rule": "相对位置上下镜像、各件朝向不变后搬入",
+  "demonstration": null
+}

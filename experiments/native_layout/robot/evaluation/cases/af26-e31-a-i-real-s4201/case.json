@@ -1,0 +1,30 @@
+{
+  "task": "E31",
+  "variant": "A",
+  "generalization_condition": "I",
+  "input_condition": "real",
+  "seed": 4201,
+  "experiments": [
+    "ablation_abc"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e31-a-i-real-s4201",
+  "instruction": "碗碟组合\n\n按照示范的碗碟上下关系和盘面朝向，把碗与盘组合摆好。\n",
+  "instruction_sha256": "4c5f6cc6b5d58db4f5221552019de5e6f159446046acfad6c48364ecf2d5850a",
+  "text_rule": null,
+  "demonstration": {
+    "path": "evaluation/media/e3b3d040e1e0c74f9ed6e0d64bbf69f71ebe6b9e4992a2bfad75ce2cdaaf750d.mp4",
+    "sha256": "4946ae70d94986da80bda490c006fbaa1d0c5a4620cf8b52eb0b917a9c88ae5d",
+    "bytes": 1871206,
+    "evaluated_input_sha256": "e3b3d040e1e0c74f9ed6e0d64bbf69f71ebe6b9e4992a2bfad75ce2cdaaf750d",
+    "audio_tracks": 0,
+    "video_codec": "h264",
+    "width": 1920,
+    "height": 1080,
+    "duration_seconds": 4.366667,
+    "frames": 131,
+    "transformation": "remove_audio_streams_and_remux_video_without_reencoding"
+  }
+}

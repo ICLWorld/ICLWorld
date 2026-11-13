@@ -1,0 +1,955 @@
+import asyncio
+import errno
+import hashlib
+import hmac
+import json
+import logging
+import os
+import secrets
+import shutil
+import uuid
+from contextlib import asynccontextmanager
+from pathlib import Path
+from fastapi import FastAPI, Depends, Header, HTTPException, Request
+from fastapi.responses import FileResponse, JSONResponse
+from fastapi.staticfiles import StaticFiles
+from sqlalchemy import select
+from . import business, lessons, recording_guidance
+from .catalog import catalog, task, task_digest
+from .config import ROOT, DATA, PUBLIC_BASE, admin_token
+from .models import make_database, Run
+from .schemas import CreateRun, Action, Mutation, Review, EvaluateTask, HumanEvidence, LessonAdvance
+from .store import WorkspaceStore
+from .runtime import BrowserRuntime
+from .recording import Recorder
+from .provenance import provenance
+from .app_client import ApplicationClient
+from . import application_eval, v2
+from vic_apps.domain import initialize as initialize_domain
+
+
+def create_app(database_url=None, data_dir=None, secret=None, browser=None):
+    for required in (
+        "tasks/catalog.json",
+        "sources.lock.json",
+        "apps/portal/dist/index.html",
+    ):
+        if not (ROOT / required).is_file():
+            raise RuntimeError(
+                f"Missing runtime asset: {required}; set VIC_ROOT to the built workspace"
+            )
+    data = Path(data_dir or DATA)
+    data.mkdir(parents=True, exist_ok=True)
+    secret = secret or admin_token()
+    sessions = make_database(database_url) if database_url else make_database()
+    store = WorkspaceStore(data / "runs")
+    runtime = browser or BrowserRuntime()
+    recorder = Recorder(data / "artifacts", runtime)
+    implementation = provenance()
+    applications = ApplicationClient(secret)
+    locks = {}
+
+    @asynccontextmanager
+    async def lifespan(app):
+        # Never silently resume a process that lost its browser and input log.
+        with sessions() as db:
+            for run in db.scalars(select(Run).where(Run.status == "running")):
+                if run.manifest.get("interaction", "agent") == "agent":
+                    run.status = "interrupted"
+            db.commit()
+        yield
+        await recorder.close()
+        await runtime.close()
+        await app.state.os_runtime.close()
+
+    app = FastAPI(
+        title="VideoICL-Bench",
+        version="0.1.0",
+        lifespan=lifespan,
+        docs_url=None,
+        redoc_url=None,
+        openapi_url=None,
+    )
+    app.state.store = store
+    app.state.sessions = sessions
+    app.state.runtime = runtime
+
+    def token(authorization: str = Header(default="")):
+        if not authorization.startswith("Bearer "):
+            raise HTTPException(401, "Bearer credential required")
+        return authorization[7:]
+
+    def manager(t=Depends(token)):
+        if not hmac.compare_digest(t, secret):
+            raise HTTPException(403, "Manager credential required")
+
+    def get_run(run_id):
+        with sessions() as db:
+            run = db.get(Run, run_id)
+            if not run:
+                raise HTTPException(404, "Run not found")
+            return run
+
+    def authorize(run_id, t):
+        run = get_run(run_id)
+        if not hmac.compare_digest(t, secret) and not hmac.compare_digest(
+            hashlib.sha256(t.encode()).hexdigest(), run.token_hash
+        ):
+            raise HTTPException(403, "Credential does not belong to this run")
+        return run
+
+    def ui_token(run):
+        return hmac.new(
+            secret.encode(), (f"ui:{run.id}:{run.epoch}" +
+                              (f":lesson:{run.manifest['lesson']['index']}" if run.manifest.get('lesson') else '')).encode(), "sha256"
+        ).hexdigest()
+
+    def authorize_ui(run_id, t):
+        run = get_run(run_id)
+        if not hmac.compare_digest(t, ui_token(run)):
+            raise HTTPException(403, "Workspace credential required")
+        return run
+
+    def url(run):
+        return (
+            applications.url(run, ui_token(run))
+            if run.runtime == "browser"
+            else f"{PUBLIC_BASE}/workspace/{run.id}#{ui_token(run)}"
+        )
+
+    def human(run):
+        return run.manifest.get("interaction", "agent") == "human"
+
+    def direct_modules():
+        return os.environ.get("VIC_DIRECT_MODULES", "chat,im,music,news,media,blog,studio,travel,shop,bank,code,gomoku,games").split(",")
+
+    def links(run):
+        public_base = os.environ.get("VIC_APPLICATION_PUBLIC_BASE", "http://127.0.0.1:8771").rstrip("/")
+        return dict(workspace_url=url(run), application_url=(
+            f"{public_base}/apps/{run.initial['app']}/{run.id}#{ui_token(run)}"
+            if human(run) else None
+        ))
+
+    def remote_only(run):
+        if human(run):
+            raise HTTPException(409, "此环境在独立应用页面操作；远程截图、键鼠和服务器录制仅用于 Agent 会话。")
+
+    def lock(run_id):
+        return locks.setdefault(run_id, asyncio.Lock())
+
+    def current_contract(run):
+        digest = v2.digest if run.manifest.get('suite') == 'v2' else task_digest
+        if run.manifest.get("task_digest") != digest(run.task_id):
+            raise HTTPException(409, "任务数据或规则已更新，请重置环境后重新录制。已有录像与结果保留归档。")
+
+    def active(run):
+        current_contract(run)
+        if run.status not in ("ready", "running"):
+            raise HTTPException(
+                409, f"Run is {run.status}; reset or create another run"
+            )
+
+    def recording_metadata(run, epoch=None):
+        epoch = run.epoch if epoch is None else epoch
+        directory = data / "artifacts" / run.id
+        if epoch != run.epoch:
+            directory /= f"epoch-{epoch}"
+        path = directory / "recording.json"
+        if not path.exists():
+            return None
+        meta = json.loads(path.read_text())
+        manifest = run.manifest
+        if epoch != run.epoch:
+            archived_manifest = data / "runs" / run.id / f"epoch-{epoch}" / "manifest.json"
+            manifest = json.loads(archived_manifest.read_text()) if archived_manifest.exists() else {}
+        digest = v2.digest if manifest.get('suite') == 'v2' else task_digest
+        return dict(meta, available=(directory / "tutorial.mp4").is_file(),
+                    archived=epoch != run.epoch,
+                    contract_current=meta.get("task_digest", manifest.get("task_digest")) == digest(run.task_id))
+
+    def summarize(run):
+        return dict(
+            id=run.id,
+            task_id=run.task_id,
+            variant=run.variant,
+            seed=run.seed,
+            mode=run.mode,
+            runtime=run.runtime,
+            status=run.status,
+            epoch=run.epoch,
+            result=run.result,
+            recording=recording_metadata(run),
+            created_at=run.created_at.isoformat(),
+            manifest=run.manifest,
+            inference_task=run.initial.get("execution") if run.mode != "demo" else None,
+            interaction=run.manifest.get("interaction", "agent"),
+            lesson=lessons.progress(run.manifest.get("lesson")),
+        )
+
+    def save_status(run_id, status):
+        with sessions() as db:
+            r = db.get(Run, run_id)
+            r.status = status
+            db.commit()
+
+    storage_error = '服务器可用存储空间不足，暂时无法创建环境或保存录像。请联系管理员；已有录像保留，上传失败时请先下载原始录像。'
+
+    def require_storage():
+        free = shutil.disk_usage(data).free
+        if free < 1024 ** 3:
+            raise HTTPException(507, storage_error)
+        return free
+
+    @app.exception_handler(OSError)
+    async def storage_exception(request, exc):
+        if exc.errno in (errno.ENOSPC, errno.EDQUOT):
+            return JSONResponse(status_code=507, content={'detail': storage_error})
+        logging.getLogger(__name__).error('Filesystem request failed', exc_info=exc)
+        return JSONResponse(status_code=500, content={'detail': '服务器文件操作失败，请稍后重试。'})
+
+    @app.get("/release/identity", dependencies=[Depends(manager)])
+    def release_identity():
+        manifest=ROOT/'release-lock.json'
+        locked=json.loads(manifest.read_text())
+        for name,expected in locked['files'].items():
+            family,relative=name.split('/',1)
+            base=ROOT if family=='platform' else Path(os.environ.get('VIC_OS_SOURCE','/opt/os-icl'))
+            target=base/relative
+            if hashlib.sha256(target.read_bytes()).hexdigest()!=expected:
+                raise HTTPException(503,'Release source integrity mismatch')
+        return dict(release_sha256=hashlib.sha256(manifest.read_bytes()).hexdigest(),implementation=implementation)
+
+    @app.get("/healthz")
+    def health():
+        return {"status": "ok", "service": "videoicl-control", "storage_free_bytes": require_storage()}
+
+    @app.get("/v1/capabilities", dependencies=[Depends(manager)])
+    def capabilities():
+        return dict(
+            runtimes={
+                "web-dev": True,
+                "browser": True,
+                "windows": False,
+                "linux": False,
+                "android": False,
+            },
+            application_modules=13,
+            application_tasks=75,
+            system_tasks_deferred=25,
+            software_workspaces=65,
+            game_workspaces=10,
+            native_app_certified=0,
+            frontend_review="human-review-required",
+            recording_entry_required=True,
+            native_process_capacity=12,
+            recording_fps=recorder.fps,
+            official_evaluation_ready=False,
+            direct_application_modules=direct_modules(),
+        )
+
+    @app.get("/v1/tasks", dependencies=[Depends(manager)])
+    def tasks():
+        return catalog()
+
+    @app.get("/v2/tasks", dependencies=[Depends(manager)])
+    def v2_tasks():
+        data = v2.catalog()
+        for item in data['tasks']:
+            recording_guidance.apply(item)
+            if item['id'] == 29:
+                item['demo']['rule_explanations']['C'] += ' 标题中的汉字、数字、标点和空格各计一个字符，文章编号不计入；列表会显示实际标题字符数。'
+            if item['id'] == 59:
+                item['demo']['completion_checks'] += ['demo 只需编辑规则示例并保存草稿，不需要提交答案。']
+            if item['id'] == 68:
+                item['variants']['C'] = '优先选择移动合并后最大块位于四个角之一的方向'
+                item['demo']['rule_explanations']['C'] = '对每个有效方向，分别看移动和合并结束后的棋盘：该棋盘的最大数字至少有一块位于四个角之一，就满足角落条件。多个方向满足时任选一个，不再比较谁合出了更大的数字、得分或合并次数，也不按固定方向顺序选择。若所有有效方向都不能满足角落条件，则任选有效方向。不改变棋盘的方向无效；每组只移动一次，本题不生成随机新方块。'
+                item['inference']['instructions'] += ' 多个方向同样满足视频规则时任选一个，不要求固定方向优先级；不改变棋盘的移动无效。'
+                for variant in 'AB':
+                    item['demo']['rule_explanations'][variant] += ' 多个有效方向并列达到最优值时，任选其中一个都正确；相反方向可能对称，不要求固定优先级。'
+                item['inference']['instructions'] += ' 按合并次数或得分比较时，多个有效方向并列最优可任选一个；每组仅移动一次。'
+            if item['id'] == 72:
+                item['demo']['recording_steps'] += ['候选格并列时，先选行号最小者，同一行再选列号最小者；行从上到下、列从左到右编号。']
+                item['inference']['instructions'] += ' 候选格并列时，先按行号升序，再按列号升序选择。'
+        return data
+
+    @app.get("/v2/tasks/{task_id}/contract", dependencies=[Depends(manager)])
+    def v2_contract(task_id: int):
+        if not 1 <= task_id <= 75:
+            raise HTTPException(404, "Task not found")
+        return v2.task(task_id)
+
+    @app.post("/v2/tasks/{task_id}/eval", dependencies=[Depends(manager)])
+    async def v2_eval_task(task_id: int, body: EvaluateTask):
+        run = get_run(body.run_id)
+        if run.manifest.get('suite') != 'v2' or run.task_id != task_id:
+            raise HTTPException(409, "Task suite and run mismatch")
+        return await evaluate(body.run_id)
+
+    @app.get("/v1/tasks/{task_id}/recording-preview", dependencies=[Depends(manager)])
+    def recording_preview(task_id: int):
+        if not 1 <= task_id <= 75:
+            raise HTTPException(404, "此任务尚未开放录制")
+        # Match the recording portal's fixed demo fixture, without allocating a run.
+        initial = initialize_domain(business.generate(task_id, 0))
+        return dict(task_id=task_id, title=initial["title"], type=initial["type"],
+                    app=initial["app"], source=initial.get("source", {}),
+                    object_count=len(initial.get("items", [])),
+                    episode_count=lessons.episode_count(task_id),
+                    target_number=initial.get("target_number"),
+                    target_score=initial.get("target_score"))
+
+    @app.get("/v1/tasks/{task_id}/contract", dependencies=[Depends(manager)])
+    def contract(task_id: int):
+        if not 1 <= task_id <= 100:
+            raise HTTPException(404, "Task not found")
+        return json.loads(
+            (ROOT / "tasks/contracts" / f"{task_id:03d}.json").read_text()
+        )
+
+    @app.post("/v1/tasks/{task_id}/eval", dependencies=[Depends(manager)])
+    async def eval_task(task_id: int, body: EvaluateTask):
+        run = get_run(body.run_id)
+        if run.task_id != task_id or run.manifest.get('suite', 'v1') != 'v1':
+            raise HTTPException(409, "Task and run mismatch")
+        result = await evaluate(body.run_id)
+        return {**result, 'task_id':task_id, 'variant':run.variant}
+
+    @app.get("/v1/runs", dependencies=[Depends(manager)])
+    def runs():
+        with sessions() as db:
+            return [
+                summarize(r)
+                for r in db.scalars(
+                    select(Run).order_by(Run.created_at.desc()).limit(200)
+                )
+            ]
+
+    @app.get("/v1/recordings", dependencies=[Depends(manager)])
+    def recording_library():
+        # Unlike the recent-run list, this library includes every saved take.
+        recorded_ids = {p.parent.name for p in (data / "artifacts").glob("*/recording.json")}
+        recorded_ids.update(p.parent.parent.name for p in (data / "artifacts").glob("*/epoch-*/recording.json"))
+        if not recorded_ids:
+            return []
+        with sessions() as db:
+            rows = []
+            for run in db.scalars(select(Run).where(Run.mode == "demo", Run.id.in_(recorded_ids)).order_by(Run.created_at.desc())):
+                directory = data / "artifacts" / run.id
+                paths = list(directory.glob("epoch-*/recording.json"))
+                if (directory / "recording.json").exists():
+                    paths.insert(0, directory / "recording.json")
+                for path in paths:
+                    meta = json.loads(path.read_text())
+                    epoch = int(meta["epoch"])
+                    item = summarize(run)
+                    item.update(epoch=epoch, recording=recording_metadata(run, epoch))
+                    if epoch != run.epoch:
+                        archive = data / "runs" / run.id / f"epoch-{epoch}"
+                        item["result"] = json.loads((archive / "result.json").read_text()) if (archive / "result.json").exists() else None
+                        item["status"] = "archived"
+                    rows.append(item)
+            return rows
+
+    @app.post("/v1/runs", dependencies=[Depends(manager)], status_code=201)
+    def create(body: CreateRun):
+        require_storage()
+        if body.runtime not in ("web-dev", "browser"):
+            raise HTTPException(
+                409,
+                "Runtime worker is not configured; no simulated fallback will be used",
+            )
+        if body.task_id > 75:
+            raise HTTPException(
+                409, "Task is specified but not connected to an executable runtime"
+            )
+        from . import generalization
+        if body.suite=='v2':
+            try:generalization.validate(v2.task(body.task_id)['difficulty'], body.generalization, body.mode=='demo')
+            except ValueError as exc:raise HTTPException(422,str(exc))
+        elif body.generalization!='I':
+            raise HTTPException(422,'R/E 执行条件使用 v2 任务接口')
+        if (body.mode == "demo" and body.seed >= 1000) or (
+            body.mode == "eval" and body.seed < 1000 and body.generalization != "R"
+        ):
+            raise HTTPException(
+                422, "Demo seeds: 0–999; evaluation/development seeds: 1000 and above"
+            )
+        if body.teaching and (body.interaction != "human" or body.mode != "demo" or body.runtime != "browser"):
+            raise HTTPException(422, "连续教学仅用于人工演示录制")
+        if body.suite == 'v2':
+            if body.runtime != 'browser':
+                raise HTTPException(422, 'v2 tasks require application runtime')
+            try:
+                initial = v2.generate(body.task_id, body.seed, body.mode)
+            except ValueError as exc:
+                raise HTTPException(409, str(exc)) from exc
+        else:
+            initial = business.generate(body.task_id, body.seed)
+        if body.interaction == "human" and (
+            body.runtime != "browser" or initial["app"] not in direct_modules()
+        ):
+            raise HTTPException(409, "该应用的独立入口尚未开放")
+        if body.runtime == "browser" and body.suite != 'v2':
+            initial = initialize_domain(initial)
+        if body.mode == 'eval':
+            replay=None
+            if body.generalization=='R':
+                from .release_dataset import replay as released_replay
+                initial,replay=released_replay(body)
+                initial['execution']={'goal':'在相同初始材料上完成视频中展示的'+v2.task(body.task_id)['title']+'。','constraints':[]}
+            initial=generalization.decorate(initial,body.generalization,replay)
+        run_id = uuid.uuid4().hex
+        actor = secrets.token_urlsafe(32)
+        source_lock = json.loads((ROOT / "sources.lock.json").read_text())
+        run = Run(
+            id=run_id,
+            task_id=body.task_id,
+            variant=body.variant,
+            seed=initial.get("generalization",{}).get("replay",{}).get("seed",body.seed),
+            mode=body.mode,
+            runtime=body.runtime,
+            status="ready",
+            epoch=0,
+            token_hash=hashlib.sha256(actor.encode()).hexdigest(),
+            initial=initial,
+            manifest=dict(
+                suite=body.suite,
+                generalization=initial.get("generalization"),
+                task_digest=(v2.digest if body.suite == 'v2' else task_digest)(body.task_id),
+                initial_digest=hashlib.sha256(
+                    json.dumps(initial, sort_keys=True).encode()
+                ).hexdigest(),
+                source_commits={
+                    x["module"]: x["commit"] for x in source_lock["sources"]
+                },
+                implementation=implementation,
+                surface="native-task-workspace"
+                if body.runtime == "browser"
+                else "development-workspace",
+                official=False,
+                interaction=body.interaction,
+                execution_budget=dict(timeout_seconds=body.timeout_seconds, max_actions=body.max_actions),
+                lesson=lessons.plan(body.task_id, body.seed) if body.teaching else None,
+            ),
+        )
+        store.initialize(run.id, initial)
+        if run.runtime == "browser":
+            try:
+                applications.prepare(run, ui_token(run))
+            except Exception as e:
+                raise HTTPException(503, "Application worker unavailable") from e
+        with sessions() as db:
+            db.add(run)
+            db.commit()
+            db.refresh(run)
+        return dict(**summarize(run), actor_token=actor, **links(run))
+
+    @app.get("/v1/runs/{run_id}", dependencies=[Depends(manager)])
+    def details(run_id):
+        run = get_run(run_id)
+        return dict(
+            **summarize(run),
+            **links(run),
+            rule=task(run.task_id)["variants"][run.variant],
+            events=[]
+            if run.status == "destroyed"
+            else (
+                applications.snapshot(run_id)["events"]
+                if run.runtime == "browser"
+                else store.events(run_id)
+            ),
+        )
+
+    @app.get("/v1/workspaces/{run_id}")
+    def workspace(run_id, t=Depends(token)):
+        run = authorize_ui(run_id, t)
+        if run.runtime == "browser":
+            raise HTTPException(409, "Use the application origin")
+        if run.status in ("destroying", "destroyed"):
+            raise HTTPException(410, "Workspace destroyed")
+        return dict(epoch=run.epoch, status=run.status, state=store.snapshot(run_id))
+
+    @app.post("/v1/workspaces/{run_id}/mutations")
+    async def mutation(run_id, body: Mutation, t=Depends(token)):
+        run = authorize_ui(run_id, t)
+        if run.runtime == "browser":
+            raise HTTPException(409, "Use the application origin")
+        active(run)
+        if body.epoch != run.epoch:
+            raise HTTPException(409, "Stale execution epoch")
+        if len(store.events(run_id)) >= 200:
+            raise HTTPException(409, "Workspace action budget exhausted")
+        try:
+            state = store.mutate(run_id, body)
+        except ValueError as exc:
+            raise HTTPException(422, str(exc))
+        return dict(epoch=run.epoch, status=run.status, state=state)
+
+    @app.get("/v1/runs/{run_id}/observation")
+    async def observation(run_id, t=Depends(token)):
+        async with lock(run_id):
+            run = authorize(run_id, t)
+            remote_only(run)
+            active(run)
+            try:
+                if isinstance(runtime, BrowserRuntime) and run.manifest.get("execution_budget"):
+                    runtime.limits[run_id] = run.manifest["execution_budget"]
+                shot = await runtime.screenshot(run_id, url(run))
+            except Exception as exc:
+                # Playwright errors include the URL fragment, which is a UI credential.
+                message = str(exc).replace(ui_token(run), "[REDACTED]")
+                logging.getLogger(__name__).error("Observation failed run=%s task=%s: %s: %s",
+                                                 run_id, run.task_id, type(exc).__name__, message)
+                save_status(run_id, "environment_error")
+                raise HTTPException(
+                    503,
+                    "Browser unavailable; inspect worker logs and installed Chromium",
+                )
+            save_status(run_id, "running")
+            return dict(**shot, epoch=run.epoch, status="running", official=False)
+
+    @app.post("/v1/runs/{run_id}/actions")
+    async def action(run_id, body: Action, t=Depends(token)):
+        async with lock(run_id):
+            run = authorize(run_id, t)
+            remote_only(run)
+            active(run)
+            if body.epoch != run.epoch:
+                raise HTTPException(409, "Stale execution epoch")
+            if run_id in recorder.active and not hmac.compare_digest(t, secret):
+                raise HTTPException(
+                    409, "Recording is human-controlled; Agent input is disabled"
+                )
+            try:
+                result = await runtime.act(run_id, url(run), body)
+            except ValueError as exc:
+                raise HTTPException(409, str(exc))
+            save_status(run_id, "running")
+            dest = data / "runs" / run_id / "input.jsonl"
+            # Browser runtime provides idempotency; archive only first acceptance.
+            previous = (
+                {json.loads(x)["action_id"] for x in dest.read_text().splitlines()}
+                if dest.exists()
+                else set()
+            )
+            if body.action_id not in previous:
+                with dest.open("a") as f:
+                    f.write(json.dumps(body.model_dump()) + "\n")
+            return result
+
+    @app.post("/v1/runs/{run_id}/reset", dependencies=[Depends(manager)])
+    async def reset(run_id):
+        async with lock(run_id):
+            run = get_run(run_id)
+            if run.status in ("destroying", "destroyed"):
+                raise HTTPException(410, "Create a new run after destruction")
+            if run_id in recorder.active:
+                raise HTTPException(409, "Stop recording before reset")
+            suite = run.manifest.get('suite', 'v1')
+            initial = (__import__('copy').deepcopy(run.initial) if run.manifest.get('generalization') else
+                       v2.generate(run.task_id, run.seed, run.mode) if suite == 'v2' else business.generate(run.task_id, run.seed))
+            if run.runtime == "browser" and suite != 'v2':
+                initial = initialize_domain(initial)
+            save_status(run_id, "resetting")
+            await runtime.close_run(run_id)
+            archive = data / "runs" / run_id / f"epoch-{run.epoch}"
+            archive.mkdir(exist_ok=True)
+            if run.runtime == "browser":
+                current = applications.seal(run_id)
+                (archive / "application.json").write_text(json.dumps(current))
+            (archive / "state.json").write_text(json.dumps(store.snapshot(run_id)))
+            (archive / "events.json").write_text(json.dumps(store.events(run_id)))
+            (archive / "result.json").write_text(json.dumps(run.result))
+            (archive / "initial.json").write_text(json.dumps(run.initial))
+            (archive / "manifest.json").write_text(json.dumps(run.manifest))
+            input_file = data / "runs" / run_id / "input.jsonl"
+            if input_file.exists():
+                input_file.rename(archive / "input.jsonl")
+            artifacts = data / "artifacts" / run_id
+            if artifacts.exists():
+                recording_archive = artifacts / f"epoch-{run.epoch}"
+                recording_archive.mkdir(exist_ok=True)
+                for artifact in list(artifacts.glob("*.png")) + [
+                    artifacts / "tutorial.mp4",
+                    artifacts / "recording.json",
+                ]:
+                    if artifact.exists():
+                        artifact.rename(recording_archive / artifact.name)
+            store.initialize(run_id, initial)
+            with sessions() as db:
+                row = db.get(Run, run_id)
+                row.initial = initial
+                if row.manifest.get("lesson"):
+                    row.manifest = {**row.manifest, "lesson": lessons.plan(row.task_id, row.seed)}
+                row.manifest = {**row.manifest,
+                    "task_digest": (v2.digest if suite == 'v2' else task_digest)(row.task_id),
+                    "initial_digest": hashlib.sha256(json.dumps(initial, sort_keys=True).encode()).hexdigest(),
+                    "implementation": implementation,
+                }
+                row.epoch += 1
+                row.status = "resetting"
+                row.result = None
+                db.commit()
+                db.refresh(row)
+                if row.runtime == "browser":
+                    try:
+                        applications.prepare(row, ui_token(row))
+                    except Exception as exc:
+                        row.status = "environment_error"
+                        db.commit()
+                        raise HTTPException(503, "Application reset failed") from exc
+                row.status = "ready"
+                db.commit()
+                db.refresh(row)
+                return dict(**summarize(row), **links(row))
+
+    @app.post("/v1/runs/{run_id}/lesson/next")
+    async def next_lesson(run_id, body: LessonAdvance, credential=Depends(token)):
+        async with lock(run_id):
+            run = get_run(run_id)
+            current_contract(run)
+            lesson = run.manifest.get("lesson")
+            if not lesson or not human(run) or run.mode != "demo":
+                raise HTTPException(409, "此环境不属于连续教学录制")
+            if body.epoch != run.epoch:
+                raise HTTPException(409, "环境已重置，请重新打开应用")
+            # A previous episode credential may retry its transition, but cannot
+            # act in the new episode or advance it a second time.
+            expected_token = hmac.new(secret.encode(),
+                f"ui:{run.id}:{run.epoch}:lesson:{body.index}".encode(), "sha256").hexdigest()
+            if not hmac.compare_digest(credential, secret) and not hmac.compare_digest(credential, expected_token):
+                raise HTTPException(403, "Application credential required")
+            if body.index not in (lesson["index"], lesson["index"] - 1):
+                raise HTTPException(409, "练习进度已变化，请重新打开当前练习")
+
+            def response(row):
+                return dict(lesson=lessons.progress(row.manifest["lesson"]), epoch=row.epoch,
+                            application_url=lessons.native_path(row.initial['app'], row.id) + '#' + ui_token(row))
+
+            def prepare_episode(row):
+                store.initialize(run_id, row.initial)
+                try:
+                    applications.prepare(row, ui_token(row))
+                except Exception as exc:
+                    save_status(run_id, "environment_error")
+                    raise HTTPException(503, "下一组暂未载入，请重试；已完成的练习仍保留。") from exc
+                save_status(run_id, "ready")
+
+            if body.index < lesson["index"]:
+                if run.status in ("environment_error", "resetting"):
+                    prepare_episode(run)
+                return response(get_run(run_id))
+            if lesson["finished"]:
+                return response(run)
+            # Recheck an uploaded copy lesson using its frozen workspace data.
+            # This also recovers old failures caused only by OS permissions.
+            recorded_clipboard = (run.status in ('recorded', 'completed') and run.task_id == 43
+                                  and run.variant == 'B' and lesson['index'] == len(lesson['seeds']) - 1)
+            if not recorded_clipboard:
+                active(run)
+            sealed = applications.seal(run_id)
+            try:
+                result = application_eval.evaluate(run.initial, sealed['state'], run.variant, sealed['events'], body.clipboard)
+            except Exception as exc:
+                if not recorded_clipboard:
+                    applications.resume(run_id)
+                raise HTTPException(503, "本组检查暂未完成，请重试；当前操作仍保留。") from exc
+            if not result['success']:
+                if not recorded_clipboard:
+                    applications.resume(run_id)
+                raise HTTPException(409, lessons.incomplete_message(sealed['state'], result))
+            archive = data / 'runs' / run_id / 'lesson' / f'epoch-{run.epoch}'
+            archive.mkdir(parents=True, exist_ok=True)
+            evidence_file = archive / f'episode-{lesson["index"]}.json'
+            evidence_file.write_text(json.dumps(dict(index=lesson['index'], seed=lesson['seeds'][lesson['index']],
+                initial=run.initial, final=sealed['state'], events=sealed['events'],
+                result=result, manifest=run.manifest), ensure_ascii=False, indent=2))
+            completed = lesson['completed'] + [dict(index=lesson['index'], result=result,
+                evidence_ref=f"/v1/runs/{run_id}/lesson/evidence/{run.epoch}/{lesson['index']}")]
+            finished = len(completed) == len(lesson['seeds'])
+            following = {**lesson, 'completed': completed, 'finished': finished,
+                         'index': lesson['index'] if finished else lesson['index'] + 1}
+            try:
+                initial = run.initial if finished else initialize_domain(
+                    business.generate(run.task_id, following['seeds'][following['index']]))
+            except Exception as exc:
+                applications.resume(run_id)
+                raise HTTPException(503, "下一组数据暂未准备好，请稍后重试。当前练习仍保留。") from exc
+            with sessions() as db:
+                row = db.get(Run, run_id)
+                row.initial = initial
+                row.manifest = {**row.manifest, 'lesson': following,
+                    'initial_digest': hashlib.sha256(json.dumps(initial, sort_keys=True).encode()).hexdigest()}
+                row.status = 'recorded' if recorded_clipboard else ('ready' if finished else 'resetting')
+                db.commit()
+                db.refresh(row)
+                if not finished:
+                    prepare_episode(row)
+            return response(get_run(run_id))
+
+    @app.get("/v1/runs/{run_id}/lesson/evidence/{epoch}/{index}", dependencies=[Depends(manager)])
+    def lesson_evidence(run_id, epoch: int, index: int):
+        get_run(run_id)
+        if epoch < 0 or index < 0:
+            raise HTTPException(404, "No episode evidence")
+        path = data / 'runs' / run_id / 'lesson' / f'epoch-{epoch}' / f'episode-{index}.json'
+        if not path.is_file():
+            raise HTTPException(404, "No episode evidence")
+        return FileResponse(path, media_type="application/json")
+
+    @app.post("/v1/runs/{run_id}/evaluate", dependencies=[Depends(manager)])
+    async def evaluate(run_id, body: HumanEvidence | None = None):
+        async with lock(run_id):
+            run = get_run(run_id)
+            current_contract(run)
+            retry_copy = (run.task_id == 43 and run.variant == 'B' and
+                          run.result and not run.result.get('success'))
+            if run.result and not retry_copy:
+                return run.result
+            if run.status != "recorded" and not retry_copy:
+                active(run)
+            if run_id in recorder.active:
+                raise HTTPException(409, "Stop recording before evaluating")
+            legacy_clipboard = run.task_id == 43 and run.variant == "B" and run.initial.get("workflow") != "studio_projects"
+            save_status(run_id, "sealing")
+            state = store.snapshot(run_id)
+            events = store.events(run_id)
+            if run.runtime == "browser":
+                sealed = applications.seal(run_id)
+                state = sealed["state"]
+                events = sealed["events"]
+                result = (v2.evaluate(run.initial, state, run.variant, events)
+                          if run.initial.get('workflow') or run.initial.get('v2_atomic') or run.initial.get('v2_reversi') or run.initial.get('v2_worksets') or run.initial.get('v2_2048') else application_eval.evaluate(
+                              run.initial, state, run.variant, events))
+                if run.initial.get("workflow") == "studio_projects" and run.task_id == 43 and run.variant == "B":
+                    result["clipboard_evidence_source"] = "application_delivery_paste"
+                elif legacy_clipboard:
+                    result["clipboard_evidence_source"] = "application_clipboard"
+            else:
+                result = business.evaluate(run.initial, state, run.variant, events)
+            if run.manifest.get("lesson"):
+                result = lessons.aggregate(run.manifest["lesson"], result)
+            result.update(
+                run_id=run_id,
+                task_id=run.task_id,
+                variant=run.variant,
+                seed=run.seed,
+                suite=run.manifest.get("suite", "v1"),
+                status="completed",
+                epoch=run.epoch,
+                official=False,
+                evidence_ref=f"/v1/runs/{run_id}/evidence",
+            )
+            dest = data / "artifacts" / run_id
+            dest.mkdir(parents=True, exist_ok=True)
+            (dest / f"evidence-{run.epoch}.json").write_text(
+                json.dumps(
+                    dict(
+                        initial=run.initial,
+                        final=state,
+                        events=events,
+                        manifest=run.manifest,
+            inference_task=run.initial.get("execution") if run.mode != "demo" else None,
+                        result=result,
+                        episode_evidence=run.manifest.get("lesson", {}).get("completed", []) if run.manifest.get("lesson") else [],
+                    ),
+                    ensure_ascii=False,
+                    indent=2,
+                )
+            )
+            if run.runtime == "browser" and run_id in runtime.sessions:
+                (dest / f"final-{run.epoch}.png").write_bytes(
+                    await runtime.capture(run_id, url(run))
+                )
+                await runtime.close_run(run_id)
+            if run.runtime == "browser":
+                applications.release(run_id)
+            with sessions() as db:
+                row = db.get(Run, run_id)
+                row.result = result
+                row.status = "completed"
+                db.commit()
+            return result
+
+    @app.get("/v1/runs/{run_id}/final-image", dependencies=[Depends(manager)])
+    def final_image(run_id):
+        run = get_run(run_id)
+        path = data / "artifacts" / run_id / f"final-{run.epoch}.png"
+        if not path.exists():
+            raise HTTPException(404, "No final screenshot")
+        return FileResponse(path, media_type="image/png")
+
+    @app.get("/v1/runs/{run_id}/evidence", dependencies=[Depends(manager)])
+    def evidence(run_id):
+        run = get_run(run_id)
+        path = data / "artifacts" / run_id / f"evidence-{run.epoch}.json"
+        if not path.exists():
+            raise HTTPException(404, "No sealed evidence")
+        return FileResponse(path, media_type="application/json")
+
+    @app.post("/v1/runs/{run_id}/recordings/start", dependencies=[Depends(manager)])
+    async def start_recording(run_id):
+        async with lock(run_id):
+            run = get_run(run_id)
+            remote_only(run)
+            active(run)
+            if run.mode != "demo":
+                raise HTTPException(409, "Tutorial recording requires a demo run")
+            try:
+                await recorder.start(
+                    run_id,
+                    url(run),
+                    epoch=run.epoch,
+                )
+            except ValueError as exc:
+                raise HTTPException(409, str(exc))
+            return dict(status="recording", fps=recorder.fps)
+
+    @app.post("/v1/runs/{run_id}/recordings/stop", dependencies=[Depends(manager)])
+    async def stop_recording(run_id):
+        async with lock(run_id):
+            get_run(run_id)
+            try:
+                meta = await recorder.stop(run_id)
+                if get_run(run_id).runtime == "browser":
+                    applications.seal(run_id)
+                save_status(run_id, "recorded")
+                return meta
+            except ValueError as exc:
+                raise HTTPException(409, str(exc))
+            except RuntimeError as exc:
+                raise HTTPException(503, str(exc))
+
+    @app.post("/v1/runs/{run_id}/recordings/upload", dependencies=[Depends(manager)])
+    async def upload_recording(run_id, epoch: int, request: Request):
+        from .human_recording import MAX_BYTES, convert
+        async with lock(run_id):
+            run = get_run(run_id)
+            if not human(run) or run.mode != "demo":
+                raise HTTPException(409, "仅人工演示环境可导入浏览器录像")
+            active(run)
+            if epoch != run.epoch:
+                raise HTTPException(409, "录像属于另一轮环境，请重新录制")
+            media_type = request.headers.get("content-type", "").split(";")[0]
+            if media_type not in ("video/webm", "video/mp4"):
+                raise HTTPException(415, "请上传 WebM 或 MP4 录像")
+            require_storage()
+            dest = data / "artifacts" / run_id
+            dest.mkdir(parents=True, exist_ok=True)
+            if (dest / "tutorial.mp4").exists():
+                raise HTTPException(409, "本轮已有录像，请重置后录制")
+            source, converted = dest / "upload.input", dest / "upload.mp4"
+            try:
+                size = 0
+                with source.open("wb") as f:
+                    async for chunk in request.stream():
+                        size += len(chunk)
+                        if size > MAX_BYTES:
+                            raise HTTPException(413, "录像不能超过 150 MB")
+                        f.write(chunk)
+                try:
+                    meta = await asyncio.to_thread(convert, source, converted, media_type, epoch)
+                except (ValueError, RuntimeError, OSError) as exc:
+                    if isinstance(exc, OSError) and exc.errno in (errno.ENOSPC, errno.EDQUOT):
+                        raise
+                    raise HTTPException(422, "无法读取录像，请检查文件格式与时长") from exc
+                applications.seal(run_id)
+                converted.replace(dest / "tutorial.mp4")
+                (dest / "recording.json").write_text(json.dumps(meta, indent=2))
+                save_status(run_id, "recorded")
+                return meta
+            finally:
+                source.unlink(missing_ok=True)
+                converted.unlink(missing_ok=True)
+
+    @app.get("/v1/runs/{run_id}/recordings/video", dependencies=[Depends(manager)])
+    def video(run_id, epoch: int | None = None):
+        run = get_run(run_id)
+        directory = data / "artifacts" / run_id
+        if epoch is not None and epoch != run.epoch:
+            directory /= f"epoch-{epoch}"
+        path = directory / "tutorial.mp4"
+        if not path.exists():
+            raise HTTPException(404, "No recording")
+        return FileResponse(path, media_type="video/mp4")
+
+    @app.get("/v1/runs/{run_id}/recordings/metadata", dependencies=[Depends(manager)])
+    def recording_details(run_id, epoch: int | None = None):
+        meta = recording_metadata(get_run(run_id), epoch)
+        if meta is None:
+            raise HTTPException(404, "No recording")
+        return meta
+
+    @app.post("/v1/runs/{run_id}/recordings/review", dependencies=[Depends(manager)])
+    async def review(run_id, body: Review):
+        run = get_run(run_id)
+        if body.approved:
+            if run.mode != "demo":
+                raise HTTPException(409, "只能批准演示录像")
+            current_contract(run)
+            if lessons.episode_count(run.task_id) > 1 and not run.manifest.get("lesson"):
+                raise HTTPException(409, "此题需要完整的多组教学录像，请从录制台重新开始。")
+        path = data / "artifacts" / run_id / "recording.json"
+        if not path.exists():
+            raise HTTPException(409, "No recording to review")
+        if body.approved and (not run.result or not run.result["success"]):
+            raise HTTPException(409, "A passing demonstration is required")
+        meta = json.loads(path.read_text())
+        if meta.get("epoch") != run.epoch:
+            raise HTTPException(409, "Recording belongs to another execution epoch")
+        if (body.approved and meta.get("source") != "human_browser"
+                and meta.get("rule_overlay") is not False):
+            raise HTTPException(409, "此服务端录像未通过无规则字幕检查，请重新录制。")
+        meta.update(body.model_dump())
+        meta["status"] = "approved" if body.approved else "rejected"
+        meta["task_digest"] = run.manifest["task_digest"]
+        meta["seed"] = run.seed
+        meta["variant"] = run.variant
+        path.write_text(json.dumps(meta, ensure_ascii=False, indent=2))
+        return meta
+
+    @app.delete("/v1/runs/{run_id}", dependencies=[Depends(manager)])
+    async def delete(run_id):
+        async with lock(run_id):
+            get_run(run_id)
+            if run_id in recorder.active:
+                raise HTTPException(409, "Stop recording first")
+            if get_run(run_id).runtime == "browser":
+                applications.destroy(run_id)
+            save_status(run_id, "destroying")
+            await runtime.close_run(run_id)
+            save_status(run_id, "destroyed")
+            # Keep evidence and metadata for audit; destroy writable workspace.
+            shutil.rmtree(data / "runs" / run_id, ignore_errors=True)
+            return dict(status="destroyed")
+
+    @app.middleware("http")
+    async def headers(request, call_next):
+        response = await call_next(request)
+        response.headers["Cache-Control"] = "no-store"
+        response.headers["Referrer-Policy"] = "no-referrer"
+        response.headers["X-Content-Type-Options"] = "nosniff"
+        response.headers["Content-Security-Policy"] = (
+            "default-src 'self'; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'; media-src 'self' blob:; frame-src 'self'; frame-ancestors 'self'"
+        )
+        return response
+
+    dist = ROOT / "apps/portal/dist"
+    if (dist / "assets").exists():
+        app.mount("/assets", StaticFiles(directory=dist / "assets"), name="assets")
+
+    @app.get("/")
+    @app.get("/review")
+    @app.get("/workspace/{run_id}")
+    def index(run_id=None):
+        if not (dist / "index.html").exists():
+            raise HTTPException(503, "Build apps/portal first")
+        return FileResponse(dist / "index.html")
+
+    from .os_integration import install_os_routes
+    install_os_routes(app, manager, secret, data)
+
+    from .task_review import install_review
+    install_review(app, manager, secret, data, v2_tasks, recording_library, video)
+
+    return app

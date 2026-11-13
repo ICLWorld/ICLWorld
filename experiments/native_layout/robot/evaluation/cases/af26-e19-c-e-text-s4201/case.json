@@ -1,0 +1,19 @@
+{
+  "task": "E19",
+  "variant": "C",
+  "generalization_condition": "E",
+  "input_condition": "text_rule",
+  "seed": 4201,
+  "experiments": [
+    "generalization",
+    "ablation4"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "independent_paired_instance_runtime",
+  "episode_id": "af26-e19-c-e-text-s4201",
+  "instruction": "饮料瓶与瓶盖配对\n\n按示范中瓶型与瓶盖颜色的对应关系，为三瓶饮料配好盖。\n",
+  "instruction_sha256": "1504d190af33366bd05db3bab1a5d86a3f04c2069226c0fc5f3e098ed5f5e3fb",
+  "text_rule": "雪碧配白盖，水配红盖，可乐配黄盖",
+  "demonstration": null
+}

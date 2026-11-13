@@ -1,0 +1,10 @@
+{
+  "task_id": "E03",
+  "variant": "C",
+  "real": {
+    "sha256": "8aabb465563f8bf8918a7a9732e5226a9f921d876060306573eabf1f8894f8c4"
+  },
+  "sim": {
+    "sha256": "9b937ca22dca437fed10a65150504a5e438ab08ff07b1496d75ee965ff5bdc4e"
+  }
+}

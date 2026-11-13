@@ -1,0 +1,18 @@
+{
+  "task": "E04",
+  "variant": "C",
+  "generalization_condition": "I",
+  "input_condition": "text_rule",
+  "seed": 4201,
+  "experiments": [
+    "main"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e04-c-i-text-s4201",
+  "instruction": "按视频展示的物体颜色与目标图形对应关系，把苹果、梨和蓝色收纳罐分别放到相应标记上。\n",
+  "instruction_sha256": "c1553ca12f59f247ec4778e04b82bfd94dced46eea67f4ffefa28c623a0dd915",
+  "text_rule": "绿杯→圆；蓝杯→三角；红杯→方",
+  "demonstration": null
+}

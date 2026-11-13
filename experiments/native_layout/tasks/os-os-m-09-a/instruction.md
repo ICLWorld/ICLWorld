@@ -1,0 +1,1 @@
+Create a rollback snapshot from all four Workspace resources, restore it to an empty supplied destination and compare actual content. Preserve all source resources. Use the stage output-folder organization demonstrated in the video. For JSON outputs, use the declared field names and value types; indentation and object key order are unrestricted.

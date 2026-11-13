@@ -1,0 +1,30 @@
+{
+  "task": "E44",
+  "variant": "C",
+  "generalization_condition": "R",
+  "input_condition": "real",
+  "seed": 4201,
+  "experiments": [
+    "main"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e44-c-r-real-s4201",
+  "instruction": "纸板折成不同夹角\n\n按示范展示的夹角类别折好纸板，一面贴桌，松手后保持形状。\n",
+  "instruction_sha256": "e459d1288e96df1e3060362eb62acc123f6496735b1356100e227d9ed82495be",
+  "text_rule": null,
+  "demonstration": {
+    "path": "evaluation/media/82151e99a459ff2eb361b0c68000ed70dfaa9279b575f4426bd2c16bb26ca2b7.mp4",
+    "sha256": "4b592ea617f0f4b3c7da5c81ea832b1e2546b2c8151dd8fde178f5ead7236098",
+    "bytes": 3332441,
+    "evaluated_input_sha256": "82151e99a459ff2eb361b0c68000ed70dfaa9279b575f4426bd2c16bb26ca2b7",
+    "audio_tracks": 0,
+    "video_codec": "h264",
+    "width": 1920,
+    "height": 1080,
+    "duration_seconds": 7.166667,
+    "frames": 215,
+    "transformation": "remove_audio_streams_and_remux_video_without_reencoding"
+  }
+}

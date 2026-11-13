@@ -1,0 +1,26 @@
+{
+  "models": [
+    "gpt-6-astra",
+    "deepseek-v4.1-flash",
+    "glm-5.3-flash"
+  ],
+  "effort": "high",
+  "timeout": 3600,
+  "max_actions": 800,
+  "cases": "metadata/ablation.json",
+  "conditions": {
+    "none": [
+      "C"
+    ],
+    "video": [
+      "A",
+      "B",
+      "C"
+    ],
+    "qa": [
+      "A",
+      "B",
+      "C"
+    ]
+  }
+}

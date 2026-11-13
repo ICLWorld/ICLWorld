@@ -1,0 +1,18 @@
+{
+  "task": "E27",
+  "variant": "C",
+  "generalization_condition": "I",
+  "input_condition": "none",
+  "seed": 4201,
+  "experiments": [
+    "ablation_no_rule"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e27-c-i-none-s4201",
+  "instruction": "按视频展示的勺叉与餐盘的左右、内外位置关系摆放餐具；以你的用餐侧判断左右。\n",
+  "instruction_sha256": "ca6cdab5617fd3a1bb7198e6d646d60d87d76671451cab6317ae3c11cbb1bd35",
+  "text_rule": null,
+  "demonstration": null
+}

@@ -1,0 +1,19 @@
+{
+  "task": "E15",
+  "variant": "C",
+  "generalization_condition": "E",
+  "input_condition": "text_rule",
+  "seed": 4201,
+  "experiments": [
+    "generalization",
+    "ablation4"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "independent_paired_instance_runtime",
+  "episode_id": "af26-e15-c-e-text-s4201",
+  "instruction": "按视频展示的位置与朝向交换方式，调整这两架小飞机；用机头方向辨认各自朝向。\n",
+  "instruction_sha256": "0857aef966462c4f7e5b719ff09998d5a35a71798aedc371fc0aefcce5b59067",
+  "text_rule": "位置与朝向都交换",
+  "demonstration": null
+}

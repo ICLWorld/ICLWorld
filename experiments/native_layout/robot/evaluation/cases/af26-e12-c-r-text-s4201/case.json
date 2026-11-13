@@ -1,0 +1,18 @@
+{
+  "task": "E12",
+  "variant": "C",
+  "generalization_condition": "R",
+  "input_condition": "text_rule",
+  "seed": 4201,
+  "experiments": [
+    "main"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e12-c-r-text-s4201",
+  "instruction": "插排孔位选择\n\n按示范相对于电线端的插位选择，将两个充电器插入四位插排。\n",
+  "instruction_sha256": "486c9b426e31af3c6bccec7dd459474d2a26e11ea74686d961118af423b07f84",
+  "text_rule": "插入两端插位，中间两个空着",
+  "demonstration": null
+}

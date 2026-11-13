@@ -1,0 +1,18 @@
+{
+  "task": "E05",
+  "variant": "C",
+  "generalization_condition": "I",
+  "input_condition": "text_rule",
+  "seed": 4201,
+  "experiments": [
+    "main"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e05-c-i-text-s4201",
+  "instruction": "按视频展示的物体形状与目标图形对应关系，把小礼盒、橙子和三角糕点分别放到相应标记上。\n",
+  "instruction_sha256": "7f23132d9353ff550139f75f8fe7dc93bcc9cd2b58ab9354a9889bcd9480b8f7",
+  "text_rule": "方块→三角；球→方；三角→圆",
+  "demonstration": null
+}

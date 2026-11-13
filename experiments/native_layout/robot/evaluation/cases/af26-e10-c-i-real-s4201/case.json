@@ -1,0 +1,30 @@
+{
+  "task": "E10",
+  "variant": "C",
+  "generalization_condition": "I",
+  "input_condition": "real",
+  "seed": 4201,
+  "experiments": [
+    "main"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "independent_paired_instance_runtime",
+  "episode_id": "af26-e10-c-i-real-s4201",
+  "instruction": "按属性选择并套柱\n\n按示范的颜色、形状选择方式，把符合条件的零件套到匹配的立柱上，其余留在桌上。\n",
+  "instruction_sha256": "8b2277278fe9990eabecb445797b8c31fca7925fca103971d64ff46cda6a7709",
+  "text_rule": null,
+  "demonstration": {
+    "path": "evaluation/media/a6128a64ae62c305fbf60f57cc7352fdfbdfcbc032d0ed1b72ef5fb8ef58fa17.mp4",
+    "sha256": "0399a0689c68d4f33a4acd8e6e1431d73089bf303c4123ec4deee47b478352b9",
+    "bytes": 7412785,
+    "evaluated_input_sha256": "a6128a64ae62c305fbf60f57cc7352fdfbdfcbc032d0ed1b72ef5fb8ef58fa17",
+    "audio_tracks": 0,
+    "video_codec": "h264",
+    "width": 1920,
+    "height": 1080,
+    "duration_seconds": 15.5,
+    "frames": 465,
+    "transformation": "remove_audio_streams_and_remux_video_without_reencoding"
+  }
+}

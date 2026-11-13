@@ -1,0 +1,341 @@
+{
+  "source_revision": "095698825cb1d462fcc0d04e20cec46b8d10cff2",
+  "files": {
+    "bootstrap_verified_room.py": {
+      "published_sha256": "5f6508523bfc380362ead5c1cff0013fb044698c2a674b47fd7ccc9ee57b82b9"
+    },
+    "process_launcher.py": {
+      "published_sha256": "c6e4d26fe3be04f379368972d100f488c81ce0d2eb65a3b3d7d2408906e3855c"
+    },
+    "pool_verified.py": {
+      "published_sha256": "8d2be712693222d01d76e38771a838a9025c7d0fab5eaad9ddcdb106e8e715df"
+    },
+    "cases.example.json": {
+      "published_sha256": "408b8abd836b166d76e920aa850d6d38ca3cb8b0bc32a0dadef572bfc465cb14"
+    },
+    "LICENSE": {
+      "published_sha256": "983d115562ed030f5ccf5ede4b189b4f143619c0673e4b6dc013c46022003a5e"
+    },
+    "prepare_runtime.py": {
+      "published_sha256": "ff6310303bfe9a47fbe284e1aa1b9eb7b8ddf02e42ba57025b90ceadbbf10471"
+    },
+    "worker/public_read_identity.py": {
+      "published_sha256": "52ed4e714d191111bbd300f7c24a478fdce745b5ab93e74ba255b0405c561042"
+    },
+    "worker/zcode_effort.py": {
+      "published_sha256": "86c4b9dd7cf2e2b6e1ccf0dd6ba2864ae8777c6630a9681dac6bfbbad7a20a48"
+    },
+    "worker/newapi_gate.py": {
+      "published_sha256": "1d2a6cba7d9b16adf48de680f1b1808e6b14988c453eef540063d7a405fa6a91"
+    },
+    "worker/owned_provider_transport_recovery.py": {
+      "published_sha256": "ef0e3b3b916e1271f1b7859de59191ec4789240fe4c59625fffe5ce7ad183c79"
+    },
+    "worker/provider_routes.py": {
+      "published_sha256": "7534d310d374a4027173d7d9352320b69b08075df36592ee1494c3f279bbc28a"
+    },
+    "worker/gemini_gate.py": {
+      "published_sha256": "4e1c7042dcd266605f3408a8053eef273cae471e05c4a3f1e4dc5c36e915db9e"
+    },
+    "worker/stream_metadata.py": {
+      "published_sha256": "2f38c431e3523bc62b10e6e841ffdc9ac7d475cf4389d471f337803621c34f97"
+    },
+    "worker/anthropic_guard_relay.py": {
+      "published_sha256": "8638f102fba1782747c0ee7f3589699fa7d29acc2f4bb24de1263413a0dee781"
+    },
+    "worker/lazy_mcp_gui.py": {
+      "published_sha256": "b07bd83ebc75437952c1868c881bc50b01825d3a93271a18ce99addcbc67fd98"
+    },
+    "worker/gemini_route.py": {
+      "published_sha256": "e9eed93680bb7c476cc6484c09191d7a1c7fc5f16d077310e2de0c5b8b8d3657"
+    },
+    "worker/zcode_dead_lease.py": {
+      "published_sha256": "559fe9b4c4d1aa0d3aca7f096150d780bdb8ebe237cb5a52675523cf9b97bc4b"
+    },
+    "worker/transport.py": {
+      "published_sha256": "1ffc585202c7d8f81573ab4cb6cd370c5d69fd22c51b8ffb39a2a48adbb8e634"
+    },
+    "worker/dsh_messages_compat.py": {
+      "published_sha256": "070d72fef86ce0af5dd4555e87594c91af2be14e8622e182d4d3e42095861910"
+    },
+    "worker/kimi_stream_guard.py": {
+      "published_sha256": "3968a6582733d6f15435c7c00ca250eaa1b86e2ad251d642a96ad8a842e800d5"
+    },
+    "worker/kimi_guard_relay.py": {
+      "published_sha256": "15aca8797a260a9c0755ff1364847554e2f88ee066419615602cd7973b4dabd6"
+    },
+    "worker/dsh_output_recovery_policy.py": {
+      "published_sha256": "1296b20f2343169d2827d62b0344904061adc863da5fdf5c2a2733898f085f04"
+    },
+    "worker/public_depth.py": {
+      "published_sha256": "97674ef6d292f84a3b158f0bd899b12046f0bfba1b997b67f77662405ba8bb48"
+    },
+    "worker/anthropic_stream_guard.py": {
+      "published_sha256": "28af8c9b948655e91b834d076cae19af0b7914c82149294f1229dd9335d0bb68"
+    },
+    "worker/stream_shape_audit.py": {
+      "published_sha256": "7dc2748802caa5ae150110dddd61890de515c388f9706bd309eb22d31f088d7f"
+    },
+    "worker/migrate_zcode_session.py": {
+      "published_sha256": "e532d45c08c375abd9fd63adbbdbdbaf19e5cfb04012c9c054b4079f63b56aae"
+    },
+    "worker/sealed_zcode_cleanup.py": {
+      "published_sha256": "27ad9bc1b912dbee9ab5f88732c2d7446b19d3243b16aad71e388a2a2eff916a"
+    },
+    "worker/newapi_usage.py": {
+      "published_sha256": "19f158c15e1bfdf2671646aea55cdacb64190851c270c82075d7055bf190ab94"
+    },
+    "worker/gemini_gate_core.py": {
+      "published_sha256": "85bb5807312a23c177df482a1709d0a8a8dd9daff7965ff997414571ae901dc5"
+    },
+    "worker/wire_images.py": {
+      "published_sha256": "4bbd4b005a5563ca1fda9407cce938f8d8b3c8435510712d8598e5dbb4d28f21"
+    },
+    "worker/upstream_budget_metadata.py": {
+      "published_sha256": "4bb591d035d160fe932ab31d9c59787d6af78480f553c6ef4ce95b08bf5ba7ea"
+    },
+    "worker/transport_phases.py": {
+      "published_sha256": "5c3963341df26c84e273254175b692f51340ebc552cda87a8d03bf96a14b7b65"
+    },
+    "worker/qwen_runtime.py": {
+      "published_sha256": "814be5adf656675099e2a7339f2ae9c90136019d2e6ef7f789e55493df8a83a7"
+    },
+    "worker/run.py": {
+      "published_sha256": "718da38f9eff7b6b1b894a2322708ea3e5eb83ffd21f9dea8e0cad5ce954684e"
+    },
+    "worker/zcode_vision.py": {
+      "published_sha256": "340d485d6efc09cdeffce6e6f1e4b2373a38d758a902a9f3c823728ec4c6c2ed"
+    },
+    "tests/test_responses_transport.py": {
+      "published_sha256": "d40dcc9236e66ffd609d33ae5bfa6ba82310d900ada85b2bfb5d058b48ceffb2"
+    },
+    "tests/test_unified_entry.py": {
+      "published_sha256": "0d10d1fcc36eac61b69e821e382dda8f8daf29bb48c59a4c79d78c1c83e7f9ec"
+    },
+    "tests/test_native_cli_backends.py": {
+      "published_sha256": "18c170a4ada082d13b1784c50171f19176baabbd20d6b045d7669c8edf15fb10"
+    },
+    "tests/test_coalesced_pool.py": {
+      "published_sha256": "27cfc61e51cfa30d1387f3bd8bd4a5eeea8a5156a5012764d305cd27545f0f6e"
+    },
+    "VideoICLBench/pyproject.toml": {
+      "published_sha256": "b99a08e1825925bc38a5b66e4c68ad18a84ee88d4a0d2e0a5a0370a3a75ef570"
+    },
+    "runtime-overlay/videoicl_isaaclab/idle_room_state.py": {
+      "published_sha256": "93a05596e308237181a9b59b42d4b5cbb0df7c23fe06062190b36762f3fd116f"
+    },
+    "runtime-overlay/videoicl_isaaclab/control.py": {
+      "published_sha256": "862da2c0552c105bf2cf700b341250e6e8efbddad8ef0d8dc1ab00a8d5ff82ef"
+    },
+    "runtime-overlay/videoicl_isaaclab/pool_rpc.py": {
+      "published_sha256": "c3302514c6d297f8773b82297522d56eda1e36a22a825f5dee3ddcf8685e7805"
+    },
+    "runtime-overlay/videoicl_isaaclab/room_pool.py": {
+      "published_sha256": "86f27ebb5e59c50312f882f03125e781f87cfdc53cb87ab4bbf8e44bb446f6ad"
+    },
+    "runtime-overlay/scripts/probe_realworld_room_pool.py": {
+      "published_sha256": "93e4758aaae38d2b21b67f59795884af71b3a4d5118429690749f53cdec572ac"
+    },
+    "runtime-overlay/scripts/serve_realworld_room_pool.py": {
+      "published_sha256": "22f25f616ff6207d1f62dab55a093b5abd3da899f53d52792ab31fa93d8e0413"
+    },
+    "VideoICLBench/tests/test_embodied_environment.py": {
+      "published_sha256": "c658542ff5b566d7437a5d466761033dec1167f6259166f5db691914df7a6fed"
+    },
+    "VideoICLBench/tests/test_embodied_gui_mcp.py": {
+      "published_sha256": "a69955e2565d2961f98183fccacbb93df5c6055d8592ac044ffc518031bed5bb"
+    },
+    "VideoICLBench/tests/test_embodied_scoring.py": {
+      "published_sha256": "399be63c0c4779c78515ab9c19637a371dca751c5f1ce094b61d5e1bfd8ce8d7"
+    },
+    "VideoICLBench/tests/test_embodied_native_agent.py": {
+      "published_sha256": "a6f700e045b415d3cd794282539de446a3125aa7c1d9281de59606bab15b324c"
+    },
+    "VideoICLBench/packages/sdk/vic_sdk/embodied_public_observation.py": {
+      "published_sha256": "b30a3320906b0ea2cf4de9f228fe92a82ef4d737cc7cbc80f8b2b75200cbc243"
+    },
+    "VideoICLBench/packages/sdk/vic_sdk/native_agent.py": {
+      "published_sha256": "329a3250fec7ca3a310d6c1936af60f3be10cb7f271261a437fec5d87fdf9179"
+    },
+    "VideoICLBench/packages/sdk/vic_sdk/embodied_gui_mcp.py": {
+      "published_sha256": "6c5b09420138ce77da9f4c6e907de056eb81707ffd5a702b1964fbcd96aab3a7"
+    },
+    "VideoICLBench/packages/sdk/vic_sdk/embodied_protocol.py": {
+      "published_sha256": "bee105b58d7692b53d13650fad5915579735e3435ba2a63460f776c3e6b2d434"
+    },
+    "VideoICLBench/packages/sdk/vic_sdk/process_lifecycle.py": {
+      "published_sha256": "46576d13c61c0724f63a866a1a5bd6b7c83e0a7bb94d46c03fef4aa138281e0c"
+    },
+    "VideoICLBench/packages/sdk/vic_sdk/robodawn_turn_runner.py": {
+      "published_sha256": "c49b95112385a9df6e482e2bd0e0bb546388408e31c5b66ccd0ca2107d164daa"
+    },
+    "VideoICLBench/packages/sdk/vic_sdk/api_timing.py": {
+      "published_sha256": "c33769ec1e6649336a92bcdeac4f7e4f3e3f3a94a5ea47b7ad90196b1debdcca"
+    },
+    "VideoICLBench/packages/sdk/vic_sdk/episode_api_admission.py": {
+      "published_sha256": "710375aa2227d3fb61743b5005074a39f6d00a86680e3c70c62a5693fc1ce356"
+    },
+    "VideoICLBench/packages/sdk/vic_sdk/computer_mcp.py": {
+      "published_sha256": "75ad883a1732ebda8a37f628e398229a434a103f125704ff03fb94a82bd21cac"
+    },
+    "VideoICLBench/packages/sdk/vic_sdk/embodied_program_geometry.py": {
+      "published_sha256": "8157db8a8060446e27bfb316897293139717e9d95d7f0017acbe9fa79da4c979"
+    },
+    "VideoICLBench/packages/sdk/vic_sdk/robodawn_turn_context.py": {
+      "published_sha256": "2e51a728c39a3ac3042aaabf4250648faf205f89dc321c0c1b56d824fe9c5136"
+    },
+    "VideoICLBench/packages/sdk/vic_sdk/robodawn_entry.py": {
+      "published_sha256": "7ae60c70a3c257cfd7a9467b619c58b9403c1c822d4535ee2863ee3484aa68d2"
+    },
+    "VideoICLBench/packages/sdk/vic_sdk/robodawn_runner.py": {
+      "published_sha256": "647fdea33da160c46082fe13921559c9ea042f37f613d7518ff6417478d7bbc7"
+    },
+    "VideoICLBench/packages/sdk/vic_sdk/claude_structured.py": {
+      "published_sha256": "1f2a00269b431d45138b5c9b83d587a7ae7f723fcd6e8fd375f5c0b4decc2380"
+    },
+    "VideoICLBench/packages/sdk/vic_sdk/embodied_program_runtime.py": {
+      "published_sha256": "42c5997b2f8b9ba8fd3dda69822cd9df295a3177085c38d270437f43fe2ce29b"
+    },
+    "VideoICLBench/packages/sdk/vic_sdk/embodied_token_projection.py": {
+      "published_sha256": "7b30d97401916e4d4dfede8e4a066543e773be821c5bebd952a41b7d887e2185"
+    },
+    "VideoICLBench/packages/sdk/vic_sdk/embodied_mcp.py": {
+      "published_sha256": "a805643165f387e0d3aac9096b1559b71440004dbd05551b1f760ba38668d205"
+    },
+    "VideoICLBench/packages/sdk/vic_sdk/embodied_codex_mcp.py": {
+      "published_sha256": "ec77693e90ac629f2b8f447cc6ae43ce56d60410aa4e285f49012c6d13c2c783"
+    },
+    "VideoICLBench/packages/sdk/vic_sdk/native_structured_supervisor.py": {
+      "published_sha256": "b6e3c649d70476111e0eff922902e8d0f52c648f54b9e4960e57cbf3d9111804"
+    },
+    "VideoICLBench/packages/sdk/vic_sdk/__init__.py": {
+      "published_sha256": "1675fd1c7fb675700396e35fb9c83df093cc7ebb8ca01a4df4447d95991542f4"
+    },
+    "VideoICLBench/packages/sdk/vic_sdk/robodawn_message_boundaries.py": {
+      "published_sha256": "4b7c13050789eb4a4e84e93bf4155f6071330a88a0af4f551d3bd7c8459e5cb2"
+    },
+    "VideoICLBench/packages/sdk/vic_sdk/native_stop_hook.py": {
+      "published_sha256": "ee07d1f780bff590c8fa88aae98bc43f49ab958129745e40153027309c44bffd"
+    },
+    "VideoICLBench/packages/sdk/vic_sdk/client.py": {
+      "published_sha256": "73b856bf97ec77dea16478067cab3bb679d7d5fccdae03aa1a913cfb0630096a"
+    },
+    "VideoICLBench/packages/sdk/vic_sdk/process_identity.py": {
+      "published_sha256": "d0245cbc303b8155f881f77b9a2ad300f436b1fde463fb25968e48054b7750dc"
+    },
+    "VideoICLBench/packages/sdk/vic_sdk/api_concurrency.py": {
+      "published_sha256": "687796e58e25b3e5118b431f35d513b846c9f01cb979549bdd0883a0911bca38"
+    },
+    "VideoICLBench/packages/sdk/vic_sdk/tls_relay_entry.py": {
+      "published_sha256": "635a27399b160f048f324379f9307469a62a3aaeb324641e16d5943e9c2a7a46"
+    },
+    "VideoICLBench/packages/sdk/vic_sdk/direct_tools.py": {
+      "published_sha256": "56c979c28d45340c4f16a7e3bfcabe87a94fb7734889867ca4d5945f1985f191"
+    },
+    "VideoICLBench/packages/sdk/vic_sdk/embodied_recovery.py": {
+      "published_sha256": "2c1062c0f2af6683933e04e553b55588705bf2b7c9219bc9c2df96de0635fd2a"
+    },
+    "VideoICLBench/packages/sdk/vic_sdk/anthropic_image_proxy.py": {
+      "published_sha256": "29307ec6a53ce7effa3e9471a6e27801f4f4475845070e817ca7b4129297f9e6"
+    },
+    "VideoICLBench/packages/sdk/vic_sdk/embodied_codex_mcp_entry.py": {
+      "published_sha256": "5eb06c0cc41e09f0303b360ab67d16565496ede2dacd917124b6d17dad0d15a6"
+    },
+    "VideoICLBench/packages/sdk/vic_sdk/embodied_agent.py": {
+      "published_sha256": "860a43e6365f4e022b21f1f40edf6e3efe1d30c213da4d5a686127f09420638b"
+    },
+    "VideoICLBench/packages/sdk/vic_sdk/robodawn_tools.py": {
+      "published_sha256": "a68e8ac95854ab211f015cf132b2fe012482288e8c28b8529a64e792f4fc62f7"
+    },
+    "VideoICLBench/packages/sdk/vic_sdk/tls_relay.py": {
+      "published_sha256": "4e6627cbae44257bd736ba83dd1f30d3a732878b390dd5cd81b0004449d5bda6"
+    },
+    "VideoICLBench/packages/sdk/vic_sdk/embodied_program_gui.py": {
+      "published_sha256": "c73bb77638c43fb549608b8b3b4215a7fd11808e2df2ce1dda74406df272b338"
+    },
+    "VideoICLBench/packages/sdk/vic_sdk/worker.py": {
+      "published_sha256": "f032f2b3d0b7af921035e00e1c066dfcd78ac39febfab9613d4ad931dcfe3145"
+    },
+    "VideoICLBench/packages/sdk/vic_sdk/robodawn_context.py": {
+      "published_sha256": "d36d01de6bfba05df9f1a7fb179b71be7c2fc8f18ce818561009b5fd20b4a7d9"
+    },
+    "VideoICLBench/packages/sdk/vic_sdk/robodawn_turn_executor.py": {
+      "published_sha256": "4ad46025328fcdae4b7fa08bd2fcd0e07f7d8cd196aa3239214b5be2fed7dbe8"
+    },
+    "VideoICLBench/packages/sdk/vic_sdk/embodied_environment/server.py": {
+      "published_sha256": "13aa6e72aaa0e273c02f9ef763fbe7b6a27404d434b2cef42c74957806ce48a8"
+    },
+    "VideoICLBench/packages/sdk/vic_sdk/embodied_environment/sensor_depth.py": {
+      "published_sha256": "3afddae5282ae05a769d70e0ae8e47c815f90637ba155088ce3aca80ad748504"
+    },
+    "VideoICLBench/packages/sdk/vic_sdk/embodied_environment/scoring.py": {
+      "published_sha256": "27b893d9b48724e5d3c295f519210f2bf71924d4481d40dd5950c8334f771290"
+    },
+    "VideoICLBench/packages/sdk/vic_sdk/embodied_environment/native.py": {
+      "published_sha256": "8d9a94f3f8c600723bff06dae14370c2fd3a80400b8182b660b6159d99c6095c"
+    },
+    "VideoICLBench/packages/sdk/vic_sdk/embodied_environment/episode.py": {
+      "published_sha256": "1960eb379a0c24083a85137fb8d1ac50cb463e5cfc043318de85017242f066d7"
+    },
+    "VideoICLBench/packages/sdk/vic_sdk/embodied_environment/__init__.py": {
+      "published_sha256": "e1ad07c4285218c5dea4f2caa4816032486e9b3a47ab8ff83265c6b4dc18ace2"
+    },
+    "VideoICLBench/packages/sdk/vic_sdk/embodied_environment/sensor_depth_public.py": {
+      "published_sha256": "9db2fef7da480b135126d0fb18c6af3268a34fa17cf93c64ec837742ec37a851"
+    },
+    "VideoICLBench/packages/sdk/vic_sdk/embodied_environment/pool.py": {
+      "published_sha256": "cda3f21dfe52684f71f4641b6fc7d57e699c74b1585b37f384f88e61bb09838e"
+    },
+    "VideoICLBench/scripts/harbor/run_embodied.py": {
+      "published_sha256": "4bba313e1e27698dcf3a07b3b661207fadcdd0edfc597c862b6b9b778174f5c1"
+    },
+    "VideoICLBench/scripts/harbor/serve_embodied_pool_room.py": {
+      "published_sha256": "2814dc6647602f684f3d8405dddd4b6adc1bdc28a521d4b324320e807d187fe2"
+    },
+    "VideoICLBench/scripts/harbor/native_collision_admission.py": {
+      "published_sha256": "c53be1d715f5b4c5c95375f3c5ff86237a48db59ed2419a42334ef54e0098d0c"
+    },
+    "VideoICLBench/scripts/harbor/run_embodied_pool.py": {
+      "published_sha256": "76b74245f33113a1280f1c7769014257a9dc4d632bb3092b59a1cdcc4926681e"
+    },
+    "VideoICLBench/scripts/harbor/serve_embodied.py": {
+      "published_sha256": "1b71d9a20f88f087fd3c18be8aa08c25ffef869a9eec6a05b0f0ed9b7cfcd98e"
+    },
+    "VideoICLBench/scripts/harbor/panel_contract.py": {
+      "published_sha256": "32f6d3b86474696b20764641f5c824585bfa0e239877264a30c7d2969ca40b75"
+    },
+    "VideoICLBench/scripts/harbor/verify_embodied.py": {
+      "published_sha256": "a4e99c3d2cc748bc54ca86dc5f5c7c6098aad439a9cafa9f817d4f94a2fd634f"
+    },
+    "VideoICLBench/scripts/harbor/probe_embodied_gui.py": {
+      "published_sha256": "f8b2f70ad34bfbcb90487108ea5fe285045373d218b2962a323bbc50f8c1304e"
+    },
+    "VideoICLBench/apps/portal/public/embodied/index.html": {
+      "published_sha256": "de3a59e4ec9a69b5353e3badfd4bcd55143fa5cb86bc5d81efbab23b0be24031"
+    },
+    "VideoICLBench/apps/portal/public/embodied/style.css": {
+      "published_sha256": "16be6aa65eba7894746f31c421e21a3e7b2edbc5673e3f229dc4a0fe6a84807a"
+    },
+    "VideoICLBench/apps/portal/public/embodied/app.js": {
+      "published_sha256": "2847de1e8193aee728e9ecbe9f28c8df2377af011676ecb8272c584b2d5094ec"
+    },
+    "worker/adapters/zcode.py": {
+      "published_sha256": "91a849964e170c463f6faecd8b1b952fbda17fbb909660045504896652e45f68"
+    },
+    "worker/adapters/dsh.py": {
+      "published_sha256": "3e7b9bba1ad2f88f4194de5d62bdf0e10d0717ef3d8b30f43ceeaabd0573706c"
+    },
+    "worker/adapters/gemini.py": {
+      "published_sha256": "8486a09386e0006e8dd0aeb5bfcb1e19e355c81f9118a66020eab94c50bc5eeb"
+    },
+    "worker/adapters/kimi.py": {
+      "published_sha256": "7077f68469fb36b2581f97551f9ad6f1d3789f200a4800aeee02d3d06a36f843"
+    },
+    "worker/adapters/__init__.py": {
+      "published_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "worker/adapters/codex.py": {
+      "published_sha256": "ec2d1fad908ef6d1f3a8c7c8d0e999beecc9d8008a222cd622d6471b2092684c"
+    }
+  }
+}

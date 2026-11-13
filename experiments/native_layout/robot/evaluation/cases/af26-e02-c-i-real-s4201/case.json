@@ -1,0 +1,30 @@
+{
+  "task": "E02",
+  "variant": "C",
+  "generalization_condition": "I",
+  "input_condition": "real",
+  "seed": 4201,
+  "experiments": [
+    "main"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e02-c-i-real-s4201",
+  "instruction": "按视频展示的颜色层序，把三块香皂叠成稳定的一摞。\n",
+  "instruction_sha256": "b57b7bd3daabf712092b63307fb85eb2cbf8c8e23c360b6e80de664d58ba1072",
+  "text_rule": null,
+  "demonstration": {
+    "path": "evaluation/media/5f9251a57bbc98c9ed76e8b6bad92a8b6c86595f3cbcaa9a462026ec935d4ca7.mp4",
+    "sha256": "f6bbab1b5ec613d0f8fec9e08a5ad485d8e6311512f4dc6cdc4e954c76403d82",
+    "bytes": 5043487,
+    "evaluated_input_sha256": "5f9251a57bbc98c9ed76e8b6bad92a8b6c86595f3cbcaa9a462026ec935d4ca7",
+    "audio_tracks": 0,
+    "video_codec": "h264",
+    "width": 1920,
+    "height": 1080,
+    "duration_seconds": 12.666667,
+    "frames": 380,
+    "transformation": "remove_audio_streams_and_remux_video_without_reencoding"
+  }
+}

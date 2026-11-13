@@ -1,0 +1,32 @@
+{
+  "task": "E47",
+  "variant": "C",
+  "generalization_condition": "R",
+  "input_condition": "real",
+  "seed": 4201,
+  "experiments": [
+    "main",
+    "generalization",
+    "ablation4"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e47-c-r-real-s4201",
+  "instruction": "翻牌后选择红黑牌入盒\n\n翻开左起前两张牌，按照示范中的红黑选择方式将相应牌放入盒中，其余牌保留。\n",
+  "instruction_sha256": "1b73de2810302ccbbab4840919087c4b15c7eedafebbb85e60d921631d5bacb6",
+  "text_rule": null,
+  "demonstration": {
+    "path": "evaluation/media/007ab89e6481e60119448fcd42b436a10f6aebd21a6b7fb4420b89fa19572912.mp4",
+    "sha256": "6af55830e59bcf56f916ab71b4dc54d3342286a66319950c193b058fc9ce5296",
+    "bytes": 5799270,
+    "evaluated_input_sha256": "007ab89e6481e60119448fcd42b436a10f6aebd21a6b7fb4420b89fa19572912",
+    "audio_tracks": 0,
+    "video_codec": "h264",
+    "width": 1920,
+    "height": 1080,
+    "duration_seconds": 11.7,
+    "frames": 351,
+    "transformation": "remove_audio_streams_and_remux_video_without_reencoding"
+  }
+}

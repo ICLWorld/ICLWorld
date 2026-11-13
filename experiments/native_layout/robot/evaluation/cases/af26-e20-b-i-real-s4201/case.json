@@ -1,0 +1,30 @@
+{
+  "task": "E20",
+  "variant": "B",
+  "generalization_condition": "I",
+  "input_condition": "real",
+  "seed": 4201,
+  "experiments": [
+    "ablation_abc"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e20-b-i-real-s4201",
+  "instruction": "耗材盘补量后封装交付\n\n把订单指定的耗材盘准备成可直接使用的一套并送往指定工位。各图形区的配色和补齐后的总数量按视频；已有合格耗材计入总数，不得清空重装，备用耗材不应随盘送出。\n本次公开订单：批次 2，交付到 2 号目标工位。\n\n本轮对应物体为红、黄、蓝三色纽扣；上文完整任务流程及交付要求保持不变。\n",
+  "instruction_sha256": "bc27d8370274ecde330c3de1149c4b82cbbe699d6bd2710d5dab9346841aabee",
+  "text_rule": null,
+  "demonstration": {
+    "path": "evaluation/media/8d7f88c8f2ca2567adcad7b2d19e6bde55844673845c84c2911e510102d9091f.mp4",
+    "sha256": "88b0987be856a14cd65b2231453550305dcf2b368cce66c207bb70f10a5f1ee2",
+    "bytes": 11309103,
+    "evaluated_input_sha256": "8d7f88c8f2ca2567adcad7b2d19e6bde55844673845c84c2911e510102d9091f",
+    "audio_tracks": 0,
+    "video_codec": "h264",
+    "width": 1920,
+    "height": 1080,
+    "duration_seconds": 22.4,
+    "frames": 672,
+    "transformation": "remove_audio_streams_and_remux_video_without_reencoding"
+  }
+}

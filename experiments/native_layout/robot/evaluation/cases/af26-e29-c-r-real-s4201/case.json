@@ -1,0 +1,30 @@
+{
+  "task": "E29",
+  "variant": "C",
+  "generalization_condition": "R",
+  "input_condition": "real",
+  "seed": 4201,
+  "experiments": [
+    "main"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e29-c-r-real-s4201",
+  "instruction": "琴槌敲击音阶顺序\n\n用琴槌按照示范的键位先后顺序敲击这套八键琴。\n",
+  "instruction_sha256": "3d7a2848dfc39c9c20347f3079d1e1abc57c99466de41fe70ccc9fbf7574ade0",
+  "text_rule": null,
+  "demonstration": {
+    "path": "evaluation/media/7ed60bb9b6010f54808c5bd33da5cbbb924cdd9a73157c251440d6b0c5d90163.mp4",
+    "sha256": "88d258b42fab19ad0a0b1522ac3d33c4a67c778f631baf9ecc6622ddefc81580",
+    "bytes": 3919763,
+    "evaluated_input_sha256": "7ed60bb9b6010f54808c5bd33da5cbbb924cdd9a73157c251440d6b0c5d90163",
+    "audio_tracks": 0,
+    "video_codec": "h264",
+    "width": 1080,
+    "height": 1920,
+    "duration_seconds": 9.4,
+    "frames": 282,
+    "transformation": "remove_audio_streams_and_remux_video_without_reencoding"
+  }
+}

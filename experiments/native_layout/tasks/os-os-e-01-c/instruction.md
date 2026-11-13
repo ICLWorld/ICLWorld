@@ -1,0 +1,1 @@
+Rename all 6 text documents in Workspace; preserve extensions, content and all other files. Use the file-title word formatting while preserving extensions demonstrated in the video. For JSON outputs, use the declared field names and value types; indentation and object key order are unrestricted.

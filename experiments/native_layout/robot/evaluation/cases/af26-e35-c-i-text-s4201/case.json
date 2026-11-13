@@ -1,0 +1,18 @@
+{
+  "task": "E35",
+  "variant": "C",
+  "generalization_condition": "I",
+  "input_condition": "text_rule",
+  "seed": 4201,
+  "experiments": [
+    "main"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e35-c-i-text-s4201",
+  "instruction": "按视频展示的大小层序，把三本书叠成稳定的一摞。\n",
+  "instruction_sha256": "6fd68864dba56529c5bccd4dd8671ba577c34d3a1733fab9fe6a14a2ced82255",
+  "text_rule": "从下到上大、小、中",
+  "demonstration": null
+}

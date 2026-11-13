@@ -1,0 +1,1 @@
+Update only Trigger on all Existing task entries. Do not run them or change paths/dependencies. Use the task trigger setting demonstrated in the video. For JSON outputs, use the declared field names and value types; indentation and object key order are unrestricted.

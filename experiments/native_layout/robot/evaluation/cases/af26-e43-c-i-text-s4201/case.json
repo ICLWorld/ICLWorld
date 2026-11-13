@@ -1,0 +1,18 @@
+{
+  "task": "E43",
+  "variant": "C",
+  "generalization_condition": "I",
+  "input_condition": "text_rule",
+  "seed": 4201,
+  "experiments": [
+    "main"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "independent_paired_instance_runtime",
+  "episode_id": "af26-e43-c-i-text-s4201",
+  "instruction": "用导向条让球经过图形区域\n\n按示范选择的图形区域布置导向条，使释放后的球经过该区域。\n",
+  "instruction_sha256": "8d26cb80826c8a4311d3dfa33b37d7b699f00e0077bde5a94379f651f0c6a3af",
+  "text_rule": "导向方标记区域",
+  "demonstration": null
+}

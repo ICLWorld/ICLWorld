@@ -1,0 +1,30 @@
+{
+  "task": "E27",
+  "variant": "B",
+  "generalization_condition": "I",
+  "input_condition": "real",
+  "seed": 4201,
+  "experiments": [
+    "ablation_abc"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e27-b-i-real-s4201",
+  "instruction": "按视频展示的勺叉与餐盘的左右、内外位置关系摆放餐具；以你的用餐侧判断左右。\n",
+  "instruction_sha256": "ca6cdab5617fd3a1bb7198e6d646d60d87d76671451cab6317ae3c11cbb1bd35",
+  "text_rule": null,
+  "demonstration": {
+    "path": "evaluation/media/b69ecf64218790b1df8b6f2d8f62ad12a87f90a969aa5efcf20ed8474f02bc2f.mp4",
+    "sha256": "cdb824d29c6109da6b600a10adf2fa133d715f81b8150311b22c14030bf974a7",
+    "bytes": 3682954,
+    "evaluated_input_sha256": "b69ecf64218790b1df8b6f2d8f62ad12a87f90a969aa5efcf20ed8474f02bc2f",
+    "audio_tracks": 0,
+    "video_codec": "h264",
+    "width": 1920,
+    "height": 1080,
+    "duration_seconds": 7.9,
+    "frames": 237,
+    "transformation": "remove_audio_streams_and_remux_video_without_reencoding"
+  }
+}

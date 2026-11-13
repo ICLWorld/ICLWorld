@@ -1,0 +1,10 @@
+{
+  "kind": "web",
+  "task_id": "43",
+  "variant": "A",
+  "seed": 4201,
+  "generalization": "I",
+  "backend": "iclworld-web-os",
+  "codebase": "https://github.com/ICLWorld/ICLWorld",
+  "demo_sha256": "dcf1334449fdaa053f500e1fb0493bdb41bfbfdad54d7e1c2f0c6d3903646f3a"
+}

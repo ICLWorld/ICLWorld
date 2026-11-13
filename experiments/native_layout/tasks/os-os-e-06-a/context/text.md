@@ -1,0 +1,1 @@
+contact 值替换为 [REDACTED]，保留字段。Mask contact values as [REDACTED]. operator_id 是纯数字标识，例如 1004；C 写为 Contact-1004。保留 operator_id 本身及其他字段。

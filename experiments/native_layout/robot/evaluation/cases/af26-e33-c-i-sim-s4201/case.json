@@ -1,0 +1,31 @@
+{
+  "task": "E33",
+  "variant": "C",
+  "generalization_condition": "I",
+  "input_condition": "sim",
+  "seed": 4201,
+  "experiments": [
+    "generalization",
+    "ablation4"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e33-c-i-sim-s4201",
+  "instruction": "指定饮料瓶投入垃圾桶\n\n按示范的瓶子选择，把对应饮料瓶放入垃圾桶，其余瓶子留在桌上。\n",
+  "instruction_sha256": "4f78ec7ce9d3d23f73434373d5fc2467bdf878afd5836b573a2f0b49ccc0de7b",
+  "text_rule": null,
+  "demonstration": {
+    "path": "evaluation/media/7e99c8257eada677436e90e41e7cd268483845d7cc3ac7492fba24002e4aa8e7.mp4",
+    "sha256": "3b64f30397dc046988bb8ec5c0174891613a951710948990947ec7580dc6ead7",
+    "bytes": 838207,
+    "evaluated_input_sha256": "7e99c8257eada677436e90e41e7cd268483845d7cc3ac7492fba24002e4aa8e7",
+    "audio_tracks": 0,
+    "video_codec": "h264",
+    "width": 640,
+    "height": 480,
+    "duration_seconds": 33.2,
+    "frames": 830,
+    "transformation": "remove_audio_streams_and_remux_video_without_reencoding"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "models": {
+    "qwen3.8-max": "claude",
+    "kimi-k3": "kimi",
+    "glm-5.3-flash": "zcode",
+    "deepseek-v4.1-flash": "dsh",
+    "gpt-6-astra": "codex",
+    "claude-opus-5-5": "claude"
+  },
+  "effort": "high",
+  "timeout": 3600,
+  "max_actions": 800,
+  "conditions": [
+    "video",
+    "text"
+  ],
+  "cases": "metadata/main.json"
+}

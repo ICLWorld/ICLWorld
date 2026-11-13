@@ -1,0 +1,10 @@
+{
+  "question": "视频中，示范者对多组对象反复使用的是下面哪一种具体处理方法？",
+  "options": {
+    "A": "姓名 <phone>。",
+    "B": "姓名和 phone 用逗号分隔。",
+    "C": "姓名 (phone)。",
+    "D": "phone — 姓名。"
+  },
+  "correct_answer": "A"
+}

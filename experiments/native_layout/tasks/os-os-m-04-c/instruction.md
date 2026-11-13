@@ -1,0 +1,1 @@
+Repair the already-copied workspace configuration using migration-request.json. Preserve preferences and all references, with absolute paths to the new root. Use the reference ordering and tie-breaking demonstrated in the video. For JSON outputs, use the declared field names and value types; indentation and object key order are unrestricted.

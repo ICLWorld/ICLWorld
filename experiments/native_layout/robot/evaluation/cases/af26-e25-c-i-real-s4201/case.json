@@ -1,0 +1,30 @@
+{
+  "task": "E25",
+  "variant": "C",
+  "generalization_condition": "I",
+  "input_condition": "real",
+  "seed": 4201,
+  "experiments": [
+    "main"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e25-c-i-real-s4201",
+  "instruction": "按视频展示的餐具相对餐盘的位置和柄端、工作端朝向，布置这套勺、刀、叉；以你的用餐侧判断方向。\n",
+  "instruction_sha256": "0fa9468926c2117b12774d58f064cc0ae38e2b418415d8cf0be55cf73f1b9dbf",
+  "text_rule": null,
+  "demonstration": {
+    "path": "evaluation/media/405d4f6daece741f76233701d5aa09eba29c6c4760e2c7b65f25609ad2d12ed6.mp4",
+    "sha256": "ee7c42a6974bafd7718f200e72df14f1aa7892f1e46a66ff1e5b2582ded7906f",
+    "bytes": 6233397,
+    "evaluated_input_sha256": "405d4f6daece741f76233701d5aa09eba29c6c4760e2c7b65f25609ad2d12ed6",
+    "audio_tracks": 0,
+    "video_codec": "h264",
+    "width": 1920,
+    "height": 1080,
+    "duration_seconds": 10.833333,
+    "frames": 325,
+    "transformation": "remove_audio_streams_and_remux_video_without_reencoding"
+  }
+}

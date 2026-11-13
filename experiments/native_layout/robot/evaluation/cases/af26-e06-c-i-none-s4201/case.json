@@ -1,0 +1,18 @@
+{
+  "task": "E06",
+  "variant": "C",
+  "generalization_condition": "I",
+  "input_condition": "none",
+  "seed": 4201,
+  "experiments": [
+    "ablation_no_rule"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e06-c-i-none-s4201",
+  "instruction": "按视频展示的孔位布局，把三颗小柑橘放入六孔托盘；左右以你面对托盘的方向为准。\n",
+  "instruction_sha256": "fb19d90a0edca9bb7f878956b5b919f0fafd60cdae5cea83079e41e134656ae1",
+  "text_rule": null,
+  "demonstration": null
+}

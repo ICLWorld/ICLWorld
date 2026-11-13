@@ -1,0 +1,30 @@
+{
+  "task": "E38",
+  "variant": "C",
+  "generalization_condition": "I",
+  "input_condition": "real",
+  "seed": 4201,
+  "experiments": [
+    "main"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e38-c-i-real-s4201",
+  "instruction": "按视频展示的颜色层序，把三个线轴套到同一根指定立柱上。\n",
+  "instruction_sha256": "28b343c8025bdb3a90521ea1444683b7bfa4777112b66b972bfe0a0b3556532b",
+  "text_rule": null,
+  "demonstration": {
+    "path": "evaluation/media/cdae5702421ccb3f8b451df496c7fb0caa724bcbc6996bf83bd65d2ff39ac997.mp4",
+    "sha256": "75bc70b74e5eb39f2e7aa659a7fca7882f06e11c947511775a6281b342f46b6f",
+    "bytes": 1873612,
+    "evaluated_input_sha256": "cdae5702421ccb3f8b451df496c7fb0caa724bcbc6996bf83bd65d2ff39ac997",
+    "audio_tracks": 0,
+    "video_codec": "h264",
+    "width": 1920,
+    "height": 1080,
+    "duration_seconds": 4.666667,
+    "frames": 140,
+    "transformation": "remove_audio_streams_and_remux_video_without_reencoding"
+  }
+}

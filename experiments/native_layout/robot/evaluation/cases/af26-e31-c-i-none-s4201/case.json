@@ -1,0 +1,18 @@
+{
+  "task": "E31",
+  "variant": "C",
+  "generalization_condition": "I",
+  "input_condition": "none",
+  "seed": 4201,
+  "experiments": [
+    "ablation_no_rule"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e31-c-i-none-s4201",
+  "instruction": "碗碟组合\n\n按照示范的碗碟上下关系和盘面朝向，把碗与盘组合摆好。\n",
+  "instruction_sha256": "4c5f6cc6b5d58db4f5221552019de5e6f159446046acfad6c48364ecf2d5850a",
+  "text_rule": null,
+  "demonstration": null
+}

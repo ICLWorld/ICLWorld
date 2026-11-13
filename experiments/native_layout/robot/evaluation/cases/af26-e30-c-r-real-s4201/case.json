@@ -1,0 +1,31 @@
+{
+  "task": "E30",
+  "variant": "C",
+  "generalization_condition": "R",
+  "input_condition": "real",
+  "seed": 4201,
+  "experiments": [
+    "generalization",
+    "ablation4"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e30-c-r-real-s4201",
+  "instruction": "双层抽屉开合状态\n\n按示范的上下层选择，将抽屉柜调整到相同的开合组合。\n",
+  "instruction_sha256": "2c3e907e453b841c7a587c5e4f17b795d713f15bd0e04f011ddbedf4daf85e9a",
+  "text_rule": null,
+  "demonstration": {
+    "path": "evaluation/media/766c800644390f349af8819d8dc6bfb0c12637ac931311d67f1e5393e5e86ad7.mp4",
+    "sha256": "e3dd4d1bb87e7c1a0e6153475a510e43655f9b8d910d37a0a7f46b615b96b114",
+    "bytes": 2325756,
+    "evaluated_input_sha256": "766c800644390f349af8819d8dc6bfb0c12637ac931311d67f1e5393e5e86ad7",
+    "audio_tracks": 0,
+    "video_codec": "h264",
+    "width": 1920,
+    "height": 1080,
+    "duration_seconds": 5.666667,
+    "frames": 170,
+    "transformation": "remove_audio_streams_and_remux_video_without_reencoding"
+  }
+}

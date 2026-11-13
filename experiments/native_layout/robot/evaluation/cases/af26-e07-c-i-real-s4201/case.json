@@ -1,0 +1,30 @@
+{
+  "task": "E07",
+  "variant": "C",
+  "generalization_condition": "I",
+  "input_condition": "real",
+  "seed": 4201,
+  "experiments": [
+    "main"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e07-c-i-real-s4201",
+  "instruction": "按视频展示的尺寸排序，把五个套娃沿远到近方向排成一列。\n",
+  "instruction_sha256": "80bd9466d196a6f104bed714677efbc7da9ec98cf97e52d7f6f36e694cb3c103",
+  "text_rule": null,
+  "demonstration": {
+    "path": "evaluation/media/16b6f9980e0572cf6806ae679e6cc3af00cffe8ce3ba459e9e680fd7547faf94.mp4",
+    "sha256": "e8e38306f871aee71a86027cebd8fcf5e87a708efb3dead694e219a3784b0eaf",
+    "bytes": 6454756,
+    "evaluated_input_sha256": "16b6f9980e0572cf6806ae679e6cc3af00cffe8ce3ba459e9e680fd7547faf94",
+    "audio_tracks": 0,
+    "video_codec": "h264",
+    "width": 1920,
+    "height": 1080,
+    "duration_seconds": 15.266667,
+    "frames": 458,
+    "transformation": "remove_audio_streams_and_remux_video_without_reencoding"
+  }
+}

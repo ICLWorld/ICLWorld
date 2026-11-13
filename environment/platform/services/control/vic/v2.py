@@ -1,0 +1,215 @@
+"""Versioned execution contracts. Rule answers never enter application state."""
+import hashlib
+import json
+from .config import ROOT
+from .v2_atomic import TASKS as ATOMIC_TASKS
+from .v2_worksets import TASKS as WORKSET_TASKS
+from vic_apps.communications import TASKS as COMMUNICATION_TASKS
+from vic_apps.music_projects import TASKS as MUSIC_PROJECT_TASKS
+from vic_apps.editorial_projects import TASKS as EDITORIAL_TASKS
+from vic_apps.publishing import TASKS as PUBLISHING_TASKS
+from vic_apps.studio_projects import TASKS as STUDIO_PROJECT_TASKS
+from vic_apps.code_projects import TASKS as CODE_PROJECT_TASKS
+
+EXECUTABLE = {35,44,45,46,51,52,54,55,56,69,74} | ATOMIC_TASKS | WORKSET_TASKS | COMMUNICATION_TASKS | MUSIC_PROJECT_TASKS | EDITORIAL_TASKS | PUBLISHING_TASKS | STUDIO_PROJECT_TASKS | CODE_PROJECT_TASKS
+
+
+def _recording_catalog():
+    data = json.loads((ROOT / 'tasks/v2/catalog.json').read_text())
+    for item in data['tasks']:
+        item['status'] = 'application-ready' if item['id'] in EXECUTABLE else 'implementation-pending'
+    return data
+
+
+def catalog():
+    from .execution_prompts import present
+    data = _recording_catalog()
+    data['tasks'] = [present(item) for item in data['tasks']]
+    return data
+
+
+def task(task_id):
+    return next(t for t in catalog()['tasks'] if t['id'] == task_id)
+
+
+def digest(task_id):
+    # Recording compatibility is independent of inference request wording.
+    recorded = next(t for t in _recording_catalog()['tasks'] if t['id'] == task_id)
+    return hashlib.sha256(json.dumps(recorded, ensure_ascii=False, sort_keys=True).encode()).hexdigest()
+
+
+def generate(task_id, seed, mode):
+    from .identity_context import contextualize
+    state = _generate(task_id, seed, mode)
+    if mode != 'demo':
+        from .execution_prompts import apply_request
+        state = apply_request(state)
+    state = contextualize(state, mode)
+    if mode != 'demo':
+        from vic_apps.cross_platform import attach
+        state = attach(state, seed)
+    if mode != 'demo':
+        from .process_scoring import VERSION
+        state['assessment_version'] = VERSION
+        state['assessment_difficulty'] = task(task_id)['difficulty']
+    return state
+
+
+def _generate(task_id, seed, mode):
+    if task_id not in EXECUTABLE:
+        raise ValueError('此 v2 执行环境尚未完成，不能使用基础任务代替。')
+    if mode == 'demo':
+        from . import business
+        from vic_apps.domain import initialize
+        return initialize(business.generate(task_id, seed))
+    if task_id in CODE_PROJECT_TASKS:
+        from vic_apps.code_projects import fixture
+        return fixture(task_id,seed,task(task_id))
+    if task_id in ATOMIC_TASKS:
+        from .v2_atomic import generate as generate_atomic
+        return generate_atomic(task_id,seed,task(task_id))
+    if task_id in COMMUNICATION_TASKS:
+        from vic_apps.communications import fixture
+        return fixture(task_id,seed,task(task_id))
+    if task_id in STUDIO_PROJECT_TASKS:
+        from vic_apps.studio_projects import fixture
+        return fixture(task_id,seed,task(task_id))
+    if task_id in PUBLISHING_TASKS:
+        from vic_apps.publishing import fixture
+        return fixture(task_id,seed,task(task_id))
+    if task_id in EDITORIAL_TASKS:
+        from vic_apps.editorial_projects import fixture
+        return fixture(task_id,seed,task(task_id))
+    if task_id in MUSIC_PROJECT_TASKS:
+        from vic_apps.music_projects import fixture
+        return fixture(task_id,seed,task(task_id))
+    if task_id in WORKSET_TASKS:
+        from .v2_worksets import generate as generate_worksets
+        return generate_worksets(task_id,seed,task(task_id))
+    if task_id in (44,51,54):
+        from vic_apps.travel_projects import fixture
+        return fixture(task_id,seed,task(task_id))
+    if task_id in (46,56):
+        from vic_apps.payment_projects import fixture
+        return fixture(task_id,seed,task(task_id))
+    if task_id in (52,55):
+        from vic_apps.shop_projects import fixture
+        return fixture(task_id,seed,task(task_id))
+    if task_id == 35:
+        from vic_apps.screening import fixture
+        return fixture(seed,task(task_id))
+    if task_id == 69:
+        from vic_apps.stopping_training import fixture
+        return fixture(seed,task(task_id))
+    if task_id == 74:
+        from vic_apps.reversi_training import fixture
+        return fixture(seed,task(task_id))
+    if task_id == 45:
+        from vic_apps.procurement import fixture
+        return fixture(seed)
+    raise ValueError('Unsupported v2 execution')
+
+
+def evaluate(initial, state, variant, events):
+    from .process_scoring import web
+    result = evaluate_outcomes(initial, state, variant, events)
+    return web(initial, state, variant, events, result, evaluate_outcomes)
+
+
+def evaluate_outcomes(initial, state, variant, events):
+    if initial.get('cross_platform'):
+        from vic_apps.cross_platform import without_extension, evaluate as evaluate_delivery
+        base = _evaluate(without_extension(initial), without_extension(state), variant, events)
+        delivery = evaluate_delivery(initial, state)
+        checks = base['checks'] + delivery['checks']
+        return dict(success=base['success'] and delivery['success'],
+                    completion=sum(c['passed'] for c in checks)/len(checks),checks=checks,
+                    violations=base['violations']+delivery['violations'])
+    return _evaluate(initial,state,variant,events)
+
+
+def _evaluate(initial, state, variant, events):
+    if initial.get('workflow')=='code_projects':
+        from .v2_code_projects import evaluate as evaluate_code_projects
+        return evaluate_code_projects(initial,state,variant,events)
+    if initial.get('workflow')=='payment_projects':
+        from .v2_payment_projects import evaluate as evaluate_payments
+        return evaluate_payments(initial,state,variant,events)
+    if initial.get('workflow')=='shop_projects':
+        from .v2_shop_projects import evaluate as evaluate_shop_projects
+        return evaluate_shop_projects(initial,state,variant,events)
+    if initial.get('workflow')=='travel_projects':
+        from .v2_travel_projects import evaluate as evaluate_travel_projects
+        return evaluate_travel_projects(initial,state,variant,events)
+    if initial.get('workflow')=='screening':
+        from .v2_screening import evaluate as evaluate_screening
+        return evaluate_screening(initial,state,variant,events)
+    if initial.get('workflow')=='studio_projects':
+        from .v2_studio_projects import evaluate as evaluate_studio_projects
+        return evaluate_studio_projects(initial,state,variant,events)
+    if initial.get('workflow')=='publishing':
+        from .v2_publishing import evaluate as evaluate_publishing
+        return evaluate_publishing(initial,state,variant,events)
+    if initial.get('workflow')=='editorial_projects':
+        from .v2_editorial_projects import evaluate as evaluate_editorial
+        return evaluate_editorial(initial,state,variant,events)
+    if initial.get('workflow')=='music_projects':
+        from .v2_music_projects import evaluate as evaluate_music_projects
+        return evaluate_music_projects(initial,state,variant,events)
+    if initial.get('workflow')=='communications':
+        from .v2_communications import evaluate as evaluate_communications
+        return evaluate_communications(initial,state,variant,events)
+    if initial.get('v2_2048'):
+        from vic_apps.stopping_training import evaluate as evaluate_stopping
+        return evaluate_stopping(initial,state,variant,events)
+    if initial.get('v2_worksets'):
+        from .v2_worksets import evaluate as evaluate_worksets
+        return evaluate_worksets(initial,state,variant,events)
+    if initial.get('v2_reversi'):
+        from vic_apps.reversi_training import evaluate as evaluate_reversi
+        return evaluate_reversi(initial,state,variant,events)
+    if initial.get('v2_atomic'):
+        from .v2_atomic import evaluate as evaluate_atomic
+        return evaluate_atomic(initial,state,variant,events)
+    if initial.get('workflow') != 'procurement':
+        raise ValueError('Missing v2 evaluator')
+    from .business import transform
+    checks = []
+
+    def check(name, passed):
+        checks.append(dict(id=name, passed=bool(passed)))
+
+    w, start = state['world'], initial['world']
+    # Input requests are immutable evidence, not editable answers.
+    for key in ('requests', 'products', 'departments', 'brief'):
+        check(f'input:{key}', w[key] == start[key])
+    quantities = {}
+    latest = {}
+    for req in start['requests']:
+        if req['number'] not in latest or req['revision'] > latest[req['number']]['revision']:
+            latest[req['number']] = req
+    for req in latest.values():
+        for line in req['lines']:
+            key = (req['department'], line['sku'])
+            quantities[key] = quantities.get(key, 0) + line['quantity']
+    check('order_count', len(w['orders']) == len(start['departments']))
+    for dep in start['departments']:
+        orders = [o for o in w['orders'].values() if o['department'] == dep['id']]
+        check(f'{dep["id"]}:one_order', len(orders) == 1)
+        if len(orders) != 1:
+            continue
+        order = orders[0]
+        expected_skus = {sku for (dept, sku) in quantities if dept == dep['id']}
+        check(f'{dep["id"]}:address', order['address'] == dep['address'])
+        check(f'{dep["id"]}:saved', order['status'] == 'saved')
+        check(f'{dep["id"]}:products', set(order['lines']) == expected_skus)
+        for sku in sorted(expected_skus):
+            actual = order['lines'].get(sku, {})
+            q = quantities[(dep['id'], sku)]
+            product = next(p for p in start['products'] if p['id'] == sku)
+            expected_note = transform(45, 'ABC'.index(variant), dict(source=dict(text=product['name'], quantity=q)))
+            check(f'{dep["id"]}:{sku}:quantity', actual.get('quantity') == q)
+            check(f'{dep["id"]}:{sku}:note', actual.get('note') == expected_note)
+    return dict(success=all(c['passed'] for c in checks),
+                completion=sum(c['passed'] for c in checks)/len(checks), checks=checks,
+                violations=[c['id'] for c in checks if not c['passed']])

@@ -1,0 +1,11 @@
+schema_version = "1.3"
+[task]
+name = "iclworld/robot-abc-embodied-e16-a"
+authors = [{ name = "ICLWorld team" }]
+[metadata]
+category = "robot"
+variant = "A"
+max_physical_actions = 500
+native_wallclock_limit = "unlimited"
+[verifier]
+timeout_sec = 120.0

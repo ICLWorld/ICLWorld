@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "kind": "embodied",
+  "backend": "videoicl-native-slurm",
+  "task_id": "E26",
+  "variant": "C",
+  "seed": 4201,
+  "action_interface": "bounded_dual_arm_tokens_v1",
+  "agent_interaction": "gui_only",
+  "agent_protocol": "roboprobe_gui_v1",
+  "instruction_sha256": "9b8b5da1500bd105c40518516da94e44858810d9153478409689fc99984a3b2c",
+  "gui_controls": {
+    "path": "gui-controls.md",
+    "sha256": "60334559c8f394acc45ee9bfe024b7a406aebee27a1d50d86f06dcf787d9dde6"
+  },
+  "native_interaction_validated": false,
+  "model_launch_enabled": false,
+  "readiness": "native_acceptance_pending",
+  "task_revision": "embodied50-execution-v3-20261102",
+  "generalization_condition": "I",
+  "environment_base": "I",
+  "execution_support_mask": [
+    "R",
+    "I",
+    "E"
+  ],
+  "demo": {
+    "path": "../../../evaluation/media/b9c2d2e4adbff5d2c420a7f7bdcf52ceab452a65023421327cbf3ac757990ae4.mp4",
+    "sha256": "70b113c339b563c677d0fbe2afa1b84657b81beb336a583bacb82d1228f5cc45"
+  },
+  "input_conditions": [
+    "text_rule",
+    "real"
+  ],
+  "dataset_revision": "89f009bb76ee5ffb58ee66ec584e519c86f3d4b6",
+  "instruction_hash_scheme": "sha256_utf8_exact_file_bytes",
+  "qa_enabled": false,
+  "budget": {
+    "status": "diagnostic_unfrozen",
+    "max_actions": 500,
+    "timeout_sec": 0,
+    "time_limit_seconds": null,
+    "time_limit_enabled": false,
+    "deadline_unix": null
+  },
+  "preparation_admission": {
+    "state": "data_and_contract_ready_native_acceptance_pending",
+    "reasons": []
+  },
+  "instance_adaptation": {
+    "revision": "remaining90-instances-v1-20261105",
+    "native_acceptance": "pending",
+    "paired_physical_input_sha256": "dece112f26a79f689d030462a506d2c9eb30074b4a529c32593f0379a4228a07"
+  }
+}

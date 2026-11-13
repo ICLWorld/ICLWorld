@@ -1,0 +1,10 @@
+{
+  "question": "视频中，示范者对多组对象反复使用的是下面哪一种具体处理方法？",
+  "options": {
+    "A": "{title} [r{revision}]。",
+    "B": "r{revision} - {title}（英文短横线，左右各一空格）。",
+    "C": "[r{revision}] {title}。",
+    "D": "仅使用 title，不附加 revision。"
+  },
+  "correct_answer": "A"
+}

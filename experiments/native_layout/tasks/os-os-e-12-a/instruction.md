@@ -1,0 +1,1 @@
+Insert exactly one page break in each pages-*.txt document using the demonstrated heading boundary. Preserve every text character. Use the section-heading page-break boundary demonstrated in the video. For JSON outputs, use the declared field names and value types; indentation and object key order are unrestricted.

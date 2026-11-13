@@ -1,0 +1,19 @@
+{
+  "task": "E15",
+  "variant": "C",
+  "generalization_condition": "R",
+  "input_condition": "text_rule",
+  "seed": 4201,
+  "experiments": [
+    "generalization",
+    "ablation4"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e15-c-r-text-s4201",
+  "instruction": "T形块属性交换\n\n按照示范中位置与朝向的交换方式，调整这两个T形块。\n",
+  "instruction_sha256": "59d84468bee770c7599b31e50676fbda122f84e1debe0c8b904d6e5d72dfd15f",
+  "text_rule": "位置与朝向都交换",
+  "demonstration": null
+}

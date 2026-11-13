@@ -1,0 +1,18 @@
+{
+  "task": "E08",
+  "variant": "C",
+  "generalization_condition": "I",
+  "input_condition": "text_rule",
+  "seed": 4201,
+  "experiments": [
+    "main"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e08-c-i-text-s4201",
+  "instruction": "按视频展示的左右脚鞋与鞋盒标签端的朝向关系，把两只运动鞋收进盒里。\n",
+  "instruction_sha256": "671ee49b4f94fb8caf564646ed8e907444098eff1eefb068b8b3f2f4ce9ed73b",
+  "text_rule": "左脚鞋尖朝标签端，右脚鞋跟朝标签端",
+  "demonstration": null
+}

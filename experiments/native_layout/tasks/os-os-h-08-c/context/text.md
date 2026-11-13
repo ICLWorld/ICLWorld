@@ -1,0 +1,2 @@
+两行：字段名表头；按原顺序用逗号连接三个 JSON 值，保留字符串双引号及数组结构，不做 CSV 转义。Header build_artifact,passed,assertions then comma-separated JSON values 公共字段顺序为 build_artifact、passed、assertions；所有值保留源 JSON 类型与引号。C 的数据行由三个 JSON 值用逗号连接，不做 CSV 双重转义。 两行：第一行固定 build_artifact,passed,assertions；第二行将三个源 JSON 值按此顺序用英文逗号连接。例如 "build_4",true,[{"name":"check","expected":1,"actual":1,"passed":true}]。构建 ID 保留双引号；assertions 保留数组本身，不在数组外包双引号，也不将内部双引号重复转义。每个断言保留全部字段及类型。
+这不是标准 CSV 转义格式；三个值分别为 JSON 字符串、布尔值和数组。允许 JSON 等价缩进与对象字段顺序，不改变数组顺序或数据类型。

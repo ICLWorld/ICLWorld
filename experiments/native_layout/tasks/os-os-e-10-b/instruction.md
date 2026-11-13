@@ -1,0 +1,1 @@
+Format only the two body paragraphs in each working document. Preserve headings and fenced code. Use the body-paragraph formatting demonstrated in the video. For JSON outputs, use the declared field names and value types; indentation and object key order are unrestricted.

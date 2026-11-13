@@ -1,0 +1,18 @@
+{
+  "task": "E50",
+  "variant": "C",
+  "generalization_condition": "R",
+  "input_condition": "none",
+  "seed": 4201,
+  "experiments": [
+    "ablation_no_rule"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e50-c-r-none-s4201",
+  "instruction": "长尾夹夹牌送入彩盘\n\n翻开卡片，用长尾夹将它送到示范选择的彩盘，松开夹子并放回桌面。\n",
+  "instruction_sha256": "412de6b237ebc840a036b3cfd103bad1b4582a70dfc576416c7f4e9de062c05f",
+  "text_rule": null,
+  "demonstration": null
+}

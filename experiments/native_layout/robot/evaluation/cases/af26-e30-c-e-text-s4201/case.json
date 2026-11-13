@@ -1,0 +1,19 @@
+{
+  "task": "E30",
+  "variant": "C",
+  "generalization_condition": "E",
+  "input_condition": "text_rule",
+  "seed": 4201,
+  "experiments": [
+    "generalization",
+    "ablation4"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "independent_paired_instance_runtime",
+  "episode_id": "af26-e30-c-e-text-s4201",
+  "instruction": "双层抽屉开合状态\n\n按示范的上下层选择，将抽屉柜调整到相同的开合组合。\n",
+  "instruction_sha256": "2c3e907e453b841c7a587c5e4f17b795d713f15bd0e04f011ddbedf4daf85e9a",
+  "text_rule": "上层和下层都打开",
+  "demonstration": null
+}

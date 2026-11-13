@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Recording workspace — OS-ICL</title>
+  <style>
+    html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#e5eaed;font:14px "Segoe UI",Arial,sans-serif;color:#344650}
+    #canvas{position:absolute;width:1280px;height:720px;transform-origin:0 0}
+    iframe{display:block;width:1280px;height:720px;border:0;background:white}
+    #message{display:grid;height:100%;place-items:center;text-align:center;padding:20px;box-sizing:border-box}
+  </style>
+</head>
+<body>
+  <div id="message">Open this workspace with a session identifier.</div>
+  <div id="canvas" hidden><iframe id="os-frame" title="Fixed-size desktop workspace"></iframe></div>
+  <script>
+    const params=new URLSearchParams(location.search),sid=params.get('session');
+    if(sid&&/^(osl|vos)_[a-zA-Z0-9]+$/.test(sid)){
+      document.querySelector('#message').remove();
+      const canvas=document.querySelector('#canvas');canvas.hidden=false;
+      document.querySelector('#os-frame').src='/?'+new URLSearchParams({session:sid});
+      function fit(){const scale=Math.min(innerWidth/1280,innerHeight/720);canvas.style.transform=`scale(${scale})`;canvas.style.left=(innerWidth-1280*scale)/2+'px';canvas.style.top=(innerHeight-720*scale)/2+'px'}
+      addEventListener('resize',fit);fit();
+      addEventListener('message',event=>{
+        if(event.origin!==location.origin||event.source!==document.querySelector('#os-frame').contentWindow)return;
+        if(parent!==window)parent.postMessage(event.data,location.origin);
+      });
+    }
+  </script>
+</body>
+</html>

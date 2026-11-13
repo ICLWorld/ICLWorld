@@ -1,0 +1,30 @@
+{
+  "task": "E14",
+  "variant": "C",
+  "generalization_condition": "I",
+  "input_condition": "real",
+  "seed": 4201,
+  "experiments": [
+    "main"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e14-c-i-real-s4201",
+  "instruction": "按视频展示的层序调整方式，重新叠好这四本书。\n",
+  "instruction_sha256": "efb9e14f52e157eeb3b7a3e2ebeb102e839137667d2a7c8d488ddc43d6cdab09",
+  "text_rule": null,
+  "demonstration": {
+    "path": "evaluation/media/696f0e0a05f14075630ef19090a8f2e3552504c68f050d59ceb33f8ee229f9b5.mp4",
+    "sha256": "c460c7101bd40bef495ae35622e495c3fb39d1225fe392aa352ea222d7d5d5a0",
+    "bytes": 4417773,
+    "evaluated_input_sha256": "696f0e0a05f14075630ef19090a8f2e3552504c68f050d59ceb33f8ee229f9b5",
+    "audio_tracks": 0,
+    "video_codec": "h264",
+    "width": 1920,
+    "height": 1080,
+    "duration_seconds": 11.166667,
+    "frames": 335,
+    "transformation": "remove_audio_streams_and_remux_video_without_reencoding"
+  }
+}

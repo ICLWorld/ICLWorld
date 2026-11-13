@@ -1,0 +1,18 @@
+{
+  "task": "E37",
+  "variant": "C",
+  "generalization_condition": "R",
+  "input_condition": "text_rule",
+  "seed": 4201,
+  "experiments": [
+    "main"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e37-c-r-text-s4201",
+  "instruction": "用螺丝刀拆指定螺丝\n\n按示范的左右选择，用螺丝刀拆下相应螺丝，其余保持固定。\n",
+  "instruction_sha256": "4b60312da24f440ae8c48285b9c2efd029f299d572821ce66f5bc6401809919f",
+  "text_rule": "左右两颗螺丝都卸下",
+  "demonstration": null
+}

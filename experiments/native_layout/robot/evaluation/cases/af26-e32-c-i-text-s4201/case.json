@@ -1,0 +1,18 @@
+{
+  "task": "E32",
+  "variant": "C",
+  "generalization_condition": "I",
+  "input_condition": "text_rule",
+  "seed": 4201,
+  "experiments": [
+    "main"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e32-c-i-text-s4201",
+  "instruction": "杂乱桌面目标取放\n\n从杂物中取出示范选择的同一类物品，放到白色交付板上。\n",
+  "instruction_sha256": "27781524b12bb7623c428f15022bab60fbaad3af1182166e6e2d1aac8c789dcc",
+  "text_rule": "取可乐瓶到白色交付板",
+  "demonstration": null
+}

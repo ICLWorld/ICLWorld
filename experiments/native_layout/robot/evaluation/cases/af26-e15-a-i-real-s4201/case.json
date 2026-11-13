@@ -1,0 +1,30 @@
+{
+  "task": "E15",
+  "variant": "A",
+  "generalization_condition": "I",
+  "input_condition": "real",
+  "seed": 4201,
+  "experiments": [
+    "ablation_abc"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e15-a-i-real-s4201",
+  "instruction": "按视频展示的位置与朝向交换方式，调整这两架小飞机；用机头方向辨认各自朝向。\n",
+  "instruction_sha256": "0857aef966462c4f7e5b719ff09998d5a35a71798aedc371fc0aefcce5b59067",
+  "text_rule": null,
+  "demonstration": {
+    "path": "evaluation/media/808e6866ac9da1c1b8f7316a49f754ad440b48ab3336a52216b6a5b294f4e841.mp4",
+    "sha256": "1ac52fab3683459190265f599ba34398a30e6a8b18cb65e3d9bca0ea87e2dae1",
+    "bytes": 5306352,
+    "evaluated_input_sha256": "808e6866ac9da1c1b8f7316a49f754ad440b48ab3336a52216b6a5b294f4e841",
+    "audio_tracks": 0,
+    "video_codec": "h264",
+    "width": 1920,
+    "height": 1080,
+    "duration_seconds": 10.8,
+    "frames": 324,
+    "transformation": "remove_audio_streams_and_remux_video_without_reencoding"
+  }
+}

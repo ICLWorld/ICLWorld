@@ -1,0 +1,30 @@
+{
+  "task": "E17",
+  "variant": "C",
+  "generalization_condition": "I",
+  "input_condition": "real",
+  "seed": 4201,
+  "experiments": [
+    "main"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e17-c-i-real-s4201",
+  "instruction": "展示架补货与开场准备\n\n为指定展台完成一次开场备货。按视频的分层对应关系摆放本批展品；展示架必须在订单指定位置，包装收回回收盒，架上不得混入其他批次展品。\n本次公开订单：批次 2，交付到 2 号目标工位。\n\n本轮对应物体为颜色与形状清楚可辨的糕点；上文完整任务流程及交付要求保持不变。\n",
+  "instruction_sha256": "a16eb2040f13441fcc1a4d7c4f5aae9ab257578857bd097ef94cf147264265cb",
+  "text_rule": null,
+  "demonstration": {
+    "path": "evaluation/media/a7b8bacce77603ffcca0ccaf1310868d755e5fa1c93d9765830357044e362580.mp4",
+    "sha256": "243a1060b2d6da6380a19eba60d8486df97ff71c0716ebf82ae2343789d808e1",
+    "bytes": 6985904,
+    "evaluated_input_sha256": "a7b8bacce77603ffcca0ccaf1310868d755e5fa1c93d9765830357044e362580",
+    "audio_tracks": 0,
+    "video_codec": "h264",
+    "width": 1920,
+    "height": 1080,
+    "duration_seconds": 14.7,
+    "frames": 441,
+    "transformation": "remove_audio_streams_and_remux_video_without_reencoding"
+  }
+}

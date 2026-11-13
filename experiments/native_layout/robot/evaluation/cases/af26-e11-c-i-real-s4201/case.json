@@ -1,0 +1,30 @@
+{
+  "task": "E11",
+  "variant": "C",
+  "generalization_condition": "I",
+  "input_condition": "real",
+  "seed": 4201,
+  "experiments": [
+    "main"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e11-c-i-real-s4201",
+  "instruction": "按视频展示的平面布局变换，把开局排成两行两列的四个水果搬入四格框。\n",
+  "instruction_sha256": "01cd825b991aa11d1a14cb877516fa3b61b5a4e8bcab5f5c344c170d966e0ffc",
+  "text_rule": null,
+  "demonstration": {
+    "path": "evaluation/media/84079bc0fd535211c5c8f3dde3bad57cc083bfcee92523706a7def59a5f5f573.mp4",
+    "sha256": "61bfeb2f1a687485dd79e5ac6c262ea39b058f56b5ee12ecbb447f874aee4d8a",
+    "bytes": 5514333,
+    "evaluated_input_sha256": "84079bc0fd535211c5c8f3dde3bad57cc083bfcee92523706a7def59a5f5f573",
+    "audio_tracks": 0,
+    "video_codec": "h264",
+    "width": 1920,
+    "height": 1080,
+    "duration_seconds": 10.6,
+    "frames": 318,
+    "transformation": "remove_audio_streams_and_remux_video_without_reencoding"
+  }
+}

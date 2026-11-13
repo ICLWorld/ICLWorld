@@ -1,0 +1,10 @@
+{
+  "question": "视频中，示范者对多组对象反复使用的是下面哪一种具体处理方法？",
+  "options": {
+    "A": "输出 JSON 对象，含 build_artifact、passed、assertions，保留全部值及类型。",
+    "B": "输出两行：表头 build_artifact,passed,assertions；下一行用逗号连接三个原始 JSON 值，不做 CSV 双重转义。",
+    "C": "输出三行 key: value，字段为 build_artifact、passed、assertions，值保留 JSON 类型及引号。",
+    "D": "使用标准 CSV：数组作为一个单元格，外包双引号，内部双引号按 CSV 规则重复转义。"
+  },
+  "correct_answer": "C"
+}

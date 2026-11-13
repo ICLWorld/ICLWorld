@@ -1,0 +1,18 @@
+{
+  "task": "E44",
+  "variant": "C",
+  "generalization_condition": "R",
+  "input_condition": "text_rule",
+  "seed": 4201,
+  "experiments": [
+    "main"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e44-c-r-text-s4201",
+  "instruction": "纸板折成不同夹角\n\n按示范展示的夹角类别折好纸板，一面贴桌，松手后保持形状。\n",
+  "instruction_sha256": "e459d1288e96df1e3060362eb62acc123f6496735b1356100e227d9ed82495be",
+  "text_rule": "一面贴桌，另一面向内倾斜，形成锐角",
+  "demonstration": null
+}

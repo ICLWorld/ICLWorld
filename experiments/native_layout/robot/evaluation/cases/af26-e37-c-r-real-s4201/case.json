@@ -1,0 +1,30 @@
+{
+  "task": "E37",
+  "variant": "C",
+  "generalization_condition": "R",
+  "input_condition": "real",
+  "seed": 4201,
+  "experiments": [
+    "main"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e37-c-r-real-s4201",
+  "instruction": "用螺丝刀拆指定螺丝\n\n按示范的左右选择，用螺丝刀拆下相应螺丝，其余保持固定。\n",
+  "instruction_sha256": "4b60312da24f440ae8c48285b9c2efd029f299d572821ce66f5bc6401809919f",
+  "text_rule": null,
+  "demonstration": {
+    "path": "evaluation/media/d32ee06ad9460a1d094f0166bd6ff958a3651ed3c4a135744c292170d10ce0f3.mp4",
+    "sha256": "1c879c6ddc5964926af683a273f0ac3490c408502b23a8bc9f14a7dfa77046d9",
+    "bytes": 12827038,
+    "evaluated_input_sha256": "d32ee06ad9460a1d094f0166bd6ff958a3651ed3c4a135744c292170d10ce0f3",
+    "audio_tracks": 0,
+    "video_codec": "h264",
+    "width": 1920,
+    "height": 1080,
+    "duration_seconds": 26.966667,
+    "frames": 809,
+    "transformation": "remove_audio_streams_and_remux_video_without_reencoding"
+  }
+}

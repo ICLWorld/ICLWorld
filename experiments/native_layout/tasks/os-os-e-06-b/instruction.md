@@ -1,0 +1,1 @@
+Filter contact fields in every copy-*.jsonl document in Output. Preserve originals, event identifiers, timestamps and all other fields. Use the contact-field transformation demonstrated in the video. For JSON outputs, use the declared field names and value types; indentation and object key order are unrestricted.

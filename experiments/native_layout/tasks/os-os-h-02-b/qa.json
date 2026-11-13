@@ -1,0 +1,10 @@
+{
+  "question": "视频中，示范者对多组对象反复使用的是下面哪一种具体处理方法？",
+  "options": {
+    "A": "[change_id] summary。",
+    "B": "summary [change_id]。",
+    "C": "change_id: summary。",
+    "D": "只输出 summary 正文，不附加 change_id。"
+  },
+  "correct_answer": "B"
+}

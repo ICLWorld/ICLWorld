@@ -1,0 +1,30 @@
+{
+  "task": "E08",
+  "variant": "C",
+  "generalization_condition": "I",
+  "input_condition": "real",
+  "seed": 4201,
+  "experiments": [
+    "main"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e08-c-i-real-s4201",
+  "instruction": "按视频展示的左右脚鞋与鞋盒标签端的朝向关系，把两只运动鞋收进盒里。\n",
+  "instruction_sha256": "671ee49b4f94fb8caf564646ed8e907444098eff1eefb068b8b3f2f4ce9ed73b",
+  "text_rule": null,
+  "demonstration": {
+    "path": "evaluation/media/34d1eb1a63b8835f62149ea0d2e3e41683e90dfd4cba986a8429a3ae1615faad.mp4",
+    "sha256": "584b6809a3b9a15f38f8a66eeeed73ad24e00b6f87aa25b8965fabe7f94e6d64",
+    "bytes": 6558799,
+    "evaluated_input_sha256": "34d1eb1a63b8835f62149ea0d2e3e41683e90dfd4cba986a8429a3ae1615faad",
+    "audio_tracks": 0,
+    "video_codec": "h264",
+    "width": 1920,
+    "height": 1080,
+    "duration_seconds": 11.066667,
+    "frames": 332,
+    "transformation": "remove_audio_streams_and_remux_video_without_reencoding"
+  }
+}

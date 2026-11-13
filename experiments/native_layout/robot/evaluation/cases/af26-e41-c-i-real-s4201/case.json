@@ -1,0 +1,30 @@
+{
+  "task": "E41",
+  "variant": "C",
+  "generalization_condition": "I",
+  "input_condition": "real",
+  "seed": 4201,
+  "experiments": [
+    "main"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e41-c-i-real-s4201",
+  "instruction": "按视频展示的前段长度与接续段长度对应关系，为每根前段橡皮接上一段备件。\n",
+  "instruction_sha256": "c156095e5f4693ec831ebc574312dd2e9526b24e5e52af4333848174fd54e36d",
+  "text_rule": null,
+  "demonstration": {
+    "path": "evaluation/media/5e3a066926afb65e43de631fd3ce3207cfaa478f4a04f43fddfe24a1d6dc0314.mp4",
+    "sha256": "148de387040542fb9a38fcd09220a135d18cd58157d35abf7cac5ea60dbe0b19",
+    "bytes": 3482027,
+    "evaluated_input_sha256": "5e3a066926afb65e43de631fd3ce3207cfaa478f4a04f43fddfe24a1d6dc0314",
+    "audio_tracks": 0,
+    "video_codec": "h264",
+    "width": 1920,
+    "height": 1080,
+    "duration_seconds": 9.5,
+    "frames": 285,
+    "transformation": "remove_audio_streams_and_remux_video_without_reencoding"
+  }
+}

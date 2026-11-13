@@ -1,0 +1,31 @@
+{
+  "task": "E15",
+  "variant": "C",
+  "generalization_condition": "R",
+  "input_condition": "real",
+  "seed": 4201,
+  "experiments": [
+    "generalization",
+    "ablation4"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e15-c-r-real-s4201",
+  "instruction": "T形块属性交换\n\n按照示范中位置与朝向的交换方式，调整这两个T形块。\n",
+  "instruction_sha256": "59d84468bee770c7599b31e50676fbda122f84e1debe0c8b904d6e5d72dfd15f",
+  "text_rule": null,
+  "demonstration": {
+    "path": "evaluation/media/83be017aa8d56178e0618d14240e14de3ab0b788167fd36a87774c9fa1b3aed9.mp4",
+    "sha256": "3421a326db9362418c48bdcf7761f6b1d5350323856a9141fc742c2dd47f9494",
+    "bytes": 7365569,
+    "evaluated_input_sha256": "83be017aa8d56178e0618d14240e14de3ab0b788167fd36a87774c9fa1b3aed9",
+    "audio_tracks": 0,
+    "video_codec": "h264",
+    "width": 1920,
+    "height": 1080,
+    "duration_seconds": 15.7,
+    "frames": 471,
+    "transformation": "remove_audio_streams_and_remux_video_without_reencoding"
+  }
+}

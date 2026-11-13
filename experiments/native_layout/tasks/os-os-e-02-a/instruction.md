@@ -1,0 +1,1 @@
+Move all asset files from the two source projects into the supplied filing tree; preserve their contents and unrelated files. Use the destination grouping by file metadata demonstrated in the video. For JSON outputs, use the declared field names and value types; indentation and object key order are unrestricted.

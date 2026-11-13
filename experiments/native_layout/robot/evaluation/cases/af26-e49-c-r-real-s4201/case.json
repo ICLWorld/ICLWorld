@@ -1,0 +1,30 @@
+{
+  "task": "E49",
+  "variant": "C",
+  "generalization_condition": "R",
+  "input_condition": "real",
+  "seed": 4201,
+  "experiments": [
+    "main"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e49-c-r-real-s4201",
+  "instruction": "三张牌按顺序分盘\n\n翻开左起前三张牌，按示范中原始序号与盘子颜色的对应关系分放，其他牌不动。\n",
+  "instruction_sha256": "83abe8edccef9aa5b51698025379471bddee3f3729d7ce96cba24e830c3bda46",
+  "text_rule": null,
+  "demonstration": {
+    "path": "evaluation/media/1b9e5a0524de103e0541e736d271c4d7aaee0302ef0e8baacbc91ce022e500f9.mp4",
+    "sha256": "bc5199b073d98e0778800884c33d15ff864c907e19e3759d9a33d790db627872",
+    "bytes": 5745416,
+    "evaluated_input_sha256": "1b9e5a0524de103e0541e736d271c4d7aaee0302ef0e8baacbc91ce022e500f9",
+    "audio_tracks": 0,
+    "video_codec": "h264",
+    "width": 1920,
+    "height": 1080,
+    "duration_seconds": 11.566667,
+    "frames": 347,
+    "transformation": "remove_audio_streams_and_remux_video_without_reencoding"
+  }
+}

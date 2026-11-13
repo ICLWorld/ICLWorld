@@ -1,0 +1,30 @@
+{
+  "task": "E48",
+  "variant": "C",
+  "generalization_condition": "R",
+  "input_condition": "real",
+  "seed": 4201,
+  "experiments": [
+    "main"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e48-c-r-real-s4201",
+  "instruction": "按数量翻牌插入卡座\n\n按示范的数量，从左起翻开相应张数的牌，全部插入卡座，其余不动。\n",
+  "instruction_sha256": "ddd7d9232d32a08baee0ebb95a53176b1f0764085501fea5cfe8aff7352e2834",
+  "text_rule": null,
+  "demonstration": {
+    "path": "evaluation/media/a8f0716b73bcc1c6956567e03c1aca50564f5bafb58159d6fff6f1d8c1ebc654.mp4",
+    "sha256": "180feb51536d89ca5b46568bdd9032eaa6c2fe81c2d7aacfd93d7bdc986f2884",
+    "bytes": 11279480,
+    "evaluated_input_sha256": "a8f0716b73bcc1c6956567e03c1aca50564f5bafb58159d6fff6f1d8c1ebc654",
+    "audio_tracks": 0,
+    "video_codec": "h264",
+    "width": 1920,
+    "height": 1080,
+    "duration_seconds": 19.4,
+    "frames": 582,
+    "transformation": "remove_audio_streams_and_remux_video_without_reencoding"
+  }
+}

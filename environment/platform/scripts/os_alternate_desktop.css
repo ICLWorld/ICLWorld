@@ -1,0 +1,21 @@
+html[data-environment=aurora] .desktop{background:#ece8df;left:236px}
+html[data-environment=aurora] .wallpaper{background:linear-gradient(120deg,#e7e0f0,#f6efe1)}
+#aurora-shelf{position:fixed;inset:0 auto 0 0;width:236px;box-sizing:border-box;overflow:auto;background:#292439;color:#f8f6ff;padding:24px 16px;font:14px system-ui;z-index:10000}
+#aurora-shelf strong{display:block;font-size:25px;letter-spacing:4px}#aurora-shelf small{display:block;margin:6px 0 24px;color:#c2b7df}
+#aurora-shelf input{box-sizing:border-box;width:100%;padding:10px;border:1px solid #807297;border-radius:5px;background:#40384f;color:white}
+#aurora-shelf button{display:block;width:100%;text-align:left;padding:11px 12px;border:0;border-radius:5px;color:#eee7ff;background:transparent;margin-top:4px;cursor:pointer}#aurora-shelf button:hover,#aurora-shelf button[aria-pressed=true]{background:#655087}
+#aurora-shelf h3{font-size:12px;text-transform:uppercase;margin-top:25px;color:#c2b7df}
+html[data-environment=aurora] :is(.taskbar,.desktop-icons,.resize-handle){display:none!important}
+html[data-environment=aurora] .window{left:12px!important;top:12px!important;width:calc(100vw - 260px)!important;height:calc(100vh - 24px)!important;border:1px solid #b9aac9;border-radius:12px;box-shadow:0 10px 35px #37294422}
+html[data-environment=aurora] .titlebar{background:#f3edf8;padding:12px;cursor:default}
+html[data-environment=aurora] .app-layout{grid-template-columns:1fr 180px}
+html[data-environment=aurora] .navigation{grid-column:2;grid-row:1;background:#f5f0e8}
+html[data-environment=aurora] .file-main{grid-column:1;grid-row:1}
+html[data-environment=aurora] .file-head{display:none}
+html[data-environment=aurora] .file-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;align-content:start;padding:16px}
+html[data-environment=aurora] .file-row{height:auto;min-height:90px;display:grid;grid-template-columns:1fr 1fr;padding:12px;border:1px solid #d4c7df;border-radius:8px;background:white}
+html[data-environment=aurora] .file-row>span:first-child{grid-column:1/-1;font-weight:600}
+html[data-environment=aurora] .file-row.selected{background:#ebe0fb;border-color:#7650ad}
+html[data-environment=aurora] .notification{z-index:20000}
+html[data-environment=aurora] .file-main{grid-template-rows:auto auto minmax(0,1fr) 27px}
+html[data-environment=aurora] .file-list{min-height:0;overflow:auto}

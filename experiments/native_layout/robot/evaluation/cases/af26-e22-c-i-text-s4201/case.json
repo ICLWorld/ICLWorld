@@ -1,0 +1,18 @@
+{
+  "task": "E22",
+  "variant": "C",
+  "generalization_condition": "I",
+  "input_condition": "text_rule",
+  "seed": 4201,
+  "experiments": [
+    "main"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e22-c-i-text-s4201",
+  "instruction": "按视频展示的物体颜色与车前、车左、车右的对应关系，把三件物品摆到玩具车周围。\n",
+  "instruction_sha256": "e9944bfa79aec3d1adb4d1369e1fb0ec1a1902120ba752fd8611397854cefe56",
+  "text_rule": "车前蓝、车左红、车右绿",
+  "demonstration": null
+}

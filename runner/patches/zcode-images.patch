@@ -1,0 +1,11 @@
+--- a/zcode.cjs
++++ b/zcode.cjs
+@@ -243661,7 +243661,7 @@
+     init_dist();
+     init_frame_contract();
+     init_frame_contract();
+-    MCP_IMAGE_INLINE_BASE64_BYTES = 200 * 1024;
++    MCP_IMAGE_INLINE_BASE64_BYTES = 8 * 1024 * 1024;
+     MCP_IMAGE_INLINE_RAW_BYTES = Math.floor(MCP_IMAGE_INLINE_BASE64_BYTES * 3 / 4);
+     HOST_NODE_REPL_IMAGE_MAX_DIMENSION = 2048;
+     HOST_NODE_REPL_MODEL_IMAGE_MAX_DIMENSION = 2e3;

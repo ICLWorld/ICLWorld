@@ -1,0 +1,30 @@
+{
+  "task": "E06",
+  "variant": "B",
+  "generalization_condition": "I",
+  "input_condition": "real",
+  "seed": 4201,
+  "experiments": [
+    "ablation_abc"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e06-b-i-real-s4201",
+  "instruction": "按视频展示的孔位布局，把三颗小柑橘放入六孔托盘；左右以你面对托盘的方向为准。\n",
+  "instruction_sha256": "fb19d90a0edca9bb7f878956b5b919f0fafd60cdae5cea83079e41e134656ae1",
+  "text_rule": null,
+  "demonstration": {
+    "path": "evaluation/media/1affddd2b0062720045df68825447e7f31b032b69ef21eb566e40938a329fd59.mp4",
+    "sha256": "b4dba136191a511eb60d473022eac24c40e8673ca77c43105b3641ff3bd8558a",
+    "bytes": 3261136,
+    "evaluated_input_sha256": "1affddd2b0062720045df68825447e7f31b032b69ef21eb566e40938a329fd59",
+    "audio_tracks": 0,
+    "video_codec": "h264",
+    "width": 1920,
+    "height": 1080,
+    "duration_seconds": 7.133333,
+    "frames": 214,
+    "transformation": "remove_audio_streams_and_remux_video_without_reencoding"
+  }
+}

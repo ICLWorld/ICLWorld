@@ -1,0 +1,18 @@
+{
+  "task": "E02",
+  "variant": "C",
+  "generalization_condition": "I",
+  "input_condition": "text_rule",
+  "seed": 4201,
+  "experiments": [
+    "main"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e02-c-i-text-s4201",
+  "instruction": "按视频展示的颜色层序，把三块香皂叠成稳定的一摞。\n",
+  "instruction_sha256": "b57b7bd3daabf712092b63307fb85eb2cbf8c8e23c360b6e80de664d58ba1072",
+  "text_rule": "自下而上蓝、红、绿",
+  "demonstration": null
+}

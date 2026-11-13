@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "kind": "embodied",
+  "backend": "videoicl-native-slurm",
+  "task_id": "E16",
+  "variant": "C",
+  "seed": 4201,
+  "action_interface": "bounded_dual_arm_tokens_v1",
+  "agent_interaction": "gui_only",
+  "agent_protocol": "roboprobe_gui_v1",
+  "instruction_sha256": "0d582e59262cbe4803ea28c3ba0b76b4461434ca864be0ddca6cc4341d5b4208",
+  "gui_controls": {
+    "path": "gui-controls.md",
+    "sha256": "60334559c8f394acc45ee9bfe024b7a406aebee27a1d50d86f06dcf787d9dde6"
+  },
+  "native_interaction_validated": false,
+  "model_launch_enabled": false,
+  "readiness": "native_acceptance_pending",
+  "task_revision": "embodied50-execution-v3-20261102",
+  "generalization_condition": "I",
+  "environment_base": "I",
+  "execution_support_mask": [
+    "R",
+    "I",
+    "E"
+  ],
+  "demo": {
+    "path": "../../../evaluation/media/c7e6541f189ca7d4077022eba082e053c0dc93c7ab37c02c7c441d7fde3c9bbe.mp4",
+    "sha256": "c1bb48422c8cfea2d6bcd5b3c7a0168ae0801dfb3df28fc77e49b2347fad2f8e"
+  },
+  "input_conditions": [
+    "sim"
+  ],
+  "qa_enabled": false,
+  "instruction_hash_scheme": "sha256_utf8_exact_file_bytes",
+  "budget": {
+    "status": "diagnostic_unfrozen",
+    "max_actions": 500,
+    "timeout_sec": 0,
+    "time_limit_enabled": false,
+    "time_limit_seconds": null,
+    "deadline_unix": null
+  },
+  "demo_sim": {
+    "path": "../../../evaluation/media/69e91623c3112600fbfd9f989af5ebc77dd21c86e0678927645762dadb375c5b.mp4",
+    "sha256": "c985572e61d019c96d7d1da86cc2f9922e5dae6867dbbe16d24beb2ffcf9e9bd"
+  },
+  "dataset_revision": "89f009bb76ee5ffb58ee66ec584e519c86f3d4b6"
+}

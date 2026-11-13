@@ -1,0 +1,18 @@
+{
+  "task": "E49",
+  "variant": "C",
+  "generalization_condition": "R",
+  "input_condition": "text_rule",
+  "seed": 4201,
+  "experiments": [
+    "main"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e49-c-r-text-s4201",
+  "instruction": "三张牌按顺序分盘\n\n翻开左起前三张牌，按示范中原始序号与盘子颜色的对应关系分放，其他牌不动。\n",
+  "instruction_sha256": "83abe8edccef9aa5b51698025379471bddee3f3729d7ce96cba24e830c3bda46",
+  "text_rule": "翻开左起前三张，依次放入红、蓝、绿盘",
+  "demonstration": null
+}

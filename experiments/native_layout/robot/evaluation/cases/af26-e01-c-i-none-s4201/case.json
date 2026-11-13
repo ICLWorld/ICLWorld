@@ -1,0 +1,18 @@
+{
+  "task": "E01",
+  "variant": "C",
+  "generalization_condition": "I",
+  "input_condition": "none",
+  "seed": 4201,
+  "experiments": [
+    "ablation_no_rule"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e01-c-i-none-s4201",
+  "instruction": "套餐订单履约\n\n根据台面订单，为标记的取餐位准备一份套餐并装箱送达。食物组合按视频中的选配方式；订单只指定取餐位和包装，不指定组合。非套餐食物留在备料区，餐盘内物品不得掉出，交付后工作区不留包装垃圾。\n本次公开订单：批次 2，交付到 2 号目标工位。\n\n本轮对应物体为汉堡、薯条和饮料的同类别新实例；上文完整任务流程及交付要求保持不变。\n",
+  "instruction_sha256": "05b91ff2b4ed0ffed6080a54c8ca9f917aa7e2b75093a1b83f51e3a22dcd20c9",
+  "text_rule": null,
+  "demonstration": null
+}

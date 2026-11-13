@@ -1,0 +1,30 @@
+{
+  "task": "E13",
+  "variant": "C",
+  "generalization_condition": "I",
+  "input_condition": "real",
+  "seed": 4201,
+  "experiments": [
+    "main"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e13-c-i-real-s4201",
+  "instruction": "按视频展示的横竖姿态和后摄像头端朝向，把平板放稳在支架上；左右以面对支架开口的一侧为准。\n",
+  "instruction_sha256": "02ca19923aebde6d5741035c699850361978597596ef2063aa18738502e9f623",
+  "text_rule": null,
+  "demonstration": {
+    "path": "evaluation/media/da07501fea236b836ee1999921eaf22a901fdea78f0733bddafa016a72bc73fe.mp4",
+    "sha256": "5834ffa6ca1ea97be205427b746fc4b5e7c3e640709a9d02f01e74dad3271704",
+    "bytes": 2593712,
+    "evaluated_input_sha256": "da07501fea236b836ee1999921eaf22a901fdea78f0733bddafa016a72bc73fe",
+    "audio_tracks": 0,
+    "video_codec": "h264",
+    "width": 1920,
+    "height": 1080,
+    "duration_seconds": 4.866667,
+    "frames": 146,
+    "transformation": "remove_audio_streams_and_remux_video_without_reencoding"
+  }
+}

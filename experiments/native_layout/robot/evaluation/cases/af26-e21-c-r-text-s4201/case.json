@@ -1,0 +1,19 @@
+{
+  "task": "E21",
+  "variant": "C",
+  "generalization_condition": "R",
+  "input_condition": "text_rule",
+  "seed": 4201,
+  "experiments": [
+    "generalization",
+    "ablation4"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e21-c-r-text-s4201",
+  "instruction": "按颜色顺序装四格盘\n\n按示范的颜色先后顺序，依次将四块积木装进四格盘。\n",
+  "instruction_sha256": "9c01472cca62371d2fa70a71f9760386788162cfe1af35e3edb6c842c5c298cc",
+  "text_rule": "按绿、蓝、黄、红顺序放入这四格",
+  "demonstration": null
+}

@@ -1,0 +1,1 @@
+Recover from the latest complete project snapshot, preserve all local edits, restore every scheduled task recorded in the snapshot, and pass restore-check. Use the demonstrated recovery layout. Use the recovery folder layout demonstrated in the video. For JSON outputs, use the declared field names and value types; indentation and object key order are unrestricted.

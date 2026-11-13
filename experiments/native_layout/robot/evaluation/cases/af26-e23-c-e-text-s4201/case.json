@@ -1,0 +1,19 @@
+{
+  "task": "E23",
+  "variant": "C",
+  "generalization_condition": "E",
+  "input_condition": "text_rule",
+  "seed": 4201,
+  "experiments": [
+    "generalization",
+    "ablation4"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "independent_paired_instance_runtime",
+  "episode_id": "af26-e23-c-e-text-s4201",
+  "instruction": "按层位将彩杯套上杯架\n\n按示范的颜色高低次序，把三个杯子套到杯架的三个高度层。\n",
+  "instruction_sha256": "58b5b3cd4316355bf34749139cdc5282df0cb7494dffa3ce669397b938440b7e",
+  "text_rule": "从高到低蓝、绿、红",
+  "demonstration": null
+}

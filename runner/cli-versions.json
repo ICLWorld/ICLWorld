@@ -1,0 +1,15 @@
+{
+  "node": "22.21.1",
+  "codex": "0.164.0",
+  "claude": "2.1.231",
+  "dsh": "0.2.1-rc.5",
+  "zcode": {
+    "repository": "https://github.com/zai-org/ZCode.git",
+    "commit": "a60ba6a7e5a06742270ca605f5d2cc2766afa7e1",
+    "original_bundle_sha256": "3d5176947610d9061466073d2f5e51d3a7329e5e18f240518e17e056a3aed6fc",
+    "image_safe_bundle_sha256": "09f0c0de94b2c26903e1be6923af11958115ac1dd5f552d6ccd19252bc419e43",
+    "node": "24.14.0",
+    "pnpm": "10.33.2"
+  },
+  "kimi": "2.4.1"
+}

@@ -1,0 +1,19 @@
+{
+  "task": "E21",
+  "variant": "C",
+  "generalization_condition": "E",
+  "input_condition": "text_rule",
+  "seed": 4201,
+  "experiments": [
+    "generalization",
+    "ablation4"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "independent_paired_instance_runtime",
+  "episode_id": "af26-e21-c-e-text-s4201",
+  "instruction": "按视频展示的颜色先后顺序，依次把四支蜡烛放入四格盘的左上、右上、左下、右下格。\n",
+  "instruction_sha256": "f9b993bd7fde2a00dfd8812242c613090c83ae68f5083da0b63f1b9c030fb91b",
+  "text_rule": "按绿、蓝、黄、红顺序放入这四格",
+  "demonstration": null
+}

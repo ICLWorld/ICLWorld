@@ -1,0 +1,18 @@
+{
+  "task": "E29",
+  "variant": "C",
+  "generalization_condition": "R",
+  "input_condition": "text_rule",
+  "seed": 4201,
+  "experiments": [
+    "main"
+  ],
+  "max_physical_actions": 500,
+  "time_limit_seconds": null,
+  "runtime_requirement": "run2_shared_runtime",
+  "episode_id": "af26-e29-c-r-text-s4201",
+  "instruction": "琴槌敲击音阶顺序\n\n用琴槌按照示范的键位先后顺序敲击这套八键琴。\n",
+  "instruction_sha256": "3d7a2848dfc39c9c20347f3079d1e1abc57c99466de41fe70ccc9fbf7574ade0",
+  "text_rule": "往返各敲一遍：1→2→3→4→5→6→7→8→8→7→6→5→4→3→2→1",
+  "demonstration": null
+}

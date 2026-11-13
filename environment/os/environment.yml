@@ -1,0 +1,9 @@
+name: data_mining
+channels:
+  - defaults
+dependencies:
+  - python=3.10
+  - pytest
+  - pip
+  - pip:
+      - playwright==1.63.0
