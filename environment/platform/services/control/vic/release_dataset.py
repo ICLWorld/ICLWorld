@@ -10,7 +10,7 @@ def video(entry):
  if not p.is_relative_to(ROOT.resolve()) or hashlib.sha256(p.read_bytes()).hexdigest()!=entry["sha256"]: raise ValueError("Dataset media checksum mismatch")
  return p
 def replay(body):
- rows=[x for x in read("web-replays.json") if str(x["task_id"])==str(body.task_id) and x["variant"]==body.variant and (not body.replay_run_id or x["run_id"]==body.replay_run_id) and x["epoch"]==body.replay_epoch and x["example"]==body.replay_example]
+ rows=[x for x in read("web-replays.json") if str(x["task_id"])==str(body.task_id) and x["variant"]==body.variant and (not body.replay_run_id or x["run_id"]==body.replay_run_id) and (body.replay_epoch is None or x["epoch"]==body.replay_epoch) and x["example"]==body.replay_example]
  if len(rows)!=1: raise ValueError("No unique frozen replay")
  r=rows[0];initial=json.loads((ROOT/r["initial"]).read_text())
  if hashlib.sha256(json.dumps(initial,sort_keys=True).encode()).hexdigest()!=r["initial_sha256"]:raise ValueError("Replay checksum mismatch")

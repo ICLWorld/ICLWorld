@@ -23,6 +23,24 @@ def prepare(dataset,out):
   p=dataset/x['path'];q=out/rel;q.parent.mkdir(parents=True,exist_ok=True)
   try:os.link(p,q)
   except OSError:shutil.copy2(p,q)
+ # Materialize the recorded initial state for each declared Web R condition.
+ bindings={(b['native_task_id'],b['variant']): b['task_name'] for b in layout['task_bindings'] if b['native_domain']=='web'}
+ released_video_hashes={v['path']:v['sha256'] for v in layout['assets'].values()}
+ replay_index=out/'metadata/web-replays.json';enabled=[]
+ for r in json.loads(replay_index.read_text()):
+  row=keyed[(bindings[(str(r['task_id']),r['variant'])],r['variant'])]
+  entry=next((g for g in row['generalization'] if g['condition']=='R'),None)
+  if entry is None:continue
+  rel,=entry['resource_dependencies'];p=(dataset/rel).resolve()
+  if not p.is_relative_to(dataset):raise ValueError('Invalid Web replay path')
+  raw=p.read_bytes()
+  if hashlib.sha256(json.dumps(json.loads(raw),sort_keys=True).encode()).hexdigest()!=r['initial_sha256']:raise ValueError('Web replay checksum mismatch: '+rel)
+  video=row['videos'][0]['path']
+  if released_video_hashes.get(video)!=r['video_sha256']:raise ValueError('Web replay demonstration mismatch: '+video)
+  dest=out/r['initial']
+  if not dest.exists():dest.parent.mkdir(parents=True,exist_ok=True);dest.write_bytes(raw)
+  enabled.append(r)
+ replay_index.write_text(json.dumps(enabled,ensure_ascii=False,indent=2)+'\n')
  for b in layout['task_bindings']:
   r=keyed[(b['task_name'],b['variant'])];d=out/b['native_directory'];d.mkdir(parents=True,exist_ok=True)
   if r['domain'] in ['web','os']:
