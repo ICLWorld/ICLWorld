@@ -4,13 +4,13 @@ Qingle Liu, Jieming Li, Pei-lin Li, Shenghan Zheng, Ruize Yang, Sunqi Fan, Deyao
 
 Tsinghua University · † Corresponding author
 
-[Project page](https://iclworld.github.io) · arXiv (coming soon) · [Dataset](https://huggingface.co/datasets/Aoraku/ICLWorld) · [Code](https://github.com/ICLWorld/ICLWorld)
+🌐 [Project page](https://iclworld.github.io) · 📄 arXiv (coming soon) · 🤗 [Dataset](https://huggingface.co/datasets/Aoraku/ICLWorld) · 💻 [Code](https://github.com/ICLWorld/ICLWorld)
 
 ICLWorld evaluates whether interactive agents can learn customized rules from context and apply them in interactive environments. Human video demonstrations and matched textual rules specify task-specific conventions, including counterfactual conventions that differ from common priors. Execution, rule-version ablations, generalization, and independent multiple-choice diagnosis measure complementary aspects of in-context learning.
 
 The benchmark contains **160 tasks: 75 Web, 35 OS and 50 Robot**, each with A/B/C rules. One dataset metadata file describes all domains; data assets are organized under `asset/cua/` and `asset/rua/`. This repository provides the environments, execution protocols, experiment plans and Harbor workspace generation.
 
-## Contents
+## 📦 Contents
 
 - `environment/`: self-hosted Web applications, desktop simulations, deterministic generators and authoritative graders.
 - `runner/`: native agent CLI adapters, pixel/coordinate tools, context isolation, and pre-action QA branching.
@@ -20,7 +20,7 @@ The benchmark contains **160 tasks: 75 Web, 35 OS and 50 Robot**, each with A/B/
 
 The dataset is distributed separately as unified metadata and data assets. The codebase generates Harbor task directories. Execution uses the ICLWorld native GUI backend; these tasks are **not shell tasks for Harbor's default Docker agent**. See [dataset contract](docs/dataset.md).
 
-## Web and OS quick start
+## 🖥️ Web and OS quick start
 
 Use a Linux x86_64 machine with Docker Compose, Python 3.12+, FFmpeg, and adequate RAM. Download the dataset from Hugging Face, then generate the Harbor workspace locally. Parallel runs require at least 24 GiB available RAM and 20 GiB free disk after installation.
 
@@ -61,7 +61,7 @@ Copy `providers.example.json` to a private configuration file and set the refere
 
 The default three-model ablation contains **777 trials**. Optional reuse is accepted only when model configuration, inputs and result checksums match. See [experimental protocol](docs/experiments.md) for seeds, budgets, conditions and scoring. Concurrency is bounded by memory and CPU; native desktop applications have a separate hard capacity of 12 instances. Begin with a small run before increasing `--workers` (maximum 96).
 
-## Input and evaluation boundaries
+## 🔒 Input and evaluation boundaries
 
 Video agents receive video-frame tools and the public goal; text agents receive the full text rule and the public goal. None-C receives neither demonstration nor private rule. Agents interact through screenshots and coordinate input. Dataset answer keys, grader state and source code remain outside the agent workspace. QA forks the context before the first environment action and never feeds an answer back to execution.
 
@@ -69,15 +69,15 @@ Results include authoritative evaluation, identity checks and SHA-256-bound rece
 
 Project code uses the existing [MIT license](LICENSE); third-party resources retain their own terms. See [license inventory](docs/licenses.md).
 
-## Task documentation
+## 📑 Task documentation
 
 The dataset root contains `TASK_REFERENCE_EN.md`, covering all 160 task families, their A/B/C rules and available conditions, and `README.md`, documenting every metadata field. These are evaluator references; they must not be exposed to video-only or no-context agents.
 
-## Generalization levels
+## 🧭 Generalization levels
 
 Tasks are evaluated at three levels, named as in the paper: **Replay** (R) restores the demonstrated situation, **Resample** (I) samples a new instance independently of the demonstration from the same distribution and environment, and **Relocate** (E) moves the task to the counterpart environment while keeping the goal and the rule.
 
-## Citation
+## 📝 Citation
 
 ```bibtex
 @article{liu2026iclworld,
