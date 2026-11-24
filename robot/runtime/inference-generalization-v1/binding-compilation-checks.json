@@ -12,7 +12,7 @@
       ],
       "mechanism_changed": false,
       "abc_semantics_preserved": true,
-      "binding_sha256": "cfbad014402c33b31cd10fcebb9a3e87b82c778c1dcbca159c7a18860dd8297f"
+      "binding_sha256": "f66b338955bd3e08ac72636d28a2fe385805e52910d9a5eeec8704b4bfd4a001"
     },
     {
       "task_id": "iclworld_robot_02",
@@ -24,7 +24,7 @@
       ],
       "mechanism_changed": false,
       "abc_semantics_preserved": true,
-      "binding_sha256": "4626aac5dbe93fe4277162d31cfab35002cbc92d1369aac36da2decb544aa314"
+      "binding_sha256": "dccf4e78d2408cb9480cc4decaffceeb434eef67ac5dfb7954366e7fd95440ff"
     },
     {
       "task_id": "iclworld_robot_03",
@@ -42,7 +42,7 @@
       ],
       "mechanism_changed": false,
       "abc_semantics_preserved": true,
-      "binding_sha256": "0c25f0b4c7021f4cb83bf30251ce99a9a45070976e84c0affa38b143029dcd3d"
+      "binding_sha256": "6ac5258b8b516ac86ee41fbbc818f3a269b4a77dd6637c1d456391da7474324f"
     },
     {
       "task_id": "iclworld_robot_05",
@@ -54,7 +54,7 @@
       ],
       "mechanism_changed": false,
       "abc_semantics_preserved": true,
-      "binding_sha256": "d289349bd2c92c855c375bff312a5822b78d142e50b029bde7ba3c44dfb33eac"
+      "binding_sha256": "174629f61cde53a2bc80f0384c63b181a12ba5b26fd573cba1b821dc29cd5c0f"
     },
     {
       "task_id": "iclworld_robot_06",
@@ -80,7 +80,7 @@
       ],
       "mechanism_changed": false,
       "abc_semantics_preserved": true,
-      "binding_sha256": "6b30cda458a0983843e2bc2f8c91c38f1276880eb947d380d9516887c1da670f"
+      "binding_sha256": "7077767bb6ba5c10c2e371933ed5810c26180d3e1f0c7ba58eef6c6cf891e3d2"
     },
     {
       "task_id": "iclworld_robot_08",
@@ -91,7 +91,7 @@
       ],
       "mechanism_changed": false,
       "abc_semantics_preserved": true,
-      "binding_sha256": "d347473f7b43f9c4a05ef729b35518b25eaa494ecdc986e56dd772ce01f16e88"
+      "binding_sha256": "be6ec44306ad4f642b065de3e2629e1fae584ffa8ccac50ae6e7dd1f746c8794"
     },
     {
       "task_id": "iclworld_robot_09",
@@ -109,7 +109,7 @@
       ],
       "mechanism_changed": false,
       "abc_semantics_preserved": true,
-      "binding_sha256": "596c7b60763d7db046b3f786aaa6f580d26a4dce8635ac3c3b66f47fb51eb03a"
+      "binding_sha256": "c4e7231fc43f07bd0b847bd543f0682c8961ca30bcd424bff01b76a4116e1268"
     },
     {
       "task_id": "iclworld_robot_10",
@@ -128,7 +128,7 @@
       ],
       "mechanism_changed": false,
       "abc_semantics_preserved": true,
-      "binding_sha256": "7f3ceb19c991f81d3d53025c2d5af783432cddbd4558a4f24879818fc5442e65"
+      "binding_sha256": "9af61a0645d9f935d6b48f61b0101a1740c7d7fc33cf62414d55c13725d320dd"
     },
     {
       "task_id": "iclworld_robot_12",
@@ -144,7 +144,7 @@
       ],
       "mechanism_changed": false,
       "abc_semantics_preserved": true,
-      "binding_sha256": "1bed9657ef4c356cf6786cddae7ec06a31a23324a08bf1756fae67e9206e63a1"
+      "binding_sha256": "5e3974a620abe18db837e8775f60842b6c1ec6098580bdcaa7b22b529fb91ef2"
     },
     {
       "task_id": "iclworld_robot_14",
@@ -157,7 +157,7 @@
       ],
       "mechanism_changed": false,
       "abc_semantics_preserved": true,
-      "binding_sha256": "369308316c1cfbda273702792e926af538894a49560bad7f12a291073ca6551d"
+      "binding_sha256": "a12a2ce0ff6a8621bc2d02e72e829403bb7ded8116efd3482a85be620f61f33f"
     },
     {
       "task_id": "iclworld_robot_15",
@@ -168,7 +168,7 @@
       ],
       "mechanism_changed": false,
       "abc_semantics_preserved": true,
-      "binding_sha256": "8631129011e01504a0cafb8ab8f63c1e2156e2f9084c8183589c47e9bc47de76"
+      "binding_sha256": "527a228874bbe490a60e28753e340a34060cd4bb01a197d36c10006691e43580"
     },
     {
       "task_id": "iclworld_robot_16",
@@ -180,7 +180,7 @@
       ],
       "mechanism_changed": false,
       "abc_semantics_preserved": true,
-      "binding_sha256": "5d9ef9f80c53b2cc041804529ec31197f885e070f9cd713406e546d650b547dd"
+      "binding_sha256": "794ba985a92cbba5bf5fc9373d5a4e4afe7c73c202e2c9eb76440dfc4b04444d"
     },
     {
       "task_id": "iclworld_robot_17",
@@ -234,7 +234,7 @@
       ],
       "mechanism_changed": false,
       "abc_semantics_preserved": true,
-      "binding_sha256": "0c057715722b29a4cdd767fe59703ae491bbe18a11907fe33fbf75dd95db09b4"
+      "binding_sha256": "baafa3b41e0d63001911da356ddfb0e5cf1e03419350d00e388838f3ff24d324"
     },
     {
       "task_id": "iclworld_robot_21",
@@ -247,7 +247,7 @@
       ],
       "mechanism_changed": false,
       "abc_semantics_preserved": true,
-      "binding_sha256": "9adb590629914d4cb2ee5a7664f33306f756067882b6ec920ee5f5a888445b21"
+      "binding_sha256": "27e985389522543cbc641f92662526fb5a239182ddbbc633350c141bf6c7c3e3"
     },
     {
       "task_id": "iclworld_robot_22",
@@ -259,7 +259,7 @@
       ],
       "mechanism_changed": false,
       "abc_semantics_preserved": true,
-      "binding_sha256": "bc5d15dd20b0fae08826dcc0355d961b3774a1397b222ddce5030aaddd36d39f"
+      "binding_sha256": "d778f9b150f7419f419adb671df8c7454399c99c46c52f74064e4ce52bf1ff3d"
     },
     {
       "task_id": "iclworld_robot_23",
@@ -289,7 +289,7 @@
       ],
       "mechanism_changed": false,
       "abc_semantics_preserved": true,
-      "binding_sha256": "22c1591e0b4722f0a84fc9984b59cdf9b624f40654b18ad5160817d9e6e46c06"
+      "binding_sha256": "c2ffb021cee419d3913e6b921ff300a010e147b3331e3e6429780e89d7e0c562"
     },
     {
       "task_id": "iclworld_robot_26",
@@ -306,19 +306,19 @@
       ],
       "mechanism_changed": false,
       "abc_semantics_preserved": true,
-      "binding_sha256": "72a81593e8e9a6c009137016f6bdb03875ba5617a0945a251721b9cee126af27"
+      "binding_sha256": "1078eaf04d5d300853862b0cf2bc5fc536d20dfa7722564bd34c356d63faa977"
     },
     {
       "task_id": "iclworld_robot_28",
       "group": "G0",
       "unchanged": true,
-      "binding_sha256": "e0ec7712d5bd18b5d6c3a28e7b15123b1cd9d5041c8977b3e902b60fb1d346a9"
+      "binding_sha256": "c152641c6524a9234da5dc35dd0e1b222a52ceb3528b18a6cc14c98d119c9b2a"
     },
     {
       "task_id": "iclworld_robot_29",
       "group": "G0",
       "unchanged": true,
-      "binding_sha256": "167ea9505025b24cd0f4d7f3bae98cb7185cc652ac3097418da7ae48b3ac2d75"
+      "binding_sha256": "6707d8e3b2b0de67e0af6178ec20c4e41dbf85aaa782c5b82d05a9277cf7b229"
     },
     {
       "task_id": "iclworld_robot_30",
@@ -332,19 +332,19 @@
       "task_id": "iclworld_robot_31",
       "group": "G0",
       "unchanged": true,
-      "binding_sha256": "9998b0938fa1728d70b62e76789cef040a35d8e119e018b682b0c6ed861b6d4e"
+      "binding_sha256": "66164f3e89f92c7be58055eaa56eb2ae2fc681c17199b372c1f3491e95da2196"
     },
     {
       "task_id": "iclworld_robot_32",
       "group": "G0",
       "unchanged": true,
-      "binding_sha256": "fc9f5dd5cd0e3fd3a0a6dcac16c5da3e461285eb439944ab89ecec7fe334bf60"
+      "binding_sha256": "776da575c96147d7a5b2a653e87a7a2dc36ee077b35337314aea0e04d7e6a519"
     },
     {
       "task_id": "iclworld_robot_33",
       "group": "G0",
       "unchanged": true,
-      "binding_sha256": "eb1ae35d89eb705b37450e0176b06d064ce1491037f98ac1434a1cb1a1685062"
+      "binding_sha256": "a2df383b187d9eb6b2bd86d421f4f95def6e6b291e93b3376d46d683640193e5"
     },
     {
       "task_id": "iclworld_robot_34",
@@ -356,7 +356,7 @@
       ],
       "mechanism_changed": false,
       "abc_semantics_preserved": true,
-      "binding_sha256": "5aa40096527d22a0a150dd85da9399853f626eaa8d97decac2e962f1bcdf99eb"
+      "binding_sha256": "2f8c68e9eac84d9dc3646e8b194c8201362d1656297d255eafe53f19261cd820"
     },
     {
       "task_id": "iclworld_robot_35",
@@ -368,7 +368,7 @@
       ],
       "mechanism_changed": false,
       "abc_semantics_preserved": true,
-      "binding_sha256": "fe5ad1ea53c77a55c950aa3bf9cc433770cf7bc2cc4cf294104a65815d439db3"
+      "binding_sha256": "3280fd955ae3e0a8d397fa3d1475c138db2e3ec4ba4bcd9cfab194cd6b049e0c"
     },
     {
       "task_id": "iclworld_robot_36",
@@ -381,7 +381,7 @@
       ],
       "mechanism_changed": false,
       "abc_semantics_preserved": true,
-      "binding_sha256": "ad8ccde993551cb3e333878325c0216d590b420ae1677c3595bf211ba248926c"
+      "binding_sha256": "c724299d8ae9a88407c46e9a0de93a6d8df35cdf014a668964f8db6b149451f9"
     },
     {
       "task_id": "iclworld_robot_37",
@@ -414,7 +414,7 @@
       ],
       "mechanism_changed": false,
       "abc_semantics_preserved": true,
-      "binding_sha256": "a0ac6b0aa71a225280a7cdf1cbba751587cb03218b8fac133e8ffd022016eff8"
+      "binding_sha256": "712c22cace989361e31239cfd37506c72b51d97bb09e14b98e22a3bd87f1e79d"
     },
     {
       "task_id": "iclworld_robot_40",
@@ -435,19 +435,19 @@
       ],
       "mechanism_changed": false,
       "abc_semantics_preserved": true,
-      "binding_sha256": "40d85c99014c41df96e85d57b79d3345ec7e85489f46da7f94be3c2322befcb0"
+      "binding_sha256": "5d606bcabc9bcb2571fb2d7bf26c3f4576760af7dea0feb79d63799f1de5333f"
     },
     {
       "task_id": "iclworld_robot_42",
       "group": "G0",
       "unchanged": true,
-      "binding_sha256": "53f2b0e2167dc692d6052155e91009368ff136c201e5bb551adfb230530d8de8"
+      "binding_sha256": "d06266eba30d5f282ee7ad0015981edf3e9de09a59fcbfbcfbbe97e87e620313"
     },
     {
       "task_id": "iclworld_robot_43",
       "group": "G0",
       "unchanged": true,
-      "binding_sha256": "a5423dbdfc8703b4a7488a2886c3c6b85af38c9955ca265fa2ebf7103bbb6a9b"
+      "binding_sha256": "8405845defe4e1878d714f7ca1887c0532c9f9b40534c653fad4edbdf06a1eca"
     },
     {
       "task_id": "iclworld_robot_44",
@@ -465,7 +465,7 @@
       "task_id": "iclworld_robot_46",
       "group": "G0",
       "unchanged": true,
-      "binding_sha256": "1b84ce7b4ba2286959d1ecf2d6ae1ea51bd8706aa443a85cec913386cadb1811"
+      "binding_sha256": "ad3d277802e908dfc12c2ba4c22552bbb05e338c9c48e5e503f0b880382f17e8"
     },
     {
       "task_id": "iclworld_robot_47",
@@ -479,13 +479,13 @@
       ],
       "mechanism_changed": false,
       "abc_semantics_preserved": true,
-      "binding_sha256": "f6dc24fd0f3dda73d7febd8dafd42397afbcd61adc0ed6bff96ddab87cbb515b"
+      "binding_sha256": "821087f7fc82b5832343858bf59acb305138273cfff02cfd9af6033784ed72bb"
     },
     {
       "task_id": "iclworld_robot_48",
       "group": "G0",
       "unchanged": true,
-      "binding_sha256": "a03778e90ae42e612d388570ede06881f314ece611a31175bba0cd8cba81c890"
+      "binding_sha256": "e1bae43709f0376987ab15784cea85a2b9b15dda242c6f8d5465b371c768ec5d"
     },
     {
       "task_id": "iclworld_robot_49",
@@ -499,7 +499,7 @@
       ],
       "mechanism_changed": false,
       "abc_semantics_preserved": true,
-      "binding_sha256": "4535eeae0dfe88c5d447e5e53d9fb3c143cf9e319990cd856fe90425f2cc8e9c"
+      "binding_sha256": "58ce701a7e241f023b824a37eabfad49b7c5ace782c15ff5c1182d8a7652a95f"
     },
     {
       "task_id": "iclworld_robot_50",

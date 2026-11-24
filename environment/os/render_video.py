@@ -16,7 +16,7 @@ def render(session_id: str, base_url: str, output: Path) -> None:
     output.parent.mkdir(parents=True, exist_ok=True)
     query = urlencode({"session": session_id, "replay": "1"})
     url = f"{base_url.rstrip('/')}/?{query}"
-    with tempfile.TemporaryDirectory(prefix="os-icl-replay-") as temp:
+    with tempfile.TemporaryDirectory(prefix="iclworld-os-replay-") as temp:
         with sync_playwright() as playwright:
             browser = playwright.chromium.launch(
                 executable_path="/usr/bin/google-chrome",

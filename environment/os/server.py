@@ -33,8 +33,8 @@ for directory in (EPISODES, VIDEOS, RENDER_TEMP):
 SESSIONS: dict[str, dict] = {}
 LOCK = threading.RLock()
 RENDER_JOBS = {}
-PUBLIC_BASE_URL = os.environ.get("OS_ICL_PUBLIC_URL", os.environ.get("VIBE_PUBLIC_URL", "http://127.0.0.1:8790"))
-RENDER_CONCURRENCY = max(1, int(os.environ.get("OS_ICL_RENDER_CONCURRENCY", os.environ.get("VIBE_RENDER_CONCURRENCY", "3"))))
+PUBLIC_BASE_URL = os.environ.get("ICLWORLD_OS_PUBLIC_URL", "http://127.0.0.1:8790")
+RENDER_CONCURRENCY = max(1, int(os.environ.get("ICLWORLD_OS_RENDER_CONCURRENCY", "3")))
 RENDER_SLOTS = threading.Semaphore(RENDER_CONCURRENCY)
 
 
@@ -158,7 +158,7 @@ class Handler(BaseHTTPRequestHandler):
                     return self.send_json({"error":"Legacy task retired"},410)
                 return self.send_json(self.v2_payload(session))
         if parsed.path == "/api/health":
-            return self.send_json({"ok":True,"service":"os-icl-bench","benchmark_version":workflows.VERSION,"catalogue_version":"36.1-dev","cases":36,"legacy_cases":0})
+            return self.send_json({"ok":True,"service":"iclworld-os","benchmark_version":workflows.VERSION,"catalogue_version":"36.1-dev","cases":36,"legacy_cases":0})
         if parsed.path.startswith("/artifacts/"):
             name = Path(parsed.path[len("/artifacts/"):]).name
             return self.serve_file(VIDEOS / name)
@@ -316,10 +316,10 @@ class Handler(BaseHTTPRequestHandler):
 def main() -> None:
     global PUBLIC_BASE_URL
     parser = argparse.ArgumentParser(description="Run the ICLWorld OS desktop simulator")
-    parser.add_argument("--host", default=os.environ.get("OS_ICL_HOST", os.environ.get("VIBE_HOST", "0.0.0.0")))
-    parser.add_argument("--port", type=int, default=int(os.environ.get("OS_ICL_PORT", os.environ.get("VIBE_PORT", "8790"))))
+    parser.add_argument("--host", default=os.environ.get("ICLWORLD_OS_HOST", "0.0.0.0"))
+    parser.add_argument("--port", type=int, default=int(os.environ.get("ICLWORLD_OS_PORT", "8790")))
     args = parser.parse_args()
-    PUBLIC_BASE_URL = os.environ.get("OS_ICL_PUBLIC_URL", os.environ.get("VIBE_PUBLIC_URL", f"http://127.0.0.1:{args.port}"))
+    PUBLIC_BASE_URL = os.environ.get("ICLWORLD_OS_PUBLIC_URL", f"http://127.0.0.1:{args.port}")
     server = ThreadingHTTPServer((args.host, args.port), Handler)
     print(f"ICLWorld OS Desktop running at http://127.0.0.1:{args.port}", flush=True)
     try:

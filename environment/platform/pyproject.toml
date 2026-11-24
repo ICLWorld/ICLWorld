@@ -13,17 +13,10 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-agents = ["mcp>=1.26,<2"]
-test = ["pytest>=8,<10", "pytest-asyncio>=0.25,<2"]
 postgres = ["psycopg[binary]>=3.2,<4"]
 
 [tool.setuptools.packages.find]
-where = ["services/control", "packages/sdk", "packages/app_runtime"]
-
-[tool.pytest.ini_options]
-testpaths = ["tests"]
-asyncio_mode = "auto"
-addopts = "-q"
+where = ["services/control", "packages/app_runtime"]
 
 [tool.setuptools.package-data]
 iclworld_apps = ["*.json", "*.js"]

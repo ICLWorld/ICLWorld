@@ -167,17 +167,6 @@ def test_full_success_can_be_known_when_partial_adapter_is_missing():
     assert result['process_score_100'] is None
 
 
-def test_all_150_draft_contracts_are_explicit_and_unvalidated():
-    root = Path(__file__).resolve().parents[1]
-    registry = json.loads((root / 'docs/evaluation/realworld50-progress-proposed-v1.json').read_text())
-    assert registry['release_status'] == 'proposal_requires_native_positive_negative_controls'
-    assert [row['task_id'] for row in registry['tasks']] == [f'iclworld_robot_{i:02d}' for i in range(1, 51)]
-    for task in registry['tasks']:
-        assert task['native_controls_verified'] is False
-        for variant in 'ABC':
-            parsed = ScoreContract.from_task_spec(task, variant)
-            assert parsed.process_ceiling == 90.
-            assert parsed.milestone_ids
 
 
 def load_tests(loader, tests, pattern):

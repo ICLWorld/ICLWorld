@@ -16,9 +16,6 @@
     "LICENSE": {
       "published_sha256": "983d115562ed030f5ccf5ede4b189b4f143619c0673e4b6dc013c46022003a5e"
     },
-    "prepare_runtime.py": {
-      "published_sha256": "2b1084839e3571e91f6de17787e0b7ca327737f3f7cc7f788e5b11941dca4b9c"
-    },
     "worker/public_read_identity.py": {
       "published_sha256": "19841282a2905ca7e862efb72d580fb5f229a79c851a063fbe09be158a86e2d4"
     },
@@ -300,9 +297,6 @@
     },
     "iclworld_harness/scripts/harbor/serve_embodied.py": {
       "published_sha256": "ff09a9605c642844c883a4fc8a2745d284936ca6490de31ef1c29985cb3337f5"
-    },
-    "iclworld_harness/scripts/harbor/panel_contract.py": {
-      "published_sha256": "b4b80c23e31ce033523fe58f7be09e17f0267150d3d378d3b7f9339fc5a6472c"
     },
     "iclworld_harness/scripts/harbor/verify_embodied.py": {
       "published_sha256": "e37918455ba4c6f96006022b586e9a9081ac40524fc66b0fc3c62f17ca459bc2"

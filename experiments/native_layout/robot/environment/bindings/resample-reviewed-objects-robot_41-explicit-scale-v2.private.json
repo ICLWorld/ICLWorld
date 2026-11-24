@@ -35876,7 +35876,7 @@
   },
   "reviewed_object_reuse": {
     "source": "runtime/inference-generalization-v1/inference-bindings.json",
-    "sha256": "be93e683f0dec2a28794defae843027b47e16c9a0bc6e448c9224a872483e2cf",
+    "sha256": "41eb98a99e75bc10858bc6409b3a31569004c0c51568f05ea70d9e250d27211f",
     "old_environment_preserved": true,
     "old_G2_robot_or_table_not_copied": true,
     "old_G1_tags_or_variants_not_copied": true,

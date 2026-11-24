@@ -690,7 +690,7 @@
         "demo_unchanged": true,
         "robot_profile": "configs/inference-generalization-ur5-wsg-v1.json",
         "robot_profile_sha256": "91e779b1e0268ce14c8f2b93196dd25e2230b8e50cee3d23e9b9266e5578b311",
-        "source_task_binding_sha256": "5ec3ee6da228294935cf59199f943ee88d25f4289f45f5938c28a9c4024c66d1"
+        "source_task_binding_sha256": "bcc1ac2648ae2f2644becdf93a230f00aad0649df97dbe8da861225ea2a80d4a"
       }
     },
     "iclworld_robot_35": {
@@ -1067,7 +1067,7 @@
         "demo_unchanged": true,
         "robot_profile": null,
         "robot_profile_sha256": null,
-        "source_task_binding_sha256": "7b9d866dc7e552f1dd364f56ef1a173fc2a6eacbf25213810e282a3ed6c9299c"
+        "source_task_binding_sha256": "37b32288912e23771055656bbf00e4fc5a0fa5d9da18300e718296aedba39d7c"
       }
     },
     "iclworld_robot_36": {
@@ -1587,7 +1587,7 @@
         "demo_unchanged": true,
         "robot_profile": "configs/inference-generalization-ur5-wsg-v1.json",
         "robot_profile_sha256": "91e779b1e0268ce14c8f2b93196dd25e2230b8e50cee3d23e9b9266e5578b311",
-        "source_task_binding_sha256": "9ed818fe01f97efdfb078cbda64f6261d8565cbf3a737ac3d0cc63078b82ab4a"
+        "source_task_binding_sha256": "8e86fed69b1994cacaf42523ca6495121c40fe9e8cfb70b1acd5920391156891"
       }
     },
     "iclworld_robot_06": {
@@ -3405,7 +3405,7 @@
         "demo_unchanged": true,
         "robot_profile": null,
         "robot_profile_sha256": null,
-        "source_task_binding_sha256": "df2aaf70c763e8b98055cedae29e9ef2539cdf04d23e7963124fe849d0e8d5f1"
+        "source_task_binding_sha256": "8bdbe09af29ae57b20350880fb1de514e4d30ef06e958a2ece161f5cc1920a45"
       }
     },
     "iclworld_robot_27": {
@@ -3852,7 +3852,7 @@
         "demo_unchanged": true,
         "robot_profile": null,
         "robot_profile_sha256": null,
-        "source_task_binding_sha256": "7dbccdfddf3382a773ef90c89a224530a5335fc99b37aec1cbefb20078b6cd55"
+        "source_task_binding_sha256": "26a585466899fc07fb3438d4a7f335cfa3e0658675caeb1617425f6be1d1dddd"
       }
     },
     "iclworld_robot_31": {
@@ -7781,7 +7781,7 @@
         "demo_unchanged": true,
         "robot_profile": "configs/inference-generalization-ur5-wsg-v1.json",
         "robot_profile_sha256": "91e779b1e0268ce14c8f2b93196dd25e2230b8e50cee3d23e9b9266e5578b311",
-        "source_task_binding_sha256": "d911647be5bc09c2a2559ac1d52fb9aef56e671eb0f1e0ae9848ab9d1d196fb3"
+        "source_task_binding_sha256": "109eb150cf3fa57222de742f7a6b83847cec525bf65b8feaf546448dd4a522e4"
       }
     },
     "iclworld_robot_39": {
@@ -8460,7 +8460,7 @@
         "demo_unchanged": true,
         "robot_profile": null,
         "robot_profile_sha256": null,
-        "source_task_binding_sha256": "648e4461ac7c73512c60b4638adab71c6e497db1bc09ebf1dc78d95b22f5a5d1"
+        "source_task_binding_sha256": "3d9b8df5358ace5e542086a3f95a7bd337d5acef975b5382b64040c38bdbcaab"
       }
     },
     "iclworld_robot_41": {
@@ -9244,7 +9244,7 @@
         "demo_unchanged": true,
         "robot_profile": "configs/inference-generalization-ur5-wsg-v1.json",
         "robot_profile_sha256": "91e779b1e0268ce14c8f2b93196dd25e2230b8e50cee3d23e9b9266e5578b311",
-        "source_task_binding_sha256": "8d43a186f8a5eb670b07ef333686bf80414c624c2b80cb4b4bc0444079040170"
+        "source_task_binding_sha256": "c322540ee6cb82bf12d3dbad8f2146348f73097f05e8b4ce4e9cc50ebb8f107f"
       }
     },
     "iclworld_robot_25": {
@@ -9845,7 +9845,7 @@
         "demo_unchanged": true,
         "robot_profile": null,
         "robot_profile_sha256": null,
-        "source_task_binding_sha256": "e276f9709f98a489d78dc5c465075f324dd98b435d0084c600b36ca93739020f"
+        "source_task_binding_sha256": "37b9aff9de1859bb5e333492438b94b2346e43d1ee9ca22c9ba93b27668e898f"
       }
     },
     "iclworld_robot_34": {
@@ -10283,7 +10283,7 @@
         "demo_unchanged": true,
         "robot_profile": null,
         "robot_profile_sha256": null,
-        "source_task_binding_sha256": "8e948843a7a750415c3116c536d38ec5eb3f4ea90a938ff56ea49f2e2a310a45"
+        "source_task_binding_sha256": "e1ec9ff54f3a3bd2f418f3421e5a10926593b8152dafc508571c2f45e8270d62"
       }
     },
     "iclworld_robot_20": {
@@ -11631,7 +11631,7 @@
         "demo_unchanged": true,
         "robot_profile": "configs/inference-generalization-ur5-wsg-v1.json",
         "robot_profile_sha256": "91e779b1e0268ce14c8f2b93196dd25e2230b8e50cee3d23e9b9266e5578b311",
-        "source_task_binding_sha256": "4990c50f232997e1b68b67378e70f785b66f70c077d561e35b0c7a42a92ae07c"
+        "source_task_binding_sha256": "f2315f9cb826c71fccbc8c0e4b22b5b5b1694d69233774836c79f27911a65c41"
       }
     },
     "iclworld_robot_47": {
@@ -12402,7 +12402,7 @@
         "demo_unchanged": true,
         "robot_profile": null,
         "robot_profile_sha256": null,
-        "source_task_binding_sha256": "c469f7521cc5e83bd31301ac650ecb2609cdc3a07d57813c09194f084c87db61"
+        "source_task_binding_sha256": "37edcd515d16e0d28e865a64046a96b4046381cbb674b6dc2ffedc3c99542b19"
       }
     },
     "iclworld_robot_48": {
@@ -14395,7 +14395,7 @@
         "demo_unchanged": true,
         "robot_profile": "configs/inference-generalization-ur5-wsg-v1.json",
         "robot_profile_sha256": "91e779b1e0268ce14c8f2b93196dd25e2230b8e50cee3d23e9b9266e5578b311",
-        "source_task_binding_sha256": "0316c078e0124df3685010457a4f625ac980850fce1435adedc0a1d2a5b39a7f"
+        "source_task_binding_sha256": "4d6b7ab0fa31da605ffcba20bdc1590ba3a7536960fcbe419ed9a8c33f9e3fc0"
       }
     },
     "iclworld_robot_09": {
@@ -15716,7 +15716,7 @@
         "demo_unchanged": true,
         "robot_profile": "configs/inference-generalization-ur5-wsg-v1.json",
         "robot_profile_sha256": "91e779b1e0268ce14c8f2b93196dd25e2230b8e50cee3d23e9b9266e5578b311",
-        "source_task_binding_sha256": "d932a826fe64e6a03a0b15571a40b44182dc37dc881102b27367594360507c43"
+        "source_task_binding_sha256": "99256206db681a2e39ee54948fd35b3583881abbef1dcef62a3013dbdaafd0b3"
       }
     },
     "iclworld_robot_16": {
@@ -16379,7 +16379,7 @@
         "demo_unchanged": true,
         "robot_profile": null,
         "robot_profile_sha256": null,
-        "source_task_binding_sha256": "018cfa3ea2c33ea090b990606d0ec662068cf1a7e7d22e5fbbed4e76478b448f"
+        "source_task_binding_sha256": "f81b744a07e4b3c08ed991672e92de28b6f14f22a56cf39267ebd339fbb15f06"
       }
     },
     "iclworld_robot_21": {
@@ -17289,7 +17289,7 @@
         "demo_unchanged": true,
         "robot_profile": null,
         "robot_profile_sha256": null,
-        "source_task_binding_sha256": "d3347b31f3cdbfbbbd30ad3a7eeb13d638cb1aeb4e039f79d876d5ad000f1e33"
+        "source_task_binding_sha256": "bf6e84a24c117710809036873dd2006b58ac59e24116a0ddb3ebdc7583a33530"
       }
     },
     "iclworld_robot_22": {
@@ -17828,7 +17828,7 @@
         "demo_unchanged": true,
         "robot_profile": null,
         "robot_profile_sha256": null,
-        "source_task_binding_sha256": "b5ff16058944cc41ec605cb2ace827be0178320fccbf7a3ddc52ab923876434f"
+        "source_task_binding_sha256": "b4f9cd09192a2c70f62cf9fd44b7d48ee0d045a8a99da2db73b8ea1f60488caa"
       }
     },
     "iclworld_robot_11": {
@@ -18687,7 +18687,7 @@
         "demo_unchanged": true,
         "robot_profile": "configs/inference-generalization-ur5-wsg-v1.json",
         "robot_profile_sha256": "91e779b1e0268ce14c8f2b93196dd25e2230b8e50cee3d23e9b9266e5578b311",
-        "source_task_binding_sha256": "8d42a46f84d29a458455eb606c6ccc3a1598ea6054f9f313953a890ec0ea9457"
+        "source_task_binding_sha256": "3079fc94b7ad39155d79a492367112dc46027d350001c347031215668104653e"
       }
     },
     "iclworld_robot_38": {
@@ -22041,7 +22041,7 @@
         "demo_unchanged": true,
         "robot_profile": null,
         "robot_profile_sha256": null,
-        "source_task_binding_sha256": "119b71e784a4a4c52244b35cf4446b5ef82bca2017dd1e113f03863295b5b27f"
+        "source_task_binding_sha256": "f439ffdc4768a75a32b231e8a6cd51875f0a3bd8a08c48d14017420f9be9ce78"
       }
     },
     "iclworld_robot_01": {
@@ -22651,7 +22651,7 @@
         "demo_unchanged": true,
         "robot_profile": null,
         "robot_profile_sha256": null,
-        "source_task_binding_sha256": "601faa9aecb678a0df9085339e437e031f32016359a0fce8f5fa8103a061f3d3"
+        "source_task_binding_sha256": "23f16cd286fce2776276999492939a11bbc58ecd0ffcee5377c59a866ac3e1c9"
       }
     },
     "iclworld_robot_33": {
@@ -23941,7 +23941,7 @@
         "demo_unchanged": true,
         "robot_profile": null,
         "robot_profile_sha256": null,
-        "source_task_binding_sha256": "89cdab419d99634070bff5bd7dedd00f57ef396fafaf7749eb02de013cb9febf"
+        "source_task_binding_sha256": "2d2117430077dcb04788f2f7508671b0b7b3b369b07e432bfe495bc9efbdb689"
       }
     },
     "iclworld_robot_05": {
@@ -24373,7 +24373,7 @@
         "demo_unchanged": true,
         "robot_profile": "configs/inference-generalization-ur5-wsg-v1.json",
         "robot_profile_sha256": "91e779b1e0268ce14c8f2b93196dd25e2230b8e50cee3d23e9b9266e5578b311",
-        "source_task_binding_sha256": "d8d2316a3c54cf27dd701b4810f808e61096d30d687c9a13cdba2e1e1e4bb2cd"
+        "source_task_binding_sha256": "1bd3f5d8a044384fcd6ddf99c68749c55e419b4eb64690d707b798e9989c22b5"
       }
     },
     "iclworld_robot_14": {
@@ -25050,7 +25050,7 @@
         "demo_unchanged": true,
         "robot_profile": null,
         "robot_profile_sha256": null,
-        "source_task_binding_sha256": "c5a4f6addc0398f0dab8576b396b21e14572156762f2a68b14bb227b9d352411"
+        "source_task_binding_sha256": "b630ddbbab2736d27a98cdf88476ec9774d8e7a1b6236866bab6d04d9f999b9f"
       }
     },
     "iclworld_robot_10": {

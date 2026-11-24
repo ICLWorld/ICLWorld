@@ -307,7 +307,7 @@ async function command(el,w,event) {
   else if(c==='save-changes'){const pending=dialog, edited=windows.find(x=>x.id===pending.window);const outcome=await mutate({op:'write',target:edited.fileId,content:edited.draft});if(outcome)completeEditorNavigation(pending)}
   else if(c==='dismiss-notice')notice='';
   else if(c==='task-info'){start=false;dialog={type:'info',title:session.case.title,content:session.case.task+'\n\nCurrent project: '+data().project}}
-  else if(c==='finish'){session=await api(`/api/v2/sessions/${session.id}/finish`,{});traceEnabled=false;start=false;notice=session.mode==='demo'?(session.result.success?'Demonstration accepted. Video rendering queued.':'Demonstration incomplete. Inspect the authoring result in Studio.'):'Session ended. Results are available to the external runner.';window.parent.postMessage({source:'os-icl',type:'OS_ICL_FINISHED',episodeId:session.id},location.origin)}
+  else if(c==='finish'){session=await api(`/api/v2/sessions/${session.id}/finish`,{});traceEnabled=false;start=false;notice=session.mode==='demo'?(session.result.success?'Demonstration accepted. Video rendering queued.':'Demonstration incomplete. Inspect the authoring result in Studio.'):'Session ended. Results are available to the external runner.';window.parent.postMessage({source:'iclworld-os',type:'ICLWORLD_OS_FINISHED',episodeId:session.id},location.origin)}
   render();
 }
 
@@ -427,7 +427,7 @@ async function boot() {
     root.innerHTML=`<main class="brief"><h1>${esc(session.case.title)}</h1><p>${esc(session.case.task)}</p><h2>Recorder instructions</h2><pre>${esc(JSON.stringify(session.recorder_brief.convention,null,2))}</pre><p>Preserve all originals. Stage four source files under the working folder, rename the copies, create and save handoff-index.txt, configure settings, and run the dependent workflow below. Output reports go in a Reports subfolder; the final delivery goes in the delivery folder.</p><p>${esc(session.case.pipeline.join(' → '))}</p><details><summary>Detailed authoring operations</summary><pre>${esc(JSON.stringify(session.recorder_brief.reference,null,2))}</pre></details><button id="begin-demo" class="primary">Start demonstration</button></main>`;
     document.querySelector('#begin-demo').onclick=()=>{render();traceEnabled=true};
   }else {render();traceEnabled=session.status==='active'}
-  window.parent.postMessage({source:'os-icl',type:'OS_ICL_READY',episodeId:session.id},location.origin);
+  window.parent.postMessage({source:'iclworld-os',type:'ICLWORLD_OS_READY',episodeId:session.id},location.origin);
 }
 boot().catch(e=>{root.innerHTML=`<main class="brief"><h1>Could not open desktop</h1><p>${esc(e.message)}</p></main>`;window.__REPLAY_ERROR__=e.message});
 
