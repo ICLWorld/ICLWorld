@@ -1,14 +1,14 @@
 {
-  "schema": "videoicl.g2-assets.v1",
+  "schema": "iclworld.g2-assets.v1",
   "base_sha256": "fc9150d38f89d690b67591cc319b5ece76aa37371187e0b44a7a1c971fd53e4e",
   "authorship": "Procedural rigid meshes from build_inference_g2_assets.py; no demo modifications.",
   "tasks": {
-    "E04": [
+    "iclworld_robot_04": [
       {
         "id": "green_cup",
         "category": "pear",
         "original_source": {
-          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
           "relative_path": "cup_handleless.usda",
           "sha256": "fa7eef0598a2e2c619485ecfc8e10b770f6f1d3fb4b1b273cb5ac8414f3a8884",
           "source_rotation": [
@@ -25,8 +25,8 @@
           ]
         },
         "asset": {
-          "root_env": "VIC_INFERENCE_ASSETS",
-          "relative_path": "g2/E04_green_cup.usda",
+          "root_env": "ICLWORLD_INFERENCE_ASSETS",
+          "relative_path": "g2/iclworld_robot_04_green_cup.usda",
           "sha256": "f95134c58cf6a581804828d5f818126c55c422b9b669bf7d8adae804f2f9afbb",
           "source_rotation": [
             1,
@@ -52,7 +52,7 @@
         "id": "blue_cup",
         "category": "jar",
         "original_source": {
-          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
           "relative_path": "cup_handleless.usda",
           "sha256": "fa7eef0598a2e2c619485ecfc8e10b770f6f1d3fb4b1b273cb5ac8414f3a8884",
           "source_rotation": [
@@ -69,8 +69,8 @@
           ]
         },
         "asset": {
-          "root_env": "VIC_INFERENCE_ASSETS",
-          "relative_path": "g2/E04_blue_cup.usda",
+          "root_env": "ICLWORLD_INFERENCE_ASSETS",
+          "relative_path": "g2/iclworld_robot_04_blue_cup.usda",
           "sha256": "902c74519b32516cc1f241391089689523686463a623f6fcef1763b4b5b42607",
           "source_rotation": [
             1,
@@ -96,7 +96,7 @@
         "id": "red_cup",
         "category": "apple",
         "original_source": {
-          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
           "relative_path": "cup_handleless.usda",
           "sha256": "fa7eef0598a2e2c619485ecfc8e10b770f6f1d3fb4b1b273cb5ac8414f3a8884",
           "source_rotation": [
@@ -113,8 +113,8 @@
           ]
         },
         "asset": {
-          "root_env": "VIC_INFERENCE_ASSETS",
-          "relative_path": "g2/E04_red_cup.usda",
+          "root_env": "ICLWORLD_INFERENCE_ASSETS",
+          "relative_path": "g2/iclworld_robot_04_red_cup.usda",
           "sha256": "5ef0199c0bbbd66431b06c8268080dd24e5b25f635269301c00c35f7473f5d03",
           "source_rotation": [
             1,
@@ -137,12 +137,12 @@
         "native_validation": "pending"
       }
     ],
-    "E05": [
+    "iclworld_robot_05": [
       {
         "id": "cube",
         "category": "gift",
         "original_source": {
-          "root_env": "VIC_ROBODOJO_ASSETS",
+          "root_env": "ICLWORLD_ROBODOJO_ASSETS",
           "relative_path": "Object/RoboDojo/Rigid/small_cube/00007/object.usdz",
           "sha256": "5e884b3ea23bca1706aabbc53f7d6cfe66cafc57fd70ddfc5ba031d5107ec583",
           "source_rotation": [
@@ -154,8 +154,8 @@
           "dependencies": []
         },
         "asset": {
-          "root_env": "VIC_INFERENCE_ASSETS",
-          "relative_path": "g2/E05_cube.usda",
+          "root_env": "ICLWORLD_INFERENCE_ASSETS",
+          "relative_path": "g2/iclworld_robot_05_cube.usda",
           "sha256": "60bed81d98683a983ac577bce5100ef78d8176d2106a275f1a1dc862236fc081",
           "source_rotation": [
             1,
@@ -181,7 +181,7 @@
         "id": "sphere",
         "category": "orange",
         "original_source": {
-          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
           "relative_path": "sphere_white.usda",
           "sha256": "257fb8afcd8eb2787aa4c59fd39314b036f78287e4d277f210168048f8becc1a",
           "source_rotation": [
@@ -195,8 +195,8 @@
           "instance_adaptation": "Reviewed source-dimension scaling; same actual mesh in ABC"
         },
         "asset": {
-          "root_env": "VIC_INFERENCE_ASSETS",
-          "relative_path": "g2/E05_sphere.usda",
+          "root_env": "ICLWORLD_INFERENCE_ASSETS",
+          "relative_path": "g2/iclworld_robot_05_sphere.usda",
           "sha256": "8cc880989caf8e0ae9357b51f579492e1169ce8ddd92a11ced64e8a4af455fa2",
           "source_rotation": [
             1,
@@ -222,8 +222,8 @@
         "id": "triangle",
         "category": "pastry",
         "original_source": {
-          "root_env": "VIC_FULL50_RIGID_ASSETS",
-          "relative_path": "e05_solid/ravens_triangle_02.usda",
+          "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
+          "relative_path": "iclworld_robot_05_solid/ravens_triangle_02.usda",
           "sha256": "8c86d186418e868214adf16b5c3d7ae5c82971103d3543eeaa3cd505cc08fa6b",
           "source_rotation": [
             0.7071067811865476,
@@ -235,22 +235,22 @@
           "instance_adaptation": "Source triangular prism faces retained, normalized instance footprint 31.18mm along far/near x by36mm across y and22mm thickness; metric estimates pending source calibration.",
           "dependencies": [
             {
-              "relative_path": "e05_solid/ravens-02.obj",
+              "relative_path": "iclworld_robot_05_solid/ravens-02.obj",
               "sha256": "bf2c99a0a99a7b2f3b7e2eb569c11c0144192adfbd484b32594f2032b570a8d5"
             },
             {
-              "relative_path": "e05_solid/LICENSE-Ravens-Apache-2.0.txt",
+              "relative_path": "iclworld_robot_05_solid/LICENSE-Ravens-Apache-2.0.txt",
               "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
             },
             {
-              "relative_path": "e05_solid/provenance.json",
-              "sha256": "32c869792952cba1fc6884c15812456ae4038cf0d4f3d54efe40ad3bd7daf615"
+              "relative_path": "iclworld_robot_05_solid/provenance.json",
+              "sha256": "d6bc0aa6b17a336aa735c325da7e216b21612ec078d89760e0d0f08deb6724d9"
             }
           ]
         },
         "asset": {
-          "root_env": "VIC_INFERENCE_ASSETS",
-          "relative_path": "g2/E05_triangle.usda",
+          "root_env": "ICLWORLD_INFERENCE_ASSETS",
+          "relative_path": "g2/iclworld_robot_05_triangle.usda",
           "sha256": "b8793774dd64c04d00168ac60d498b7afc5071f5cd18d950d46ee92b61b2cfc9",
           "source_rotation": [
             1,
@@ -273,12 +273,12 @@
         "native_validation": "pending"
       }
     ],
-    "E06": [
+    "iclworld_robot_06": [
       {
         "id": "purple",
         "category": "tangerine",
         "original_source": {
-          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
           "relative_path": "sphere_white.usda",
           "sha256": "257fb8afcd8eb2787aa4c59fd39314b036f78287e4d277f210168048f8becc1a",
           "source_rotation": [
@@ -290,8 +290,8 @@
           "dependencies": []
         },
         "asset": {
-          "root_env": "VIC_INFERENCE_ASSETS",
-          "relative_path": "g2/E06_purple.usda",
+          "root_env": "ICLWORLD_INFERENCE_ASSETS",
+          "relative_path": "g2/iclworld_robot_06_purple.usda",
           "sha256": "61b7c3dfd5b105dbbc9d6a2c7793027081a16f504883a6ed526527b43fd1f48a",
           "source_rotation": [
             1,
@@ -317,7 +317,7 @@
         "id": "pink",
         "category": "tangerine",
         "original_source": {
-          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
           "relative_path": "sphere_white.usda",
           "sha256": "257fb8afcd8eb2787aa4c59fd39314b036f78287e4d277f210168048f8becc1a",
           "source_rotation": [
@@ -329,8 +329,8 @@
           "dependencies": []
         },
         "asset": {
-          "root_env": "VIC_INFERENCE_ASSETS",
-          "relative_path": "g2/E06_pink.usda",
+          "root_env": "ICLWORLD_INFERENCE_ASSETS",
+          "relative_path": "g2/iclworld_robot_06_pink.usda",
           "sha256": "61b7c3dfd5b105dbbc9d6a2c7793027081a16f504883a6ed526527b43fd1f48a",
           "source_rotation": [
             1,
@@ -356,7 +356,7 @@
         "id": "lightpink",
         "category": "tangerine",
         "original_source": {
-          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
           "relative_path": "sphere_white.usda",
           "sha256": "257fb8afcd8eb2787aa4c59fd39314b036f78287e4d277f210168048f8becc1a",
           "source_rotation": [
@@ -368,8 +368,8 @@
           "dependencies": []
         },
         "asset": {
-          "root_env": "VIC_INFERENCE_ASSETS",
-          "relative_path": "g2/E06_lightpink.usda",
+          "root_env": "ICLWORLD_INFERENCE_ASSETS",
+          "relative_path": "g2/iclworld_robot_06_lightpink.usda",
           "sha256": "61b7c3dfd5b105dbbc9d6a2c7793027081a16f504883a6ed526527b43fd1f48a",
           "source_rotation": [
             1,
@@ -392,12 +392,12 @@
         "native_validation": "pending"
       }
     ],
-    "E07": [
+    "iclworld_robot_07": [
       {
         "id": "block1",
         "category": "matryoshka",
         "original_source": {
-          "root_env": "VIC_ROBODOJO_ASSETS",
+          "root_env": "ICLWORLD_ROBODOJO_ASSETS",
           "relative_path": "Object/RoboDojo/Rigid/small_cube/00007/object.usdz",
           "sha256": "5e884b3ea23bca1706aabbc53f7d6cfe66cafc57fd70ddfc5ba031d5107ec583",
           "source_rotation": [
@@ -409,8 +409,8 @@
           "dependencies": []
         },
         "asset": {
-          "root_env": "VIC_INFERENCE_ASSETS",
-          "relative_path": "g2/E07_block1.usda",
+          "root_env": "ICLWORLD_INFERENCE_ASSETS",
+          "relative_path": "g2/iclworld_robot_07_block1.usda",
           "sha256": "b161776efd64ef96282a5bbb417bebd68df20d2de0b502d80e96c43a62f148f3",
           "source_rotation": [
             1,
@@ -436,7 +436,7 @@
         "id": "block2",
         "category": "matryoshka",
         "original_source": {
-          "root_env": "VIC_ROBODOJO_ASSETS",
+          "root_env": "ICLWORLD_ROBODOJO_ASSETS",
           "relative_path": "Object/RoboDojo/Rigid/small_cube/00007/object.usdz",
           "sha256": "5e884b3ea23bca1706aabbc53f7d6cfe66cafc57fd70ddfc5ba031d5107ec583",
           "source_rotation": [
@@ -448,8 +448,8 @@
           "dependencies": []
         },
         "asset": {
-          "root_env": "VIC_INFERENCE_ASSETS",
-          "relative_path": "g2/E07_block2.usda",
+          "root_env": "ICLWORLD_INFERENCE_ASSETS",
+          "relative_path": "g2/iclworld_robot_07_block2.usda",
           "sha256": "4b600afb0493be0c454aa83939c9b009e9b6e87d1325cd1d7acd388ca988979f",
           "source_rotation": [
             1,
@@ -475,7 +475,7 @@
         "id": "block3",
         "category": "matryoshka",
         "original_source": {
-          "root_env": "VIC_ROBODOJO_ASSETS",
+          "root_env": "ICLWORLD_ROBODOJO_ASSETS",
           "relative_path": "Object/RoboDojo/Rigid/small_cube/00007/object.usdz",
           "sha256": "5e884b3ea23bca1706aabbc53f7d6cfe66cafc57fd70ddfc5ba031d5107ec583",
           "source_rotation": [
@@ -487,8 +487,8 @@
           "dependencies": []
         },
         "asset": {
-          "root_env": "VIC_INFERENCE_ASSETS",
-          "relative_path": "g2/E07_block3.usda",
+          "root_env": "ICLWORLD_INFERENCE_ASSETS",
+          "relative_path": "g2/iclworld_robot_07_block3.usda",
           "sha256": "1476cc090613830447b5a73816217f89a7941cb23301cfabe780b4ee5a6b2e05",
           "source_rotation": [
             1,
@@ -514,7 +514,7 @@
         "id": "block4",
         "category": "matryoshka",
         "original_source": {
-          "root_env": "VIC_ROBODOJO_ASSETS",
+          "root_env": "ICLWORLD_ROBODOJO_ASSETS",
           "relative_path": "Object/RoboDojo/Rigid/small_cube/00007/object.usdz",
           "sha256": "5e884b3ea23bca1706aabbc53f7d6cfe66cafc57fd70ddfc5ba031d5107ec583",
           "source_rotation": [
@@ -526,8 +526,8 @@
           "dependencies": []
         },
         "asset": {
-          "root_env": "VIC_INFERENCE_ASSETS",
-          "relative_path": "g2/E07_block4.usda",
+          "root_env": "ICLWORLD_INFERENCE_ASSETS",
+          "relative_path": "g2/iclworld_robot_07_block4.usda",
           "sha256": "8a689e1e8427f738ade69ade472d0118a99912a6dc959eedd5d3ac64b4b3bdbe",
           "source_rotation": [
             1,
@@ -553,7 +553,7 @@
         "id": "block5",
         "category": "matryoshka",
         "original_source": {
-          "root_env": "VIC_ROBODOJO_ASSETS",
+          "root_env": "ICLWORLD_ROBODOJO_ASSETS",
           "relative_path": "Object/RoboDojo/Rigid/small_cube/00007/object.usdz",
           "sha256": "5e884b3ea23bca1706aabbc53f7d6cfe66cafc57fd70ddfc5ba031d5107ec583",
           "source_rotation": [
@@ -565,8 +565,8 @@
           "dependencies": []
         },
         "asset": {
-          "root_env": "VIC_INFERENCE_ASSETS",
-          "relative_path": "g2/E07_block5.usda",
+          "root_env": "ICLWORLD_INFERENCE_ASSETS",
+          "relative_path": "g2/iclworld_robot_07_block5.usda",
           "sha256": "d4a2c8e33cc80cee99754d134a34ba2630ad8ceadf7e86c2fc9f8dd27c319eb3",
           "source_rotation": [
             1,
@@ -589,12 +589,12 @@
         "native_validation": "pending"
       }
     ],
-    "E09": [
+    "iclworld_robot_09": [
       {
         "id": "red_square",
         "category": "cookie_square",
         "original_source": {
-          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
           "relative_path": "source_four_hole_plate.usda",
           "sha256": "fed57b9b0e69a5b8b98d75324ed6856c0cdb21ebc56c8f98cb372670255b61bb",
           "source_rotation": [
@@ -606,8 +606,8 @@
           "dependencies": []
         },
         "asset": {
-          "root_env": "VIC_INFERENCE_ASSETS",
-          "relative_path": "g2/E09_red_square.usda",
+          "root_env": "ICLWORLD_INFERENCE_ASSETS",
+          "relative_path": "g2/iclworld_robot_09_red_square.usda",
           "sha256": "4dc14a08ed887c65ea0d33e5a3ad6d38b2bd233acdc7c15f05590a1a2a0cce24",
           "source_rotation": [
             1,
@@ -633,7 +633,7 @@
         "id": "red_triangle",
         "category": "cookie_triangle",
         "original_source": {
-          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
           "relative_path": "source_three_hole_triangle_v2.usda",
           "sha256": "caae5e783af9afae7ee6c1933e42a1654d746635873c7a1bb221ea4554a70e7b",
           "source_rotation": [
@@ -645,8 +645,8 @@
           "dependencies": []
         },
         "asset": {
-          "root_env": "VIC_INFERENCE_ASSETS",
-          "relative_path": "g2/E09_red_triangle.usda",
+          "root_env": "ICLWORLD_INFERENCE_ASSETS",
+          "relative_path": "g2/iclworld_robot_09_red_triangle.usda",
           "sha256": "36bf311d3351405c91f8c4baf156c193102f6b7af515af091e88154d8a8cc942",
           "source_rotation": [
             1,
@@ -672,7 +672,7 @@
         "id": "red_circle",
         "category": "cookie_circle",
         "original_source": {
-          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
           "relative_path": "native_ring.usdz",
           "sha256": "df00d91f5ab3d172ad8699751be9a5b3b6115eb1702e8a6c65da29470151d550",
           "source_rotation": [
@@ -684,8 +684,8 @@
           "dependencies": []
         },
         "asset": {
-          "root_env": "VIC_INFERENCE_ASSETS",
-          "relative_path": "g2/E09_red_circle.usda",
+          "root_env": "ICLWORLD_INFERENCE_ASSETS",
+          "relative_path": "g2/iclworld_robot_09_red_circle.usda",
           "sha256": "6f8fec49bc509f2e213b985fd388345ad61d0540d6310796c09f8e07f2f1340f",
           "source_rotation": [
             1,
@@ -711,7 +711,7 @@
         "id": "green_square",
         "category": "cookie_square",
         "original_source": {
-          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
           "relative_path": "source_four_hole_plate.usda",
           "sha256": "fed57b9b0e69a5b8b98d75324ed6856c0cdb21ebc56c8f98cb372670255b61bb",
           "source_rotation": [
@@ -723,8 +723,8 @@
           "dependencies": []
         },
         "asset": {
-          "root_env": "VIC_INFERENCE_ASSETS",
-          "relative_path": "g2/E09_green_square.usda",
+          "root_env": "ICLWORLD_INFERENCE_ASSETS",
+          "relative_path": "g2/iclworld_robot_09_green_square.usda",
           "sha256": "1fd7f885f48f8fd65abb58431e222826d0d922747d87f10bcd3c68624f0888b6",
           "source_rotation": [
             1,
@@ -750,7 +750,7 @@
         "id": "green_triangle",
         "category": "cookie_triangle",
         "original_source": {
-          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
           "relative_path": "source_three_hole_triangle_v2.usda",
           "sha256": "caae5e783af9afae7ee6c1933e42a1654d746635873c7a1bb221ea4554a70e7b",
           "source_rotation": [
@@ -762,8 +762,8 @@
           "dependencies": []
         },
         "asset": {
-          "root_env": "VIC_INFERENCE_ASSETS",
-          "relative_path": "g2/E09_green_triangle.usda",
+          "root_env": "ICLWORLD_INFERENCE_ASSETS",
+          "relative_path": "g2/iclworld_robot_09_green_triangle.usda",
           "sha256": "2cc50462dddc3fc6ac4a4fa899a2325434cf1f25a3e45725bbff394e6c76799b",
           "source_rotation": [
             1,
@@ -789,7 +789,7 @@
         "id": "green_circle",
         "category": "cookie_circle",
         "original_source": {
-          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
           "relative_path": "native_ring.usdz",
           "sha256": "df00d91f5ab3d172ad8699751be9a5b3b6115eb1702e8a6c65da29470151d550",
           "source_rotation": [
@@ -801,8 +801,8 @@
           "dependencies": []
         },
         "asset": {
-          "root_env": "VIC_INFERENCE_ASSETS",
-          "relative_path": "g2/E09_green_circle.usda",
+          "root_env": "ICLWORLD_INFERENCE_ASSETS",
+          "relative_path": "g2/iclworld_robot_09_green_circle.usda",
           "sha256": "f21700903a7cfc9eebf2c50cbe21ec8a1c2c24b0192c1132e0ca782c36ce664e",
           "source_rotation": [
             1,
@@ -828,7 +828,7 @@
         "id": "blue_square",
         "category": "cookie_square",
         "original_source": {
-          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
           "relative_path": "source_four_hole_plate.usda",
           "sha256": "fed57b9b0e69a5b8b98d75324ed6856c0cdb21ebc56c8f98cb372670255b61bb",
           "source_rotation": [
@@ -840,8 +840,8 @@
           "dependencies": []
         },
         "asset": {
-          "root_env": "VIC_INFERENCE_ASSETS",
-          "relative_path": "g2/E09_blue_square.usda",
+          "root_env": "ICLWORLD_INFERENCE_ASSETS",
+          "relative_path": "g2/iclworld_robot_09_blue_square.usda",
           "sha256": "427757c213eb41ac1da7b4adc21859dca2c51cdc094cd35b7b70ccdd0f0c703c",
           "source_rotation": [
             1,
@@ -867,7 +867,7 @@
         "id": "blue_triangle",
         "category": "cookie_triangle",
         "original_source": {
-          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
           "relative_path": "source_three_hole_triangle_v2.usda",
           "sha256": "caae5e783af9afae7ee6c1933e42a1654d746635873c7a1bb221ea4554a70e7b",
           "source_rotation": [
@@ -879,8 +879,8 @@
           "dependencies": []
         },
         "asset": {
-          "root_env": "VIC_INFERENCE_ASSETS",
-          "relative_path": "g2/E09_blue_triangle.usda",
+          "root_env": "ICLWORLD_INFERENCE_ASSETS",
+          "relative_path": "g2/iclworld_robot_09_blue_triangle.usda",
           "sha256": "b56037746e336119ece1de59ca9d67c42772dde6c34d166026500b39d6d71e39",
           "source_rotation": [
             1,
@@ -906,7 +906,7 @@
         "id": "blue_circle",
         "category": "cookie_circle",
         "original_source": {
-          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
           "relative_path": "native_ring.usdz",
           "sha256": "df00d91f5ab3d172ad8699751be9a5b3b6115eb1702e8a6c65da29470151d550",
           "source_rotation": [
@@ -918,8 +918,8 @@
           "dependencies": []
         },
         "asset": {
-          "root_env": "VIC_INFERENCE_ASSETS",
-          "relative_path": "g2/E09_blue_circle.usda",
+          "root_env": "ICLWORLD_INFERENCE_ASSETS",
+          "relative_path": "g2/iclworld_robot_09_blue_circle.usda",
           "sha256": "48ba63f0d4757ec419e0943261efe7bc1dfd6def60c9e3d8e7bc6688f038a32d",
           "source_rotation": [
             1,
@@ -942,12 +942,12 @@
         "native_validation": "pending"
       }
     ],
-    "E11": [
+    "iclworld_robot_11": [
       {
         "id": "red_block",
         "category": "apple",
         "original_source": {
-          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
           "relative_path": "source_four_hole_plate.usda",
           "sha256": "fed57b9b0e69a5b8b98d75324ed6856c0cdb21ebc56c8f98cb372670255b61bb",
           "source_rotation": [
@@ -959,8 +959,8 @@
           "dependencies": []
         },
         "asset": {
-          "root_env": "VIC_INFERENCE_ASSETS",
-          "relative_path": "g2/E11_red_block.usda",
+          "root_env": "ICLWORLD_INFERENCE_ASSETS",
+          "relative_path": "g2/iclworld_robot_11_red_block.usda",
           "sha256": "5dd409f3f7d55fffeac80cfd22809d102fa68f3dbaad8e44fe1d07a67a6e48eb",
           "source_rotation": [
             1,
@@ -986,7 +986,7 @@
         "id": "blue_block",
         "category": "orange",
         "original_source": {
-          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
           "relative_path": "source_four_hole_plate.usda",
           "sha256": "fed57b9b0e69a5b8b98d75324ed6856c0cdb21ebc56c8f98cb372670255b61bb",
           "source_rotation": [
@@ -998,8 +998,8 @@
           "dependencies": []
         },
         "asset": {
-          "root_env": "VIC_INFERENCE_ASSETS",
-          "relative_path": "g2/E11_blue_block.usda",
+          "root_env": "ICLWORLD_INFERENCE_ASSETS",
+          "relative_path": "g2/iclworld_robot_11_blue_block.usda",
           "sha256": "ec8ae7c96e431ff40e1fd794a110b9f661dac992cc030903a4f44ece4e965607",
           "source_rotation": [
             1,
@@ -1025,7 +1025,7 @@
         "id": "yellow_block",
         "category": "lemon",
         "original_source": {
-          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
           "relative_path": "source_four_hole_plate.usda",
           "sha256": "fed57b9b0e69a5b8b98d75324ed6856c0cdb21ebc56c8f98cb372670255b61bb",
           "source_rotation": [
@@ -1037,8 +1037,8 @@
           "dependencies": []
         },
         "asset": {
-          "root_env": "VIC_INFERENCE_ASSETS",
-          "relative_path": "g2/E11_yellow_block.usda",
+          "root_env": "ICLWORLD_INFERENCE_ASSETS",
+          "relative_path": "g2/iclworld_robot_11_yellow_block.usda",
           "sha256": "bb68a16e4f2c6c39498846d0699b9101ee67f5afb731f05b50e9f0055dfd23ca",
           "source_rotation": [
             1,
@@ -1064,7 +1064,7 @@
         "id": "green_block",
         "category": "pear",
         "original_source": {
-          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
           "relative_path": "source_four_hole_plate.usda",
           "sha256": "fed57b9b0e69a5b8b98d75324ed6856c0cdb21ebc56c8f98cb372670255b61bb",
           "source_rotation": [
@@ -1076,8 +1076,8 @@
           "dependencies": []
         },
         "asset": {
-          "root_env": "VIC_INFERENCE_ASSETS",
-          "relative_path": "g2/E11_green_block.usda",
+          "root_env": "ICLWORLD_INFERENCE_ASSETS",
+          "relative_path": "g2/iclworld_robot_11_green_block.usda",
           "sha256": "aeb50b47b7b10a266e1a9bedc30e00964970e8cdff68f0c1ff831e48236f0bb7",
           "source_rotation": [
             1,
@@ -1100,12 +1100,12 @@
         "native_validation": "pending"
       }
     ],
-    "E20": [
+    "iclworld_robot_20": [
       {
         "id": "yellow_supply_1",
         "category": "button",
         "original_source": {
-          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
           "relative_path": "coaster_disk.usda",
           "sha256": "0a52a9c5b908277e7e408155316a3fc55f889405d6ab0331f0922e8bb4047120",
           "source_rotation": [
@@ -1122,8 +1122,8 @@
           ]
         },
         "asset": {
-          "root_env": "VIC_INFERENCE_ASSETS",
-          "relative_path": "g2/E20_yellow_supply_1.usda",
+          "root_env": "ICLWORLD_INFERENCE_ASSETS",
+          "relative_path": "g2/iclworld_robot_20_yellow_supply_1.usda",
           "sha256": "1a771929959bd8bd52da702ad69b5df64f8494aeed3b6962bbe21dd18520519d",
           "source_rotation": [
             1,
@@ -1149,7 +1149,7 @@
         "id": "yellow_supply_2",
         "category": "button",
         "original_source": {
-          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
           "relative_path": "coaster_disk.usda",
           "sha256": "0a52a9c5b908277e7e408155316a3fc55f889405d6ab0331f0922e8bb4047120",
           "source_rotation": [
@@ -1166,8 +1166,8 @@
           ]
         },
         "asset": {
-          "root_env": "VIC_INFERENCE_ASSETS",
-          "relative_path": "g2/E20_yellow_supply_2.usda",
+          "root_env": "ICLWORLD_INFERENCE_ASSETS",
+          "relative_path": "g2/iclworld_robot_20_yellow_supply_2.usda",
           "sha256": "1a771929959bd8bd52da702ad69b5df64f8494aeed3b6962bbe21dd18520519d",
           "source_rotation": [
             1,
@@ -1193,7 +1193,7 @@
         "id": "yellow_supply_3",
         "category": "button",
         "original_source": {
-          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
           "relative_path": "coaster_disk.usda",
           "sha256": "0a52a9c5b908277e7e408155316a3fc55f889405d6ab0331f0922e8bb4047120",
           "source_rotation": [
@@ -1210,8 +1210,8 @@
           ]
         },
         "asset": {
-          "root_env": "VIC_INFERENCE_ASSETS",
-          "relative_path": "g2/E20_yellow_supply_3.usda",
+          "root_env": "ICLWORLD_INFERENCE_ASSETS",
+          "relative_path": "g2/iclworld_robot_20_yellow_supply_3.usda",
           "sha256": "1a771929959bd8bd52da702ad69b5df64f8494aeed3b6962bbe21dd18520519d",
           "source_rotation": [
             1,
@@ -1237,7 +1237,7 @@
         "id": "yellow_supply_4",
         "category": "button",
         "original_source": {
-          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
           "relative_path": "coaster_disk.usda",
           "sha256": "0a52a9c5b908277e7e408155316a3fc55f889405d6ab0331f0922e8bb4047120",
           "source_rotation": [
@@ -1254,8 +1254,8 @@
           ]
         },
         "asset": {
-          "root_env": "VIC_INFERENCE_ASSETS",
-          "relative_path": "g2/E20_yellow_supply_4.usda",
+          "root_env": "ICLWORLD_INFERENCE_ASSETS",
+          "relative_path": "g2/iclworld_robot_20_yellow_supply_4.usda",
           "sha256": "1a771929959bd8bd52da702ad69b5df64f8494aeed3b6962bbe21dd18520519d",
           "source_rotation": [
             1,
@@ -1281,7 +1281,7 @@
         "id": "red_supply_1",
         "category": "button",
         "original_source": {
-          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
           "relative_path": "coaster_disk.usda",
           "sha256": "0a52a9c5b908277e7e408155316a3fc55f889405d6ab0331f0922e8bb4047120",
           "source_rotation": [
@@ -1298,8 +1298,8 @@
           ]
         },
         "asset": {
-          "root_env": "VIC_INFERENCE_ASSETS",
-          "relative_path": "g2/E20_red_supply_1.usda",
+          "root_env": "ICLWORLD_INFERENCE_ASSETS",
+          "relative_path": "g2/iclworld_robot_20_red_supply_1.usda",
           "sha256": "6d09641c82ef069d4aedcd1bb59caa03aaf2d8b3ec31c97c97b2af7d63bfc0c8",
           "source_rotation": [
             1,
@@ -1325,7 +1325,7 @@
         "id": "red_supply_2",
         "category": "button",
         "original_source": {
-          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
           "relative_path": "coaster_disk.usda",
           "sha256": "0a52a9c5b908277e7e408155316a3fc55f889405d6ab0331f0922e8bb4047120",
           "source_rotation": [
@@ -1342,8 +1342,8 @@
           ]
         },
         "asset": {
-          "root_env": "VIC_INFERENCE_ASSETS",
-          "relative_path": "g2/E20_red_supply_2.usda",
+          "root_env": "ICLWORLD_INFERENCE_ASSETS",
+          "relative_path": "g2/iclworld_robot_20_red_supply_2.usda",
           "sha256": "6d09641c82ef069d4aedcd1bb59caa03aaf2d8b3ec31c97c97b2af7d63bfc0c8",
           "source_rotation": [
             1,
@@ -1369,7 +1369,7 @@
         "id": "red_supply_3",
         "category": "button",
         "original_source": {
-          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
           "relative_path": "coaster_disk.usda",
           "sha256": "0a52a9c5b908277e7e408155316a3fc55f889405d6ab0331f0922e8bb4047120",
           "source_rotation": [
@@ -1386,8 +1386,8 @@
           ]
         },
         "asset": {
-          "root_env": "VIC_INFERENCE_ASSETS",
-          "relative_path": "g2/E20_red_supply_3.usda",
+          "root_env": "ICLWORLD_INFERENCE_ASSETS",
+          "relative_path": "g2/iclworld_robot_20_red_supply_3.usda",
           "sha256": "6d09641c82ef069d4aedcd1bb59caa03aaf2d8b3ec31c97c97b2af7d63bfc0c8",
           "source_rotation": [
             1,
@@ -1413,7 +1413,7 @@
         "id": "red_supply_4",
         "category": "button",
         "original_source": {
-          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
           "relative_path": "coaster_disk.usda",
           "sha256": "0a52a9c5b908277e7e408155316a3fc55f889405d6ab0331f0922e8bb4047120",
           "source_rotation": [
@@ -1430,8 +1430,8 @@
           ]
         },
         "asset": {
-          "root_env": "VIC_INFERENCE_ASSETS",
-          "relative_path": "g2/E20_red_supply_4.usda",
+          "root_env": "ICLWORLD_INFERENCE_ASSETS",
+          "relative_path": "g2/iclworld_robot_20_red_supply_4.usda",
           "sha256": "6d09641c82ef069d4aedcd1bb59caa03aaf2d8b3ec31c97c97b2af7d63bfc0c8",
           "source_rotation": [
             1,
@@ -1457,7 +1457,7 @@
         "id": "blue_supply_1",
         "category": "button",
         "original_source": {
-          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
           "relative_path": "coaster_disk.usda",
           "sha256": "0a52a9c5b908277e7e408155316a3fc55f889405d6ab0331f0922e8bb4047120",
           "source_rotation": [
@@ -1474,8 +1474,8 @@
           ]
         },
         "asset": {
-          "root_env": "VIC_INFERENCE_ASSETS",
-          "relative_path": "g2/E20_blue_supply_1.usda",
+          "root_env": "ICLWORLD_INFERENCE_ASSETS",
+          "relative_path": "g2/iclworld_robot_20_blue_supply_1.usda",
           "sha256": "e14395c1577a9b914586c2fbdd92dbab8ae4a024190601f535df71bb890f8be7",
           "source_rotation": [
             1,
@@ -1501,7 +1501,7 @@
         "id": "blue_supply_2",
         "category": "button",
         "original_source": {
-          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
           "relative_path": "coaster_disk.usda",
           "sha256": "0a52a9c5b908277e7e408155316a3fc55f889405d6ab0331f0922e8bb4047120",
           "source_rotation": [
@@ -1518,8 +1518,8 @@
           ]
         },
         "asset": {
-          "root_env": "VIC_INFERENCE_ASSETS",
-          "relative_path": "g2/E20_blue_supply_2.usda",
+          "root_env": "ICLWORLD_INFERENCE_ASSETS",
+          "relative_path": "g2/iclworld_robot_20_blue_supply_2.usda",
           "sha256": "e14395c1577a9b914586c2fbdd92dbab8ae4a024190601f535df71bb890f8be7",
           "source_rotation": [
             1,
@@ -1545,7 +1545,7 @@
         "id": "blue_supply_3",
         "category": "button",
         "original_source": {
-          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
           "relative_path": "coaster_disk.usda",
           "sha256": "0a52a9c5b908277e7e408155316a3fc55f889405d6ab0331f0922e8bb4047120",
           "source_rotation": [
@@ -1562,8 +1562,8 @@
           ]
         },
         "asset": {
-          "root_env": "VIC_INFERENCE_ASSETS",
-          "relative_path": "g2/E20_blue_supply_3.usda",
+          "root_env": "ICLWORLD_INFERENCE_ASSETS",
+          "relative_path": "g2/iclworld_robot_20_blue_supply_3.usda",
           "sha256": "e14395c1577a9b914586c2fbdd92dbab8ae4a024190601f535df71bb890f8be7",
           "source_rotation": [
             1,
@@ -1589,7 +1589,7 @@
         "id": "blue_supply_4",
         "category": "button",
         "original_source": {
-          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
           "relative_path": "coaster_disk.usda",
           "sha256": "0a52a9c5b908277e7e408155316a3fc55f889405d6ab0331f0922e8bb4047120",
           "source_rotation": [
@@ -1606,8 +1606,8 @@
           ]
         },
         "asset": {
-          "root_env": "VIC_INFERENCE_ASSETS",
-          "relative_path": "g2/E20_blue_supply_4.usda",
+          "root_env": "ICLWORLD_INFERENCE_ASSETS",
+          "relative_path": "g2/iclworld_robot_20_blue_supply_4.usda",
           "sha256": "e14395c1577a9b914586c2fbdd92dbab8ae4a024190601f535df71bb890f8be7",
           "source_rotation": [
             1,
@@ -1633,7 +1633,7 @@
         "id": "yellow_initial",
         "category": "button",
         "original_source": {
-          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
           "relative_path": "coaster_disk.usda",
           "sha256": "0a52a9c5b908277e7e408155316a3fc55f889405d6ab0331f0922e8bb4047120",
           "source_rotation": [
@@ -1650,8 +1650,8 @@
           ]
         },
         "asset": {
-          "root_env": "VIC_INFERENCE_ASSETS",
-          "relative_path": "g2/E20_yellow_initial.usda",
+          "root_env": "ICLWORLD_INFERENCE_ASSETS",
+          "relative_path": "g2/iclworld_robot_20_yellow_initial.usda",
           "sha256": "1a771929959bd8bd52da702ad69b5df64f8494aeed3b6962bbe21dd18520519d",
           "source_rotation": [
             1,
@@ -1677,7 +1677,7 @@
         "id": "blue_initial",
         "category": "button",
         "original_source": {
-          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
           "relative_path": "coaster_disk.usda",
           "sha256": "0a52a9c5b908277e7e408155316a3fc55f889405d6ab0331f0922e8bb4047120",
           "source_rotation": [
@@ -1694,8 +1694,8 @@
           ]
         },
         "asset": {
-          "root_env": "VIC_INFERENCE_ASSETS",
-          "relative_path": "g2/E20_blue_initial.usda",
+          "root_env": "ICLWORLD_INFERENCE_ASSETS",
+          "relative_path": "g2/iclworld_robot_20_blue_initial.usda",
           "sha256": "e14395c1577a9b914586c2fbdd92dbab8ae4a024190601f535df71bb890f8be7",
           "source_rotation": [
             1,
@@ -1718,12 +1718,12 @@
         "native_validation": "pending"
       }
     ],
-    "E36": [
+    "iclworld_robot_36": [
       {
         "id": "red",
         "category": "apple",
         "original_source": {
-          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
           "relative_path": "sphere_white.usda",
           "sha256": "257fb8afcd8eb2787aa4c59fd39314b036f78287e4d277f210168048f8becc1a",
           "source_rotation": [
@@ -1735,8 +1735,8 @@
           "dependencies": []
         },
         "asset": {
-          "root_env": "VIC_INFERENCE_ASSETS",
-          "relative_path": "g2/E36_red.usda",
+          "root_env": "ICLWORLD_INFERENCE_ASSETS",
+          "relative_path": "g2/iclworld_robot_36_red.usda",
           "sha256": "6ec0b25e6d1947b1f143ce5c569e9e3a9715175fb2bdbd0b3313458ca0b08ef3",
           "source_rotation": [
             1,
@@ -1762,7 +1762,7 @@
         "id": "pink",
         "category": "apple",
         "original_source": {
-          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
           "relative_path": "sphere_white.usda",
           "sha256": "257fb8afcd8eb2787aa4c59fd39314b036f78287e4d277f210168048f8becc1a",
           "source_rotation": [
@@ -1774,8 +1774,8 @@
           "dependencies": []
         },
         "asset": {
-          "root_env": "VIC_INFERENCE_ASSETS",
-          "relative_path": "g2/E36_pink.usda",
+          "root_env": "ICLWORLD_INFERENCE_ASSETS",
+          "relative_path": "g2/iclworld_robot_36_pink.usda",
           "sha256": "6ec0b25e6d1947b1f143ce5c569e9e3a9715175fb2bdbd0b3313458ca0b08ef3",
           "source_rotation": [
             1,
@@ -1801,7 +1801,7 @@
         "id": "lightpink",
         "category": "apple",
         "original_source": {
-          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
           "relative_path": "sphere_white.usda",
           "sha256": "257fb8afcd8eb2787aa4c59fd39314b036f78287e4d277f210168048f8becc1a",
           "source_rotation": [
@@ -1813,8 +1813,8 @@
           "dependencies": []
         },
         "asset": {
-          "root_env": "VIC_INFERENCE_ASSETS",
-          "relative_path": "g2/E36_lightpink.usda",
+          "root_env": "ICLWORLD_INFERENCE_ASSETS",
+          "relative_path": "g2/iclworld_robot_36_lightpink.usda",
           "sha256": "6ec0b25e6d1947b1f143ce5c569e9e3a9715175fb2bdbd0b3313458ca0b08ef3",
           "source_rotation": [
             1,
@@ -1840,7 +1840,7 @@
         "id": "blue",
         "category": "apple",
         "original_source": {
-          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
           "relative_path": "sphere_white.usda",
           "sha256": "257fb8afcd8eb2787aa4c59fd39314b036f78287e4d277f210168048f8becc1a",
           "source_rotation": [
@@ -1852,8 +1852,8 @@
           "dependencies": []
         },
         "asset": {
-          "root_env": "VIC_INFERENCE_ASSETS",
-          "relative_path": "g2/E36_blue.usda",
+          "root_env": "ICLWORLD_INFERENCE_ASSETS",
+          "relative_path": "g2/iclworld_robot_36_blue.usda",
           "sha256": "6ec0b25e6d1947b1f143ce5c569e9e3a9715175fb2bdbd0b3313458ca0b08ef3",
           "source_rotation": [
             1,
@@ -1876,12 +1876,12 @@
         "native_validation": "pending"
       }
     ],
-    "E41": [
+    "iclworld_robot_41": [
       {
         "id": "short_ref",
         "category": "eraser",
         "original_source": {
-          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
           "relative_path": "native_wood_plank.usdz",
           "sha256": "9e71af43eaa1afcf63198dfc5653f11472fae47d498264b065aa269aa26be611",
           "source_rotation": [
@@ -1894,8 +1894,8 @@
           "allow_nonuniform_scale": true
         },
         "asset": {
-          "root_env": "VIC_INFERENCE_ASSETS",
-          "relative_path": "g2/E41_short_ref.usda",
+          "root_env": "ICLWORLD_INFERENCE_ASSETS",
+          "relative_path": "g2/iclworld_robot_41_short_ref.usda",
           "sha256": "85095adca95c6dcaf568901b110b7192c99b7182ae1e2a82f97db7843c090f65",
           "source_rotation": [
             1,
@@ -1921,7 +1921,7 @@
         "id": "medium_ref",
         "category": "eraser",
         "original_source": {
-          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
           "relative_path": "native_wood_plank.usdz",
           "sha256": "9e71af43eaa1afcf63198dfc5653f11472fae47d498264b065aa269aa26be611",
           "source_rotation": [
@@ -1934,8 +1934,8 @@
           "allow_nonuniform_scale": true
         },
         "asset": {
-          "root_env": "VIC_INFERENCE_ASSETS",
-          "relative_path": "g2/E41_medium_ref.usda",
+          "root_env": "ICLWORLD_INFERENCE_ASSETS",
+          "relative_path": "g2/iclworld_robot_41_medium_ref.usda",
           "sha256": "e37189b5739af01f1f31dc7f2f7a99f1a10b08491cb8f478a416ab9b5d12e1c1",
           "source_rotation": [
             1,
@@ -1961,7 +1961,7 @@
         "id": "long_ref",
         "category": "eraser",
         "original_source": {
-          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
           "relative_path": "native_wood_plank.usdz",
           "sha256": "9e71af43eaa1afcf63198dfc5653f11472fae47d498264b065aa269aa26be611",
           "source_rotation": [
@@ -1974,8 +1974,8 @@
           "allow_nonuniform_scale": true
         },
         "asset": {
-          "root_env": "VIC_INFERENCE_ASSETS",
-          "relative_path": "g2/E41_long_ref.usda",
+          "root_env": "ICLWORLD_INFERENCE_ASSETS",
+          "relative_path": "g2/iclworld_robot_41_long_ref.usda",
           "sha256": "57148e972b15c5199ce2d5a9cef23c1d03189923cafdf69eca23eca5598f1743",
           "source_rotation": [
             1,
@@ -2001,7 +2001,7 @@
         "id": "long_piece",
         "category": "eraser",
         "original_source": {
-          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
           "relative_path": "native_wood_plank.usdz",
           "sha256": "9e71af43eaa1afcf63198dfc5653f11472fae47d498264b065aa269aa26be611",
           "source_rotation": [
@@ -2014,8 +2014,8 @@
           "allow_nonuniform_scale": true
         },
         "asset": {
-          "root_env": "VIC_INFERENCE_ASSETS",
-          "relative_path": "g2/E41_long_piece.usda",
+          "root_env": "ICLWORLD_INFERENCE_ASSETS",
+          "relative_path": "g2/iclworld_robot_41_long_piece.usda",
           "sha256": "57148e972b15c5199ce2d5a9cef23c1d03189923cafdf69eca23eca5598f1743",
           "source_rotation": [
             1,
@@ -2041,7 +2041,7 @@
         "id": "short_piece",
         "category": "eraser",
         "original_source": {
-          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
           "relative_path": "native_wood_plank.usdz",
           "sha256": "9e71af43eaa1afcf63198dfc5653f11472fae47d498264b065aa269aa26be611",
           "source_rotation": [
@@ -2054,8 +2054,8 @@
           "allow_nonuniform_scale": true
         },
         "asset": {
-          "root_env": "VIC_INFERENCE_ASSETS",
-          "relative_path": "g2/E41_short_piece.usda",
+          "root_env": "ICLWORLD_INFERENCE_ASSETS",
+          "relative_path": "g2/iclworld_robot_41_short_piece.usda",
           "sha256": "85095adca95c6dcaf568901b110b7192c99b7182ae1e2a82f97db7843c090f65",
           "source_rotation": [
             1,
@@ -2081,7 +2081,7 @@
         "id": "medium_piece",
         "category": "eraser",
         "original_source": {
-          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
           "relative_path": "native_wood_plank.usdz",
           "sha256": "9e71af43eaa1afcf63198dfc5653f11472fae47d498264b065aa269aa26be611",
           "source_rotation": [
@@ -2094,8 +2094,8 @@
           "allow_nonuniform_scale": true
         },
         "asset": {
-          "root_env": "VIC_INFERENCE_ASSETS",
-          "relative_path": "g2/E41_medium_piece.usda",
+          "root_env": "ICLWORLD_INFERENCE_ASSETS",
+          "relative_path": "g2/iclworld_robot_41_medium_piece.usda",
           "sha256": "e37189b5739af01f1f31dc7f2f7a99f1a10b08491cb8f478a416ab9b5d12e1c1",
           "source_rotation": [
             1,
@@ -2118,12 +2118,12 @@
         "native_validation": "pending"
       }
     ],
-    "E49": [
+    "iclworld_robot_49": [
       {
         "id": "card1",
         "category": "photo",
         "original_source": {
-          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
           "relative_path": "card_H_2.usda",
           "sha256": "e6d4c721b74a3b6f3d273c987d06698c3b4f162de30189554de47ddee51b3f81",
           "source_rotation": [
@@ -2144,8 +2144,8 @@
           ]
         },
         "asset": {
-          "root_env": "VIC_INFERENCE_ASSETS",
-          "relative_path": "g2/E49_card1.usda",
+          "root_env": "ICLWORLD_INFERENCE_ASSETS",
+          "relative_path": "g2/iclworld_robot_49_card1.usda",
           "sha256": "21afb5c8a197d883f56f35c493c7a3c1eca7cd4ada5e3f8dad4e5d1cf553f331",
           "source_rotation": [
             1,
@@ -2177,7 +2177,7 @@
         "id": "card2",
         "category": "photo",
         "original_source": {
-          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
           "relative_path": "card_S_2.usda",
           "sha256": "6d421066b8c2ecfc51432478ff6cca05b07a3807c1ac22cc6d8ded18ac4f9a2c",
           "source_rotation": [
@@ -2198,8 +2198,8 @@
           ]
         },
         "asset": {
-          "root_env": "VIC_INFERENCE_ASSETS",
-          "relative_path": "g2/E49_card2.usda",
+          "root_env": "ICLWORLD_INFERENCE_ASSETS",
+          "relative_path": "g2/iclworld_robot_49_card2.usda",
           "sha256": "e8bc06925a6d832acaf35094b558fc2885e5afb06d36b849223d99eed661efbf",
           "source_rotation": [
             1,
@@ -2231,7 +2231,7 @@
         "id": "card3",
         "category": "photo",
         "original_source": {
-          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
           "relative_path": "card_D_3.usda",
           "sha256": "1334a3240acfd3e0843bb4778419adc11128d6733cf5278bdb54134ad4ba770c",
           "source_rotation": [
@@ -2252,8 +2252,8 @@
           ]
         },
         "asset": {
-          "root_env": "VIC_INFERENCE_ASSETS",
-          "relative_path": "g2/E49_card3.usda",
+          "root_env": "ICLWORLD_INFERENCE_ASSETS",
+          "relative_path": "g2/iclworld_robot_49_card3.usda",
           "sha256": "bc4f0c70fe051b840e37028d33152f7c75ad55bab771ee548b3f38619a357f02",
           "source_rotation": [
             1,
@@ -2285,7 +2285,7 @@
         "id": "card4",
         "category": "photo",
         "original_source": {
-          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
           "relative_path": "card_C_3.usda",
           "sha256": "e7e6ec6c5aaf72a7b8327d652c322117cf6ab992df21fcb9fd5fa47a552cf17c",
           "source_rotation": [
@@ -2306,8 +2306,8 @@
           ]
         },
         "asset": {
-          "root_env": "VIC_INFERENCE_ASSETS",
-          "relative_path": "g2/E49_card4.usda",
+          "root_env": "ICLWORLD_INFERENCE_ASSETS",
+          "relative_path": "g2/iclworld_robot_49_card4.usda",
           "sha256": "4073812f820dc8efa3af13f39a0a94e0c5903fa1217635c3b2078810daf965f7",
           "source_rotation": [
             1,
@@ -2339,7 +2339,7 @@
         "id": "card5",
         "category": "photo",
         "original_source": {
-          "root_env": "VIC_FULL50_RIGID_ASSETS",
+          "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
           "relative_path": "card_H_2.usda",
           "sha256": "e6d4c721b74a3b6f3d273c987d06698c3b4f162de30189554de47ddee51b3f81",
           "source_rotation": [
@@ -2360,8 +2360,8 @@
           ]
         },
         "asset": {
-          "root_env": "VIC_INFERENCE_ASSETS",
-          "relative_path": "g2/E49_card5.usda",
+          "root_env": "ICLWORLD_INFERENCE_ASSETS",
+          "relative_path": "g2/iclworld_robot_49_card5.usda",
           "sha256": "f26199d820554c8e9a258e7dcd55917db6a1bd1d1715336bf09a09ca6d42c330",
           "source_rotation": [
             1,

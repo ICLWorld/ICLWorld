@@ -1,11 +1,11 @@
 [
   {
-    "name": "os-os-e-04-a-i",
+    "name": "os-os-e-04-a-resample",
     "kind": "os",
     "task_id": "OS-E-04",
     "variant": "A",
     "difficulty": "easy",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": null,
@@ -17,12 +17,12 @@
     "instruction_sha256": "ce379ffebe9f425a57d6056c804dd117a1d798f8a22a448f79c6bc7522660efc"
   },
   {
-    "name": "os-os-e-04-b-i",
+    "name": "os-os-e-04-b-resample",
     "kind": "os",
     "task_id": "OS-E-04",
     "variant": "B",
     "difficulty": "easy",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": null,
@@ -34,12 +34,12 @@
     "instruction_sha256": "ce379ffebe9f425a57d6056c804dd117a1d798f8a22a448f79c6bc7522660efc"
   },
   {
-    "name": "os-os-e-04-c-i",
+    "name": "os-os-e-04-c-resample",
     "kind": "os",
     "task_id": "OS-E-04",
     "variant": "C",
     "difficulty": "easy",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": null,
@@ -51,12 +51,12 @@
     "instruction_sha256": "ce379ffebe9f425a57d6056c804dd117a1d798f8a22a448f79c6bc7522660efc"
   },
   {
-    "name": "os-os-e-08-a-i",
+    "name": "os-os-e-08-a-resample",
     "kind": "os",
     "task_id": "OS-E-08",
     "variant": "A",
     "difficulty": "easy",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": null,
@@ -68,12 +68,12 @@
     "instruction_sha256": "63afb51e8f7093f14ec5262edaf1f8a9b03354491dcc45ddf974eccd7310e114"
   },
   {
-    "name": "os-os-e-08-b-i",
+    "name": "os-os-e-08-b-resample",
     "kind": "os",
     "task_id": "OS-E-08",
     "variant": "B",
     "difficulty": "easy",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": null,
@@ -85,12 +85,12 @@
     "instruction_sha256": "63afb51e8f7093f14ec5262edaf1f8a9b03354491dcc45ddf974eccd7310e114"
   },
   {
-    "name": "os-os-e-08-c-i",
+    "name": "os-os-e-08-c-resample",
     "kind": "os",
     "task_id": "OS-E-08",
     "variant": "C",
     "difficulty": "easy",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": null,
@@ -102,12 +102,12 @@
     "instruction_sha256": "63afb51e8f7093f14ec5262edaf1f8a9b03354491dcc45ddf974eccd7310e114"
   },
   {
-    "name": "os-os-e-09-a-i",
+    "name": "os-os-e-09-a-resample",
     "kind": "os",
     "task_id": "OS-E-09",
     "variant": "A",
     "difficulty": "easy",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": null,
@@ -119,12 +119,12 @@
     "instruction_sha256": "6df76a57c138a1b9d620d0bfa871296884eb5c0aac960d5b159ba75275beda79"
   },
   {
-    "name": "os-os-e-09-b-i",
+    "name": "os-os-e-09-b-resample",
     "kind": "os",
     "task_id": "OS-E-09",
     "variant": "B",
     "difficulty": "easy",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": null,
@@ -136,12 +136,12 @@
     "instruction_sha256": "6df76a57c138a1b9d620d0bfa871296884eb5c0aac960d5b159ba75275beda79"
   },
   {
-    "name": "os-os-e-09-c-i",
+    "name": "os-os-e-09-c-resample",
     "kind": "os",
     "task_id": "OS-E-09",
     "variant": "C",
     "difficulty": "easy",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": null,
@@ -153,12 +153,12 @@
     "instruction_sha256": "6df76a57c138a1b9d620d0bfa871296884eb5c0aac960d5b159ba75275beda79"
   },
   {
-    "name": "os-os-e-11-a-i",
+    "name": "os-os-e-11-a-resample",
     "kind": "os",
     "task_id": "OS-E-11",
     "variant": "A",
     "difficulty": "easy",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": null,
@@ -170,12 +170,12 @@
     "instruction_sha256": "6047544a36060cc1f1eb9fcffb057ca0040cec1261254e0375e35173060dbe9a"
   },
   {
-    "name": "os-os-e-11-b-i",
+    "name": "os-os-e-11-b-resample",
     "kind": "os",
     "task_id": "OS-E-11",
     "variant": "B",
     "difficulty": "easy",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": null,
@@ -187,12 +187,12 @@
     "instruction_sha256": "6047544a36060cc1f1eb9fcffb057ca0040cec1261254e0375e35173060dbe9a"
   },
   {
-    "name": "os-os-e-11-c-i",
+    "name": "os-os-e-11-c-resample",
     "kind": "os",
     "task_id": "OS-E-11",
     "variant": "C",
     "difficulty": "easy",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": null,
@@ -204,12 +204,12 @@
     "instruction_sha256": "6047544a36060cc1f1eb9fcffb057ca0040cec1261254e0375e35173060dbe9a"
   },
   {
-    "name": "os-os-h-04-a-i",
+    "name": "os-os-h-04-a-resample",
     "kind": "os",
     "task_id": "OS-H-04",
     "variant": "A",
     "difficulty": "hard",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": null,
@@ -221,12 +221,12 @@
     "instruction_sha256": "cad975a4827df007cd63e44839d4da6a6d67894799a42d8d7663e33f3506d70a"
   },
   {
-    "name": "os-os-h-04-b-i",
+    "name": "os-os-h-04-b-resample",
     "kind": "os",
     "task_id": "OS-H-04",
     "variant": "B",
     "difficulty": "hard",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": null,
@@ -238,12 +238,12 @@
     "instruction_sha256": "cad975a4827df007cd63e44839d4da6a6d67894799a42d8d7663e33f3506d70a"
   },
   {
-    "name": "os-os-h-04-c-i",
+    "name": "os-os-h-04-c-resample",
     "kind": "os",
     "task_id": "OS-H-04",
     "variant": "C",
     "difficulty": "hard",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": null,
@@ -255,12 +255,12 @@
     "instruction_sha256": "cad975a4827df007cd63e44839d4da6a6d67894799a42d8d7663e33f3506d70a"
   },
   {
-    "name": "os-os-h-08-a-i",
+    "name": "os-os-h-08-a-resample",
     "kind": "os",
     "task_id": "OS-H-08",
     "variant": "A",
     "difficulty": "hard",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": null,
@@ -272,12 +272,12 @@
     "instruction_sha256": "5bbf2589f7e3fd93bf0d2b5bbb9e83decc8fca5a1fcb87149a92bf7d80d3af8f"
   },
   {
-    "name": "os-os-h-08-b-i",
+    "name": "os-os-h-08-b-resample",
     "kind": "os",
     "task_id": "OS-H-08",
     "variant": "B",
     "difficulty": "hard",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": null,
@@ -289,12 +289,12 @@
     "instruction_sha256": "5bbf2589f7e3fd93bf0d2b5bbb9e83decc8fca5a1fcb87149a92bf7d80d3af8f"
   },
   {
-    "name": "os-os-h-08-c-i",
+    "name": "os-os-h-08-c-resample",
     "kind": "os",
     "task_id": "OS-H-08",
     "variant": "C",
     "difficulty": "hard",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": null,
@@ -306,12 +306,12 @@
     "instruction_sha256": "5bbf2589f7e3fd93bf0d2b5bbb9e83decc8fca5a1fcb87149a92bf7d80d3af8f"
   },
   {
-    "name": "os-os-h-09-a-i",
+    "name": "os-os-h-09-a-resample",
     "kind": "os",
     "task_id": "OS-H-09",
     "variant": "A",
     "difficulty": "hard",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": null,
@@ -323,12 +323,12 @@
     "instruction_sha256": "583516aed6288cb7900b063a9f427db420e7fa16e8898c9e28b1c931adfad059"
   },
   {
-    "name": "os-os-h-09-b-i",
+    "name": "os-os-h-09-b-resample",
     "kind": "os",
     "task_id": "OS-H-09",
     "variant": "B",
     "difficulty": "hard",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": null,
@@ -340,12 +340,12 @@
     "instruction_sha256": "583516aed6288cb7900b063a9f427db420e7fa16e8898c9e28b1c931adfad059"
   },
   {
-    "name": "os-os-h-09-c-i",
+    "name": "os-os-h-09-c-resample",
     "kind": "os",
     "task_id": "OS-H-09",
     "variant": "C",
     "difficulty": "hard",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": null,
@@ -357,12 +357,12 @@
     "instruction_sha256": "583516aed6288cb7900b063a9f427db420e7fa16e8898c9e28b1c931adfad059"
   },
   {
-    "name": "os-os-h-12-a-i",
+    "name": "os-os-h-12-a-resample",
     "kind": "os",
     "task_id": "OS-H-12",
     "variant": "A",
     "difficulty": "hard",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": null,
@@ -374,12 +374,12 @@
     "instruction_sha256": "4be0b43743bfe06d19fc616173f48820501b5e0ab2395469ce1fe5335032a38f"
   },
   {
-    "name": "os-os-h-12-b-i",
+    "name": "os-os-h-12-b-resample",
     "kind": "os",
     "task_id": "OS-H-12",
     "variant": "B",
     "difficulty": "hard",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": null,
@@ -391,12 +391,12 @@
     "instruction_sha256": "4be0b43743bfe06d19fc616173f48820501b5e0ab2395469ce1fe5335032a38f"
   },
   {
-    "name": "os-os-h-12-c-i",
+    "name": "os-os-h-12-c-resample",
     "kind": "os",
     "task_id": "OS-H-12",
     "variant": "C",
     "difficulty": "hard",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": null,
@@ -408,12 +408,12 @@
     "instruction_sha256": "4be0b43743bfe06d19fc616173f48820501b5e0ab2395469ce1fe5335032a38f"
   },
   {
-    "name": "os-os-m-01-a-i",
+    "name": "os-os-m-01-a-resample",
     "kind": "os",
     "task_id": "OS-M-01",
     "variant": "A",
     "difficulty": "medium",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": null,
@@ -425,12 +425,12 @@
     "instruction_sha256": "381e60daa749af3239a2255da7e08dd0d10058061a5a3f6983e92d3e89f349d4"
   },
   {
-    "name": "os-os-m-01-b-i",
+    "name": "os-os-m-01-b-resample",
     "kind": "os",
     "task_id": "OS-M-01",
     "variant": "B",
     "difficulty": "medium",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": null,
@@ -442,12 +442,12 @@
     "instruction_sha256": "381e60daa749af3239a2255da7e08dd0d10058061a5a3f6983e92d3e89f349d4"
   },
   {
-    "name": "os-os-m-01-c-i",
+    "name": "os-os-m-01-c-resample",
     "kind": "os",
     "task_id": "OS-M-01",
     "variant": "C",
     "difficulty": "medium",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": null,
@@ -459,12 +459,12 @@
     "instruction_sha256": "381e60daa749af3239a2255da7e08dd0d10058061a5a3f6983e92d3e89f349d4"
   },
   {
-    "name": "os-os-m-02-a-i",
+    "name": "os-os-m-02-a-resample",
     "kind": "os",
     "task_id": "OS-M-02",
     "variant": "A",
     "difficulty": "medium",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": null,
@@ -476,12 +476,12 @@
     "instruction_sha256": "b462fae30a5aa599cb24659ceb1e25b9f1ef7af217024c097ef6e5ab89b42ea3"
   },
   {
-    "name": "os-os-m-02-b-i",
+    "name": "os-os-m-02-b-resample",
     "kind": "os",
     "task_id": "OS-M-02",
     "variant": "B",
     "difficulty": "medium",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": null,
@@ -493,12 +493,12 @@
     "instruction_sha256": "b462fae30a5aa599cb24659ceb1e25b9f1ef7af217024c097ef6e5ab89b42ea3"
   },
   {
-    "name": "os-os-m-02-c-i",
+    "name": "os-os-m-02-c-resample",
     "kind": "os",
     "task_id": "OS-M-02",
     "variant": "C",
     "difficulty": "medium",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": null,
@@ -510,12 +510,12 @@
     "instruction_sha256": "b462fae30a5aa599cb24659ceb1e25b9f1ef7af217024c097ef6e5ab89b42ea3"
   },
   {
-    "name": "os-os-m-05-a-i",
+    "name": "os-os-m-05-a-resample",
     "kind": "os",
     "task_id": "OS-M-05",
     "variant": "A",
     "difficulty": "medium",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": null,
@@ -527,12 +527,12 @@
     "instruction_sha256": "10840dacad39e7cb47959f6c7260832878ac7d91d7bf36329a8f41ec0cda35c9"
   },
   {
-    "name": "os-os-m-05-b-i",
+    "name": "os-os-m-05-b-resample",
     "kind": "os",
     "task_id": "OS-M-05",
     "variant": "B",
     "difficulty": "medium",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": null,
@@ -544,12 +544,12 @@
     "instruction_sha256": "10840dacad39e7cb47959f6c7260832878ac7d91d7bf36329a8f41ec0cda35c9"
   },
   {
-    "name": "os-os-m-05-c-i",
+    "name": "os-os-m-05-c-resample",
     "kind": "os",
     "task_id": "OS-M-05",
     "variant": "C",
     "difficulty": "medium",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": null,
@@ -561,12 +561,12 @@
     "instruction_sha256": "10840dacad39e7cb47959f6c7260832878ac7d91d7bf36329a8f41ec0cda35c9"
   },
   {
-    "name": "os-os-m-12-a-i",
+    "name": "os-os-m-12-a-resample",
     "kind": "os",
     "task_id": "OS-M-12",
     "variant": "A",
     "difficulty": "medium",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": null,
@@ -578,12 +578,12 @@
     "instruction_sha256": "ed26698342590bc240804aa129388a843bc91ea09f525184ab20ec038be4af58"
   },
   {
-    "name": "os-os-m-12-b-i",
+    "name": "os-os-m-12-b-resample",
     "kind": "os",
     "task_id": "OS-M-12",
     "variant": "B",
     "difficulty": "medium",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": null,
@@ -595,12 +595,12 @@
     "instruction_sha256": "ed26698342590bc240804aa129388a843bc91ea09f525184ab20ec038be4af58"
   },
   {
-    "name": "os-os-m-12-c-i",
+    "name": "os-os-m-12-c-resample",
     "kind": "os",
     "task_id": "OS-M-12",
     "variant": "C",
     "difficulty": "medium",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": null,
@@ -612,12 +612,12 @@
     "instruction_sha256": "ed26698342590bc240804aa129388a843bc91ea09f525184ab20ec038be4af58"
   },
   {
-    "name": "web-10-a-i",
+    "name": "web-10-a-resample",
     "kind": "web",
     "task_id": "10",
     "variant": "A",
     "difficulty": "easy",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "19fca6f6be6f2a1e6abf009036ba946cdff01e312a5a8fa3b8d7ad3b333dfa8f",
@@ -629,12 +629,12 @@
     "instruction_sha256": "9244bbe8f8418371f6146860d7e8a17ddb5a3148ac543bd747f6ee630a42e4ad"
   },
   {
-    "name": "web-10-b-i",
+    "name": "web-10-b-resample",
     "kind": "web",
     "task_id": "10",
     "variant": "B",
     "difficulty": "easy",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "19fca6f6be6f2a1e6abf009036ba946cdff01e312a5a8fa3b8d7ad3b333dfa8f",
@@ -646,12 +646,12 @@
     "instruction_sha256": "9244bbe8f8418371f6146860d7e8a17ddb5a3148ac543bd747f6ee630a42e4ad"
   },
   {
-    "name": "web-10-c-i",
+    "name": "web-10-c-resample",
     "kind": "web",
     "task_id": "10",
     "variant": "C",
     "difficulty": "easy",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "19fca6f6be6f2a1e6abf009036ba946cdff01e312a5a8fa3b8d7ad3b333dfa8f",
@@ -663,12 +663,12 @@
     "instruction_sha256": "9244bbe8f8418371f6146860d7e8a17ddb5a3148ac543bd747f6ee630a42e4ad"
   },
   {
-    "name": "web-12-a-i",
+    "name": "web-12-a-resample",
     "kind": "web",
     "task_id": "12",
     "variant": "A",
     "difficulty": "medium",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "cedd1f4b13a96378e0da2814b64ec1a14bcd9e587bf09ce16bb877be091c5546",
@@ -680,12 +680,12 @@
     "instruction_sha256": "d8b5dd142318b305115547fdbc2cfb924f5f5075e4ba512b52524016500dd2c4"
   },
   {
-    "name": "web-12-b-i",
+    "name": "web-12-b-resample",
     "kind": "web",
     "task_id": "12",
     "variant": "B",
     "difficulty": "medium",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "cedd1f4b13a96378e0da2814b64ec1a14bcd9e587bf09ce16bb877be091c5546",
@@ -697,12 +697,12 @@
     "instruction_sha256": "d8b5dd142318b305115547fdbc2cfb924f5f5075e4ba512b52524016500dd2c4"
   },
   {
-    "name": "web-12-c-i",
+    "name": "web-12-c-resample",
     "kind": "web",
     "task_id": "12",
     "variant": "C",
     "difficulty": "medium",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "cedd1f4b13a96378e0da2814b64ec1a14bcd9e587bf09ce16bb877be091c5546",
@@ -714,12 +714,12 @@
     "instruction_sha256": "d8b5dd142318b305115547fdbc2cfb924f5f5075e4ba512b52524016500dd2c4"
   },
   {
-    "name": "web-14-a-i",
+    "name": "web-14-a-resample",
     "kind": "web",
     "task_id": "14",
     "variant": "A",
     "difficulty": "medium",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "87422cb952305164b7fe355fb3ba6691feb4ea4b1033a0fee5afc62c85ca283b",
@@ -731,12 +731,12 @@
     "instruction_sha256": "dd3c0672efdbe32de730ee8f80e79a641157147492a8b37ee3a66104b4aae997"
   },
   {
-    "name": "web-14-b-i",
+    "name": "web-14-b-resample",
     "kind": "web",
     "task_id": "14",
     "variant": "B",
     "difficulty": "medium",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "87422cb952305164b7fe355fb3ba6691feb4ea4b1033a0fee5afc62c85ca283b",
@@ -748,12 +748,12 @@
     "instruction_sha256": "dd3c0672efdbe32de730ee8f80e79a641157147492a8b37ee3a66104b4aae997"
   },
   {
-    "name": "web-14-c-i",
+    "name": "web-14-c-resample",
     "kind": "web",
     "task_id": "14",
     "variant": "C",
     "difficulty": "medium",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "87422cb952305164b7fe355fb3ba6691feb4ea4b1033a0fee5afc62c85ca283b",
@@ -765,12 +765,12 @@
     "instruction_sha256": "dd3c0672efdbe32de730ee8f80e79a641157147492a8b37ee3a66104b4aae997"
   },
   {
-    "name": "web-17-a-i",
+    "name": "web-17-a-resample",
     "kind": "web",
     "task_id": "17",
     "variant": "A",
     "difficulty": "easy",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "c70b29de9ba5654908852fe69e21a7e5d5b7d6b9663583f2532d665a39bbe99a",
@@ -782,12 +782,12 @@
     "instruction_sha256": "5b445c8404b11edf96f81d93ddc92d82ea0b0e18531f32304f409b6d643b044b"
   },
   {
-    "name": "web-17-b-i",
+    "name": "web-17-b-resample",
     "kind": "web",
     "task_id": "17",
     "variant": "B",
     "difficulty": "easy",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "c70b29de9ba5654908852fe69e21a7e5d5b7d6b9663583f2532d665a39bbe99a",
@@ -799,12 +799,12 @@
     "instruction_sha256": "5b445c8404b11edf96f81d93ddc92d82ea0b0e18531f32304f409b6d643b044b"
   },
   {
-    "name": "web-17-c-i",
+    "name": "web-17-c-resample",
     "kind": "web",
     "task_id": "17",
     "variant": "C",
     "difficulty": "easy",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "c70b29de9ba5654908852fe69e21a7e5d5b7d6b9663583f2532d665a39bbe99a",
@@ -816,12 +816,12 @@
     "instruction_sha256": "5b445c8404b11edf96f81d93ddc92d82ea0b0e18531f32304f409b6d643b044b"
   },
   {
-    "name": "web-19-a-i",
+    "name": "web-19-a-resample",
     "kind": "web",
     "task_id": "19",
     "variant": "A",
     "difficulty": "easy",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "be7e95d15161a279c611584a87afda92297e108fa392f8179145be54cbff9f8e",
@@ -833,12 +833,12 @@
     "instruction_sha256": "dcfab48ffb1cebc58028856322c3975c27091fecf14eb1b07ca575922e385033"
   },
   {
-    "name": "web-19-b-i",
+    "name": "web-19-b-resample",
     "kind": "web",
     "task_id": "19",
     "variant": "B",
     "difficulty": "easy",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "be7e95d15161a279c611584a87afda92297e108fa392f8179145be54cbff9f8e",
@@ -850,12 +850,12 @@
     "instruction_sha256": "dcfab48ffb1cebc58028856322c3975c27091fecf14eb1b07ca575922e385033"
   },
   {
-    "name": "web-19-c-i",
+    "name": "web-19-c-resample",
     "kind": "web",
     "task_id": "19",
     "variant": "C",
     "difficulty": "easy",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "be7e95d15161a279c611584a87afda92297e108fa392f8179145be54cbff9f8e",
@@ -867,12 +867,12 @@
     "instruction_sha256": "dcfab48ffb1cebc58028856322c3975c27091fecf14eb1b07ca575922e385033"
   },
   {
-    "name": "web-22-a-i",
+    "name": "web-22-a-resample",
     "kind": "web",
     "task_id": "22",
     "variant": "A",
     "difficulty": "medium",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "0fc9ab1120488d7e1411629f8ad98480bd10663bedc04f4a438ff4fda70c9d5a",
@@ -884,12 +884,12 @@
     "instruction_sha256": "913b9f9376c2a9b18058fd9fae1555dcd04a6e87e7ef415deb33dbd285345e32"
   },
   {
-    "name": "web-22-b-i",
+    "name": "web-22-b-resample",
     "kind": "web",
     "task_id": "22",
     "variant": "B",
     "difficulty": "medium",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "0fc9ab1120488d7e1411629f8ad98480bd10663bedc04f4a438ff4fda70c9d5a",
@@ -901,12 +901,12 @@
     "instruction_sha256": "913b9f9376c2a9b18058fd9fae1555dcd04a6e87e7ef415deb33dbd285345e32"
   },
   {
-    "name": "web-22-c-i",
+    "name": "web-22-c-resample",
     "kind": "web",
     "task_id": "22",
     "variant": "C",
     "difficulty": "medium",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "0fc9ab1120488d7e1411629f8ad98480bd10663bedc04f4a438ff4fda70c9d5a",
@@ -918,12 +918,12 @@
     "instruction_sha256": "913b9f9376c2a9b18058fd9fae1555dcd04a6e87e7ef415deb33dbd285345e32"
   },
   {
-    "name": "web-29-a-i",
+    "name": "web-29-a-resample",
     "kind": "web",
     "task_id": "29",
     "variant": "A",
     "difficulty": "hard",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "97e1c359fec13fa69d9351fb3843df4434c742f7f7a0c37862280536b467199a",
@@ -935,12 +935,12 @@
     "instruction_sha256": "0670b96e6f1cda749c304ca4bf17aa4e7879ffa9ce9c6e4465c37e9eeabe9f6b"
   },
   {
-    "name": "web-29-b-i",
+    "name": "web-29-b-resample",
     "kind": "web",
     "task_id": "29",
     "variant": "B",
     "difficulty": "hard",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "97e1c359fec13fa69d9351fb3843df4434c742f7f7a0c37862280536b467199a",
@@ -952,12 +952,12 @@
     "instruction_sha256": "0670b96e6f1cda749c304ca4bf17aa4e7879ffa9ce9c6e4465c37e9eeabe9f6b"
   },
   {
-    "name": "web-29-c-i",
+    "name": "web-29-c-resample",
     "kind": "web",
     "task_id": "29",
     "variant": "C",
     "difficulty": "hard",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "97e1c359fec13fa69d9351fb3843df4434c742f7f7a0c37862280536b467199a",
@@ -969,12 +969,12 @@
     "instruction_sha256": "0670b96e6f1cda749c304ca4bf17aa4e7879ffa9ce9c6e4465c37e9eeabe9f6b"
   },
   {
-    "name": "web-3-a-i",
+    "name": "web-3-a-resample",
     "kind": "web",
     "task_id": "3",
     "variant": "A",
     "difficulty": "easy",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "14a78008225ced38632257800a20c8944c2c1928b769e624070b0db8cc3f6bcf",
@@ -986,12 +986,12 @@
     "instruction_sha256": "1ffc813163a7c888b78df8a21fa53bfe08c4f2134d902a382ec0ec14e49bb9b4"
   },
   {
-    "name": "web-3-b-i",
+    "name": "web-3-b-resample",
     "kind": "web",
     "task_id": "3",
     "variant": "B",
     "difficulty": "easy",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "14a78008225ced38632257800a20c8944c2c1928b769e624070b0db8cc3f6bcf",
@@ -1003,12 +1003,12 @@
     "instruction_sha256": "1ffc813163a7c888b78df8a21fa53bfe08c4f2134d902a382ec0ec14e49bb9b4"
   },
   {
-    "name": "web-3-c-i",
+    "name": "web-3-c-resample",
     "kind": "web",
     "task_id": "3",
     "variant": "C",
     "difficulty": "easy",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "14a78008225ced38632257800a20c8944c2c1928b769e624070b0db8cc3f6bcf",
@@ -1020,12 +1020,12 @@
     "instruction_sha256": "1ffc813163a7c888b78df8a21fa53bfe08c4f2134d902a382ec0ec14e49bb9b4"
   },
   {
-    "name": "web-38-a-i",
+    "name": "web-38-a-resample",
     "kind": "web",
     "task_id": "38",
     "variant": "A",
     "difficulty": "medium",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "2ff488fab01a6fb9efa37e9c4c663133592df21c411a8e830ec8207e941efe5d",
@@ -1037,12 +1037,12 @@
     "instruction_sha256": "7a9b7d234dffe930f39d58a3979914842552243f3d5e8c32beaa97c6c876bf76"
   },
   {
-    "name": "web-38-b-i",
+    "name": "web-38-b-resample",
     "kind": "web",
     "task_id": "38",
     "variant": "B",
     "difficulty": "medium",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "2ff488fab01a6fb9efa37e9c4c663133592df21c411a8e830ec8207e941efe5d",
@@ -1054,12 +1054,12 @@
     "instruction_sha256": "7a9b7d234dffe930f39d58a3979914842552243f3d5e8c32beaa97c6c876bf76"
   },
   {
-    "name": "web-38-c-i",
+    "name": "web-38-c-resample",
     "kind": "web",
     "task_id": "38",
     "variant": "C",
     "difficulty": "medium",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "2ff488fab01a6fb9efa37e9c4c663133592df21c411a8e830ec8207e941efe5d",
@@ -1071,12 +1071,12 @@
     "instruction_sha256": "7a9b7d234dffe930f39d58a3979914842552243f3d5e8c32beaa97c6c876bf76"
   },
   {
-    "name": "web-4-a-i",
+    "name": "web-4-a-resample",
     "kind": "web",
     "task_id": "4",
     "variant": "A",
     "difficulty": "easy",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "4d6e724029d0892de43f8df332bc6d6bd30c33a7ffe5222f5de165290d5bc825",
@@ -1088,12 +1088,12 @@
     "instruction_sha256": "577efaa81774c60619f1c1b53a76d5d035c10b95213261ec82481ffd6c768981"
   },
   {
-    "name": "web-4-b-i",
+    "name": "web-4-b-resample",
     "kind": "web",
     "task_id": "4",
     "variant": "B",
     "difficulty": "easy",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "4d6e724029d0892de43f8df332bc6d6bd30c33a7ffe5222f5de165290d5bc825",
@@ -1105,12 +1105,12 @@
     "instruction_sha256": "577efaa81774c60619f1c1b53a76d5d035c10b95213261ec82481ffd6c768981"
   },
   {
-    "name": "web-4-c-i",
+    "name": "web-4-c-resample",
     "kind": "web",
     "task_id": "4",
     "variant": "C",
     "difficulty": "easy",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "4d6e724029d0892de43f8df332bc6d6bd30c33a7ffe5222f5de165290d5bc825",
@@ -1122,12 +1122,12 @@
     "instruction_sha256": "577efaa81774c60619f1c1b53a76d5d035c10b95213261ec82481ffd6c768981"
   },
   {
-    "name": "web-41-a-i",
+    "name": "web-41-a-resample",
     "kind": "web",
     "task_id": "41",
     "variant": "A",
     "difficulty": "hard",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "8ad9269cd3089173af1b9efc457f54bfda86d42702e06c519c1cb6e155c0b9d9",
@@ -1139,12 +1139,12 @@
     "instruction_sha256": "df2551e9c4208fcb1d173c035588577f4d78729df9edcac5fe658a92513fec9d"
   },
   {
-    "name": "web-41-b-i",
+    "name": "web-41-b-resample",
     "kind": "web",
     "task_id": "41",
     "variant": "B",
     "difficulty": "hard",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "8ad9269cd3089173af1b9efc457f54bfda86d42702e06c519c1cb6e155c0b9d9",
@@ -1156,12 +1156,12 @@
     "instruction_sha256": "df2551e9c4208fcb1d173c035588577f4d78729df9edcac5fe658a92513fec9d"
   },
   {
-    "name": "web-41-c-i",
+    "name": "web-41-c-resample",
     "kind": "web",
     "task_id": "41",
     "variant": "C",
     "difficulty": "hard",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "8ad9269cd3089173af1b9efc457f54bfda86d42702e06c519c1cb6e155c0b9d9",
@@ -1173,12 +1173,12 @@
     "instruction_sha256": "df2551e9c4208fcb1d173c035588577f4d78729df9edcac5fe658a92513fec9d"
   },
   {
-    "name": "web-45-a-i",
+    "name": "web-45-a-resample",
     "kind": "web",
     "task_id": "45",
     "variant": "A",
     "difficulty": "hard",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "bffe41ace7372c264ad418070e06561dfedde5e0ac246ebb4fcadac3e8fa99fe",
@@ -1190,12 +1190,12 @@
     "instruction_sha256": "67277aec60e3e23dd62de991a6307f91f3e4f357fd48842e10752f86c920f4b7"
   },
   {
-    "name": "web-45-b-i",
+    "name": "web-45-b-resample",
     "kind": "web",
     "task_id": "45",
     "variant": "B",
     "difficulty": "hard",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "bffe41ace7372c264ad418070e06561dfedde5e0ac246ebb4fcadac3e8fa99fe",
@@ -1207,12 +1207,12 @@
     "instruction_sha256": "67277aec60e3e23dd62de991a6307f91f3e4f357fd48842e10752f86c920f4b7"
   },
   {
-    "name": "web-45-c-i",
+    "name": "web-45-c-resample",
     "kind": "web",
     "task_id": "45",
     "variant": "C",
     "difficulty": "hard",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "bffe41ace7372c264ad418070e06561dfedde5e0ac246ebb4fcadac3e8fa99fe",
@@ -1224,12 +1224,12 @@
     "instruction_sha256": "67277aec60e3e23dd62de991a6307f91f3e4f357fd48842e10752f86c920f4b7"
   },
   {
-    "name": "web-48-a-i",
+    "name": "web-48-a-resample",
     "kind": "web",
     "task_id": "48",
     "variant": "A",
     "difficulty": "medium",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "ea4db58942d6522b2a9c724a81e32358b1963220b6f3846022d342e55d3d6e89",
@@ -1241,12 +1241,12 @@
     "instruction_sha256": "2bedd8911cd666f29a26e180a8eb7e2144a5fad3a6096ff242180c78724a2717"
   },
   {
-    "name": "web-48-b-i",
+    "name": "web-48-b-resample",
     "kind": "web",
     "task_id": "48",
     "variant": "B",
     "difficulty": "medium",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "ea4db58942d6522b2a9c724a81e32358b1963220b6f3846022d342e55d3d6e89",
@@ -1258,12 +1258,12 @@
     "instruction_sha256": "2bedd8911cd666f29a26e180a8eb7e2144a5fad3a6096ff242180c78724a2717"
   },
   {
-    "name": "web-48-c-i",
+    "name": "web-48-c-resample",
     "kind": "web",
     "task_id": "48",
     "variant": "C",
     "difficulty": "medium",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "ea4db58942d6522b2a9c724a81e32358b1963220b6f3846022d342e55d3d6e89",
@@ -1275,12 +1275,12 @@
     "instruction_sha256": "2bedd8911cd666f29a26e180a8eb7e2144a5fad3a6096ff242180c78724a2717"
   },
   {
-    "name": "web-51-a-i",
+    "name": "web-51-a-resample",
     "kind": "web",
     "task_id": "51",
     "variant": "A",
     "difficulty": "hard",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "a16051f91c209f7b567a33b4b0abc12adccbed41011655f4fb0baac503e3e100",
@@ -1292,12 +1292,12 @@
     "instruction_sha256": "c42c393406f671fd8516606feeaa6561d38c1af47954b571d79cb9daba85e065"
   },
   {
-    "name": "web-51-b-i",
+    "name": "web-51-b-resample",
     "kind": "web",
     "task_id": "51",
     "variant": "B",
     "difficulty": "hard",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "a16051f91c209f7b567a33b4b0abc12adccbed41011655f4fb0baac503e3e100",
@@ -1309,12 +1309,12 @@
     "instruction_sha256": "c42c393406f671fd8516606feeaa6561d38c1af47954b571d79cb9daba85e065"
   },
   {
-    "name": "web-51-c-i",
+    "name": "web-51-c-resample",
     "kind": "web",
     "task_id": "51",
     "variant": "C",
     "difficulty": "hard",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "a16051f91c209f7b567a33b4b0abc12adccbed41011655f4fb0baac503e3e100",
@@ -1326,12 +1326,12 @@
     "instruction_sha256": "c42c393406f671fd8516606feeaa6561d38c1af47954b571d79cb9daba85e065"
   },
   {
-    "name": "web-55-a-i",
+    "name": "web-55-a-resample",
     "kind": "web",
     "task_id": "55",
     "variant": "A",
     "difficulty": "hard",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "e1dbd8684838de2af6a5b4878351bfea9dcc8adc10c6c9284cafb86b179b50cc",
@@ -1343,12 +1343,12 @@
     "instruction_sha256": "92ab288281c0cd9ce1aed1cd08a93b21b02c01595e5623301f955ae385a86fb1"
   },
   {
-    "name": "web-55-b-i",
+    "name": "web-55-b-resample",
     "kind": "web",
     "task_id": "55",
     "variant": "B",
     "difficulty": "hard",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "e1dbd8684838de2af6a5b4878351bfea9dcc8adc10c6c9284cafb86b179b50cc",
@@ -1360,12 +1360,12 @@
     "instruction_sha256": "92ab288281c0cd9ce1aed1cd08a93b21b02c01595e5623301f955ae385a86fb1"
   },
   {
-    "name": "web-55-c-i",
+    "name": "web-55-c-resample",
     "kind": "web",
     "task_id": "55",
     "variant": "C",
     "difficulty": "hard",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "e1dbd8684838de2af6a5b4878351bfea9dcc8adc10c6c9284cafb86b179b50cc",
@@ -1377,12 +1377,12 @@
     "instruction_sha256": "92ab288281c0cd9ce1aed1cd08a93b21b02c01595e5623301f955ae385a86fb1"
   },
   {
-    "name": "web-56-a-i",
+    "name": "web-56-a-resample",
     "kind": "web",
     "task_id": "56",
     "variant": "A",
     "difficulty": "hard",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "5b9a113e1bd510863e5882f2b6dd439d570cb5dc4c4007edb0f6b3ddbd73c3b4",
@@ -1394,12 +1394,12 @@
     "instruction_sha256": "f2b7285b190eff88ed40f23ac588756f595ca74b346f77bf7358dfd001163c44"
   },
   {
-    "name": "web-56-b-i",
+    "name": "web-56-b-resample",
     "kind": "web",
     "task_id": "56",
     "variant": "B",
     "difficulty": "hard",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "5b9a113e1bd510863e5882f2b6dd439d570cb5dc4c4007edb0f6b3ddbd73c3b4",
@@ -1411,12 +1411,12 @@
     "instruction_sha256": "f2b7285b190eff88ed40f23ac588756f595ca74b346f77bf7358dfd001163c44"
   },
   {
-    "name": "web-56-c-i",
+    "name": "web-56-c-resample",
     "kind": "web",
     "task_id": "56",
     "variant": "C",
     "difficulty": "hard",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "5b9a113e1bd510863e5882f2b6dd439d570cb5dc4c4007edb0f6b3ddbd73c3b4",
@@ -1428,12 +1428,12 @@
     "instruction_sha256": "f2b7285b190eff88ed40f23ac588756f595ca74b346f77bf7358dfd001163c44"
   },
   {
-    "name": "web-61-a-i",
+    "name": "web-61-a-resample",
     "kind": "web",
     "task_id": "61",
     "variant": "A",
     "difficulty": "medium",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "ed46704272f2784c2063da7c926538dfa7acda9e493f9f9fd8ad16c8f754e091",
@@ -1445,12 +1445,12 @@
     "instruction_sha256": "fa88043db728e4f0b28f510cc980593066bc48f40b0e6168a17c32c22088a50a"
   },
   {
-    "name": "web-61-b-i",
+    "name": "web-61-b-resample",
     "kind": "web",
     "task_id": "61",
     "variant": "B",
     "difficulty": "medium",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "ed46704272f2784c2063da7c926538dfa7acda9e493f9f9fd8ad16c8f754e091",
@@ -1462,12 +1462,12 @@
     "instruction_sha256": "fa88043db728e4f0b28f510cc980593066bc48f40b0e6168a17c32c22088a50a"
   },
   {
-    "name": "web-61-c-i",
+    "name": "web-61-c-resample",
     "kind": "web",
     "task_id": "61",
     "variant": "C",
     "difficulty": "medium",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "ed46704272f2784c2063da7c926538dfa7acda9e493f9f9fd8ad16c8f754e091",
@@ -1479,12 +1479,12 @@
     "instruction_sha256": "fa88043db728e4f0b28f510cc980593066bc48f40b0e6168a17c32c22088a50a"
   },
   {
-    "name": "web-62-a-i",
+    "name": "web-62-a-resample",
     "kind": "web",
     "task_id": "62",
     "variant": "A",
     "difficulty": "easy",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "a82128301d16f9a761c6aaa8730c2d9fb3e447c550656238e3649f853d6d4808",
@@ -1496,12 +1496,12 @@
     "instruction_sha256": "29ca8814f0ef1d4fad53369fe78e18c8d637f042eb9259f493893d374a58a7d1"
   },
   {
-    "name": "web-62-b-i",
+    "name": "web-62-b-resample",
     "kind": "web",
     "task_id": "62",
     "variant": "B",
     "difficulty": "easy",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "a82128301d16f9a761c6aaa8730c2d9fb3e447c550656238e3649f853d6d4808",
@@ -1513,12 +1513,12 @@
     "instruction_sha256": "29ca8814f0ef1d4fad53369fe78e18c8d637f042eb9259f493893d374a58a7d1"
   },
   {
-    "name": "web-62-c-i",
+    "name": "web-62-c-resample",
     "kind": "web",
     "task_id": "62",
     "variant": "C",
     "difficulty": "easy",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "a82128301d16f9a761c6aaa8730c2d9fb3e447c550656238e3649f853d6d4808",
@@ -1530,12 +1530,12 @@
     "instruction_sha256": "29ca8814f0ef1d4fad53369fe78e18c8d637f042eb9259f493893d374a58a7d1"
   },
   {
-    "name": "web-64-a-i",
+    "name": "web-64-a-resample",
     "kind": "web",
     "task_id": "64",
     "variant": "A",
     "difficulty": "hard",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "4cf040d84c2531a217230a4a347998c2b0e912988f33979fb3563f9c9d28ae19",
@@ -1547,12 +1547,12 @@
     "instruction_sha256": "42056dbac15b04f9037ea449c4456145a993cf6e87ef2143536603ec93e1a563"
   },
   {
-    "name": "web-64-b-i",
+    "name": "web-64-b-resample",
     "kind": "web",
     "task_id": "64",
     "variant": "B",
     "difficulty": "hard",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "4cf040d84c2531a217230a4a347998c2b0e912988f33979fb3563f9c9d28ae19",
@@ -1564,12 +1564,12 @@
     "instruction_sha256": "42056dbac15b04f9037ea449c4456145a993cf6e87ef2143536603ec93e1a563"
   },
   {
-    "name": "web-64-c-i",
+    "name": "web-64-c-resample",
     "kind": "web",
     "task_id": "64",
     "variant": "C",
     "difficulty": "hard",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "4cf040d84c2531a217230a4a347998c2b0e912988f33979fb3563f9c9d28ae19",
@@ -1581,12 +1581,12 @@
     "instruction_sha256": "42056dbac15b04f9037ea449c4456145a993cf6e87ef2143536603ec93e1a563"
   },
   {
-    "name": "web-65-a-i",
+    "name": "web-65-a-resample",
     "kind": "web",
     "task_id": "65",
     "variant": "A",
     "difficulty": "hard",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "df2e3cc6bc9132442fc96d2bc9743994619fda5e7bf89b9083f70bf39c201020",
@@ -1598,12 +1598,12 @@
     "instruction_sha256": "3365d2f1bd66c8bfe9b72c3f2e3d2b0318051d075101d493b035e3523c26f083"
   },
   {
-    "name": "web-65-b-i",
+    "name": "web-65-b-resample",
     "kind": "web",
     "task_id": "65",
     "variant": "B",
     "difficulty": "hard",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "df2e3cc6bc9132442fc96d2bc9743994619fda5e7bf89b9083f70bf39c201020",
@@ -1615,12 +1615,12 @@
     "instruction_sha256": "3365d2f1bd66c8bfe9b72c3f2e3d2b0318051d075101d493b035e3523c26f083"
   },
   {
-    "name": "web-65-c-i",
+    "name": "web-65-c-resample",
     "kind": "web",
     "task_id": "65",
     "variant": "C",
     "difficulty": "hard",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "df2e3cc6bc9132442fc96d2bc9743994619fda5e7bf89b9083f70bf39c201020",
@@ -1632,12 +1632,12 @@
     "instruction_sha256": "3365d2f1bd66c8bfe9b72c3f2e3d2b0318051d075101d493b035e3523c26f083"
   },
   {
-    "name": "web-68-a-i",
+    "name": "web-68-a-resample",
     "kind": "web",
     "task_id": "68",
     "variant": "A",
     "difficulty": "easy",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "b00b80f42fa8ca53bcd7c6d5819538070f8721071be7708bddb9b8b996723c3b",
@@ -1649,12 +1649,12 @@
     "instruction_sha256": "1403c5394ad03973f71c857b7c2ed8b4a795a4cd9cefe73b1db6040d47b95e31"
   },
   {
-    "name": "web-68-b-i",
+    "name": "web-68-b-resample",
     "kind": "web",
     "task_id": "68",
     "variant": "B",
     "difficulty": "easy",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "b00b80f42fa8ca53bcd7c6d5819538070f8721071be7708bddb9b8b996723c3b",
@@ -1666,12 +1666,12 @@
     "instruction_sha256": "1403c5394ad03973f71c857b7c2ed8b4a795a4cd9cefe73b1db6040d47b95e31"
   },
   {
-    "name": "web-68-c-i",
+    "name": "web-68-c-resample",
     "kind": "web",
     "task_id": "68",
     "variant": "C",
     "difficulty": "easy",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "b00b80f42fa8ca53bcd7c6d5819538070f8721071be7708bddb9b8b996723c3b",
@@ -1683,12 +1683,12 @@
     "instruction_sha256": "1403c5394ad03973f71c857b7c2ed8b4a795a4cd9cefe73b1db6040d47b95e31"
   },
   {
-    "name": "web-69-a-i",
+    "name": "web-69-a-resample",
     "kind": "web",
     "task_id": "69",
     "variant": "A",
     "difficulty": "medium",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "322968521db539ba143abbe36159cba7899c3814b2a12b8429be53cd48d388ff",
@@ -1700,12 +1700,12 @@
     "instruction_sha256": "89be0ba6ebe42ff3b1ab5087edde9c226faefe8dda65b65a31418bffd6ba4fad"
   },
   {
-    "name": "web-69-b-i",
+    "name": "web-69-b-resample",
     "kind": "web",
     "task_id": "69",
     "variant": "B",
     "difficulty": "medium",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "322968521db539ba143abbe36159cba7899c3814b2a12b8429be53cd48d388ff",
@@ -1717,12 +1717,12 @@
     "instruction_sha256": "89be0ba6ebe42ff3b1ab5087edde9c226faefe8dda65b65a31418bffd6ba4fad"
   },
   {
-    "name": "web-69-c-i",
+    "name": "web-69-c-resample",
     "kind": "web",
     "task_id": "69",
     "variant": "C",
     "difficulty": "medium",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "322968521db539ba143abbe36159cba7899c3814b2a12b8429be53cd48d388ff",
@@ -1734,12 +1734,12 @@
     "instruction_sha256": "89be0ba6ebe42ff3b1ab5087edde9c226faefe8dda65b65a31418bffd6ba4fad"
   },
   {
-    "name": "web-72-a-i",
+    "name": "web-72-a-resample",
     "kind": "web",
     "task_id": "72",
     "variant": "A",
     "difficulty": "easy",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "7805e52dc8f57a6691a49aa346d6f932ffce790ef47982ff4a08543e7df1c04e",
@@ -1751,12 +1751,12 @@
     "instruction_sha256": "b80e2c7758e54c7e92aa7cc073ebdc3d2d42adb3f1cda503af65b6e7d559635c"
   },
   {
-    "name": "web-72-b-i",
+    "name": "web-72-b-resample",
     "kind": "web",
     "task_id": "72",
     "variant": "B",
     "difficulty": "easy",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "7805e52dc8f57a6691a49aa346d6f932ffce790ef47982ff4a08543e7df1c04e",
@@ -1768,12 +1768,12 @@
     "instruction_sha256": "b80e2c7758e54c7e92aa7cc073ebdc3d2d42adb3f1cda503af65b6e7d559635c"
   },
   {
-    "name": "web-72-c-i",
+    "name": "web-72-c-resample",
     "kind": "web",
     "task_id": "72",
     "variant": "C",
     "difficulty": "easy",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "7805e52dc8f57a6691a49aa346d6f932ffce790ef47982ff4a08543e7df1c04e",
@@ -1785,12 +1785,12 @@
     "instruction_sha256": "b80e2c7758e54c7e92aa7cc073ebdc3d2d42adb3f1cda503af65b6e7d559635c"
   },
   {
-    "name": "web-73-a-i",
+    "name": "web-73-a-resample",
     "kind": "web",
     "task_id": "73",
     "variant": "A",
     "difficulty": "easy",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "890bb61c1f50c913e9c1da6d54e60a0b8620fdf23a7b23349470cb232d79308d",
@@ -1802,12 +1802,12 @@
     "instruction_sha256": "f0b6a84fa8007ed0418e13a616d1e693dce2619be7b262dd9c19d00c0e5624b5"
   },
   {
-    "name": "web-73-b-i",
+    "name": "web-73-b-resample",
     "kind": "web",
     "task_id": "73",
     "variant": "B",
     "difficulty": "easy",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "890bb61c1f50c913e9c1da6d54e60a0b8620fdf23a7b23349470cb232d79308d",
@@ -1819,12 +1819,12 @@
     "instruction_sha256": "f0b6a84fa8007ed0418e13a616d1e693dce2619be7b262dd9c19d00c0e5624b5"
   },
   {
-    "name": "web-73-c-i",
+    "name": "web-73-c-resample",
     "kind": "web",
     "task_id": "73",
     "variant": "C",
     "difficulty": "easy",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "890bb61c1f50c913e9c1da6d54e60a0b8620fdf23a7b23349470cb232d79308d",
@@ -1836,12 +1836,12 @@
     "instruction_sha256": "f0b6a84fa8007ed0418e13a616d1e693dce2619be7b262dd9c19d00c0e5624b5"
   },
   {
-    "name": "web-8-a-i",
+    "name": "web-8-a-resample",
     "kind": "web",
     "task_id": "8",
     "variant": "A",
     "difficulty": "medium",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "4db07609df653f9a16017f37811460ca87dadcfade53bfe6590b39d37df5bf4d",
@@ -1853,12 +1853,12 @@
     "instruction_sha256": "0a76f801ef00bfe38f48d9756796e649284ebdade1b4d9b4e6c638c3fe827413"
   },
   {
-    "name": "web-8-b-i",
+    "name": "web-8-b-resample",
     "kind": "web",
     "task_id": "8",
     "variant": "B",
     "difficulty": "medium",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "4db07609df653f9a16017f37811460ca87dadcfade53bfe6590b39d37df5bf4d",
@@ -1870,12 +1870,12 @@
     "instruction_sha256": "0a76f801ef00bfe38f48d9756796e649284ebdade1b4d9b4e6c638c3fe827413"
   },
   {
-    "name": "web-8-c-i",
+    "name": "web-8-c-resample",
     "kind": "web",
     "task_id": "8",
     "variant": "C",
     "difficulty": "medium",
-    "generalization": "I",
+    "generalization": "resample",
     "actual_seed": 4201,
     "replay_source": null,
     "task_digest": "4db07609df653f9a16017f37811460ca87dadcfade53bfe6590b39d37df5bf4d",

@@ -13,7 +13,7 @@ class Phases:
         self.start = clock()
         self.digest = hashlib.sha256()
         self.state = {
-            'schema': 'videoicl-transport-observed-phases-v1',
+            'schema': 'iclworld-transport-observed-phases-v1',
             'layer': 'upstream_curl_reader',
             'submitted_body_sha256': hashlib.sha256(submitted_body).hexdigest(),
             'submitted_body_bytes': len(submitted_body),
@@ -109,5 +109,5 @@ def begin(receipt, submitted_body):
     try:
         return Phases(receipt, submitted_body)
     except Exception:
-        receipt['transport_phase_metadata'] = {'schema': 'videoicl-transport-observed-phases-v1', 'unknown': True}
+        receipt['transport_phase_metadata'] = {'schema': 'iclworld-transport-observed-phases-v1', 'unknown': True}
         return None

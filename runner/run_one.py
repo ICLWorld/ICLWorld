@@ -19,8 +19,8 @@ def verify(case,result_file,attempt):
     assert meta['generalization']==case['generalization']
     evaluation=attempt/'authoritative-evaluation.json';save(evaluation,result['evaluation'])
     config=attempt/'verifier-private.json';save(config,{'result_path':str(evaluation),'expected_identity':identity})
-    subprocess.run(['sh',str(Path(case['task_dir'])/'tests/test.sh')],env=dict(os.environ,VIDEOICL_PYTHON=sys.executable,
-        VIDEOICL_VERIFIER_CONFIG=str(config),HARBOR_VERIFIER_LOG_DIR=str(attempt/'logs/verifier')),check=True,capture_output=True)
+    subprocess.run(['sh',str(Path(case['task_dir'])/'tests/test.sh')],env=dict(os.environ,ICLWORLD_PYTHON=sys.executable,
+        ICLWORLD_VERIFIER_CONFIG=str(config),HARBOR_VERIFIER_LOG_DIR=str(attempt/'logs/verifier')),check=True,capture_output=True)
     return json.loads((attempt/'logs/verifier/reward.json').read_text())
 
 def execute(root,model,case,condition,attempt):
@@ -41,13 +41,13 @@ def execute(root,model,case,condition,attempt):
     if engine=='codex':cmd+=['--binary',str(root/'cli/node_modules/@openai/codex/bin/codex.js'),'--code-mode']
     if engine=='claude':cmd+=['--binary',os.environ['ICLWORLD_CLAUDE_BINARY']]
     env={k:v for k,v in os.environ.items() if k.lower() not in ('http_proxy','https_proxy','all_proxy')}
-    env.update(MATRIX_ENGINE=engine,PATH=str(Path(os.environ['MATRIX_CLI_ROOT'])/'node-v22.21.1-linux-x64/bin')+':'+env['PATH'])
+    env.update(ICLWORLD_ENGINE=engine,PATH=str(Path(os.environ['ICLWORLD_CLI_ROOT'])/'node-v22.21.1-linux-x64/bin')+':'+env['PATH'])
     replay=case.get('replay_source') or {}
     replay_params={}
-    if case['generalization']=='R':
+    if case['generalization']=='replay':
         replay_params=({'replay_recording_id':replay['recording'],'replay_example':replay['example']} if case['kind']=='os' else {'replay_run_id':replay['run_id'],'replay_epoch':replay['epoch'],'replay_example':replay['example']})
-    env.update(MATRIX_NO_RULE='1' if condition=='none' else '0')
-    env.update(MATRIX_GENERALIZATION=case['generalization'],MATRIX_REPLAY_PARAMS=json.dumps(replay_params),MATRIX_EXPECTED_CASE=json.dumps(dict(generalization=case['generalization'],actual_seed=case['actual_seed'],demo_sha256=case['demo']['sha256'],benchmark_version=case.get('benchmark_version'),task_digest=case.get('task_digest'),implementation_digest=case.get('implementation_digest'))))
+    env.update(ICLWORLD_NO_RULE='1' if condition=='none' else '0')
+    env.update(ICLWORLD_GENERALIZATION=case['generalization'],ICLWORLD_REPLAY_PARAMS=json.dumps(replay_params),ICLWORLD_EXPECTED_CASE=json.dumps(dict(generalization=case['generalization'],actual_seed=case['actual_seed'],demo_sha256=case['demo']['sha256'],benchmark_version=case.get('benchmark_version'),task_digest=case.get('task_digest'),implementation_digest=case.get('implementation_digest'))))
     save(attempt/'input-contract.json',{'task':case['name'],'condition':condition,'generalization':case['generalization'],'seed':case['actual_seed'],'instruction_sha256':case['instruction_sha256'],'demo_sha256':case['demo']['sha256'],'provider':os.environ.get('CAMPAIGN_PROVIDER','primary')})
     started=time.time()
     with (attempt/'driver.stdout').open('w') as out,(attempt/'driver.stderr').open('w') as err:

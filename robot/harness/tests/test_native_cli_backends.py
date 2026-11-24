@@ -9,7 +9,7 @@ from types import SimpleNamespace
 import pytest
 
 ROOT = Path(__file__).resolve().parents[1]
-sys.path[:0] = [str(ROOT / 'worker'), str(ROOT / 'VideoICLBench/packages/sdk')]
+sys.path[:0] = [str(ROOT / 'worker'), str(ROOT / 'iclworld_harness/packages/sdk')]
 spec = importlib.util.spec_from_file_location('shared_native_worker', ROOT / 'worker/run.py')
 worker = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(worker)
@@ -61,7 +61,7 @@ def test_codex_uses_native_config_and_original_session(tmp_path, monkeypatch):
         'type': 'session_meta', 'payload': {'id': 'original'}}) + '\n')
     cmd, env = codex.command(profile, workspace, 'gpt-6-astra', binary='/fixture/codex', resume='original')
     assert cmd[-3:] == ['resume', 'original', '-']
-    assert env['CODEX_HOME'] == str(profile) and env['VIC_MODEL_API_KEY'] == 'loopback-fixture'
+    assert env['CODEX_HOME'] == str(profile) and env['ICLWORLD_MODEL_API_KEY'] == 'loopback-fixture'
     with pytest.raises(ValueError):
         codex.command(profile, workspace, 'gpt-6-astra', binary='/fixture/codex', resume='different')
 
@@ -77,7 +77,7 @@ def test_codex_rejects_catalog_without_requested_capacity(tmp_path, monkeypatch)
 
 @pytest.mark.parametrize('engine', ['codex', 'claude'])
 def test_attempt_loop_reuses_selected_model_and_attaches_only_first_image(tmp_path, monkeypatch, engine):
-    from vic_sdk import embodied_agent, embodied_recovery, native_agent, native_structured_supervisor
+    from iclworld_sdk import embodied_agent, embodied_recovery, native_agent, native_structured_supervisor
     room = tmp_path / 'room'
     room.mkdir()
     (room / 'native-structured').mkdir()

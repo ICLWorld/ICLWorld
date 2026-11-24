@@ -45,10 +45,10 @@ def prepare(dataset,out,experiment=None,task=None):
  write(out/'cases.json',{'cases':rows})
  roots=data/'environment/asset_roots'
  env={p.name:str(p) for p in roots.iterdir() if p.is_dir()}
- env.update(VIC_INFERENCE_ASSETS=str(out/'runtime/inference-generalization-v1/assets'),VIC_EXECUTION_DESIGN_ASSETS=str(out/'runtime/execution-design-v3/assets'),VIDEOICL_SENSOR_DEPTH='1')
+ env.update(ICLWORLD_INFERENCE_ASSETS=str(out/'runtime/inference-generalization-v1/assets'),ICLWORLD_EXECUTION_DESIGN_ASSETS=str(out/'runtime/execution-design-v3/assets'),ICLWORLD_SENSOR_DEPTH='1')
  robot=out/'runtime/assets/embodiments/robotwin-r5/franka-panda/robot.usd'
  if not robot.is_file():raise ValueError('Missing Franka USD')
- env['VIC_FRANKA_ROBOTWIN_USD']=str(robot)
+ env['ICLWORLD_FRANKA_ROBOTWIN_USD']=str(robot)
  (out/'environment.sh').write_text('\n'.join('export '+k+'='+shlex.quote(v) for k,v in sorted(env.items()))+'\n')
  write(out/'preparation.json',{'case_count':len(rows),'runtime_files':len(manifest),'source_dataset':str(dataset.resolve()),'model_requests':0})
  return rows

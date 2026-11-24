@@ -10,15 +10,15 @@ import xml.etree.ElementTree as ET
 
 RUNTIME = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(RUNTIME))
-from videoicl_isaaclab.execution_design import REVISION, REVISION_V2, REVISION_V3, SUPPORTED_REVISIONS, WORKFLOW_TASKS, build_task_contract, metadata, source_sha256
-from videoicl_isaaclab.realworld_scenes import load as load_scene
+from iclworld_isaaclab.execution_design import REVISION, REVISION_V2, REVISION_V3, SUPPORTED_REVISIONS, WORKFLOW_TASKS, build_task_contract, metadata, source_sha256
+from iclworld_isaaclab.realworld_scenes import load as load_scene
 
 CONTROLS = ('positive', 'wrong_members', 'wrong_destination', 'wrong_rule', 'not_released')
-SOURCE_PATTERNS = ('videoicl_isaaclab/*.py', 'execution-design-v2/*','execution-design-v3/*',
+SOURCE_PATTERNS = ('iclworld_isaaclab/*.py', 'execution-design-v2/*','execution-design-v3/*',
                    'configs/realworld50_catalog.json', 'configs/tasks.json',
                    'configs/embodiments/*.json', 'scripts/build_execution_design_release.py',
-                   'sdk-overlays/execution-design-v2/vic_sdk/*.py',
-                   'sdk-overlays/execution-design-v3/vic_sdk/*.py',
+                   'sdk-overlays/execution-design-v2/iclworld_sdk/*.py',
+                   'sdk-overlays/execution-design-v3/iclworld_sdk/*.py',
                    'tests/test_execution_design_qa_integration.py',
                    'scripts/prepare_execution_design_qa.py',
                    'scripts/probe_realworld_room_pool.py', 'scripts/serve_realworld_room_pool.py')
@@ -40,7 +40,7 @@ def source_hashes(runtime=RUNTIME):
 def build_release(destination, *, bindings=None, seeds=(4201, 4202, 4203),qa_preparation=None,tasks=None,revision=None):
     revision=REVISION if revision is None else revision
     if revision not in SUPPORTED_REVISIONS:raise ValueError('Unsupported release revision')
-    all_tasks=[f'E{i:02}'for i in range(1,51)]
+    all_tasks=[f'iclworld_robot_{i:02}'for i in range(1,51)]
     selected=sorted((all_tasks if revision==REVISION_V3 else WORKFLOW_TASKS) if tasks is None else list(tasks))
     if not selected or len(set(selected))!=len(selected) or not set(selected)<=set(all_tasks):raise ValueError('Unique known release tasks required')
     dest = Path(destination)
@@ -51,7 +51,7 @@ def build_release(destination, *, bindings=None, seeds=(4201, 4202, 4203),qa_pre
     if original.get('execution_design') or any(original['tasks'][t].get('inference_generalization') for t in WORKFLOW_TASKS):
         raise ValueError('Canonical source bindings required')
     dest.mkdir(parents=True)
-    from videoicl_isaaclab.execution_design_qa import export_sdk
+    from iclworld_isaaclab.execution_design_qa import export_sdk
     sdk_receipt=export_sdk(dest/'sdk',revision=revision)
     # Bundle only source/config files; reviewed asset binaries remain separately
     # hash-verified by the source resolver and native preflight.
@@ -74,14 +74,14 @@ def build_release(destination, *, bindings=None, seeds=(4201, 4202, 4203),qa_pre
 import argparse,json,sys
 root=Path(__file__).resolve().parent
 sys.path.insert(0,str(root/'runtime'))
-from videoicl_isaaclab.realworld_scenes import load
+from iclworld_isaaclab.realworld_scenes import load
 p=argparse.ArgumentParser();p.add_argument('case_id');p.add_argument('--offline',action='store_true');a=p.parse_args()
 m=json.loads((root/'manifest.private.json').read_text());c=next(c for c in m['cases'] if c['case_id']==a.case_id)
 s=load(c['task'],c['variant'],c['seed'],root/c['binding_file'],verify_files=not a.offline)
 print(json.dumps(dict(case_id=c['case_id'],objects=len(s['objects']),revision=s['execution_design']['revision'],source_files_verified=s['source_files_verified'],release_ready=s['release_ready'])))
 """)
     cases=[]
-    for condition in ('R','I','E'):
+    for condition in ('replay','resample','relocate'):
         binding=json.loads(json.dumps(original));binding['execution_design']={'revision':revision,'condition':condition}
         bp=dest/'bindings'/f'{condition}.private.json';write(bp,binding)
         for task in selected:
@@ -132,7 +132,7 @@ print(json.dumps(dict(case_id=c['case_id'],objects=len(s['objects']),revision=s[
     coverage=[dict(task=t,support_mask=metadata(t,revision)['support_mask'],environment_base=metadata(t,revision).get('environment_base'),
                    included=t in selected,native_acceptance='pending',required_cases=len(metadata(t,revision)['support_mask'])*3*len(seeds),
                    required_controls=len(metadata(t,revision)['support_mask'])*3*len(seeds)*len(CONTROLS)) for t in all_tasks]
-    manifest={'schema':'videoicl-execution-release-v3' if revision==REVISION_V3 else 'videoicl-execution-v2-release-v1','revision':revision,'model_launch_enabled':False,
+    manifest={'schema':'iclworld-execution-release-v3' if revision==REVISION_V3 else 'iclworld-execution-v2-release-v1','revision':revision,'model_launch_enabled':False,
               'native_acceptance':'pending','asset_validation':'pending','source_hashes':hashes,
               'canonical_bindings_sha256':sha(binding_path),'qa_hashes':qa_hashes,'qa_runtime_acceptance':None,
               'sdk_files':sdk_receipt['files'],'sdk_overlay_applied':True,'cases':cases,
@@ -162,15 +162,15 @@ def install_prepared_qa(release,preparation):
     if test.get('source_sha256')!=manifest['source_hashes'].get(test_source):raise ValueError('QA test source changed')
     _validate_qa_junit(testfile,revision)
     qa_dir=release/'qa';test_target=qa_dir/'integration-tests.xml';shutil.copyfile(testfile,test_target)
-    receipt=dict(schema='videoicl-execution-v2-qa-gate-v1',revision=revision,source_hashes=manifest['source_hashes'],
-        qa_hashes=manifest['qa_hashes'],conditions=['R','I','E'] if revision==REVISION_V3 else ['I','E'],input_modes=['text','real','sim'],
+    receipt=dict(schema='iclworld-execution-v2-qa-gate-v1',revision=revision,source_hashes=manifest['source_hashes'],
+        qa_hashes=manifest['qa_hashes'],conditions=['replay','resample','relocate'] if revision==REVISION_V3 else ['resample','relocate'],input_modes=['text','real','sim'],
         media_delivery_before_question=True,first_answer_immutable=True,action_blocked_before_answer=True,
         no_answer_key_in_public_mount=True,fresh_assignment_resume_checked=True,
         test_artifact=dict(path=str(test_target.relative_to(release)),sha256=sha(test_target),source_sha256=test['source_sha256']))
     rp=qa_dir/'runtime-acceptance.private.json';write(rp,receipt)
     manifest['qa_runtime_acceptance']=dict(path=str(rp.relative_to(release)),sha256=sha(rp))
     by_key={(r['task'],r['variant'],r['mode']):r for r in prepared['media'] if r.get('status')=='ready'}
-    from videoicl_isaaclab.execution_design_qa import prepare_assignment,write_assignment,bind_native_spec,export_public_task
+    from iclworld_isaaclab.execution_design_qa import prepare_assignment,write_assignment,bind_native_spec,export_public_task
     for case in manifest['cases']:
         assignments=[];package_media={}
         for mode in ('text','real','sim'):
@@ -227,7 +227,7 @@ def validate_release(release):
     release=Path(release);manifest=json.loads((release/'manifest.private.json').read_bytes());errors=[]
     revision=manifest.get('revision')
     if revision not in SUPPORTED_REVISIONS:return dict(ready=False,full50_ready=False,errors=['revision_mismatch'])
-    all_tasks={f'E{i:02}'for i in range(1,51)};selected=set(manifest.get('selected_tasks',WORKFLOW_TASKS))
+    all_tasks={f'iclworld_robot_{i:02}'for i in range(1,51)};selected=set(manifest.get('selected_tasks',WORKFLOW_TASKS))
     if not selected or not selected<=all_tasks:errors.append('invalid_selected_tasks')
     full_scope=selected==all_tasks and manifest.get('scope')=='full50'
     if not full_scope:errors.append('full50_scope_incomplete')
@@ -260,8 +260,8 @@ def validate_release(release):
             qp=_local(release,qa_receipt['path'])
             if sha(qp)!=qa_receipt['sha256']:raise ValueError('qa_runtime_receipt_hash_mismatch')
             qr=json.loads(qp.read_bytes())
-            if qr.get('schema')!='videoicl-execution-v2-qa-gate-v1' or qr.get('revision')!=revision or qr.get('source_hashes')!=hashes or qr.get('qa_hashes')!=manifest.get('qa_hashes'):raise ValueError('qa_runtime_receipt_identity_mismatch')
-            expected_conditions={'R','I','E'}if revision==REVISION_V3 else {'I','E'}
+            if qr.get('schema')!='iclworld-execution-v2-qa-gate-v1' or qr.get('revision')!=revision or qr.get('source_hashes')!=hashes or qr.get('qa_hashes')!=manifest.get('qa_hashes'):raise ValueError('qa_runtime_receipt_identity_mismatch')
+            expected_conditions={'replay','resample','relocate'}if revision==REVISION_V3 else {'resample','relocate'}
             if set(qr.get('conditions',[]))!=expected_conditions or set(qr.get('input_modes',[]))!={'text','real','sim'}:raise ValueError('qa_runtime_coverage_incomplete')
             if not all(qr.get(k) is True for k in ('media_delivery_before_question','first_answer_immutable','action_blocked_before_answer','no_answer_key_in_public_mount','fresh_assignment_resume_checked')):raise ValueError('qa_runtime_gate_unverified')
             ap=_local(release,qr['test_artifact']['path'])
@@ -313,7 +313,7 @@ def validate_release(release):
                     assignment=json.loads((directory/'environment/rule-qa'/f'{source}.json').read_bytes())
                     expected_identity=hashlib.sha256((case['assignment_identity_sha256']+':'+mode).encode()).hexdigest()
                     if assignment.get('assignment_identity_sha256')!=expected_identity or ns.get('qa_assignment_identities',{}).get(source)!=expected_identity:raise ValueError('sdk_task_qa_identity_mismatch')
-                    from videoicl_isaaclab.execution_design_qa import prepare_assignment
+                    from iclworld_isaaclab.execution_design_qa import prepare_assignment
                     expected_assignment,_=prepare_assignment(case['task'],case['variant'],case['seed'],case['condition'],'text_rule',bank_dir=release/'qa',revision=revision)
                     expected_assignment.update(source=source,assignment_identity_sha256=expected_identity)
                     if revision==REVISION_V3:expected_assignment['paired_input_identity']=hashlib.sha256((contract['execution_design']['paired_input_identity']+':'+mode).encode()).hexdigest()
@@ -354,9 +354,9 @@ def validate_release(release):
                 r=json.loads(receipt_path.read_bytes())
                 # A CPU fixture, author declaration, scripted success or mock
                 # cannot satisfy this measured native receipt protocol.
-                if r.get('schema')!='videoicl-native-execution-v2-control-v1' or r.get('backend')!='isaaclab_physx' or r.get('evidence_origin')!='native_physx_worker' or r.get('synthetic') is not False:raise ValueError('non_native_evidence')
+                if r.get('schema')!='iclworld-native-execution-v2-control-v1' or r.get('backend')!='isaaclab_physx' or r.get('evidence_origin')!='native_physx_worker' or r.get('synthetic') is not False:raise ValueError('non_native_evidence')
                 if revision==REVISION_V3 and r.get('revision')!=revision:raise ValueError('native_revision_mismatch')
-                if revision==REVISION_V3 and case['condition']=='E':
+                if revision==REVISION_V3 and case['condition']=='relocate':
                     if r.get('initial_pairing_verified') is not True or r.get('environment_base')!=case['declared_pairing']['environment_base'] or r.get('paired_input_identity')!=case['declared_pairing']['paired_input_identity']:raise ValueError('native_initial_environment_pairing_unverified')
                 if r.get('case_id')!=key or r.get('control')!=control or r.get('assignment_identity_sha256')!=case['assignment_identity_sha256'] or r.get('source_hashes')!=hashes or r.get('binding_sha256')!=case['binding_sha256']:raise ValueError('native_identity_or_source_mismatch')
                 owner=r.get('native_process',{})

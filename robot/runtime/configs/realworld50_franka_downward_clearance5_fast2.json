@@ -76,13 +76,13 @@
       "Additional 50mm inward mount adjustment after a 12mm block grasp reached a 5mm IK boundary; actual joint limits retained.",
       "RealWorld50 action interval 0.2s with original 4ms physical dt; actual render sampling remains 15Hz and frame-clock checked.",
       "Private author recording at 25fps and continuous minimum-jerk Cartesian targets through real native IK/PhysX; physical dt remains 4ms.",
-      "Private E07 inner-row reach probe: both Panda mounts task X=-0.50m; native joints, meshes, limits, control and task geometry retained.",
+      "Private iclworld_robot_07 inner-row reach probe: both Panda mounts task X=-0.50m; native joints, meshes, limits, control and task geometry retained.",
       "Low-table-only left-arm source-layout trial; private 0.18m/s carry, 0.98m transfer plane and direct idle retreat."
     ]
   },
   "asset": {
     "path": "assets/embodiments/robotwin-r5/franka-panda/robot.usd",
-    "env": "VIC_FRANKA_ROBOTWIN_USD",
+    "env": "ICLWORLD_FRANKA_ROBOTWIN_USD",
     "format": "usd",
     "source_embodiment": "franka-panda"
   },

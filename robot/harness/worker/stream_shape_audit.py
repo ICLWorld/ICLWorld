@@ -29,7 +29,7 @@ def enum(value,allowed):
 
 def public_tool(value):
     if not isinstance(value,str):return None
-    for prefix in ('mcp__vic__','mcp_vic_','vic_',''):
+    for prefix in ('mcp__iclworld__','mcp_iclworld_','iclworld_',''):
         if value.startswith(prefix)and value[len(prefix):]in TOOLS:return value[len(prefix):]
     return 'unrecognized_tool'
 
@@ -94,7 +94,7 @@ def summarize(raw):
         if event=='content_block_stop'and valid_index:finish(index,'content_block_stop')
         rows.append(row)
     for index in list(partials):finish(index,'stream_ended_without_block_stop')
-    return {'schema':'videoicl-content-free-sse-shape-v1','raw_bytes':len(raw),'raw_sha256':hashlib.sha256(raw).hexdigest(),'frames':rows,'partial_json_roots':ended}
+    return {'schema':'iclworld-content-free-sse-shape-v1','raw_bytes':len(raw),'raw_sha256':hashlib.sha256(raw).hexdigest(),'frames':rows,'partial_json_roots':ended}
 
 def append(out,record):
     path=Path(out)/'dsh-response-shape.jsonl'
@@ -121,6 +121,6 @@ def audit(out,receipt,raw):
         record=summarize(raw);record.update(meta);append(out,record)
     except BaseException as exc:
         # No exception messages: parse errors may embed provider content.
-        try:append(out,dict(meta,schema='videoicl-content-free-sse-shape-v1',audit_error=type(exc).__name__))
+        try:append(out,dict(meta,schema='iclworld-content-free-sse-shape-v1',audit_error=type(exc).__name__))
         except BaseException:pass
     return None

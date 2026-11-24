@@ -3,9 +3,9 @@ from pathlib import Path
 import json
 import subprocess
 
-from vic_sdk.direct_tools import freeze_direct_model_catalog, validate_context_window
-from vic_sdk.native_agent import cli_command, codex_config, private_json, summarize as native_summary
-from vic_sdk.embodied_recovery import resolve_session
+from iclworld_sdk.direct_tools import freeze_direct_model_catalog, validate_context_window
+from iclworld_sdk.native_agent import cli_command, codex_config, private_json, summarize as native_summary
+from iclworld_sdk.embodied_recovery import resolve_session
 
 
 def configure(profile, workspace, model, server, provider, options):
@@ -22,7 +22,7 @@ def configure(profile, workspace, model, server, provider, options):
                                          cli_version=version, serial_tools=False)
     # Task-specific instructions arrive once in the user prompt. The native role
     # and developer contract are shared with the other CLI backends.
-    from vic_sdk.embodied_codex_mcp import NATIVE_MODEL_INSTRUCTIONS, NATIVE_TOOL_INSTRUCTIONS
+    from iclworld_sdk.embodied_codex_mcp import NATIVE_MODEL_INSTRUCTIONS, NATIVE_TOOL_INSTRUCTIONS
     role = profile / 'model-instructions.md'
     role.write_text(NATIVE_MODEL_INSTRUCTIONS + '\n')
     configuration = ('model_instructions_file = ' + json.dumps(str(role)) + '\n'
@@ -49,7 +49,7 @@ def command(profile, workspace, model, *, binary, resume=None):
         resolve_session(profile, {'session_id': resume}, resume)
     cmd, env = cli_command('codex', profile, workspace, model, metadata['server'],
                            resume=resume, binary=binary)
-    env['VIC_MODEL_API_KEY'] = metadata['api_key']
+    env['ICLWORLD_MODEL_API_KEY'] = metadata['api_key']
     return cmd, env
 
 

@@ -3,7 +3,7 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 ROOT="$PWD"
-RUNTIME="${MATRIX_CLI_ROOT:-$ROOT/.runtime}"
+RUNTIME="${ICLWORLD_CLI_ROOT:-$ROOT/.runtime}"
 mkdir -p "$RUNTIME"
 case "$(uname -s)-$(uname -m)" in Linux-x86_64) ;; *) echo 'This pinned runtime is Linux x86_64.' >&2; exit 1;; esac
 NODE=node-v22.21.1-linux-x64
@@ -31,8 +31,8 @@ cat > "$RUNTIME/zcode-source/trust-iclworld.ts" <<'TS'
 import { createWorkspaceMcpTrust } from './apps/zcode-cli/packages/bootstrap/src/workspace-mcp-trust/index.ts';
 const trust=createWorkspaceMcpTrust({workingDirectory:process.argv[2]});
 const reviews=await trust.inspect();
-if(!reviews.vic)throw new Error('No vic declaration');
-await trust.decide('vic',reviews.vic.declarationDigest,true);
+if(!reviews.iclworld)throw new Error('No iclworld declaration');
+await trust.decide('iclworld',reviews.iclworld.declarationDigest,true);
 TS
 (cd "$RUNTIME/zcode-source"; pnpm exec esbuild trust-iclworld.ts --bundle --platform=node --format=esm --banner:js='import {fileURLToPath as mf} from "node:url";import {dirname as md} from "node:path";import {createRequire as mc} from "node:module";const __filename=mf(import.meta.url);const __dirname=md(__filename);const require=mc(import.meta.url);' --outfile="$RUNTIME/trust-zcode-bundle.mjs")
 curl --fail --location https://code.kimi.com/kimi-code/install.sh -o "$RUNTIME/kimi-install.sh"

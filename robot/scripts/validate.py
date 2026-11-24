@@ -7,9 +7,9 @@ def validate(dataset,media=False):
  root=dataset.resolve()/'robot';videos=[]
  for i in range(1,51):
   for variant in 'ABC':
-   p=root/'tasks'/f'E{i:02d}'/variant
+   p=root/'tasks'/f'iclworld_robot_{i:02d}'/variant
    meta=json.loads((p/'task.json').read_text())
-   assert meta['task_id']==f'E{i:02d}' and meta['variant']==variant
+   assert meta['task_id']==f'iclworld_robot_{i:02d}' and meta['variant']==variant
    for kind in ['real','sim']:
     f=p/(kind+'.mp4');assert f.is_file() and digest(f)==meta[kind]['sha256'],f
     videos.append(f)

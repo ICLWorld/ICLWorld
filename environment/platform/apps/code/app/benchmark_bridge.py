@@ -5,7 +5,7 @@ import uuid
 import requests
 import streamlit as st
 
-ACTIVE = bool(os.environ.get("VIC_NATIVE_RUN"))
+ACTIVE = bool(os.environ.get("ICLWORLD_NATIVE_RUN"))
 
 
 def whitespace_view(text):
@@ -34,8 +34,8 @@ def business(path="", body=None):
         return _snapshot
     response = requests.request(
         "POST" if body else "GET",
-        os.environ["VIC_NATIVE_SELF_BASE"] + "/api/runs/" + os.environ["VIC_NATIVE_RUN"] + path,
-        headers={"Authorization": "Bearer " + os.environ["VIC_NATIVE_TOKEN"]}, json=body, timeout=15,
+        os.environ["ICLWORLD_NATIVE_SELF_BASE"] + "/api/runs/" + os.environ["ICLWORLD_NATIVE_RUN"] + path,
+        headers={"Authorization": "Bearer " + os.environ["ICLWORLD_NATIVE_TOKEN"]}, json=body, timeout=15,
     )
     if not response.ok:
         raise ValueError(response.json().get("detail", "Application request failed"))
@@ -52,7 +52,7 @@ def command(op, target="", value="", ids=None):
 
 
 def problem(item):
-    from vic_apps.oj_resources import problem_content, samples
+    from iclworld_apps.oj_resources import problem_content, samples
     title=item.get('problem_title',item['name'])
     content = problem_content(title)
     return dict(id=str(item.get('problem_number',item["number"])), title=title, difficulty="easy", author="课程组",
@@ -284,7 +284,7 @@ def render_indent_editor(state):
     st.subheader('solution.py')
     st.caption('在下方直接编辑代码，再点击“提交代码”保存到提交记录。')
     # Stable while editing, distinct for every demonstration/reset/episode.
-    identity = f"{os.environ.get('VIC_NATIVE_RUN', '')}:{business().get('epoch', 0)}:{state['seed']}:{state['source']['text']}"
+    identity = f"{os.environ.get('ICLWORLD_NATIVE_RUN', '')}:{business().get('epoch', 0)}:{state['seed']}:{state['source']['text']}"
     key = 'indent_draft_' + hashlib.sha256(identity.encode()).hexdigest()[:16]
     st.caption('Tab 插入制表符；选中多行后 Tab / Shift+Tab 调整缩进。按 Esc 后再按 Tab 可离开编辑器。')
     code = st.text_area('编辑源代码', value=state['outputs'].get('target', state['source']['text']), height=400, key=key)

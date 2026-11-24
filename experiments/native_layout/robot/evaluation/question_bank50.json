@@ -1,11 +1,11 @@
 {
-  "schema": "videoicl.rule_qa.v1",
+  "schema": "iclworld.rule_qa.v1",
   "bank_version": "embodied-rule-qa-v1",
   "question_count": 50,
   "questions": [
     {
       "question_id": "rq_bf057dcade49",
-      "task_id": "E01",
+      "task_id": "iclworld_robot_01",
       "title": "套餐选配装盘",
       "prompt": "视频中的示范按哪一种食物组合装盘？",
       "options": {
@@ -17,7 +17,7 @@
     },
     {
       "question_id": "rq_78b321f85694",
-      "task_id": "E02",
+      "task_id": "iclworld_robot_02",
       "title": "三色块叠放",
       "prompt": "视频中三色块最终自下而上的叠放顺序是什么？",
       "options": {
@@ -29,7 +29,7 @@
     },
     {
       "question_id": "rq_99a6749b07c1",
-      "task_id": "E03",
+      "task_id": "iclworld_robot_03",
       "title": "三色杯套叠",
       "prompt": "视频中三个彩杯由外层到内层如何套叠？",
       "options": {
@@ -41,7 +41,7 @@
     },
     {
       "question_id": "rq_1dc2a175a2c7",
-      "task_id": "E04",
+      "task_id": "iclworld_robot_04",
       "title": "彩杯与图形配对",
       "prompt": "视频中的三个彩杯分别与哪些图形配对？",
       "options": {
@@ -53,7 +53,7 @@
     },
     {
       "question_id": "rq_d49ac3307802",
-      "task_id": "E05",
+      "task_id": "iclworld_robot_05",
       "title": "形状块与图形配对",
       "prompt": "视频中方块、球和三角块分别放到哪些图形标记处？",
       "options": {
@@ -65,7 +65,7 @@
     },
     {
       "question_id": "rq_3f2b25ab859d",
-      "task_id": "E06",
+      "task_id": "iclworld_robot_06",
       "title": "蛋托孔位布局",
       "prompt": "以示范操作者的视角看，视频中三个球放入蛋托的哪些孔？",
       "options": {
@@ -77,7 +77,7 @@
     },
     {
       "question_id": "rq_972f75e58d70",
-      "task_id": "E07",
+      "task_id": "iclworld_robot_07",
       "title": "五块尺寸排序",
       "prompt": "视频中五块物体按尺寸从远到近如何排列？",
       "options": {
@@ -89,7 +89,7 @@
     },
     {
       "question_id": "rq_09e9b3f3e402",
-      "task_id": "E08",
+      "task_id": "iclworld_robot_08",
       "title": "鞋盒内朝向摆放",
       "prompt": "视频中两只鞋放入鞋盒后，鞋尖或鞋跟与标签端是什么关系？",
       "options": {
@@ -101,7 +101,7 @@
     },
     {
       "question_id": "rq_2f0582b83429",
-      "task_id": "E09",
+      "task_id": "iclworld_robot_09",
       "title": "九件交叉属性分组",
       "prompt": "视频中九件物体按哪一种成员关系分成三组？",
       "options": {
@@ -113,7 +113,7 @@
     },
     {
       "question_id": "rq_df23b3a1fbbc",
-      "task_id": "E10",
+      "task_id": "iclworld_robot_10",
       "title": "按属性选择并套柱",
       "prompt": "视频中按什么属性选择零件套到柱上？",
       "options": {
@@ -125,7 +125,7 @@
     },
     {
       "question_id": "rq_ff1ac406dbae",
-      "task_id": "E11",
+      "task_id": "iclworld_robot_11",
       "title": "四格布局变换入框",
       "prompt": "视频中如何将初始2×2布局变换后搬入四格框？",
       "options": {
@@ -137,7 +137,7 @@
     },
     {
       "question_id": "rq_e65974279e7a",
-      "task_id": "E12",
+      "task_id": "iclworld_robot_12",
       "title": "插排孔位选择",
       "prompt": "视频中两个充电器插入插排的哪两个插位？",
       "options": {
@@ -149,7 +149,7 @@
     },
     {
       "question_id": "rq_ea645ac88800",
-      "task_id": "E13",
+      "task_id": "iclworld_robot_13",
       "title": "手机支架姿态",
       "prompt": "从支架开口观看侧看，视频中手机如何放在支架上？",
       "options": {
@@ -161,7 +161,7 @@
     },
     {
       "question_id": "rq_13be0aed84b5",
-      "task_id": "E14",
+      "task_id": "iclworld_robot_14",
       "title": "拆塔与层序重排",
       "prompt": "相对初始层序，视频中四层塔如何重排？",
       "options": {
@@ -173,7 +173,7 @@
     },
     {
       "question_id": "rq_88cba630a4c6",
-      "task_id": "E15",
+      "task_id": "iclworld_robot_15",
       "title": "T形块属性交换",
       "prompt": "相对初始状态，视频中两个T形块的位置和朝向如何变化？",
       "options": {
@@ -185,7 +185,7 @@
     },
     {
       "question_id": "rq_3aaa966cec48",
-      "task_id": "E16",
+      "task_id": "iclworld_robot_16",
       "title": "三件布局搬入托盘",
       "prompt": "视频中三件物体搬入托盘时，相对位置和各自朝向如何变化？",
       "options": {
@@ -197,7 +197,7 @@
     },
     {
       "question_id": "rq_414a9c021418",
-      "task_id": "E17",
+      "task_id": "iclworld_robot_17",
       "title": "双层点心架分层收纳",
       "prompt": "视频中四件物体如何分配到点心架上下两层？",
       "options": {
@@ -209,7 +209,7 @@
     },
     {
       "question_id": "rq_8a758328a66c",
-      "task_id": "E18",
+      "task_id": "iclworld_robot_18",
       "title": "抽屉取球并关回",
       "prompt": "视频中从抽屉取出哪些球放到白色目标纸上，并关回抽屉？",
       "options": {
@@ -221,7 +221,7 @@
     },
     {
       "question_id": "rq_26b307b59161",
-      "task_id": "E19",
+      "task_id": "iclworld_robot_19",
       "title": "饮料瓶与瓶盖配对",
       "prompt": "视频中雪碧瓶、水瓶和可乐瓶分别配什么颜色的盖？",
       "options": {
@@ -233,7 +233,7 @@
     },
     {
       "question_id": "rq_e7fccbd8d617",
-      "task_id": "E20",
+      "task_id": "iclworld_robot_20",
       "title": "按颜色补齐指定数量",
       "prompt": "视频中如何按颜色给三个图形标记处补齐筹码？",
       "options": {
@@ -245,7 +245,7 @@
     },
     {
       "question_id": "rq_ca2871c244e7",
-      "task_id": "E21",
+      "task_id": "iclworld_robot_21",
       "title": "按颜色顺序装四格盘",
       "prompt": "视频中按什么颜色顺序，将物体依次放入四格盘的左上、右上、左下、右下格？",
       "options": {
@@ -257,7 +257,7 @@
     },
     {
       "question_id": "rq_8faae6184282",
-      "task_id": "E22",
+      "task_id": "iclworld_robot_22",
       "title": "围绕玩具车摆放色块",
       "prompt": "以玩具车自身的前、左、右为参照，视频中三个色块如何摆放？",
       "options": {
@@ -269,7 +269,7 @@
     },
     {
       "question_id": "rq_a0d05016fc8d",
-      "task_id": "E23",
+      "task_id": "iclworld_robot_23",
       "title": "按层位将彩杯套上杯架",
       "prompt": "视频中彩杯套上杯架后，从高层到低层是什么颜色顺序？",
       "options": {
@@ -281,7 +281,7 @@
     },
     {
       "question_id": "rq_9a6b62dcb1f2",
-      "task_id": "E24",
+      "task_id": "iclworld_robot_24",
       "title": "彩杯按序装盒并盖盖",
       "prompt": "视频中三个彩杯按什么顺序装盒，然后盖上盒盖？",
       "options": {
@@ -293,7 +293,7 @@
     },
     {
       "question_id": "rq_050d9a7f865f",
-      "task_id": "E25",
+      "task_id": "iclworld_robot_25",
       "title": "餐具朝向与盘边布局",
       "prompt": "以操作者为参照，视频中勺、刀、叉如何摆在盘边？",
       "options": {
@@ -305,7 +305,7 @@
     },
     {
       "question_id": "rq_3733005cf39e",
-      "task_id": "E26",
+      "task_id": "iclworld_robot_26",
       "title": "数字牌与按铃次数",
       "prompt": "视频中左右数字牌与左右铃的按铃次数遵循哪一种对应规则？",
       "options": {
@@ -317,7 +317,7 @@
     },
     {
       "question_id": "rq_d3644d539a5c",
-      "task_id": "E27",
+      "task_id": "iclworld_robot_27",
       "title": "盘旁勺叉摆放",
       "prompt": "以操作者为参照，视频中勺和叉如何摆在盘的两侧？",
       "options": {
@@ -329,7 +329,7 @@
     },
     {
       "question_id": "rq_2bf9d29acc3c",
-      "task_id": "E28",
+      "task_id": "iclworld_robot_28",
       "title": "用平铲选取食物装盘",
       "prompt": "视频中用平铲选择哪些食物放入盘中？",
       "options": {
@@ -341,7 +341,7 @@
     },
     {
       "question_id": "rq_c17e1c5e583f",
-      "task_id": "E29",
+      "task_id": "iclworld_robot_29",
       "title": "琴槌敲击音阶顺序",
       "prompt": "视频中用琴槌按哪一种顺序敲击八个琴键？按最长到最短将琴键编号为1到8。",
       "options": {
@@ -353,7 +353,7 @@
     },
     {
       "question_id": "rq_31a887592402",
-      "task_id": "E30",
+      "task_id": "iclworld_robot_30",
       "title": "双层抽屉开合状态",
       "prompt": "视频结束时，上层红抽屉和下层蓝抽屉分别是什么开合状态？",
       "options": {
@@ -365,7 +365,7 @@
     },
     {
       "question_id": "rq_1a433343fdab",
-      "task_id": "E31",
+      "task_id": "iclworld_robot_31",
       "title": "碗碟组合",
       "prompt": "视频中碗和盘以哪一种方式组合？",
       "options": {
@@ -377,7 +377,7 @@
     },
     {
       "question_id": "rq_0bc4f60f4e7c",
-      "task_id": "E32",
+      "task_id": "iclworld_robot_32",
       "title": "杂乱桌面目标取放",
       "prompt": "视频中从杂乱桌面选择哪些物体放到白色交付板？",
       "options": {
@@ -389,7 +389,7 @@
     },
     {
       "question_id": "rq_e1fbda1c3034",
-      "task_id": "E33",
+      "task_id": "iclworld_robot_33",
       "title": "指定饮料瓶投入垃圾桶",
       "prompt": "视频中选择哪些饮料瓶投入垃圾桶，其余留在桌上？",
       "options": {
@@ -401,7 +401,7 @@
     },
     {
       "question_id": "rq_abc7239ae111",
-      "task_id": "E34",
+      "task_id": "iclworld_robot_34",
       "title": "挑选餐具放入收纳盘",
       "prompt": "视频中选择哪些餐具放到收纳盘左上格？",
       "options": {
@@ -413,7 +413,7 @@
     },
     {
       "question_id": "rq_e9b48320dbfa",
-      "task_id": "E35",
+      "task_id": "iclworld_robot_35",
       "title": "按尺寸关系叠三块",
       "prompt": "视频中三块同色、不同尺寸的物体，从下到上如何叠放？",
       "options": {
@@ -425,7 +425,7 @@
     },
     {
       "question_id": "rq_18894c08bfba",
-      "task_id": "E36",
+      "task_id": "iclworld_robot_36",
       "title": "按数量装球",
       "prompt": "视频中向空盒放入几个球？",
       "options": {
@@ -437,7 +437,7 @@
     },
     {
       "question_id": "rq_633570eb304b",
-      "task_id": "E37",
+      "task_id": "iclworld_robot_37",
       "title": "用螺丝刀拆指定螺丝",
       "prompt": "以操作者面对横梁时的左右为准，视频中卸下哪些螺丝？",
       "options": {
@@ -449,7 +449,7 @@
     },
     {
       "question_id": "rq_69e38ad6acdf",
-      "task_id": "E38",
+      "task_id": "iclworld_robot_38",
       "title": "彩环按序套同一根柱",
       "prompt": "视频中三个彩环套在同一根柱上后，从下到上是什么颜色顺序？",
       "options": {
@@ -461,7 +461,7 @@
     },
     {
       "question_id": "rq_e1021bd4b831",
-      "task_id": "E39",
+      "task_id": "iclworld_robot_39",
       "title": "参照T形布局选择性纠正",
       "prompt": "以上排T形块为参照，视频中如何调整下排的颜色次序和朝向？",
       "options": {
@@ -473,7 +473,7 @@
     },
     {
       "question_id": "rq_5b7a2900ac95",
-      "task_id": "E40",
+      "task_id": "iclworld_robot_40",
       "title": "在指定图形处夹长尾夹",
       "prompt": "视频中把长尾夹夹在托盘边的哪些图形标记处？",
       "options": {
@@ -485,7 +485,7 @@
     },
     {
       "question_id": "rq_27663cae6337",
-      "task_id": "E41",
+      "task_id": "iclworld_robot_41",
       "title": "为不同长度木条接续一段",
       "prompt": "视频中不同长度的前段木条分别接续什么长度的备件？",
       "options": {
@@ -497,7 +497,7 @@
     },
     {
       "question_id": "rq_8b2d1597574c",
-      "task_id": "E42",
+      "task_id": "iclworld_robot_42",
       "title": "用铲沿推球到图形区域",
       "prompt": "视频中用平铲侧沿把两个球如何分配到图形标记纸区域？",
       "options": {
@@ -509,7 +509,7 @@
     },
     {
       "question_id": "rq_4092c6d012b0",
-      "task_id": "E43",
+      "task_id": "iclworld_robot_43",
       "title": "用导向条让球经过图形区域",
       "prompt": "视频中用导向条让球的运动轨迹经过哪一种图形标记区域？",
       "options": {
@@ -521,7 +521,7 @@
     },
     {
       "question_id": "rq_2a219fb5c0f7",
-      "task_id": "E44",
+      "task_id": "iclworld_robot_44",
       "title": "纸板折成不同夹角",
       "prompt": "视频中纸板一面贴桌，另一面与它形成哪一种夹角？",
       "options": {
@@ -533,7 +533,7 @@
     },
     {
       "question_id": "rq_3069a660d66e",
-      "task_id": "E45",
+      "task_id": "iclworld_robot_45",
       "title": "把杯中球倒入指定图形格",
       "prompt": "视频中把杯中所有球倒入哪一种图形格？",
       "options": {
@@ -545,7 +545,7 @@
     },
     {
       "question_id": "rq_4bc17101f11c",
-      "task_id": "E46",
+      "task_id": "iclworld_robot_46",
       "title": "平铲承托送至图形区域",
       "prompt": "视频中用平铲承托黄色块，送到哪一种图形标记纸处？",
       "options": {
@@ -557,7 +557,7 @@
     },
     {
       "question_id": "rq_ceeb327f940d",
-      "task_id": "E47",
+      "task_id": "iclworld_robot_47",
       "title": "翻牌后选择红黑牌入盒",
       "prompt": "视频中翻开左起前两张牌后，按什么规则选择入盒的牌？",
       "options": {
@@ -569,7 +569,7 @@
     },
     {
       "question_id": "rq_045808b13784",
-      "task_id": "E48",
+      "task_id": "iclworld_robot_48",
       "title": "按数量翻牌插入卡座",
       "prompt": "视频中从左起翻开几张牌，并插入同一卡座？",
       "options": {
@@ -581,7 +581,7 @@
     },
     {
       "question_id": "rq_bc34e1cfef10",
-      "task_id": "E49",
+      "task_id": "iclworld_robot_49",
       "title": "三张牌按顺序分盘",
       "prompt": "视频中翻开左起前三张牌后，按原始左起序号依次放入哪三个盘？",
       "options": {
@@ -593,7 +593,7 @@
     },
     {
       "question_id": "rq_8c93974cc2cb",
-      "task_id": "E50",
+      "task_id": "iclworld_robot_50",
       "title": "长尾夹夹牌送入彩盘",
       "prompt": "视频中翻牌后，用长尾夹夹取并送到哪个彩盘，再释放？",
       "options": {

@@ -15,8 +15,8 @@ import sys
 
 RUNTIME=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(RUNTIME))
-from videoicl_isaaclab.execution_design import REVISION,SUPPORTED_REVISIONS,WORKFLOW_TASKS,metadata
-from videoicl_isaaclab.execution_design_qa import export_sdk,prepare_assignment,sha
+from iclworld_isaaclab.execution_design import REVISION,SUPPORTED_REVISIONS,WORKFLOW_TASKS,metadata
+from iclworld_isaaclab.execution_design_qa import export_sdk,prepare_assignment,sha
 
 
 def dump(path,value):
@@ -25,7 +25,7 @@ def dump(path,value):
 
 def prepare(destination,*,python=sys.executable,ffmpeg='/opt/homebrew/bin/ffmpeg',sim_reviews=None,tasks=None,revision=None):
     revision=REVISION if revision is None else revision
-    tasks=[f'E{i:02}'for i in range(1,51)] if tasks is None else list(tasks)
+    tasks=[f'iclworld_robot_{i:02}'for i in range(1,51)] if tasks is None else list(tasks)
     if len(set(tasks))!=len(tasks):raise ValueError('Unique tasks required')
     for task in tasks:metadata(task,revision)
     dest=Path(destination).resolve();dest.mkdir(parents=True,exist_ok=False)
@@ -100,7 +100,7 @@ def prepare(destination,*,python=sys.executable,ffmpeg='/opt/homebrew/bin/ffmpeg
             dump(dest/(task+'-'+variant+'-'+mode+'.private.json'),record)
         return record
     with ThreadPoolExecutor(max_workers=3) as pool:media=list(pool.map(check,jobs))
-    prepared=dict(schema='videoicl-execution-v2-qa-preparation-v1',revision=revision,tasks=tasks,
+    prepared=dict(schema='iclworld-execution-v2-qa-preparation-v1',revision=revision,tasks=tasks,
         checked_utc=datetime.now(timezone.utc).isoformat(),sdk_files=sdk['files'],
         integration_test=dict(path=junit.name,sha256=sha(junit),source_sha256=sha(tests),passed=True,command=command),
         media=media,model_launch_enabled=False,model_calls=0,simulation_starts=0,

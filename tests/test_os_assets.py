@@ -14,11 +14,11 @@ from unittest.mock import patch
 
 CODEBASE = Path(__file__).resolve().parents[1]
 PLATFORM = CODEBASE / 'environment' / 'platform'
-os.environ['VIC_ROOT'] = str(PLATFORM)
+os.environ['ICLWORLD_ROOT'] = str(PLATFORM)
 sys.path.insert(0, str(PLATFORM / 'services' / 'control'))
 from fastapi import FastAPI
 from fastapi.testclient import TestClient
-from vic import os_integration
+from iclworld_control import os_integration
 
 
 class PackagedOSAssets(unittest.TestCase):
@@ -50,13 +50,13 @@ class PackagedOSAssets(unittest.TestCase):
                         content = (static / ('desktop.' + suffix)).read_bytes()
                         if suffix == 'js':
                             content = content.decode().replace('fetch(url,', 'fetch("/os-sim/osl_assets" + url,').replace("${btn('task-info','Task instructions')}", '').encode()
-                        if condition == 'E':
+                        if condition == 'relocate':
                             content += b'\n' + (PLATFORM / 'scripts' / ('os_alternate_desktop.' + suffix)).read_bytes()
                         self.assertEqual(response.content, content)
-                        self.assertEqual('aurora' in response.text.lower(), condition == 'E')
-    def test_e_serves_alternate_js_and_css(self): self.check_condition('E')
-    def test_i_serves_native_js_and_css(self): self.check_condition('I')
-    def test_r_serves_native_js_and_css(self): self.check_condition('R')
+                        self.assertEqual('aurora' in response.text.lower(), condition == 'relocate')
+    def test_e_serves_alternate_js_and_css(self): self.check_condition('relocate')
+    def test_i_serves_native_js_and_css(self): self.check_condition('resample')
+    def test_r_serves_native_js_and_css(self): self.check_condition('replay')
 
 if __name__ == '__main__':
     unittest.main()

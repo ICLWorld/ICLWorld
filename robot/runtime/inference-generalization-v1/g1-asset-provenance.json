@@ -1,15 +1,15 @@
 {
-  "schema": "videoicl-g1-asset-provenance-v1",
+  "schema": "iclworld-g1-asset-provenance-v1",
   "generator": "scripts/build_inference_g1_assets.py",
   "generator_sha256": "5c8abe4bee93490a9fce1672eaee1be5f3f66b615ede23d488526c2fadc72632",
   "policy": "Inference-only assets; G0, environment, demo and ABC goal semantics unchanged. Native physics acceptance is separate, never inferred from mesh generation.",
   "assets": [
     {
-      "task": "E01",
+      "task": "iclworld_robot_01",
       "object": "burger",
       "kind": "burger",
       "original_source": {
-        "root_env": "VIC_FULL50_RIGID_ASSETS",
+        "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
         "relative_path": "burger0.usda",
         "sha256": "e2fae563a673cc56086d70610df8faf86cf7f87746f72f71a4477aad5220ab2e",
         "source_rotation": [
@@ -27,7 +27,7 @@
         "allow_nonuniform_scale": true,
         "instance_adaptation": "Reviewed source mesh resizing to video-estimated dimensions; same geometry in all ABC"
       },
-      "asset": "g1/E01/burger.usda",
+      "asset": "g1/iclworld_robot_01/burger.usda",
       "sha256": "10892bdd8cf21aaa7c9603836f0fa6648e931925046f892942314b707a8d1005",
       "half_extents": [
         0.038,
@@ -41,11 +41,11 @@
       "native_verified": false
     },
     {
-      "task": "E01",
+      "task": "iclworld_robot_01",
       "object": "fries",
       "kind": "fries",
       "original_source": {
-        "root_env": "VIC_FULL50_RIGID_ASSETS",
+        "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
         "relative_path": "fries0.usda",
         "sha256": "80885424fb976c87ab6fd971fbbe22318078bb1794c65a692fe04b6ab514a6b0",
         "source_rotation": [
@@ -63,7 +63,7 @@
         "allow_nonuniform_scale": true,
         "instance_adaptation": "Reviewed source mesh resizing to video-estimated dimensions; same geometry in all ABC"
       },
-      "asset": "g1/E01/fries.usda",
+      "asset": "g1/iclworld_robot_01/fries.usda",
       "sha256": "84d3dfa3ddfc46a24f9a47641031e7af5ab901dc3d0d3236c25ea2e5be048ead",
       "half_extents": [
         0.04,
@@ -77,11 +77,11 @@
       "native_verified": false
     },
     {
-      "task": "E01",
+      "task": "iclworld_robot_01",
       "object": "drink",
       "kind": "drink",
       "original_source": {
-        "root_env": "VIC_FULL50_RIGID_ASSETS",
+        "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
         "relative_path": "drink_cup.usda",
         "sha256": "e7949db2a99658e7daf57ab10cd193d0e218b1c274c92c30def95aec7eda6d10",
         "source_rotation": [
@@ -99,7 +99,7 @@
         "allow_nonuniform_scale": true,
         "instance_adaptation": "Reviewed source mesh resizing to video-estimated dimensions; same geometry in all ABC"
       },
-      "asset": "g1/E01/drink.usda",
+      "asset": "g1/iclworld_robot_01/drink.usda",
       "sha256": "a820ed9d267e83bbaa893e6bd4d508e5d4b67204233916ae1b3bf327bb1252ef",
       "half_extents": [
         0.031,
@@ -113,11 +113,11 @@
       "native_verified": false
     },
     {
-      "task": "E02",
+      "task": "iclworld_robot_02",
       "object": "red",
       "kind": "soap",
       "original_source": {
-        "root_env": "VIC_FULL50_RIGID_ASSETS",
+        "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
         "relative_path": "source_four_hole_plate.usda",
         "sha256": "fed57b9b0e69a5b8b98d75324ed6856c0cdb21ebc56c8f98cb372670255b61bb",
         "source_rotation": [
@@ -130,7 +130,7 @@
         "allow_nonuniform_scale": true,
         "instance_adaptation": "Reviewed source-dimension scaling; same actual mesh in ABC"
       },
-      "asset": "g1/E02/red.usda",
+      "asset": "g1/iclworld_robot_02/red.usda",
       "sha256": "242e102c4c78bfe09f6b7015d8f523735ac4bc3fdcbafa24b1fd5bd2fefe1fe3",
       "half_extents": [
         0.02,
@@ -144,11 +144,11 @@
       "native_verified": false
     },
     {
-      "task": "E02",
+      "task": "iclworld_robot_02",
       "object": "blue",
       "kind": "soap",
       "original_source": {
-        "root_env": "VIC_FULL50_RIGID_ASSETS",
+        "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
         "relative_path": "source_four_hole_plate.usda",
         "sha256": "fed57b9b0e69a5b8b98d75324ed6856c0cdb21ebc56c8f98cb372670255b61bb",
         "source_rotation": [
@@ -161,7 +161,7 @@
         "allow_nonuniform_scale": true,
         "instance_adaptation": "Reviewed source-dimension scaling; same actual mesh in ABC"
       },
-      "asset": "g1/E02/blue.usda",
+      "asset": "g1/iclworld_robot_02/blue.usda",
       "sha256": "773e36fa189283650469c4e481fedf5352e114280f0075177addd2df8975affa",
       "half_extents": [
         0.02,
@@ -175,11 +175,11 @@
       "native_verified": false
     },
     {
-      "task": "E02",
+      "task": "iclworld_robot_02",
       "object": "green",
       "kind": "soap",
       "original_source": {
-        "root_env": "VIC_FULL50_RIGID_ASSETS",
+        "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
         "relative_path": "source_four_hole_plate.usda",
         "sha256": "fed57b9b0e69a5b8b98d75324ed6856c0cdb21ebc56c8f98cb372670255b61bb",
         "source_rotation": [
@@ -192,7 +192,7 @@
         "allow_nonuniform_scale": true,
         "instance_adaptation": "Reviewed source-dimension scaling; same actual mesh in ABC"
       },
-      "asset": "g1/E02/green.usda",
+      "asset": "g1/iclworld_robot_02/green.usda",
       "sha256": "5205ca573e116bbbfaf0c03d73561fb47d84b50d033dec8354fabc4de57eba31",
       "half_extents": [
         0.02,
@@ -206,11 +206,11 @@
       "native_verified": false
     },
     {
-      "task": "E08",
+      "task": "iclworld_robot_08",
       "object": "left_shoe",
       "kind": "left_shoe",
       "original_source": {
-        "root_env": "VIC_FULL50_RIGID_ASSETS",
+        "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
         "relative_path": "formal_shoe_left.usda",
         "sha256": "fdd7d78b574ad7bd52485d063fbb48621a02651cd174235cfd6bd9f7b2e40b32",
         "source_rotation": [
@@ -244,7 +244,7 @@
         "allow_nonuniform_scale": true,
         "instance_adaptation": "Reviewed labeled-box height110mm / unchanged source shoe aspect; identical in ABC"
       },
-      "asset": "g1/E08/left_shoe.usda",
+      "asset": "g1/iclworld_robot_08/left_shoe.usda",
       "sha256": "73e3aeb29a100c20721121ef81b8a9a2ad0597b2e7c65538e8d9257cdd12157d",
       "half_extents": [
         0.13,
@@ -258,11 +258,11 @@
       "native_verified": false
     },
     {
-      "task": "E08",
+      "task": "iclworld_robot_08",
       "object": "right_shoe",
       "kind": "right_shoe",
       "original_source": {
-        "root_env": "VIC_FULL50_RIGID_ASSETS",
+        "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
         "relative_path": "formal_shoe_right.usda",
         "sha256": "d47101e06a14ea63e22b76f3444fce6bd4faf4e1a33ed3c38c0cd603c339e3b2",
         "source_rotation": [
@@ -296,7 +296,7 @@
         "allow_nonuniform_scale": true,
         "instance_adaptation": "Reviewed labeled-box height110mm / unchanged source shoe aspect; identical in ABC"
       },
-      "asset": "g1/E08/right_shoe.usda",
+      "asset": "g1/iclworld_robot_08/right_shoe.usda",
       "sha256": "553cfaa4cdad388a9a5093cbdd1c739152aa5088c62bbbffa2db84cebf123c87",
       "half_extents": [
         0.13,
@@ -310,11 +310,11 @@
       "native_verified": false
     },
     {
-      "task": "E13",
+      "task": "iclworld_robot_13",
       "object": "phone",
       "kind": "tablet",
       "original_source": {
-        "root_env": "VIC_FULL50_RIGID_ASSETS",
+        "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
         "relative_path": "phone_triple_camera_dark.usda",
         "sha256": "877328ef32ace63e63f7ed3c60de990f5f3532a17208e1e74143bfb794c7f6bb",
         "source_rotation": [
@@ -358,7 +358,7 @@
           }
         ]
       },
-      "asset": "g1/E13/phone.usda",
+      "asset": "g1/iclworld_robot_13/phone.usda",
       "sha256": "116f9b5f7061ddf5532fb10f603ad88d03f0da52d23b74105a372ec6e18ad44c",
       "half_extents": [
         0.075,
@@ -372,11 +372,11 @@
       "native_verified": false
     },
     {
-      "task": "E14",
+      "task": "iclworld_robot_14",
       "object": "red",
       "kind": "book",
       "original_source": {
-        "root_env": "VIC_FULL50_RIGID_ASSETS",
+        "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
         "relative_path": "source_four_hole_plate.usda",
         "sha256": "fed57b9b0e69a5b8b98d75324ed6856c0cdb21ebc56c8f98cb372670255b61bb",
         "source_rotation": [
@@ -389,7 +389,7 @@
         "allow_nonuniform_scale": true,
         "instance_adaptation": "Reviewed source-dimension scaling; same actual mesh in ABC"
       },
-      "asset": "g1/E14/red.usda",
+      "asset": "g1/iclworld_robot_14/red.usda",
       "sha256": "914f90a6c1b6dcf6931196a97a470a38ae84a6d9509971c0a56101d83d85d5dc",
       "half_extents": [
         0.02,
@@ -403,11 +403,11 @@
       "native_verified": false
     },
     {
-      "task": "E14",
+      "task": "iclworld_robot_14",
       "object": "yellow",
       "kind": "book",
       "original_source": {
-        "root_env": "VIC_FULL50_RIGID_ASSETS",
+        "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
         "relative_path": "source_four_hole_plate.usda",
         "sha256": "fed57b9b0e69a5b8b98d75324ed6856c0cdb21ebc56c8f98cb372670255b61bb",
         "source_rotation": [
@@ -420,7 +420,7 @@
         "allow_nonuniform_scale": true,
         "instance_adaptation": "Reviewed source-dimension scaling; same actual mesh in ABC"
       },
-      "asset": "g1/E14/yellow.usda",
+      "asset": "g1/iclworld_robot_14/yellow.usda",
       "sha256": "a46a2808de3b5be0761f2734bfa23d8179bdaeb8815510474eefd596bd871dc8",
       "half_extents": [
         0.02,
@@ -434,11 +434,11 @@
       "native_verified": false
     },
     {
-      "task": "E14",
+      "task": "iclworld_robot_14",
       "object": "blue",
       "kind": "book",
       "original_source": {
-        "root_env": "VIC_FULL50_RIGID_ASSETS",
+        "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
         "relative_path": "source_four_hole_plate.usda",
         "sha256": "fed57b9b0e69a5b8b98d75324ed6856c0cdb21ebc56c8f98cb372670255b61bb",
         "source_rotation": [
@@ -451,7 +451,7 @@
         "allow_nonuniform_scale": true,
         "instance_adaptation": "Reviewed source-dimension scaling; same actual mesh in ABC"
       },
-      "asset": "g1/E14/blue.usda",
+      "asset": "g1/iclworld_robot_14/blue.usda",
       "sha256": "7213ef16261e2c3bc3fb7c2e298ed6c9dc184409f6cb6dde17be81f7768e345c",
       "half_extents": [
         0.02,
@@ -465,11 +465,11 @@
       "native_verified": false
     },
     {
-      "task": "E14",
+      "task": "iclworld_robot_14",
       "object": "green",
       "kind": "book",
       "original_source": {
-        "root_env": "VIC_FULL50_RIGID_ASSETS",
+        "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
         "relative_path": "source_four_hole_plate.usda",
         "sha256": "fed57b9b0e69a5b8b98d75324ed6856c0cdb21ebc56c8f98cb372670255b61bb",
         "source_rotation": [
@@ -482,7 +482,7 @@
         "allow_nonuniform_scale": true,
         "instance_adaptation": "Reviewed source-dimension scaling; same actual mesh in ABC"
       },
-      "asset": "g1/E14/green.usda",
+      "asset": "g1/iclworld_robot_14/green.usda",
       "sha256": "b59fd9056638a485a17aed7b3b998421a61c55151fdfa9d0fb46a2ff3c9372bd",
       "half_extents": [
         0.02,
@@ -496,11 +496,11 @@
       "native_verified": false
     },
     {
-      "task": "E15",
+      "task": "iclworld_robot_15",
       "object": "red_t",
       "kind": "airplane",
       "original_source": {
-        "root_env": "VIC_FULL50_RIGID_ASSETS",
+        "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
         "relative_path": "native_t0.usdz",
         "sha256": "98bae9ae3dddf67e58004695930c09f3d36f715dfa2bf5d65d1ed2b7179fa493",
         "source_rotation": [
@@ -511,7 +511,7 @@
         ],
         "dependencies": []
       },
-      "asset": "g1/E15/red_t.usda",
+      "asset": "g1/iclworld_robot_15/red_t.usda",
       "sha256": "08bc3a5a885a0df50857e1c1e47591a7853f07b5d9571f43875f0864ef38b845",
       "half_extents": [
         0.025999999418854714,
@@ -525,11 +525,11 @@
       "native_verified": false
     },
     {
-      "task": "E15",
+      "task": "iclworld_robot_15",
       "object": "blue_t",
       "kind": "airplane",
       "original_source": {
-        "root_env": "VIC_FULL50_RIGID_ASSETS",
+        "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
         "relative_path": "native_t1.usdz",
         "sha256": "f6634d82aa7e5a389b17f8ce40af445a82e156a02c1c45d08c64838b6c41b7c2",
         "source_rotation": [
@@ -540,7 +540,7 @@
         ],
         "dependencies": []
       },
-      "asset": "g1/E15/blue_t.usda",
+      "asset": "g1/iclworld_robot_15/blue_t.usda",
       "sha256": "270702538598eae8dc4351fb9498d937a8418a8413130eba0fa451e3ea670e8f",
       "half_extents": [
         0.025999999418854714,
@@ -554,11 +554,11 @@
       "native_verified": false
     },
     {
-      "task": "E16",
+      "task": "iclworld_robot_16",
       "object": "red_t",
       "kind": "car",
       "original_source": {
-        "root_env": "VIC_FULL50_RIGID_ASSETS",
+        "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
         "relative_path": "native_t0.usdz",
         "sha256": "98bae9ae3dddf67e58004695930c09f3d36f715dfa2bf5d65d1ed2b7179fa493",
         "source_rotation": [
@@ -569,7 +569,7 @@
         ],
         "dependencies": []
       },
-      "asset": "g1/E16/red_t.usda",
+      "asset": "g1/iclworld_robot_16/red_t.usda",
       "sha256": "3777ed4d11099eaa4c1704d58047e9d1a9468b33895c9ba570006d856d6aa717",
       "half_extents": [
         0.026,
@@ -583,11 +583,11 @@
       "native_verified": false
     },
     {
-      "task": "E16",
+      "task": "iclworld_robot_16",
       "object": "blue_t",
       "kind": "car",
       "original_source": {
-        "root_env": "VIC_FULL50_RIGID_ASSETS",
+        "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
         "relative_path": "native_t0.usdz",
         "sha256": "98bae9ae3dddf67e58004695930c09f3d36f715dfa2bf5d65d1ed2b7179fa493",
         "source_rotation": [
@@ -598,7 +598,7 @@
         ],
         "dependencies": []
       },
-      "asset": "g1/E16/blue_t.usda",
+      "asset": "g1/iclworld_robot_16/blue_t.usda",
       "sha256": "4203810ed6eba5948f4644c4e8c616d67c57b425e57c86dda41542c6cdde9d57",
       "half_extents": [
         0.026,
@@ -612,11 +612,11 @@
       "native_verified": false
     },
     {
-      "task": "E16",
+      "task": "iclworld_robot_16",
       "object": "black_t",
       "kind": "car",
       "original_source": {
-        "root_env": "VIC_FULL50_RIGID_ASSETS",
+        "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
         "relative_path": "native_t0.usdz",
         "sha256": "98bae9ae3dddf67e58004695930c09f3d36f715dfa2bf5d65d1ed2b7179fa493",
         "source_rotation": [
@@ -627,7 +627,7 @@
         ],
         "dependencies": []
       },
-      "asset": "g1/E16/black_t.usda",
+      "asset": "g1/iclworld_robot_16/black_t.usda",
       "sha256": "15da96821c0e4082b50db65604949707e01888538d533a990cc91ec1afac3f0d",
       "half_extents": [
         0.026,
@@ -641,11 +641,11 @@
       "native_verified": false
     },
     {
-      "task": "E17",
+      "task": "iclworld_robot_17",
       "object": "blue_square",
       "kind": "square_pastry",
       "original_source": {
-        "root_env": "VIC_FULL50_RIGID_ASSETS",
+        "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
         "relative_path": "source_four_hole_plate.usda",
         "sha256": "fed57b9b0e69a5b8b98d75324ed6856c0cdb21ebc56c8f98cb372670255b61bb",
         "source_rotation": [
@@ -656,7 +656,7 @@
         ],
         "dependencies": []
       },
-      "asset": "g1/E17/blue_square.usda",
+      "asset": "g1/iclworld_robot_17/blue_square.usda",
       "sha256": "635f4b56fa1ecce1ef0b7edbe00e6b1ec821d612264b5ebe15a306ddd101a0b3",
       "half_extents": [
         0.019999999552965164,
@@ -670,11 +670,11 @@
       "native_verified": false
     },
     {
-      "task": "E17",
+      "task": "iclworld_robot_17",
       "object": "blue_triangle",
       "kind": "triangle_pastry",
       "original_source": {
-        "root_env": "VIC_FULL50_RIGID_ASSETS",
+        "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
         "relative_path": "source_three_hole_triangle_v2.usda",
         "sha256": "caae5e783af9afae7ee6c1933e42a1654d746635873c7a1bb221ea4554a70e7b",
         "source_rotation": [
@@ -685,7 +685,7 @@
         ],
         "dependencies": []
       },
-      "asset": "g1/E17/blue_triangle.usda",
+      "asset": "g1/iclworld_robot_17/blue_triangle.usda",
       "sha256": "dd799ffe8e5a0b02518639f561be231948bd0f714e8aadc1347688c121f2ca66",
       "half_extents": [
         0.019999999552965164,
@@ -699,11 +699,11 @@
       "native_verified": false
     },
     {
-      "task": "E17",
+      "task": "iclworld_robot_17",
       "object": "green_square",
       "kind": "square_pastry",
       "original_source": {
-        "root_env": "VIC_FULL50_RIGID_ASSETS",
+        "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
         "relative_path": "source_four_hole_plate.usda",
         "sha256": "fed57b9b0e69a5b8b98d75324ed6856c0cdb21ebc56c8f98cb372670255b61bb",
         "source_rotation": [
@@ -714,7 +714,7 @@
         ],
         "dependencies": []
       },
-      "asset": "g1/E17/green_square.usda",
+      "asset": "g1/iclworld_robot_17/green_square.usda",
       "sha256": "6ed2276154cdac04620e4c7b1b4c4ee04fb186553af630f259e5cd7f42c542c7",
       "half_extents": [
         0.019999999552965164,
@@ -728,11 +728,11 @@
       "native_verified": false
     },
     {
-      "task": "E17",
+      "task": "iclworld_robot_17",
       "object": "green_triangle",
       "kind": "triangle_pastry",
       "original_source": {
-        "root_env": "VIC_FULL50_RIGID_ASSETS",
+        "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
         "relative_path": "source_three_hole_triangle_v2.usda",
         "sha256": "caae5e783af9afae7ee6c1933e42a1654d746635873c7a1bb221ea4554a70e7b",
         "source_rotation": [
@@ -743,7 +743,7 @@
         ],
         "dependencies": []
       },
-      "asset": "g1/E17/green_triangle.usda",
+      "asset": "g1/iclworld_robot_17/green_triangle.usda",
       "sha256": "81597a9cad3ec39b271a887c3fe54ccb59480a768b40f4eefaea82d210ae0865",
       "half_extents": [
         0.019999999552965164,
@@ -757,11 +757,11 @@
       "native_verified": false
     },
     {
-      "task": "E18",
+      "task": "iclworld_robot_18",
       "object": "red",
       "kind": "apple",
       "original_source": {
-        "root_env": "VIC_FULL50_RIGID_ASSETS",
+        "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
         "relative_path": "sphere_white.usda",
         "sha256": "257fb8afcd8eb2787aa4c59fd39314b036f78287e4d277f210168048f8becc1a",
         "source_rotation": [
@@ -772,7 +772,7 @@
         ],
         "dependencies": []
       },
-      "asset": "g1/E18/red.usda",
+      "asset": "g1/iclworld_robot_18/red.usda",
       "sha256": "3139780b149f4d1427b25cc1312fee9b474601363eb9fd3d0ce1873dcbabdf05",
       "half_extents": [
         0.014628151948382623,
@@ -786,11 +786,11 @@
       "native_verified": false
     },
     {
-      "task": "E18",
+      "task": "iclworld_robot_18",
       "object": "green",
       "kind": "pear",
       "original_source": {
-        "root_env": "VIC_FULL50_RIGID_ASSETS",
+        "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
         "relative_path": "sphere_white.usda",
         "sha256": "257fb8afcd8eb2787aa4c59fd39314b036f78287e4d277f210168048f8becc1a",
         "source_rotation": [
@@ -801,7 +801,7 @@
         ],
         "dependencies": []
       },
-      "asset": "g1/E18/green.usda",
+      "asset": "g1/iclworld_robot_18/green.usda",
       "sha256": "03daeb4af4522cacc6cfe3c424fcf595b6f99897849215e3b50db8c78c2dc74c",
       "half_extents": [
         0.014628151948382623,
@@ -815,11 +815,11 @@
       "native_verified": false
     },
     {
-      "task": "E18",
+      "task": "iclworld_robot_18",
       "object": "blue",
       "kind": "jar",
       "original_source": {
-        "root_env": "VIC_FULL50_RIGID_ASSETS",
+        "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
         "relative_path": "sphere_white.usda",
         "sha256": "257fb8afcd8eb2787aa4c59fd39314b036f78287e4d277f210168048f8becc1a",
         "source_rotation": [
@@ -830,7 +830,7 @@
         ],
         "dependencies": []
       },
-      "asset": "g1/E18/blue.usda",
+      "asset": "g1/iclworld_robot_18/blue.usda",
       "sha256": "10cd6b2d2a2472eb3777552aedf3d5fbfc00cbbb2525d0439f7e064c2785c943",
       "half_extents": [
         0.014628151948382623,
@@ -844,11 +844,11 @@
       "native_verified": false
     },
     {
-      "task": "E21",
+      "task": "iclworld_robot_21",
       "object": "green_block",
       "kind": "candle",
       "original_source": {
-        "root_env": "VIC_FULL50_RIGID_ASSETS",
+        "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
         "relative_path": "source_four_hole_plate.usda",
         "sha256": "fed57b9b0e69a5b8b98d75324ed6856c0cdb21ebc56c8f98cb372670255b61bb",
         "source_rotation": [
@@ -859,7 +859,7 @@
         ],
         "dependencies": []
       },
-      "asset": "g1/E21/green_block.usda",
+      "asset": "g1/iclworld_robot_21/green_block.usda",
       "sha256": "b1494d1ca3dd639c9e45850596aaab5bb9214b0bc545d4e65e37153f5f9f42f1",
       "half_extents": [
         0.02,
@@ -873,11 +873,11 @@
       "native_verified": false
     },
     {
-      "task": "E21",
+      "task": "iclworld_robot_21",
       "object": "yellow_block",
       "kind": "candle",
       "original_source": {
-        "root_env": "VIC_FULL50_RIGID_ASSETS",
+        "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
         "relative_path": "source_four_hole_plate.usda",
         "sha256": "fed57b9b0e69a5b8b98d75324ed6856c0cdb21ebc56c8f98cb372670255b61bb",
         "source_rotation": [
@@ -888,7 +888,7 @@
         ],
         "dependencies": []
       },
-      "asset": "g1/E21/yellow_block.usda",
+      "asset": "g1/iclworld_robot_21/yellow_block.usda",
       "sha256": "5e02948a362cb39c83e20f1a4bc3293025bcd4931e361e6265c219071e2f9b01",
       "half_extents": [
         0.02,
@@ -902,11 +902,11 @@
       "native_verified": false
     },
     {
-      "task": "E21",
+      "task": "iclworld_robot_21",
       "object": "blue_block",
       "kind": "candle",
       "original_source": {
-        "root_env": "VIC_FULL50_RIGID_ASSETS",
+        "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
         "relative_path": "source_four_hole_plate.usda",
         "sha256": "fed57b9b0e69a5b8b98d75324ed6856c0cdb21ebc56c8f98cb372670255b61bb",
         "source_rotation": [
@@ -917,7 +917,7 @@
         ],
         "dependencies": []
       },
-      "asset": "g1/E21/blue_block.usda",
+      "asset": "g1/iclworld_robot_21/blue_block.usda",
       "sha256": "73f520aab284ac6a5d97efb9edb082a06a8e031c04c5314fdb39814684b155d1",
       "half_extents": [
         0.02,
@@ -931,11 +931,11 @@
       "native_verified": false
     },
     {
-      "task": "E21",
+      "task": "iclworld_robot_21",
       "object": "red_block",
       "kind": "candle",
       "original_source": {
-        "root_env": "VIC_FULL50_RIGID_ASSETS",
+        "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
         "relative_path": "source_four_hole_plate.usda",
         "sha256": "fed57b9b0e69a5b8b98d75324ed6856c0cdb21ebc56c8f98cb372670255b61bb",
         "source_rotation": [
@@ -946,7 +946,7 @@
         ],
         "dependencies": []
       },
-      "asset": "g1/E21/red_block.usda",
+      "asset": "g1/iclworld_robot_21/red_block.usda",
       "sha256": "16b7b4155ea3df33f3d5e1d3990202589965bc402179c96170768a0c671690c1",
       "half_extents": [
         0.02,
@@ -960,11 +960,11 @@
       "native_verified": false
     },
     {
-      "task": "E22",
+      "task": "iclworld_robot_22",
       "object": "red_block",
       "kind": "apple",
       "original_source": {
-        "root_env": "VIC_FULL50_RIGID_ASSETS",
+        "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
         "relative_path": "source_four_hole_plate.usda",
         "sha256": "fed57b9b0e69a5b8b98d75324ed6856c0cdb21ebc56c8f98cb372670255b61bb",
         "source_rotation": [
@@ -975,7 +975,7 @@
         ],
         "dependencies": []
       },
-      "asset": "g1/E22/red_block.usda",
+      "asset": "g1/iclworld_robot_22/red_block.usda",
       "sha256": "9fc6209cb448ca95ee245200119465d710174d3be3ab007234e16cf7ff834f9e",
       "half_extents": [
         0.02,
@@ -989,11 +989,11 @@
       "native_verified": false
     },
     {
-      "task": "E22",
+      "task": "iclworld_robot_22",
       "object": "blue_block",
       "kind": "jar",
       "original_source": {
-        "root_env": "VIC_FULL50_RIGID_ASSETS",
+        "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
         "relative_path": "source_four_hole_plate.usda",
         "sha256": "fed57b9b0e69a5b8b98d75324ed6856c0cdb21ebc56c8f98cb372670255b61bb",
         "source_rotation": [
@@ -1004,7 +1004,7 @@
         ],
         "dependencies": []
       },
-      "asset": "g1/E22/blue_block.usda",
+      "asset": "g1/iclworld_robot_22/blue_block.usda",
       "sha256": "d58c4a211d84852bc217016389122e262540c6380daa0a5838fa0bc7c827a8c1",
       "half_extents": [
         0.02,
@@ -1018,11 +1018,11 @@
       "native_verified": false
     },
     {
-      "task": "E22",
+      "task": "iclworld_robot_22",
       "object": "green_block",
       "kind": "pear",
       "original_source": {
-        "root_env": "VIC_FULL50_RIGID_ASSETS",
+        "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
         "relative_path": "source_four_hole_plate.usda",
         "sha256": "fed57b9b0e69a5b8b98d75324ed6856c0cdb21ebc56c8f98cb372670255b61bb",
         "source_rotation": [
@@ -1033,7 +1033,7 @@
         ],
         "dependencies": []
       },
-      "asset": "g1/E22/green_block.usda",
+      "asset": "g1/iclworld_robot_22/green_block.usda",
       "sha256": "7189a7b9e0cf032986f9467c04f042c92f80317b5c1ca843de755d48ba02e179",
       "half_extents": [
         0.02,
@@ -1047,11 +1047,11 @@
       "native_verified": false
     },
     {
-      "task": "E24",
+      "task": "iclworld_robot_24",
       "object": "red",
       "kind": "yarn",
       "original_source": {
-        "root_env": "VIC_MECHANISM_ASSETS",
+        "root_env": "ICLWORLD_MECHANISM_ASSETS",
         "relative_path": "hollow_cup.usda",
         "sha256": "c9d82475379f3bc83666d97222a3c55a39f3334f97eb9ed02df4efab84183b5b",
         "dependencies": [
@@ -1075,7 +1075,7 @@
           0
         ]
       },
-      "asset": "g1/E24/red.usda",
+      "asset": "g1/iclworld_robot_24/red.usda",
       "sha256": "f5a400294a80dcbfa17fd2cc7cd34e72190aca0c94521856232ef7a430d24a9a",
       "half_extents": [
         0.04127701522395277,
@@ -1089,11 +1089,11 @@
       "native_verified": false
     },
     {
-      "task": "E24",
+      "task": "iclworld_robot_24",
       "object": "green",
       "kind": "yarn",
       "original_source": {
-        "root_env": "VIC_MECHANISM_ASSETS",
+        "root_env": "ICLWORLD_MECHANISM_ASSETS",
         "relative_path": "hollow_cup.usda",
         "sha256": "c9d82475379f3bc83666d97222a3c55a39f3334f97eb9ed02df4efab84183b5b",
         "dependencies": [
@@ -1117,7 +1117,7 @@
           0
         ]
       },
-      "asset": "g1/E24/green.usda",
+      "asset": "g1/iclworld_robot_24/green.usda",
       "sha256": "7935376acbc17c5d29d3991d299644c8d5c8adf6ed30aa398d0af875fb7386b7",
       "half_extents": [
         0.04127701522395277,
@@ -1131,11 +1131,11 @@
       "native_verified": false
     },
     {
-      "task": "E24",
+      "task": "iclworld_robot_24",
       "object": "blue",
       "kind": "yarn",
       "original_source": {
-        "root_env": "VIC_MECHANISM_ASSETS",
+        "root_env": "ICLWORLD_MECHANISM_ASSETS",
         "relative_path": "hollow_cup.usda",
         "sha256": "c9d82475379f3bc83666d97222a3c55a39f3334f97eb9ed02df4efab84183b5b",
         "dependencies": [
@@ -1159,7 +1159,7 @@
           0
         ]
       },
-      "asset": "g1/E24/blue.usda",
+      "asset": "g1/iclworld_robot_24/blue.usda",
       "sha256": "1f68001bc7299d0a2d3919fc991a1a9e8287d84f046eb5a65edfc06b1ae7f54e",
       "half_extents": [
         0.04127701522395277,
@@ -1173,11 +1173,11 @@
       "native_verified": false
     },
     {
-      "task": "E25",
+      "task": "iclworld_robot_25",
       "object": "spoon",
       "kind": "spoon",
       "original_source": {
-        "root_env": "VIC_FULL50_RIGID_ASSETS",
+        "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
         "relative_path": "ycb_spoon_aligned.usda",
         "sha256": "57eca21e894ebd2ef3a091127be5a51d4baf04e3da9bf06f90454a1f01040c4e",
         "source_rotation": [
@@ -1193,7 +1193,7 @@
           }
         ]
       },
-      "asset": "g1/E25/spoon.usda",
+      "asset": "g1/iclworld_robot_25/spoon.usda",
       "sha256": "6f305675d6d2eaf38b8ddc29bd7944a6f545c664e19de1ead5400fa0f79ed49f",
       "half_extents": [
         0.09,
@@ -1207,11 +1207,11 @@
       "native_verified": false
     },
     {
-      "task": "E25",
+      "task": "iclworld_robot_25",
       "object": "knife",
       "kind": "knife",
       "original_source": {
-        "root_env": "VIC_FULL50_RIGID_ASSETS",
+        "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
         "relative_path": "ycb_knife.usda",
         "sha256": "8d7e874a9fa51024264e6a9afb1b5c03cff586fc26f5b1eb417de57445dac18d",
         "source_rotation": [
@@ -1227,7 +1227,7 @@
           }
         ]
       },
-      "asset": "g1/E25/knife.usda",
+      "asset": "g1/iclworld_robot_25/knife.usda",
       "sha256": "164d3a831e9cce17cace0dcf629c6e5c419c986894a2493617623a105ff0fd1d",
       "half_extents": [
         0.1,
@@ -1241,11 +1241,11 @@
       "native_verified": false
     },
     {
-      "task": "E25",
+      "task": "iclworld_robot_25",
       "object": "fork",
       "kind": "fork",
       "original_source": {
-        "root_env": "VIC_FULL50_RIGID_ASSETS",
+        "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
         "relative_path": "fork.usda",
         "sha256": "134d334cc03851a697ada7cd31bfec4218ba3917a9dae084fcda4c6b62c918d6",
         "source_rotation": [
@@ -1261,7 +1261,7 @@
           }
         ]
       },
-      "asset": "g1/E25/fork.usda",
+      "asset": "g1/iclworld_robot_25/fork.usda",
       "sha256": "53e5eedb6de6627e5757e874f22be080920485658fb18014feafd129d282c97a",
       "half_extents": [
         0.09500000000000001,
@@ -1275,11 +1275,11 @@
       "native_verified": false
     },
     {
-      "task": "E27",
+      "task": "iclworld_robot_27",
       "object": "spoon",
       "kind": "spoon",
       "original_source": {
-        "root_env": "VIC_FULL50_RIGID_ASSETS",
+        "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
         "relative_path": "ycb_spoon_aligned.usda",
         "sha256": "57eca21e894ebd2ef3a091127be5a51d4baf04e3da9bf06f90454a1f01040c4e",
         "source_rotation": [
@@ -1295,7 +1295,7 @@
           }
         ]
       },
-      "asset": "g1/E27/spoon.usda",
+      "asset": "g1/iclworld_robot_27/spoon.usda",
       "sha256": "6f305675d6d2eaf38b8ddc29bd7944a6f545c664e19de1ead5400fa0f79ed49f",
       "half_extents": [
         0.09,
@@ -1309,11 +1309,11 @@
       "native_verified": false
     },
     {
-      "task": "E27",
+      "task": "iclworld_robot_27",
       "object": "fork",
       "kind": "fork",
       "original_source": {
-        "root_env": "VIC_FULL50_RIGID_ASSETS",
+        "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
         "relative_path": "fork.usda",
         "sha256": "134d334cc03851a697ada7cd31bfec4218ba3917a9dae084fcda4c6b62c918d6",
         "source_rotation": [
@@ -1329,7 +1329,7 @@
           }
         ]
       },
-      "asset": "g1/E27/fork.usda",
+      "asset": "g1/iclworld_robot_27/fork.usda",
       "sha256": "53e5eedb6de6627e5757e874f22be080920485658fb18014feafd129d282c97a",
       "half_extents": [
         0.09500000000000001,
@@ -1343,20 +1343,20 @@
       "native_verified": false
     },
     {
-      "task": "E30",
-      "asset": "g1/E30/cabinet_g1_frame.usda",
-      "sha256": "e75effe97ce2bc8a92f062d77d01cc8c6541f839b774a4eacfa7e2ccd9cf8635",
-      "original_sha256": "5fda0eee3704c225d31a066701009cce8d9721008ea6e424ea2b0ebba000aecc",
+      "task": "iclworld_robot_30",
+      "asset": "g1/iclworld_robot_30/cabinet_g1_frame.usda",
+      "sha256": "dc467993be2d89ef1573cb9e3e700f09ad30e52a9a3993dadf32821427ab7004",
+      "original_sha256": "56082a1b788f9def5d08dc3dcb91713d7641f88b5a1edd0cb28db4f827d60542",
       "kind": "framed_two_tier_cabinet",
       "physics": "retained_source_joint_and_collision_definitions",
       "native_verified": false
     },
     {
-      "task": "E34",
+      "task": "iclworld_robot_34",
       "object": "spoon",
       "kind": "spoon",
       "original_source": {
-        "root_env": "VIC_FULL50_RIGID_ASSETS",
+        "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
         "relative_path": "ycb_spoon_aligned.usda",
         "sha256": "57eca21e894ebd2ef3a091127be5a51d4baf04e3da9bf06f90454a1f01040c4e",
         "source_rotation": [
@@ -1372,7 +1372,7 @@
           }
         ]
       },
-      "asset": "g1/E34/spoon.usda",
+      "asset": "g1/iclworld_robot_34/spoon.usda",
       "sha256": "6f305675d6d2eaf38b8ddc29bd7944a6f545c664e19de1ead5400fa0f79ed49f",
       "half_extents": [
         0.09,
@@ -1386,11 +1386,11 @@
       "native_verified": false
     },
     {
-      "task": "E34",
+      "task": "iclworld_robot_34",
       "object": "knife",
       "kind": "knife",
       "original_source": {
-        "root_env": "VIC_FULL50_RIGID_ASSETS",
+        "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
         "relative_path": "ycb_knife.usda",
         "sha256": "8d7e874a9fa51024264e6a9afb1b5c03cff586fc26f5b1eb417de57445dac18d",
         "source_rotation": [
@@ -1406,7 +1406,7 @@
           }
         ]
       },
-      "asset": "g1/E34/knife.usda",
+      "asset": "g1/iclworld_robot_34/knife.usda",
       "sha256": "164d3a831e9cce17cace0dcf629c6e5c419c986894a2493617623a105ff0fd1d",
       "half_extents": [
         0.1,
@@ -1420,11 +1420,11 @@
       "native_verified": false
     },
     {
-      "task": "E34",
+      "task": "iclworld_robot_34",
       "object": "fork",
       "kind": "fork",
       "original_source": {
-        "root_env": "VIC_FULL50_RIGID_ASSETS",
+        "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
         "relative_path": "fork.usda",
         "sha256": "134d334cc03851a697ada7cd31bfec4218ba3917a9dae084fcda4c6b62c918d6",
         "source_rotation": [
@@ -1440,7 +1440,7 @@
           }
         ]
       },
-      "asset": "g1/E34/fork.usda",
+      "asset": "g1/iclworld_robot_34/fork.usda",
       "sha256": "53e5eedb6de6627e5757e874f22be080920485658fb18014feafd129d282c97a",
       "half_extents": [
         0.09500000000000001,
@@ -1454,11 +1454,11 @@
       "native_verified": false
     },
     {
-      "task": "E35",
+      "task": "iclworld_robot_35",
       "object": "small",
       "kind": "book",
       "original_source": {
-        "root_env": "VIC_ROBODOJO_ASSETS",
+        "root_env": "ICLWORLD_ROBODOJO_ASSETS",
         "relative_path": "Object/RoboDojo/Rigid/small_cube/00007/object.usdz",
         "sha256": "5e884b3ea23bca1706aabbc53f7d6cfe66cafc57fd70ddfc5ba031d5107ec583",
         "source_rotation": [
@@ -1469,7 +1469,7 @@
         ],
         "dependencies": []
       },
-      "asset": "g1/E35/small.usda",
+      "asset": "g1/iclworld_robot_35/small.usda",
       "sha256": "bf5729832a8f6945e6507d4b516fad95914f6ea5ca8afb95050afde306e4044e",
       "half_extents": [
         0.012,
@@ -1483,11 +1483,11 @@
       "native_verified": false
     },
     {
-      "task": "E35",
+      "task": "iclworld_robot_35",
       "object": "medium",
       "kind": "book",
       "original_source": {
-        "root_env": "VIC_ROBODOJO_ASSETS",
+        "root_env": "ICLWORLD_ROBODOJO_ASSETS",
         "relative_path": "Object/RoboDojo/Rigid/small_cube/00007/object.usdz",
         "sha256": "5e884b3ea23bca1706aabbc53f7d6cfe66cafc57fd70ddfc5ba031d5107ec583",
         "source_rotation": [
@@ -1498,7 +1498,7 @@
         ],
         "dependencies": []
       },
-      "asset": "g1/E35/medium.usda",
+      "asset": "g1/iclworld_robot_35/medium.usda",
       "sha256": "ec1fd58a817955c7e404c0ab8aa7222fbb5a2b0dae6a8d8f483ce162632efd73",
       "half_extents": [
         0.02,
@@ -1512,11 +1512,11 @@
       "native_verified": false
     },
     {
-      "task": "E35",
+      "task": "iclworld_robot_35",
       "object": "large",
       "kind": "book",
       "original_source": {
-        "root_env": "VIC_ROBODOJO_ASSETS",
+        "root_env": "ICLWORLD_ROBODOJO_ASSETS",
         "relative_path": "Object/RoboDojo/Rigid/small_cube/00007/object.usdz",
         "sha256": "5e884b3ea23bca1706aabbc53f7d6cfe66cafc57fd70ddfc5ba031d5107ec583",
         "source_rotation": [
@@ -1527,7 +1527,7 @@
         ],
         "dependencies": []
       },
-      "asset": "g1/E35/large.usda",
+      "asset": "g1/iclworld_robot_35/large.usda",
       "sha256": "dff999ac52ca01c0aa5aa4603634b54c19435114622895adb04c37aca179cabc",
       "half_extents": [
         0.03,
@@ -1541,11 +1541,11 @@
       "native_verified": false
     },
     {
-      "task": "E38",
+      "task": "iclworld_robot_38",
       "object": "red",
       "kind": "spool",
       "original_source": {
-        "root_env": "VIC_MECHANISM_ASSETS",
+        "root_env": "ICLWORLD_MECHANISM_ASSETS",
         "relative_path": "source_single_hole_ring.usda",
         "sha256": "043034c6aad20115868b17db73066c112e089da589acaf38de3d06c1aaf2c179",
         "dependencies": [],
@@ -1556,7 +1556,7 @@
           0
         ]
       },
-      "asset": "g1/E38/red.usda",
+      "asset": "g1/iclworld_robot_38/red.usda",
       "sha256": "80778b1463a8edb0d027a446bd65d9105bfed0b03b8678c63c78933cb80dffa0",
       "half_extents": [
         0.01999999317560597,
@@ -1570,11 +1570,11 @@
       "native_verified": false
     },
     {
-      "task": "E38",
+      "task": "iclworld_robot_38",
       "object": "green",
       "kind": "spool",
       "original_source": {
-        "root_env": "VIC_MECHANISM_ASSETS",
+        "root_env": "ICLWORLD_MECHANISM_ASSETS",
         "relative_path": "source_single_hole_ring.usda",
         "sha256": "043034c6aad20115868b17db73066c112e089da589acaf38de3d06c1aaf2c179",
         "dependencies": [],
@@ -1585,7 +1585,7 @@
           0
         ]
       },
-      "asset": "g1/E38/green.usda",
+      "asset": "g1/iclworld_robot_38/green.usda",
       "sha256": "337c0e8b42e7094366bfee7f30d9feb0a514d24e9a649f8293c27aaba2305429",
       "half_extents": [
         0.01999999317560597,
@@ -1599,11 +1599,11 @@
       "native_verified": false
     },
     {
-      "task": "E38",
+      "task": "iclworld_robot_38",
       "object": "blue",
       "kind": "spool",
       "original_source": {
-        "root_env": "VIC_MECHANISM_ASSETS",
+        "root_env": "ICLWORLD_MECHANISM_ASSETS",
         "relative_path": "source_single_hole_ring.usda",
         "sha256": "043034c6aad20115868b17db73066c112e089da589acaf38de3d06c1aaf2c179",
         "dependencies": [],
@@ -1614,7 +1614,7 @@
           0
         ]
       },
-      "asset": "g1/E38/blue.usda",
+      "asset": "g1/iclworld_robot_38/blue.usda",
       "sha256": "ba25dfbafee14672c6d4ad010fe564ddb76b39f948f5d9d17ef19588aebc0f0a",
       "half_extents": [
         0.01999999317560597,
@@ -1628,11 +1628,11 @@
       "native_verified": false
     },
     {
-      "task": "E39",
+      "task": "iclworld_robot_39",
       "object": "red_ref",
       "kind": "arrow",
       "original_source": {
-        "root_env": "VIC_FULL50_RIGID_ASSETS",
+        "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
         "relative_path": "native_t0.usdz",
         "sha256": "98bae9ae3dddf67e58004695930c09f3d36f715dfa2bf5d65d1ed2b7179fa493",
         "source_rotation": [
@@ -1643,7 +1643,7 @@
         ],
         "dependencies": []
       },
-      "asset": "g1/E39/red_ref.usda",
+      "asset": "g1/iclworld_robot_39/red_ref.usda",
       "sha256": "abdb3ef4145ebba3dea0ba7d30a042d7dbb010c3ecb716e97d10b4e37f6d2fa3",
       "half_extents": [
         0.026,
@@ -1657,11 +1657,11 @@
       "native_verified": false
     },
     {
-      "task": "E39",
+      "task": "iclworld_robot_39",
       "object": "blue_ref",
       "kind": "arrow",
       "original_source": {
-        "root_env": "VIC_FULL50_RIGID_ASSETS",
+        "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
         "relative_path": "native_t0.usdz",
         "sha256": "98bae9ae3dddf67e58004695930c09f3d36f715dfa2bf5d65d1ed2b7179fa493",
         "source_rotation": [
@@ -1672,7 +1672,7 @@
         ],
         "dependencies": []
       },
-      "asset": "g1/E39/blue_ref.usda",
+      "asset": "g1/iclworld_robot_39/blue_ref.usda",
       "sha256": "4ed748a6785d47f4e74b70833249dca8393f4385637a701a2cd84c0299f37d89",
       "half_extents": [
         0.026,
@@ -1686,11 +1686,11 @@
       "native_verified": false
     },
     {
-      "task": "E39",
+      "task": "iclworld_robot_39",
       "object": "black_ref",
       "kind": "arrow",
       "original_source": {
-        "root_env": "VIC_FULL50_RIGID_ASSETS",
+        "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
         "relative_path": "native_t0.usdz",
         "sha256": "98bae9ae3dddf67e58004695930c09f3d36f715dfa2bf5d65d1ed2b7179fa493",
         "source_rotation": [
@@ -1701,7 +1701,7 @@
         ],
         "dependencies": []
       },
-      "asset": "g1/E39/black_ref.usda",
+      "asset": "g1/iclworld_robot_39/black_ref.usda",
       "sha256": "a7cadac93b08fa5b4d7cbd8924a9034daf8a95efb6d76497f6a67316ccad7734",
       "half_extents": [
         0.026,
@@ -1715,11 +1715,11 @@
       "native_verified": false
     },
     {
-      "task": "E39",
+      "task": "iclworld_robot_39",
       "object": "blue_active",
       "kind": "arrow",
       "original_source": {
-        "root_env": "VIC_FULL50_RIGID_ASSETS",
+        "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
         "relative_path": "native_t0.usdz",
         "sha256": "98bae9ae3dddf67e58004695930c09f3d36f715dfa2bf5d65d1ed2b7179fa493",
         "source_rotation": [
@@ -1730,7 +1730,7 @@
         ],
         "dependencies": []
       },
-      "asset": "g1/E39/blue_active.usda",
+      "asset": "g1/iclworld_robot_39/blue_active.usda",
       "sha256": "4ed748a6785d47f4e74b70833249dca8393f4385637a701a2cd84c0299f37d89",
       "half_extents": [
         0.026,
@@ -1744,11 +1744,11 @@
       "native_verified": false
     },
     {
-      "task": "E39",
+      "task": "iclworld_robot_39",
       "object": "black_active",
       "kind": "arrow",
       "original_source": {
-        "root_env": "VIC_FULL50_RIGID_ASSETS",
+        "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
         "relative_path": "native_t0.usdz",
         "sha256": "98bae9ae3dddf67e58004695930c09f3d36f715dfa2bf5d65d1ed2b7179fa493",
         "source_rotation": [
@@ -1759,7 +1759,7 @@
         ],
         "dependencies": []
       },
-      "asset": "g1/E39/black_active.usda",
+      "asset": "g1/iclworld_robot_39/black_active.usda",
       "sha256": "a7cadac93b08fa5b4d7cbd8924a9034daf8a95efb6d76497f6a67316ccad7734",
       "half_extents": [
         0.026,
@@ -1773,11 +1773,11 @@
       "native_verified": false
     },
     {
-      "task": "E39",
+      "task": "iclworld_robot_39",
       "object": "red_active",
       "kind": "arrow",
       "original_source": {
-        "root_env": "VIC_FULL50_RIGID_ASSETS",
+        "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
         "relative_path": "native_t0.usdz",
         "sha256": "98bae9ae3dddf67e58004695930c09f3d36f715dfa2bf5d65d1ed2b7179fa493",
         "source_rotation": [
@@ -1788,7 +1788,7 @@
         ],
         "dependencies": []
       },
-      "asset": "g1/E39/red_active.usda",
+      "asset": "g1/iclworld_robot_39/red_active.usda",
       "sha256": "abdb3ef4145ebba3dea0ba7d30a042d7dbb010c3ecb716e97d10b4e37f6d2fa3",
       "half_extents": [
         0.026,
@@ -1802,11 +1802,11 @@
       "native_verified": false
     },
     {
-      "task": "E47",
+      "task": "iclworld_robot_47",
       "object": "card1",
       "kind": "ticket_red",
       "original_source": {
-        "root_env": "VIC_FULL50_RIGID_ASSETS",
+        "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
         "relative_path": "card_H_2.usda",
         "sha256": "e6d4c721b74a3b6f3d273c987d06698c3b4f162de30189554de47ddee51b3f81",
         "source_rotation": [
@@ -1826,7 +1826,7 @@
           }
         ]
       },
-      "asset": "g1/E47/card1.usda",
+      "asset": "g1/iclworld_robot_47/card1.usda",
       "sha256": "06dd53450185c5952c55be2da45bf97c70df5339ef17dec1c99044c521e2d2ec",
       "half_extents": [
         0.04415271966527,
@@ -1840,11 +1840,11 @@
       "native_verified": false
     },
     {
-      "task": "E47",
+      "task": "iclworld_robot_47",
       "object": "card2",
       "kind": "ticket_black",
       "original_source": {
-        "root_env": "VIC_FULL50_RIGID_ASSETS",
+        "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
         "relative_path": "card_S_2.usda",
         "sha256": "6d421066b8c2ecfc51432478ff6cca05b07a3807c1ac22cc6d8ded18ac4f9a2c",
         "source_rotation": [
@@ -1864,7 +1864,7 @@
           }
         ]
       },
-      "asset": "g1/E47/card2.usda",
+      "asset": "g1/iclworld_robot_47/card2.usda",
       "sha256": "ca8b21d492e7468daa81d90aab5114279685572ecf8c0c073e42cad1af2b5778",
       "half_extents": [
         0.04415271966527,
@@ -1878,11 +1878,11 @@
       "native_verified": false
     },
     {
-      "task": "E47",
+      "task": "iclworld_robot_47",
       "object": "card3",
       "kind": "ticket_red",
       "original_source": {
-        "root_env": "VIC_FULL50_RIGID_ASSETS",
+        "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
         "relative_path": "card_D_3.usda",
         "sha256": "1334a3240acfd3e0843bb4778419adc11128d6733cf5278bdb54134ad4ba770c",
         "source_rotation": [
@@ -1902,7 +1902,7 @@
           }
         ]
       },
-      "asset": "g1/E47/card3.usda",
+      "asset": "g1/iclworld_robot_47/card3.usda",
       "sha256": "06dd53450185c5952c55be2da45bf97c70df5339ef17dec1c99044c521e2d2ec",
       "half_extents": [
         0.04415271966527,
@@ -1916,11 +1916,11 @@
       "native_verified": false
     },
     {
-      "task": "E47",
+      "task": "iclworld_robot_47",
       "object": "card4",
       "kind": "ticket_black",
       "original_source": {
-        "root_env": "VIC_FULL50_RIGID_ASSETS",
+        "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
         "relative_path": "card_C_3.usda",
         "sha256": "e7e6ec6c5aaf72a7b8327d652c322117cf6ab992df21fcb9fd5fa47a552cf17c",
         "source_rotation": [
@@ -1940,7 +1940,7 @@
           }
         ]
       },
-      "asset": "g1/E47/card4.usda",
+      "asset": "g1/iclworld_robot_47/card4.usda",
       "sha256": "ca8b21d492e7468daa81d90aab5114279685572ecf8c0c073e42cad1af2b5778",
       "half_extents": [
         0.04415271966527,
@@ -1954,11 +1954,11 @@
       "native_verified": false
     },
     {
-      "task": "E47",
+      "task": "iclworld_robot_47",
       "object": "card5",
       "kind": "ticket_red",
       "original_source": {
-        "root_env": "VIC_FULL50_RIGID_ASSETS",
+        "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
         "relative_path": "card_H_2.usda",
         "sha256": "e6d4c721b74a3b6f3d273c987d06698c3b4f162de30189554de47ddee51b3f81",
         "source_rotation": [
@@ -1978,7 +1978,7 @@
           }
         ]
       },
-      "asset": "g1/E47/card5.usda",
+      "asset": "g1/iclworld_robot_47/card5.usda",
       "sha256": "06dd53450185c5952c55be2da45bf97c70df5339ef17dec1c99044c521e2d2ec",
       "half_extents": [
         0.04415271966527,

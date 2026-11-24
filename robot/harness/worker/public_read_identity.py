@@ -14,7 +14,7 @@ def install(native_tools, make_server):
         def __init__(self, *args, **kwargs):
             super().__init__(*args, **kwargs)
             executor = self.executor
-            if getattr(executor, '_vic_independent_public_reads', False):
+            if getattr(executor, '_iclworld_independent_public_reads', False):
                 return
             original = executor.execute
 
@@ -28,6 +28,6 @@ def install(native_tools, make_server):
                 return original(commands, decision_id=decision_id)
 
             executor.execute = execute
-            executor._vic_independent_public_reads = True
+            executor._iclworld_independent_public_reads = True
 
     return IndependentReadIdentity, make_server

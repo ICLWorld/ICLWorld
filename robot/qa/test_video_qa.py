@@ -12,7 +12,7 @@ import pytest
 HERE=Path(__file__).resolve().parent
 sys.path.insert(0,str(HERE))
 from standalone_qa_tools import StandaloneQA,make_server,public_question
-sys.path.insert(0,str(HERE.parent/'harness/VideoICLBench/packages/sdk'))
+sys.path.insert(0,str(HERE.parent/'harness/iclworld_harness/packages/sdk'))
 
 
 class Reader:
@@ -23,7 +23,7 @@ class Reader:
 @pytest.fixture
 def cfg(tmp_path):
     video=tmp_path/'assigned.mp4';video.write_bytes(b'ORIGINAL_VIDEO_FAKE_FIXTURE')
-    return dict(schema='standalone-video-qa-v1',identity=dict(qa_id='qa-one',task='E22',variant='C',seed=4201),
+    return dict(schema='standalone-video-qa-v1',identity=dict(qa_id='qa-one',task='iclworld_robot_22',variant='C',seed=4201),
         video_path=str(video),video_sha256=hashlib.sha256(video.read_bytes()).hexdigest(),output_dir=str(tmp_path/'qa'),api_timing_log=str(tmp_path/'qa/api-timing.private.jsonl'),
         question=dict(question_id='question-one',prompt='Which public rule is shown?',options=dict(A='one',B='two',C='three',D='four'),response_instruction='A/B/C/D'))
 
@@ -53,8 +53,8 @@ def test_QA_public_packet_rejects_answerkey_and_different_video(cfg):
 
 
 def test_first_answer_fences_new_upstream_but_drains_already_active_without_cancel(cfg):
-    from vic_sdk.api_timing import append_timing_event
-    from vic_sdk.episode_api_admission import register_api_request_start,EpisodeApiClosed
+    from iclworld_sdk.api_timing import append_timing_event
+    from iclworld_sdk.episode_api_admission import register_api_request_start,EpisodeApiClosed
     import threading,time
     b=StandaloneQA(cfg,reader=Reader());b.frames([0]);b.issue()
     register_api_request_start(b.timing,'generating-first-answer')
@@ -65,8 +65,8 @@ def test_first_answer_fences_new_upstream_but_drains_already_active_without_canc
 
 
 def test_unknown_api_does_not_commit_answer_or_silently_clear_ledger(cfg):
-    from vic_sdk.api_timing import append_timing_event
-    from vic_sdk.episode_api_admission import register_api_request_start
+    from iclworld_sdk.api_timing import append_timing_event
+    from iclworld_sdk.episode_api_admission import register_api_request_start
     b=StandaloneQA(cfg,reader=Reader());b.frames([0]);b.issue()
     register_api_request_start(b.timing,'unknown')
     append_timing_event(b.timing,'request_end',request_id='unknown',outcome='unknown',failure_kind='unverified_response_completion')

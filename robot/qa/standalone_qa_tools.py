@@ -41,10 +41,10 @@ class VideoReader:
     def __init__(self,path):self.config={'demo_video':str(path)}
     def log(self,_):pass
     def info(self):
-        from vic_sdk.computer_mcp import Computer
+        from iclworld_sdk.computer_mcp import Computer
         return Computer.demo_info(self)
     def frame(self,seconds):
-        from vic_sdk.computer_mcp import Computer
+        from iclworld_sdk.computer_mcp import Computer
         return Computer.demo_frame(self,seconds)
 
 
@@ -116,8 +116,8 @@ class StandaloneQA:
             result=dict(identity=self.identity,question_id=self.question['question_id'],source_sha256=self.sha,
                 selected_option=answer.strip(),raw_answer=answer,first_valid=True,delivered_seconds=list(self.state['delivered']),
                 complete_video_viewing_proven=False,simulation_started=False)
-            from vic_sdk.api_timing import ApiTimingLedger
-            from vic_sdk.episode_api_admission import EpisodeApiAdmission
+            from iclworld_sdk.api_timing import ApiTimingLedger
+            from iclworld_sdk.episode_api_admission import EpisodeApiAdmission
             ledger=ApiTimingLedger(self.timing)
             admission=EpisodeApiAdmission(self.timing)
             # Hold admission while the already-accepted generating request
@@ -137,7 +137,7 @@ class StandaloneQA:
 
 
 def make_server(backend):
-    server=FastMCP('vic-standalone-video-qa')
+    server=FastMCP('iclworld-standalone-video-qa')
     @server.tool()
     async def demo_info()->dict:
         """Read only assigned video metadata; no physical environment exists."""
@@ -162,7 +162,7 @@ def main():
     # Absolute source binding also works when an ambient older SDK was preloaded.
     import sys
     for name in list(sys.modules):
-        if name=='vic_sdk'or name.startswith('vic_sdk.'):del sys.modules[name]
+        if name=='iclworld_sdk'or name.startswith('iclworld_sdk.'):del sys.modules[name]
     sys.path.insert(0,str(args.sdk_root.resolve()))
     backend=StandaloneQA(json.loads(args.config.read_text()))
     make_server(backend).run(transport='stdio')

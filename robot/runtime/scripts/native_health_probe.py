@@ -1,6 +1,6 @@
 """On-demand native API health check, separate from all model evaluations.
 
-``prepare`` writes one E05/A/seed4201 plan without importing Isaac or touching
+``prepare`` writes one iclworld_robot_05/A/seed4201 plan without importing Isaac or touching
 CUDA. ``run`` starts only that plan, executes one bounded native action, seals
 the room, reads immutable private evaluation, and checks owned GPU PID release.
 """
@@ -22,10 +22,10 @@ import uuid
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
-from videoicl_isaaclab.pool_rpc import atomic_json
+from iclworld_isaaclab.pool_rpc import atomic_json
 
 IDENTITY_KEYS = {'run_id', 'task_id', 'variant', 'seed', 'suite', 'epoch'}
-ROOM = 'native-health-e05-a-s4201'
+ROOM = 'native-health-robot_05-a-s4201'
 
 
 def exact_identity(actual, expected):
@@ -44,9 +44,9 @@ def prepare(out, *, native_python, bindings, experience, runtime_root=ROOT, robo
         raise ValueError('Native API health deadline must be 60 to 300 seconds')
     out = Path(out).resolve()
     out.mkdir(parents=True, exist_ok=False, mode=0o700)
-    identity = dict(run_id='native-health-'+uuid.uuid4().hex, task_id='E05', variant='A', seed=4201,
+    identity = dict(run_id='native-health-'+uuid.uuid4().hex, task_id='iclworld_robot_05', variant='A', seed=4201,
         suite='native-api-health-not-model-evaluation', epoch=datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ'))
-    case = dict(episode_id=ROOM, task='E05', variant='A', seed=4201,
+    case = dict(episode_id=ROOM, task='iclworld_robot_05', variant='A', seed=4201,
         bindings=str(Path(bindings).resolve()), robot=robot, identity=identity)
     atomic_json(out/'cases.private.json', [case])
     kit = out/'kit';kit.mkdir(mode=0o700)
@@ -60,11 +60,11 @@ def prepare(out, *, native_python, bindings, experience, runtime_root=ROOT, robo
         f'--/app/userConfigPath={kit}/user.config.json --/app/cachePath={kit}/cache '
         f'--/app/dataPath={kit}/data --/app/logPath={kit}/logs --/log/file={kit}/kit.log']
     assets=Path(asset_roots).resolve() if asset_roots is not None else Path(native_python).resolve().parent/'asset_roots'
-    environment={name:str(assets/name) for name in ('VIC_FULL50_RIGID_ASSETS','VIC_ROBODOJO_ASSETS','VIC_MECHANISM_ASSETS')}
+    environment={name:str(assets/name) for name in ('ICLWORLD_FULL50_RIGID_ASSETS','ICLWORLD_ROBODOJO_ASSETS','ICLWORLD_MECHANISM_ASSETS')}
     configuration=dict(native_python=str(Path(native_python).resolve()),bindings=str(Path(bindings).resolve()),
         experience=str(Path(experience).resolve()),runtime_root=str(Path(runtime_root).resolve()),robot=robot,
         expected_gpu_uuid=expected_gpu_uuid,deadline_seconds=deadline_seconds,asset_roots=str(assets))
-    plan = dict(schema='videoicl-native-api-health-plan-v1', prepared_only=True, auto_start=False,
+    plan = dict(schema='iclworld-native-api-health-plan-v1', prepared_only=True, auto_start=False,
         counts_toward_450=False, is_model_evaluation=False, room_id=ROOM, identity=identity, out=str(out),
         deadline_seconds=deadline_seconds, expected_gpu_uuid=expected_gpu_uuid, minimum_free_mib=4096,
         command=command, environment=environment,configuration=configuration,
@@ -194,12 +194,12 @@ def verify_action(before, result, after, ready):
 
 
 def run(plan):
-    if plan.get('schema')!='videoicl-native-api-health-plan-v1' or plan.get('counts_toward_450') is not False:
+    if plan.get('schema')!='iclworld-native-api-health-plan-v1' or plan.get('counts_toward_450') is not False:
         raise ValueError('Explicit native health plan required')
     # Reserve 20 seconds for bounded TERM/KILL and GPU-release checks inside
     # the declared total 300-second ceiling.
     out=Path(plan['out']);deadline=time.monotonic()+plan['deadline_seconds']-20;process=None;owned={};before_gpu=None
-    report=dict(schema='videoicl-native-api-health-result-v1',health_passed=False,counts_toward_450=False,
+    report=dict(schema='iclworld-native-api-health-result-v1',health_passed=False,counts_toward_450=False,
         is_model_evaluation=False,identity=plan['identity'],phases=[],started_unix=time.time())
     marker=os.open(out/'started.private.json',os.O_WRONLY|os.O_CREAT|os.O_EXCL,0o600)
     with os.fdopen(marker,'w') as stream:json.dump(dict(controller_pid=os.getpid(),started=report['started_unix']),stream)
@@ -214,7 +214,7 @@ def run(plan):
         if len(visible)!=1 or before_gpu['gpus'][0]['free_mib']<plan['minimum_free_mib']:
             raise RuntimeError('Native health needs one admitted GPU with sufficient current free memory')
         log=(out/'native.private.log').open('x')
-        env=dict(os.environ,**plan['environment'],VIC_SKIP_APP_CLOSE='1')
+        env=dict(os.environ,**plan['environment'],ICLWORLD_SKIP_APP_CLOSE='1')
         command=['timeout','--signal=TERM','--kill-after=5s',str(max(1,int(plan['deadline_seconds']-20))),*plan['command']]
         process=subprocess.Popen(command,stdout=log,stderr=subprocess.STDOUT,env=env,start_new_session=True);log.close()
         atomic_json(out/'process.private.json',dict(pid=process.pid,process_group=process.pid,command=command))
@@ -297,7 +297,7 @@ def main():
         return 0
     if args.operation=='start':
         template=read_json(args.template)
-        if template.get('schema')!='videoicl-native-api-health-plan-v1':raise ValueError('Native health slot template required')
+        if template.get('schema')!='iclworld-native-api-health-plan-v1':raise ValueError('Native health slot template required')
         plan=prepare(args.out,**template['configuration'])
     else:plan=read_json(args.plan)
     report=run(plan);print(json.dumps({key:report[key] for key in ('health_passed','phases','wall_seconds','gpu_context_released')}))

@@ -15,8 +15,8 @@ def route_for(engine):
     # Codex (Responses) and Claude (Messages) use the same explicitly configured
     # provider as the other CLI adapters; no model-specific credential fallback.
     if engine == 'gemini':
-        return https_origin('VIC_GEMINI_PRIMARY'), 'configured', True
-    return https_origin('VIC_UPSTREAM_ORIGIN'), 'configured', os.environ.get('VIC_PROVIDER_DIRECT') == '1'
+        return https_origin('ICLWORLD_GEMINI_PRIMARY'), 'configured', True
+    return https_origin('ICLWORLD_UPSTREAM_ORIGIN'), 'configured', os.environ.get('ICLWORLD_PROVIDER_DIRECT') == '1'
 
 
 def upstream_url(origin, route):

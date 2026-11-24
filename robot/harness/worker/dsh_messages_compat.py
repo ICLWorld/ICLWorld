@@ -8,12 +8,12 @@ import hashlib,json,re
 TOOLS=frozenset(('observe','action_batch','depth_points','demo_frames','history','done','giveup'))
 def public_tool(name):
  if not isinstance(name,str):return None
- for prefix in ('mcp__vic__','mcp_vic_','vic_',''):
+ for prefix in ('mcp__iclworld__','mcp_iclworld_','iclworld_',''):
   if name.startswith(prefix)and name[len(prefix):]in TOOLS:return name[len(prefix):]
  return None
 
 def normalize(raw):
- meta={'schema':'videoicl-dsh-missing-input-placeholder-v1','before_sha256':hashlib.sha256(raw).hexdigest(),'changed':False,'filled_indices':[],'argument_values_changed':False,'reasoning_or_text_changed':False}
+ meta={'schema':'iclworld-dsh-missing-input-placeholder-v1','before_sha256':hashlib.sha256(raw).hexdigest(),'changed':False,'filled_indices':[],'argument_values_changed':False,'reasoning_or_text_changed':False}
  try:
   parts=re.split(br'(\r?\n\r?\n)',raw);parsed=[];starts={};candidates={};complete=False;error=False
   for position in range(0,len(parts),2):

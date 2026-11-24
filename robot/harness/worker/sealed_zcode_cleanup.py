@@ -18,8 +18,8 @@ def rows(p):
 
 
 def evidence(room,identity,session):
-    from vic_sdk.api_timing import ApiTimingLedger
-    from vic_sdk.native_structured_supervisor import provider_drained
+    from iclworld_sdk.api_timing import ApiTimingLedger
+    from iclworld_sdk.native_structured_supervisor import provider_drained
     room=Path(room);out=room/'cli';connection=read(room.parent/'connection.private.json')
     need(connection['identity']==identity,'connection identity mismatch')
     result=read(out/'result.json');ev=result['evaluation'];snap=ev['terminal_snapshot']
@@ -28,7 +28,7 @@ def evidence(room,identity,session):
     need(all(ev.get(k)==v for k,v in identity.items()),'evaluation identity mismatch')
     need(snap.get('sampling')=='sealed_runtime_final_native_check'and snap['status']in('done','give_up','max_actions','budget_exhausted'),'missing native terminal')
     binary_only = (ev.get('task_score_100') is None and ev.get('task_score') is None
-        and ev.get('scoring_protocol') == 'videoicl-native-terminal-success-v1'
+        and ev.get('scoring_protocol') == 'iclworld-native-terminal-success-v1'
         and ev.get('score_definition') == 'terminal_native_success'
         and ev.get('native_success') is False and ev.get('success') is False
         and all(ev.get(k) == 0 for k in ('score','success_score','terminal_success_100'))

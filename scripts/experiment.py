@@ -50,7 +50,7 @@ def main():
  save(work/'experiment.json',contract);save(work/'private/cases.json',cases)
  token=work/'runtime/admin.token';token.parent.mkdir(parents=True,exist_ok=True);token.write_text(envconf['ICLWORLD_ADMIN_TOKEN']);token.chmod(0o600)
  save(work/'runtime/connection.json',dict(control_url='http://127.0.0.1:'+envconf['ICLWORLD_PORT'],token_file=str(token)))
- runtime=Path(os.environ.get('MATRIX_CLI_ROOT',ROOT/'.runtime')).resolve();env=dict(os.environ,MATRIX_CLI_ROOT=str(runtime),ICLWORLD_CLAUDE_BINARY=os.environ.get('ICLWORLD_CLAUDE_BINARY',str(runtime/'claude/node_modules/.bin/claude')))
+ runtime=Path(os.environ.get('ICLWORLD_CLI_ROOT',ROOT/'.runtime')).resolve();env=dict(os.environ,ICLWORLD_CLI_ROOT=str(runtime),ICLWORLD_CLAUDE_BINARY=os.environ.get('ICLWORLD_CLAUDE_BINARY',str(runtime/'claude/node_modules/.bin/claude')))
  env['PYTHONPATH']=str(work/'sdk')+os.pathsep+env.get('PYTHONPATH','')
  if not (work/'cli').exists():(work/'cli').symlink_to(runtime/'cli',target_is_directory=True)
  public_providers={}

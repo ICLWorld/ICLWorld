@@ -10,7 +10,7 @@ The physical backend requires Linux, an NVIDIA GPU, compatible NVIDIA drivers, I
 
 ```bash
 python3 -m venv robot/.venv
-robot/.venv/bin/pip install -e 'robot/harness/VideoICLBench[test]'
+robot/.venv/bin/pip install -e 'robot/harness/iclworld_harness[test]'
 robot/.venv/bin/python -m playwright install chromium
 robot/.venv/bin/python robot/scripts/validate.py --dataset work/dataset --media
 robot/.venv/bin/python robot/scripts/prepare.py \
@@ -25,9 +25,9 @@ Configure your model, compatible native CLI, API endpoint and key. `--engine` se
 
 ```bash
 source /work/robot/environment.sh
-export VIC_UPSTREAM_ORIGIN=https://YOUR_API_ENDPOINT
-export VIC_PROVIDER_DIRECT=1
-export VIC_POOL_AUTHFILE=/work/private/model.key  # one key, mode 0600
+export ICLWORLD_UPSTREAM_ORIGIN=https://YOUR_API_ENDPOINT
+export ICLWORLD_PROVIDER_DIRECT=1
+export ICLWORLD_POOL_AUTHFILE=/work/private/model.key  # one key, mode 0600
 export CUDA_VISIBLE_DEVICES=0
 
 # Run one isolated case with a user-selected native CLI and model.
@@ -35,7 +35,7 @@ robot/.venv/bin/python robot/harness/pool_verified.py \
   --native-python /opt/IsaacLab/python.sh \
   --gui-python "$PWD/robot/.venv/bin/python" \
   --runtime-root /work/robot/runtime \
-  --cases /work/robot/cases/af26-e01-c-i-real-s4201.json \
+  --cases /work/robot/cases/iclworld_robot_01-c-resample-real-s4201.json \
   --engine dsh --model YOUR_MODEL_ID --binary /path/to/dsh \
   --effort high --epoch run-001 --out /work/results/run-001 \
   --max-actions 500 --timeout 0 --coalesce-window-seconds 0.05 \
@@ -54,22 +54,22 @@ The QA branch exposes only `demo_info`, `demo_frames`, `qa_question` and `qa_ans
 export MODEL_API_KEY=YOUR_KEY
 # Validation only unless --execute is supplied.
 robot/.venv/bin/python robot/qa/evaluate.py \
-  --dataset work/dataset --qa-id af26-qa-e01-c-real-s4201 \
+  --dataset work/dataset --qa-id iclworld_robot_01-qa-c-real-s4201 \
   --engine dsh --model YOUR_MODEL_ID --binary /path/to/dsh \
-  --api-base https://YOUR_API_ENDPOINT --out /work/qa/e01-c
+  --api-base https://YOUR_API_ENDPOINT --out /work/qa/iclworld_robot_01-c
 
 # Add --execute to the same command to request the model.
 robot/.venv/bin/python robot/qa/grade.py \
-  --dataset work/dataset --out /work/qa/e01-c
+  --dataset work/dataset --out /work/qa/iclworld_robot_01-c
 ```
 
-CLI installation must match the adapter's supported version. The robot and Web/OS adapters have separate Python environments. `harness/VideoICLBench/packages/sdk/vic_sdk/direct_tools.py` lists supported Codex versions; other versions are declared in `harness/worker/adapters/`. Use the CLI installation guide for the relevant engine rather than sharing an incompatible installed binary.
+CLI installation must match the adapter's supported version. The robot and Web/OS adapters have separate Python environments. `harness/iclworld_harness/packages/sdk/iclworld_sdk/direct_tools.py` lists supported Codex versions; other versions are declared in `harness/worker/adapters/`. Use the CLI installation guide for the relevant engine rather than sharing an incompatible installed binary.
 
 ## Checks and provenance
 
 ```bash
-PYTHONPATH=robot/harness/VideoICLBench/packages/sdk:robot/harness/VideoICLBench/tests \
+PYTHONPATH=robot/harness/iclworld_harness/packages/sdk:robot/harness/iclworld_harness/tests \
   robot/.venv/bin/python -m pytest -o addopts='' robot/harness/tests robot/qa/test_video_qa.py
 ```
 
-Source revisions and data origins are recorded in the dataset's `robot/metadata/sources.json`. Dataset and codebase `SHA256SUMS` cover all published files. The [source repository](https://github.com/Aoraku/VideoICLBench) supplies the simulator harness under its included MIT license; IsaacSim/IsaacLab and third-party assets retain their own terms. The [public trajectory repository](https://huggingface.co/datasets/JJimmyL/VideoICL-Embodied-Evaluation-Trajectories-Public) provides optional result analysis independently of the benchmark inputs.
+Integrity is checked from files in this repository: `robot/runtime-manifest.json` records the SHA-256 of every runtime file, and `experiments/dataset_layout.json` records the SHA-256 of every dataset asset that the robot branch reads. `prepare.py` and `validate.py` refuse mismatched files. The simulator harness under `robot/harness/` keeps its MIT license (`robot/harness/LICENSE`); IsaacSim/IsaacLab and third-party assets retain their own terms.

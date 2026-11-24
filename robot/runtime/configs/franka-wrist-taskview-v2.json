@@ -75,12 +75,12 @@
       "Harness uses physical grasp center; Panda hand +Z 103.4 mm",
       "Gravity disabled to approximate upstream per-tick gravity compensation",
       "Native gripper limits respected; upstream out-of-range targets are clipped",
-      "Independent E31 B/C engineering camera v2: original native camera link/light centre; OpenGL local X tilt -25 degrees; wrist vertical FOV 55 degrees; near clip 20 mm. Head, physical gains and joint limits unchanged; reference/horizon changes are separately versioned. Not comparable to original camera-profile results."
+      "Independent iclworld_robot_31 B/C engineering camera v2: original native camera link/light centre; OpenGL local X tilt -25 degrees; wrist vertical FOV 55 degrees; near clip 20 mm. Head, physical gains and joint limits unchanged; reference/horizon changes are separately versioned. Not comparable to original camera-profile results."
     ]
   },
   "asset": {
     "path": "assets/embodiments/robotwin-r5/franka-panda/robot.usd",
-    "env": "VIC_FRANKA_ROBOTWIN_USD",
+    "env": "ICLWORLD_FRANKA_ROBOTWIN_USD",
     "format": "usd",
     "source_embodiment": "franka-panda"
   },
@@ -346,8 +346,8 @@
   },
   "engineering_camera_revision": {
     "id": "franka-wrist-taskview-v2",
-    "baseline_profile_sha256": "8863c1ac7813fff9daa72d714ef4b4b658a1559ece977325c6c19e7d8e160de2",
-    "scope": "New E31 B/C engineering test only; do not change old20 or recording profiles",
+    "baseline_profile_sha256": "c7141135d770df4e3f4e5e020e7d33fab50b78eb646a829c40aaa867d8a05f38",
+    "scope": "New iclworld_robot_31 B/C engineering test only; do not change old20 or recording profiles",
     "wrist_local_optical_x_tilt_deg": -25,
     "head_unchanged": true,
     "native_optical_center_unchanged": true,

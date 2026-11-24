@@ -9,7 +9,7 @@ import subprocess
 import time
 import xml.etree.ElementTree as ET
 
-PREFIX = Path(os.environ.get('VIC_GPU_LOCK_PREFIX','/tmp/videoicl-realworld50-gpu'))
+PREFIX = Path(os.environ.get('ICLWORLD_GPU_LOCK_PREFIX','/tmp/iclworld-realworld50-gpu'))
 
 
 def parse_gpu_process_memory(xml):
@@ -141,7 +141,7 @@ def main():
                             continue
                         slot_file = candidate
                         env = os.environ.copy()
-                        env['VIC_REALWORLD_WORKER_SLOT'] = str(index)
+                        env['ICLWORLD_REALWORLD_WORKER_SLOT'] = str(index)
                         child = subprocess.Popen(command, env=env, start_new_session=True)
                         state = dict(group=child.pid, broker=os.getpid(), slot=index,
                                      budget_mib=args.budget_mib, started_unix_s=time.time())

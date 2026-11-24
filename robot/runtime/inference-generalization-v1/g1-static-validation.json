@@ -2,435 +2,435 @@
   "native_physics_verified": false,
   "usd_parse_assets": [
     {
-      "task": "E01",
+      "task": "iclworld_robot_01",
       "object": "burger",
       "collision_prims": 5,
       "joints": 0,
       "parse": true
     },
     {
-      "task": "E01",
+      "task": "iclworld_robot_01",
       "object": "fries",
       "collision_prims": 8,
       "joints": 0,
       "parse": true
     },
     {
-      "task": "E01",
+      "task": "iclworld_robot_01",
       "object": "drink",
       "collision_prims": 18,
       "joints": 0,
       "parse": true
     },
     {
-      "task": "E02",
+      "task": "iclworld_robot_02",
       "object": "red",
       "collision_prims": 1,
       "joints": 0,
       "parse": true
     },
     {
-      "task": "E02",
+      "task": "iclworld_robot_02",
       "object": "blue",
       "collision_prims": 1,
       "joints": 0,
       "parse": true
     },
     {
-      "task": "E02",
+      "task": "iclworld_robot_02",
       "object": "green",
       "collision_prims": 1,
       "joints": 0,
       "parse": true
     },
     {
-      "task": "E08",
+      "task": "iclworld_robot_08",
       "object": "left_shoe",
       "collision_prims": 3,
       "joints": 0,
       "parse": true
     },
     {
-      "task": "E08",
+      "task": "iclworld_robot_08",
       "object": "right_shoe",
       "collision_prims": 3,
       "joints": 0,
       "parse": true
     },
     {
-      "task": "E13",
+      "task": "iclworld_robot_13",
       "object": "phone",
       "collision_prims": 2,
       "joints": 0,
       "parse": true
     },
     {
-      "task": "E14",
+      "task": "iclworld_robot_14",
       "object": "red",
       "collision_prims": 4,
       "joints": 0,
       "parse": true
     },
     {
-      "task": "E14",
+      "task": "iclworld_robot_14",
       "object": "yellow",
       "collision_prims": 4,
       "joints": 0,
       "parse": true
     },
     {
-      "task": "E14",
+      "task": "iclworld_robot_14",
       "object": "blue",
       "collision_prims": 4,
       "joints": 0,
       "parse": true
     },
     {
-      "task": "E14",
+      "task": "iclworld_robot_14",
       "object": "green",
       "collision_prims": 4,
       "joints": 0,
       "parse": true
     },
     {
-      "task": "E15",
+      "task": "iclworld_robot_15",
       "object": "red_t",
       "collision_prims": 5,
       "joints": 0,
       "parse": true
     },
     {
-      "task": "E15",
+      "task": "iclworld_robot_15",
       "object": "blue_t",
       "collision_prims": 5,
       "joints": 0,
       "parse": true
     },
     {
-      "task": "E16",
+      "task": "iclworld_robot_16",
       "object": "red_t",
       "collision_prims": 3,
       "joints": 0,
       "parse": true
     },
     {
-      "task": "E16",
+      "task": "iclworld_robot_16",
       "object": "blue_t",
       "collision_prims": 3,
       "joints": 0,
       "parse": true
     },
     {
-      "task": "E16",
+      "task": "iclworld_robot_16",
       "object": "black_t",
       "collision_prims": 3,
       "joints": 0,
       "parse": true
     },
     {
-      "task": "E17",
+      "task": "iclworld_robot_17",
       "object": "blue_square",
       "collision_prims": 2,
       "joints": 0,
       "parse": true
     },
     {
-      "task": "E17",
+      "task": "iclworld_robot_17",
       "object": "blue_triangle",
       "collision_prims": 2,
       "joints": 0,
       "parse": true
     },
     {
-      "task": "E17",
+      "task": "iclworld_robot_17",
       "object": "green_square",
       "collision_prims": 2,
       "joints": 0,
       "parse": true
     },
     {
-      "task": "E17",
+      "task": "iclworld_robot_17",
       "object": "green_triangle",
       "collision_prims": 2,
       "joints": 0,
       "parse": true
     },
     {
-      "task": "E18",
+      "task": "iclworld_robot_18",
       "object": "red",
       "collision_prims": 2,
       "joints": 0,
       "parse": true
     },
     {
-      "task": "E18",
+      "task": "iclworld_robot_18",
       "object": "green",
       "collision_prims": 2,
       "joints": 0,
       "parse": true
     },
     {
-      "task": "E18",
+      "task": "iclworld_robot_18",
       "object": "blue",
       "collision_prims": 2,
       "joints": 0,
       "parse": true
     },
     {
-      "task": "E21",
+      "task": "iclworld_robot_21",
       "object": "green_block",
       "collision_prims": 2,
       "joints": 0,
       "parse": true
     },
     {
-      "task": "E21",
+      "task": "iclworld_robot_21",
       "object": "yellow_block",
       "collision_prims": 2,
       "joints": 0,
       "parse": true
     },
     {
-      "task": "E21",
+      "task": "iclworld_robot_21",
       "object": "blue_block",
       "collision_prims": 2,
       "joints": 0,
       "parse": true
     },
     {
-      "task": "E21",
+      "task": "iclworld_robot_21",
       "object": "red_block",
       "collision_prims": 2,
       "joints": 0,
       "parse": true
     },
     {
-      "task": "E22",
+      "task": "iclworld_robot_22",
       "object": "red_block",
       "collision_prims": 2,
       "joints": 0,
       "parse": true
     },
     {
-      "task": "E22",
+      "task": "iclworld_robot_22",
       "object": "blue_block",
       "collision_prims": 2,
       "joints": 0,
       "parse": true
     },
     {
-      "task": "E22",
+      "task": "iclworld_robot_22",
       "object": "green_block",
       "collision_prims": 2,
       "joints": 0,
       "parse": true
     },
     {
-      "task": "E24",
+      "task": "iclworld_robot_24",
       "object": "blue",
       "collision_prims": 289,
       "joints": 0,
       "parse": true
     },
     {
-      "task": "E24",
+      "task": "iclworld_robot_24",
       "object": "green",
       "collision_prims": 289,
       "joints": 0,
       "parse": true
     },
     {
-      "task": "E24",
+      "task": "iclworld_robot_24",
       "object": "red",
       "collision_prims": 289,
       "joints": 0,
       "parse": true
     },
     {
-      "task": "E25",
+      "task": "iclworld_robot_25",
       "object": "fork",
       "collision_prims": 7,
       "joints": 0,
       "parse": true
     },
     {
-      "task": "E25",
+      "task": "iclworld_robot_25",
       "object": "spoon",
       "collision_prims": 4,
       "joints": 0,
       "parse": true
     },
     {
-      "task": "E25",
+      "task": "iclworld_robot_25",
       "object": "knife",
       "collision_prims": 3,
       "joints": 0,
       "parse": true
     },
     {
-      "task": "E27",
+      "task": "iclworld_robot_27",
       "object": "fork",
       "collision_prims": 7,
       "joints": 0,
       "parse": true
     },
     {
-      "task": "E27",
+      "task": "iclworld_robot_27",
       "object": "spoon",
       "collision_prims": 4,
       "joints": 0,
       "parse": true
     },
     {
-      "task": "E30",
+      "task": "iclworld_robot_30",
       "object": "cabinet",
       "collision_prims": 26,
       "joints": 4,
       "parse": true
     },
     {
-      "task": "E34",
+      "task": "iclworld_robot_34",
       "object": "fork",
       "collision_prims": 7,
       "joints": 0,
       "parse": true
     },
     {
-      "task": "E34",
+      "task": "iclworld_robot_34",
       "object": "spoon",
       "collision_prims": 4,
       "joints": 0,
       "parse": true
     },
     {
-      "task": "E34",
+      "task": "iclworld_robot_34",
       "object": "knife",
       "collision_prims": 3,
       "joints": 0,
       "parse": true
     },
     {
-      "task": "E35",
+      "task": "iclworld_robot_35",
       "object": "small",
       "collision_prims": 4,
       "joints": 0,
       "parse": true
     },
     {
-      "task": "E35",
+      "task": "iclworld_robot_35",
       "object": "medium",
       "collision_prims": 4,
       "joints": 0,
       "parse": true
     },
     {
-      "task": "E35",
+      "task": "iclworld_robot_35",
       "object": "large",
       "collision_prims": 4,
       "joints": 0,
       "parse": true
     },
     {
-      "task": "E38",
+      "task": "iclworld_robot_38",
       "object": "red",
       "collision_prims": 144,
       "joints": 0,
       "parse": true
     },
     {
-      "task": "E38",
+      "task": "iclworld_robot_38",
       "object": "blue",
       "collision_prims": 144,
       "joints": 0,
       "parse": true
     },
     {
-      "task": "E38",
+      "task": "iclworld_robot_38",
       "object": "green",
       "collision_prims": 144,
       "joints": 0,
       "parse": true
     },
     {
-      "task": "E39",
+      "task": "iclworld_robot_39",
       "object": "red_ref",
       "collision_prims": 2,
       "joints": 0,
       "parse": true
     },
     {
-      "task": "E39",
+      "task": "iclworld_robot_39",
       "object": "blue_ref",
       "collision_prims": 2,
       "joints": 0,
       "parse": true
     },
     {
-      "task": "E39",
+      "task": "iclworld_robot_39",
       "object": "black_ref",
       "collision_prims": 2,
       "joints": 0,
       "parse": true
     },
     {
-      "task": "E39",
+      "task": "iclworld_robot_39",
       "object": "blue_active",
       "collision_prims": 2,
       "joints": 0,
       "parse": true
     },
     {
-      "task": "E39",
+      "task": "iclworld_robot_39",
       "object": "black_active",
       "collision_prims": 2,
       "joints": 0,
       "parse": true
     },
     {
-      "task": "E39",
+      "task": "iclworld_robot_39",
       "object": "red_active",
       "collision_prims": 2,
       "joints": 0,
       "parse": true
     },
     {
-      "task": "E47",
+      "task": "iclworld_robot_47",
       "object": "card1",
       "collision_prims": 1,
       "joints": 0,
       "parse": true
     },
     {
-      "task": "E47",
+      "task": "iclworld_robot_47",
       "object": "card2",
       "collision_prims": 1,
       "joints": 0,
       "parse": true
     },
     {
-      "task": "E47",
+      "task": "iclworld_robot_47",
       "object": "card3",
       "collision_prims": 1,
       "joints": 0,
       "parse": true
     },
     {
-      "task": "E47",
+      "task": "iclworld_robot_47",
       "object": "card4",
       "collision_prims": 1,
       "joints": 0,
       "parse": true
     },
     {
-      "task": "E47",
+      "task": "iclworld_robot_47",
       "object": "card5",
       "collision_prims": 1,
       "joints": 0,
       "parse": true
     }
   ],
-  "E38": {
-    "post_collision_source": "RoboDojo-Audit/deployment/real-text300-20261030/asset_roots/VIC_MECHANISM_ASSETS/five_group_post_board.usda",
+  "iclworld_robot_38": {
+    "post_collision_source": "RoboDojo-Audit/deployment/real-text300-20261030/asset_roots/ICLWORLD_MECHANISM_ASSETS/five_group_post_board.usda",
     "prim": "/Asset/Collisions/mesh_0_circle_post_0",
     "bounds": [
       [

@@ -17,7 +17,7 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-BASE_URL = os.environ.get("VIC_API_URL", "http://127.0.0.1:8000")
+BASE_URL = os.environ.get("ICLWORLD_API_URL", "http://127.0.0.1:8000")
 
 # 会话状态管理
 def init_session_state():

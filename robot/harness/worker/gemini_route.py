@@ -20,8 +20,8 @@ else:
 
 def configured_routes():
     from provider_routes import https_origin
-    return [('primary', https_origin('VIC_GEMINI_PRIMARY')),
-            ('fallback', https_origin('VIC_GEMINI_FALLBACK'))]
+    return [('primary', https_origin('ICLWORLD_GEMINI_PRIMARY')),
+            ('fallback', https_origin('ICLWORLD_GEMINI_FALLBACK'))]
 
 
 
@@ -172,7 +172,7 @@ def query(curl, ca, path, body, keys, out, rec, *, client_alive=lambda: True):
                    'header = ' + json.dumps('x-goog-api-key: ' + key),
                    'header = ' + json.dumps('Authorization: Bearer ' + key),
                    'dump-header = ' + json.dumps(headers.name), 'connect-timeout = 15', 'data-binary = ' + json.dumps('@' + f.name),
-                   'write-out = "\\nVIC_TIMING\\t%{http_code}\\t%{time_namelookup}\\t%{time_connect}\\t%{time_appconnect}\\t%{time_pretransfer}\\t%{time_starttransfer}\\t%{time_total}\\t%{size_upload}\\t%{speed_upload}\\t%{size_download}"']
+                   'write-out = "\\nICLWORLD_TIMING\\t%{http_code}\\t%{time_namelookup}\\t%{time_connect}\\t%{time_appconnect}\\t%{time_pretransfer}\\t%{time_starttransfer}\\t%{time_total}\\t%{size_upload}\\t%{speed_upload}\\t%{size_download}"']
             if name == 'primary':
                 cfg += ['noproxy = "*"']
             elif ca:
@@ -186,7 +186,7 @@ def query(curl, ca, path, body, keys, out, rec, *, client_alive=lambda: True):
                                    input=('\n'.join(cfg) + '\n').encode(), capture_output=True)
             data, _, http = r.stdout.rpartition(b'\n')
             timing = None
-            if http.startswith(b'VIC_TIMING\t'):
+            if http.startswith(b'ICLWORLD_TIMING\t'):
                 fields = http.split(b'\t')[1:]
                 http = fields[0]
                 names = ('dns_seconds', 'connect_seconds', 'tls_seconds',

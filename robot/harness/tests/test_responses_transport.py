@@ -2,10 +2,10 @@ import io,json,os,sys,tempfile,unittest,gzip
 from pathlib import Path
 from unittest.mock import patch
 ROOT=Path(__file__).resolve().parents[1]
-sys.path[:0]=[str(ROOT/'worker'),str(ROOT/'VideoICLBench/packages/sdk')]
+sys.path[:0]=[str(ROOT/'worker'),str(ROOT/'iclworld_harness/packages/sdk')]
 import transport,provider_routes
-import vic_sdk.episode_api_admission as admission
-import vic_sdk.api_timing as timing
+import iclworld_sdk.episode_api_admission as admission
+import iclworld_sdk.api_timing as timing
 
 class DummyServer:
  def __init__(self,addr,handler):self.RequestHandlerClass=handler
@@ -25,10 +25,10 @@ class BrokenWriter:
 class TransportTests(unittest.TestCase):
  def setUp(self):
   self.tmp=tempfile.TemporaryDirectory();self.out=Path(self.tmp.name);self.events=[]
-  self.env=patch.dict(os.environ,{'VIC_UPSTREAM_ORIGIN':'https://provider.invalid/v1','VIC_PROVIDER_DIRECT':'1'})
+  self.env=patch.dict(os.environ,{'ICLWORLD_UPSTREAM_ORIGIN':'https://provider.invalid/v1','ICLWORLD_PROVIDER_DIRECT':'1'})
   self.env.start();self.addCleanup(self.env.stop);self.addCleanup(self.tmp.cleanup)
  def req(self,engine='codex',route='/v1/responses',payload=None,raw=None,status=200,mime='text/event-stream',headers=b'',broken=False,closed=False):
-  if payload is None:payload={'model':'model-test','tools':[{'type':'function','name':'mcp__vic__'+n} for n in transport.TOOLS],'input':[{'role':'user','content':[{'type':'input_image','image_url':'data:fake'}]}]}
+  if payload is None:payload={'model':'model-test','tools':[{'type':'function','name':'mcp__iclworld__'+n} for n in transport.TOOLS],'input':[{'role':'user','content':[{'type':'input_image','image_url':'data:fake'}]}]}
   if raw is None:raw=b'data: '+json.dumps({'type':'response.completed','response':{'id':'response-test','model':'model-test','status':'completed','usage':{'input_tokens':120,'input_tokens_details':{'cached_tokens':90},'output_tokens':7,'output_tokens_details':{'reasoning_tokens':2},'total_tokens':127}}}).encode()+b'\n\n'
   Proc.wire=f'HTTP/1.1 {status} TEST\r\nContent-Type: {mime}\r\n'.encode()+headers+b'\r\n'+raw;Proc.drained=False;Proc.rc=0
   def start(*args):

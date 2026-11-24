@@ -21,19 +21,19 @@ import urllib.request
 import uuid
 
 CAMPAIGN = Path(__file__).resolve().parent
-ROOT = CAMPAIGN / 'VideoICLBench'
+ROOT = CAMPAIGN / 'iclworld_harness'
 sys.path.insert(0, str(ROOT / 'packages/sdk'))
 sys.path.insert(0, str(ROOT/'scripts/harbor'))
 if __name__ == '__main__':
     for name in list(sys.modules):
-        if name == 'vic_sdk' or name.startswith('vic_sdk.'):
+        if name == 'iclworld_sdk' or name.startswith('iclworld_sdk.'):
             del sys.modules[name]
-from vic_sdk.native_agent import provider_key
-from vic_sdk.embodied_agent import robodawn_policy
-from vic_sdk.process_identity import named_python_command
-from vic_sdk.process_lifecycle import ProcessIdentity, alive, identity, terminate_tree
+from iclworld_sdk.native_agent import provider_key
+from iclworld_sdk.embodied_agent import robodawn_policy
+from iclworld_sdk.process_identity import named_python_command
+from iclworld_sdk.process_lifecycle import ProcessIdentity, alive, identity, terminate_tree
 from native_collision_admission import assert_native_collision_admission
-from vic_sdk.direct_tools import validate_context_window, validate_model_catalog, SUPPORTED_NATIVE_CLI_VERSIONS
+from iclworld_sdk.direct_tools import validate_context_window, validate_model_catalog, SUPPORTED_NATIVE_CLI_VERSIONS
 
 
 class Stopped(RuntimeError):
@@ -149,7 +149,7 @@ def build_parser():
     p.add_argument('--api-concurrency-config', type=Path,
                    help='Shared provider-scope request admission; queued time is infrastructure waiting')
     p.add_argument('--probe-only', action='store_true', help='Real GUI/native validation with no model or API')
-    p.add_argument('--probe-profile', choices=['basic','e31_rgb_motion_v1','e31_rgbd_motion_v2','sensor_only_gui_v1','inference_motion_v1'], default='basic')
+    p.add_argument('--probe-profile', choices=['basic','iclworld_robot_31_rgb_motion_v1','iclworld_robot_31_rgbd_motion_v2','sensor_only_gui_v1','inference_motion_v1'], default='basic')
     p.add_argument('--provider-ca-bundle', type=Path,
                    help='Use a temporary loopback relay to the same verified HTTPS provider')
     p.add_argument('--provider-proxy', help='Explicit HTTP(S) egress proxy for the verified provider relay')
@@ -204,15 +204,15 @@ def main():
     if not args.probe_only:
         if args.max_actions != 500 or args.timeout != 0:
             p.error('The verified model worker requires --max-actions 500 --timeout 0')
-        cli = args.binary or Path(os.environ.get('VIC_CLI_' + args.engine.upper(), ''))
+        cli = args.binary or Path(os.environ.get('ICLWORLD_CLI_' + args.engine.upper(), ''))
         if not cli.is_file():
-            p.error('Set --binary or VIC_CLI_' + args.engine.upper() + ' to the installed native CLI')
-        auth = Path(os.environ.get('VIC_POOL_AUTHFILE', ''))
+            p.error('Set --binary or ICLWORLD_CLI_' + args.engine.upper() + ' to the installed native CLI')
+        auth = Path(os.environ.get('ICLWORLD_POOL_AUTHFILE', ''))
         if not auth.is_file() or auth.stat().st_mode & 0o077:
-            p.error('VIC_POOL_AUTHFILE must name a private (0600) provider key file')
-        os.environ['VIC_POOL_AUTHFILE'] = str(auth.resolve())
+            p.error('ICLWORLD_POOL_AUTHFILE must name a private (0600) provider key file')
+        os.environ['ICLWORLD_POOL_AUTHFILE'] = str(auth.resolve())
         if args.browser_path:
-            os.environ['VIC_BROWSER_PATH'] = str(args.browser_path.resolve(strict=True))
+            os.environ['ICLWORLD_BROWSER_PATH'] = str(args.browser_path.resolve(strict=True))
     if args.coalesce_window_seconds is not None and not 0 < args.coalesce_window_seconds <= .25:
         p.error('--coalesce-window-seconds must be in (0, .25]')
     if not args.probe_only and (args.embodied_harness != 'program_gui' or not args.native_structured_tools):
@@ -239,7 +239,7 @@ def main():
                for r in rooms) or len(set(rooms)) != len(rooms):
         p.error('Each assigned case requires a unique episode_id')
     for case in cases:
-        if (case.get('task') not in {f'E{i:02d}' for i in range(1,51)}
+        if (case.get('task') not in {f'iclworld_robot_{i:02d}' for i in range(1,51)}
                 or case.get('variant') not in {'A','B','C'}
                 or case.get('input_condition',args.condition) not in {'real','sim','text_rule','none'}):
             p.error('Every case requires a valid task, variant and input condition')
@@ -260,7 +260,7 @@ def main():
     stop = threading.Event()
     for sig in [signal.SIGTERM, signal.SIGINT]:
         signal.signal(sig, lambda *_: stop.set())
-    state = dict(schema='videoicl-on-demand-pool-v1', owner=asdict(identity(os.getpid())),
+    state = dict(schema='iclworld-on-demand-pool-v1', owner=asdict(identity(os.getpid())),
         started_unix=time.time(), status='starting', validation_only=True,
         scientific_evaluation=False, campaign=CAMPAIGN.name, engine=args.engine, worker_configuration=effective_worker_configuration, assigned_rooms=rooms, children=[], results=[])
 
@@ -364,7 +364,7 @@ def main():
             providers = json.loads(credentials.read_text())
             provider = providers[provider_key(args.engine)]
             relay_folder = out/'provider-relay'
-            relay_command=[args.gui_python,ROOT/'packages/sdk/vic_sdk/tls_relay_entry.py',
+            relay_command=[args.gui_python,ROOT/'packages/sdk/iclworld_sdk/tls_relay_entry.py',
                 '--upstream',provider['base_url'],'--ca-bundle',args.provider_ca_bundle,
                 '--out',relay_folder,'--timeout',args.timeout or 300]
             if args.api_concurrency_config:
@@ -436,7 +436,7 @@ def main():
                     and report.get('condition')==condition
                     and report.get('model_requests')==0
                     and report.get('probe_profile')==args.probe_profile
-                    and report.get('physical_commits')==(3 if args.probe_profile in {'e31_rgb_motion_v1','e31_rgbd_motion_v2','inference_motion_v1'} else 1)
+                    and report.get('physical_commits')==(3 if args.probe_profile in {'iclworld_robot_31_rgb_motion_v1','iclworld_robot_31_rgbd_motion_v2','inference_motion_v1'} else 1)
                     and report.get('validation_only') is True
                     and report.get('scientific_evaluation') is False)
                 state['results'].append(dict(room_id=case['episode_id'],condition=condition,

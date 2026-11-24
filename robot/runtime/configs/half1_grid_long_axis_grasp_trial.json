@@ -1,13 +1,13 @@
 {
   "schema": "realworld50-source-bindings-v1",
   "tasks": {
-    "E09": {
+    "iclworld_robot_09": {
       "scene_adapter": "full50-source-v1",
       "fidelity_status": "source_derived_geometry_ready_visual_and_physics_review_pending",
       "objects": {
         "red_square": {
           "source_asset": {
-            "root_env": "VIC_FULL50_RIGID_ASSETS",
+            "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
             "relative_path": "source_four_hole_plate.usda",
             "sha256": "fed57b9b0e69a5b8b98d75324ed6856c0cdb21ebc56c8f98cb372670255b61bb",
             "source_rotation": [
@@ -47,7 +47,7 @@
         },
         "red_triangle": {
           "source_asset": {
-            "root_env": "VIC_FULL50_RIGID_ASSETS",
+            "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
             "relative_path": "source_three_hole_triangle_v2.usda",
             "sha256": "caae5e783af9afae7ee6c1933e42a1654d746635873c7a1bb221ea4554a70e7b",
             "source_rotation": [
@@ -87,7 +87,7 @@
         },
         "red_circle": {
           "source_asset": {
-            "root_env": "VIC_FULL50_RIGID_ASSETS",
+            "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
             "relative_path": "native_ring.usdz",
             "sha256": "df00d91f5ab3d172ad8699751be9a5b3b6115eb1702e8a6c65da29470151d550",
             "source_rotation": [
@@ -127,7 +127,7 @@
         },
         "green_square": {
           "source_asset": {
-            "root_env": "VIC_FULL50_RIGID_ASSETS",
+            "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
             "relative_path": "source_four_hole_plate.usda",
             "sha256": "fed57b9b0e69a5b8b98d75324ed6856c0cdb21ebc56c8f98cb372670255b61bb",
             "source_rotation": [
@@ -167,7 +167,7 @@
         },
         "green_triangle": {
           "source_asset": {
-            "root_env": "VIC_FULL50_RIGID_ASSETS",
+            "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
             "relative_path": "source_three_hole_triangle_v2.usda",
             "sha256": "caae5e783af9afae7ee6c1933e42a1654d746635873c7a1bb221ea4554a70e7b",
             "source_rotation": [
@@ -207,7 +207,7 @@
         },
         "green_circle": {
           "source_asset": {
-            "root_env": "VIC_FULL50_RIGID_ASSETS",
+            "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
             "relative_path": "native_ring.usdz",
             "sha256": "df00d91f5ab3d172ad8699751be9a5b3b6115eb1702e8a6c65da29470151d550",
             "source_rotation": [
@@ -247,7 +247,7 @@
         },
         "blue_square": {
           "source_asset": {
-            "root_env": "VIC_FULL50_RIGID_ASSETS",
+            "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
             "relative_path": "source_four_hole_plate.usda",
             "sha256": "fed57b9b0e69a5b8b98d75324ed6856c0cdb21ebc56c8f98cb372670255b61bb",
             "source_rotation": [
@@ -287,7 +287,7 @@
         },
         "blue_triangle": {
           "source_asset": {
-            "root_env": "VIC_FULL50_RIGID_ASSETS",
+            "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
             "relative_path": "source_three_hole_triangle_v2.usda",
             "sha256": "caae5e783af9afae7ee6c1933e42a1654d746635873c7a1bb221ea4554a70e7b",
             "source_rotation": [
@@ -327,7 +327,7 @@
         },
         "blue_circle": {
           "source_asset": {
-            "root_env": "VIC_FULL50_RIGID_ASSETS",
+            "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
             "relative_path": "native_ring.usdz",
             "sha256": "df00d91f5ab3d172ad8699751be9a5b3b6115eb1702e8a6c65da29470151d550",
             "source_rotation": [
@@ -1307,13 +1307,13 @@
       ],
       "expert_preserve_goal_order": true
     },
-    "E11": {
+    "iclworld_robot_11": {
       "scene_adapter": "full50-source-v1",
       "fidelity_status": "source_derived_geometry_ready_visual_and_physics_review_pending",
       "objects": {
         "tray": {
           "source_asset": {
-            "root_env": "VIC_FULL50_RIGID_ASSETS",
+            "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
             "relative_path": "four_grid_wooden_tray.usda",
             "sha256": "b6b5837110820a23f6dc743e0ea007259500124d8da632686c708732a4e3633c",
             "source_rotation": [
@@ -1355,7 +1355,7 @@
         },
         "red_block": {
           "source_asset": {
-            "root_env": "VIC_FULL50_RIGID_ASSETS",
+            "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
             "relative_path": "source_four_hole_plate.usda",
             "sha256": "fed57b9b0e69a5b8b98d75324ed6856c0cdb21ebc56c8f98cb372670255b61bb",
             "source_rotation": [
@@ -1396,7 +1396,7 @@
         },
         "blue_block": {
           "source_asset": {
-            "root_env": "VIC_FULL50_RIGID_ASSETS",
+            "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
             "relative_path": "source_four_hole_plate.usda",
             "sha256": "fed57b9b0e69a5b8b98d75324ed6856c0cdb21ebc56c8f98cb372670255b61bb",
             "source_rotation": [
@@ -1437,7 +1437,7 @@
         },
         "yellow_block": {
           "source_asset": {
-            "root_env": "VIC_FULL50_RIGID_ASSETS",
+            "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
             "relative_path": "source_four_hole_plate.usda",
             "sha256": "fed57b9b0e69a5b8b98d75324ed6856c0cdb21ebc56c8f98cb372670255b61bb",
             "source_rotation": [
@@ -1478,7 +1478,7 @@
         },
         "green_block": {
           "source_asset": {
-            "root_env": "VIC_FULL50_RIGID_ASSETS",
+            "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
             "relative_path": "source_four_hole_plate.usda",
             "sha256": "fed57b9b0e69a5b8b98d75324ed6856c0cdb21ebc56c8f98cb372670255b61bb",
             "source_rotation": [
@@ -2176,13 +2176,13 @@
       ],
       "expert_preserve_goal_order": true
     },
-    "E20": {
+    "iclworld_robot_20": {
       "scene_adapter": "full50-source-v1",
       "fidelity_status": "source_coaster_rescaled_recolored_to_thin_tokens",
       "objects": {
         "yellow_supply_1": {
           "source_asset": {
-            "root_env": "VIC_FULL50_RIGID_ASSETS",
+            "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
             "relative_path": "coaster_disk.usda",
             "sha256": "0a52a9c5b908277e7e408155316a3fc55f889405d6ab0331f0922e8bb4047120",
             "source_rotation": [
@@ -2226,7 +2226,7 @@
         },
         "yellow_supply_2": {
           "source_asset": {
-            "root_env": "VIC_FULL50_RIGID_ASSETS",
+            "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
             "relative_path": "coaster_disk.usda",
             "sha256": "0a52a9c5b908277e7e408155316a3fc55f889405d6ab0331f0922e8bb4047120",
             "source_rotation": [
@@ -2270,7 +2270,7 @@
         },
         "yellow_supply_3": {
           "source_asset": {
-            "root_env": "VIC_FULL50_RIGID_ASSETS",
+            "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
             "relative_path": "coaster_disk.usda",
             "sha256": "0a52a9c5b908277e7e408155316a3fc55f889405d6ab0331f0922e8bb4047120",
             "source_rotation": [
@@ -2314,7 +2314,7 @@
         },
         "yellow_supply_4": {
           "source_asset": {
-            "root_env": "VIC_FULL50_RIGID_ASSETS",
+            "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
             "relative_path": "coaster_disk.usda",
             "sha256": "0a52a9c5b908277e7e408155316a3fc55f889405d6ab0331f0922e8bb4047120",
             "source_rotation": [
@@ -2358,7 +2358,7 @@
         },
         "red_supply_1": {
           "source_asset": {
-            "root_env": "VIC_FULL50_RIGID_ASSETS",
+            "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
             "relative_path": "coaster_disk.usda",
             "sha256": "0a52a9c5b908277e7e408155316a3fc55f889405d6ab0331f0922e8bb4047120",
             "source_rotation": [
@@ -2402,7 +2402,7 @@
         },
         "red_supply_2": {
           "source_asset": {
-            "root_env": "VIC_FULL50_RIGID_ASSETS",
+            "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
             "relative_path": "coaster_disk.usda",
             "sha256": "0a52a9c5b908277e7e408155316a3fc55f889405d6ab0331f0922e8bb4047120",
             "source_rotation": [
@@ -2446,7 +2446,7 @@
         },
         "red_supply_3": {
           "source_asset": {
-            "root_env": "VIC_FULL50_RIGID_ASSETS",
+            "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
             "relative_path": "coaster_disk.usda",
             "sha256": "0a52a9c5b908277e7e408155316a3fc55f889405d6ab0331f0922e8bb4047120",
             "source_rotation": [
@@ -2490,7 +2490,7 @@
         },
         "red_supply_4": {
           "source_asset": {
-            "root_env": "VIC_FULL50_RIGID_ASSETS",
+            "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
             "relative_path": "coaster_disk.usda",
             "sha256": "0a52a9c5b908277e7e408155316a3fc55f889405d6ab0331f0922e8bb4047120",
             "source_rotation": [
@@ -2534,7 +2534,7 @@
         },
         "blue_supply_1": {
           "source_asset": {
-            "root_env": "VIC_FULL50_RIGID_ASSETS",
+            "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
             "relative_path": "coaster_disk.usda",
             "sha256": "0a52a9c5b908277e7e408155316a3fc55f889405d6ab0331f0922e8bb4047120",
             "source_rotation": [
@@ -2578,7 +2578,7 @@
         },
         "blue_supply_2": {
           "source_asset": {
-            "root_env": "VIC_FULL50_RIGID_ASSETS",
+            "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
             "relative_path": "coaster_disk.usda",
             "sha256": "0a52a9c5b908277e7e408155316a3fc55f889405d6ab0331f0922e8bb4047120",
             "source_rotation": [
@@ -2622,7 +2622,7 @@
         },
         "blue_supply_3": {
           "source_asset": {
-            "root_env": "VIC_FULL50_RIGID_ASSETS",
+            "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
             "relative_path": "coaster_disk.usda",
             "sha256": "0a52a9c5b908277e7e408155316a3fc55f889405d6ab0331f0922e8bb4047120",
             "source_rotation": [
@@ -2666,7 +2666,7 @@
         },
         "blue_supply_4": {
           "source_asset": {
-            "root_env": "VIC_FULL50_RIGID_ASSETS",
+            "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
             "relative_path": "coaster_disk.usda",
             "sha256": "0a52a9c5b908277e7e408155316a3fc55f889405d6ab0331f0922e8bb4047120",
             "source_rotation": [
@@ -2710,7 +2710,7 @@
         },
         "yellow_initial": {
           "source_asset": {
-            "root_env": "VIC_FULL50_RIGID_ASSETS",
+            "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
             "relative_path": "coaster_disk.usda",
             "sha256": "0a52a9c5b908277e7e408155316a3fc55f889405d6ab0331f0922e8bb4047120",
             "source_rotation": [
@@ -2754,7 +2754,7 @@
         },
         "blue_initial": {
           "source_asset": {
-            "root_env": "VIC_FULL50_RIGID_ASSETS",
+            "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
             "relative_path": "coaster_disk.usda",
             "sha256": "0a52a9c5b908277e7e408155316a3fc55f889405d6ab0331f0922e8bb4047120",
             "source_rotation": [
@@ -3553,13 +3553,13 @@
       ],
       "expert_preserve_goal_order": true
     },
-    "E21": {
+    "iclworld_robot_21": {
       "scene_adapter": "full50-source-v1",
       "fidelity_status": "source_derived_geometry_ready_visual_and_physics_review_pending",
       "objects": {
         "tray": {
           "source_asset": {
-            "root_env": "VIC_FULL50_RIGID_ASSETS",
+            "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
             "relative_path": "four_grid_wooden_tray.usda",
             "sha256": "b6b5837110820a23f6dc743e0ea007259500124d8da632686c708732a4e3633c",
             "source_rotation": [
@@ -3601,7 +3601,7 @@
         },
         "green_block": {
           "source_asset": {
-            "root_env": "VIC_FULL50_RIGID_ASSETS",
+            "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
             "relative_path": "source_four_hole_plate.usda",
             "sha256": "fed57b9b0e69a5b8b98d75324ed6856c0cdb21ebc56c8f98cb372670255b61bb",
             "source_rotation": [
@@ -3643,7 +3643,7 @@
         },
         "yellow_block": {
           "source_asset": {
-            "root_env": "VIC_FULL50_RIGID_ASSETS",
+            "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
             "relative_path": "source_four_hole_plate.usda",
             "sha256": "fed57b9b0e69a5b8b98d75324ed6856c0cdb21ebc56c8f98cb372670255b61bb",
             "source_rotation": [
@@ -3685,7 +3685,7 @@
         },
         "blue_block": {
           "source_asset": {
-            "root_env": "VIC_FULL50_RIGID_ASSETS",
+            "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
             "relative_path": "source_four_hole_plate.usda",
             "sha256": "fed57b9b0e69a5b8b98d75324ed6856c0cdb21ebc56c8f98cb372670255b61bb",
             "source_rotation": [
@@ -3727,7 +3727,7 @@
         },
         "red_block": {
           "source_asset": {
-            "root_env": "VIC_FULL50_RIGID_ASSETS",
+            "root_env": "ICLWORLD_FULL50_RIGID_ASSETS",
             "relative_path": "source_four_hole_plate.usda",
             "sha256": "fed57b9b0e69a5b8b98d75324ed6856c0cdb21ebc56c8f98cb372670255b61bb",
             "source_rotation": [

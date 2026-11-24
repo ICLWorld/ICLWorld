@@ -76,7 +76,7 @@
   },
   "asset": {
     "path": "assets/embodiments/robotwin-r5/ur5-wsg/robot.usd",
-    "env": "VIC_UR5_WSG_USD",
+    "env": "ICLWORLD_UR5_WSG_USD",
     "format": "usd",
     "source_embodiment": "ur5-wsg"
   },

@@ -3,7 +3,7 @@
   "task_id": "24",
   "variant": "A",
   "seed": 4201,
-  "generalization": "I",
+  "generalization": "resample",
   "backend": "iclworld-web-os",
   "codebase": "https://github.com/ICLWorld/ICLWorld",
   "demo_sha256": "4151d7a417bb96653c3f6ea4df0750a81068ab287b093caff4a57c5f1453fba7"

@@ -3,7 +3,7 @@ import argparse
 import json
 from pathlib import Path
 import os
-from vic_sdk.computer_mcp import Computer, make_server
+from iclworld_sdk.computer_mcp import Computer, make_server
 
 class CheckpointComputer(Computer):
     def act(self, *args, **kwargs):

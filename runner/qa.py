@@ -87,7 +87,7 @@ def raw_branch(root,model,case,checkpoint,directory):
     return result
 
 def gpt_branch(root,model,case,directory):
-    from vic_sdk.native_agent import codex_config,summarize
+    from iclworld_sdk.native_agent import codex_config,summarize
     d=directory;d.mkdir(parents=True,exist_ok=True);profile=d/'profile';profile.mkdir();work=d/'workspace';work.mkdir()
     source=root/'qa-checkpoints'/model/case['name']
     record=json.loads((source/'checkpoint.json').read_text());assert record['eligible']
@@ -99,10 +99,10 @@ def gpt_branch(root,model,case,directory):
     first=json.loads(dst.read_text().splitlines()[0])['payload'];sid=first.get('session_id',first.get('id'))
     provider=json.loads((root/'providers.private.json').read_text())[model]
     from api_model_identity import api_model_id
-    config=codex_config(api_model_id(model),provider['base'].removesuffix('/v1')+'/v1',{'command':'unused','args':[]},native_auth=True,code_mode=True,effort='high').split('[mcp_servers.vic]')[0]
+    config=codex_config(api_model_id(model),provider['base'].removesuffix('/v1')+'/v1',{'command':'unused','args':[]},native_auth=True,code_mode=True,effort='high').split('[mcp_servers.iclworld]')[0]
     (profile/'config.toml').write_text(config);save(profile/'auth.json',{'auth_mode':'apikey','OPENAI_API_KEY':provider['key']})
     env={k:v for k,v in os.environ.items() if k.lower() not in ('http_proxy','https_proxy','all_proxy')}
-    env['CODEX_HOME']=str(profile);env['PATH']=str(Path(os.environ['MATRIX_CLI_ROOT'])/'node-v22.21.1-linux-x64/bin')+':'+env['PATH']
+    env['CODEX_HOME']=str(profile);env['PATH']=str(Path(os.environ['ICLWORLD_CLI_ROOT'])/'node-v22.21.1-linux-x64/bin')+':'+env['PATH']
     binary=root/'cli/node_modules/@openai/codex/bin/codex.js'
     cmd=[str(binary),'exec','--skip-git-repo-check','--json','--color','never','-C',str(work),'fork',sid,'-']
     started=time.time();timed=False

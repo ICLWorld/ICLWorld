@@ -77,12 +77,12 @@
       "RealWorld50 action interval 0.2s with original 4ms physical dt; actual render sampling remains 15Hz and frame-clock checked.",
       "Private author recording at 25fps and continuous minimum-jerk Cartesian targets through real native IK/PhysX; physical dt remains 4ms.",
       "Private generic-demo speed probe: loaded Cartesian peak 0.18m/s, acceleration 0.6m/s2; actual native physics and 25fps retained.",
-      "Low-table E05/E06-only author route probe: direct idle-arm retreat at 1.10m, carry plane0.98m; no task objects or physics time assignments."
+      "Low-table iclworld_robot_05/iclworld_robot_06-only author route probe: direct idle-arm retreat at 1.10m, carry plane0.98m; no task objects or physics time assignments."
     ]
   },
   "asset": {
     "path": "assets/embodiments/robotwin-r5/franka-panda/robot.usd",
-    "env": "VIC_FRANKA_ROBOTWIN_USD",
+    "env": "ICLWORLD_FRANKA_ROBOTWIN_USD",
     "format": "usd",
     "source_embodiment": "franka-panda"
   },

@@ -1,11 +1,11 @@
 {
   "schema": "realworld50-source-bindings-v1",
   "tasks": {
-    "E32": {
+    "iclworld_robot_32": {
       "objects": {
         "sprite_bottle": {
           "source_asset": {
-            "root_env": "VIC_REALWORLD_ASSETS",
+            "root_env": "ICLWORLD_REALWORLD_ASSETS",
             "relative_path": "sprite_bottle.usda",
             "sha256": "6e69283316bbbbb8996ce3467e9a9b816f02f2f5eb6adc576d618f140e7b3e04",
             "source_rotation": [
@@ -46,7 +46,7 @@
         },
         "cola_bottle": {
           "source_asset": {
-            "root_env": "VIC_REALWORLD_ASSETS",
+            "root_env": "ICLWORLD_REALWORLD_ASSETS",
             "relative_path": "cola_bottle.usda",
             "sha256": "93c5402054122d2808282637cac33199019d8c532baad3e0c484f07729d6e48a",
             "source_rotation": [
@@ -87,7 +87,7 @@
         },
         "phone": {
           "source_asset": {
-            "root_env": "VIC_REALWORLD_ASSETS",
+            "root_env": "ICLWORLD_REALWORLD_ASSETS",
             "relative_path": "phone.usda",
             "sha256": "76e09a11306404b992162e7581228887e0fb9ea2c68f7d7fbef9c0e7ad8bfed7",
             "source_rotation": [
@@ -128,7 +128,7 @@
         },
         "shoe": {
           "source_asset": {
-            "root_env": "VIC_REALWORLD_ASSETS",
+            "root_env": "ICLWORLD_REALWORLD_ASSETS",
             "relative_path": "shoe.usda",
             "sha256": "396c67fa6869c96c71342e2b03e26b011c200b6093a6beddfb987f11c1bc368a",
             "source_rotation": [
@@ -169,7 +169,7 @@
         },
         "plate": {
           "source_asset": {
-            "root_env": "VIC_REALWORLD_ASSETS",
+            "root_env": "ICLWORLD_REALWORLD_ASSETS",
             "relative_path": "plate.usda",
             "sha256": "f4cced132b6fffa20c50b869daf4bc4d09b3611bfbbf15a40f791da9a92ad734",
             "source_rotation": [
@@ -210,7 +210,7 @@
         },
         "bowl": {
           "source_asset": {
-            "root_env": "VIC_REALWORLD_ASSETS",
+            "root_env": "ICLWORLD_REALWORLD_ASSETS",
             "relative_path": "bowl.usda",
             "sha256": "0547e8b413326e663a6d00096b536b0f61c42835d4bef6c2e1be6f95a885f110",
             "source_rotation": [
@@ -251,7 +251,7 @@
         },
         "cup": {
           "source_asset": {
-            "root_env": "VIC_REALWORLD_ASSETS",
+            "root_env": "ICLWORLD_REALWORLD_ASSETS",
             "relative_path": "cup.usda",
             "sha256": "ce381937baf620703210719ed6947f539dd06cd57be4718ebc3f7d2528c00d14",
             "source_rotation": [
@@ -292,7 +292,7 @@
         },
         "plasticbox": {
           "source_asset": {
-            "root_env": "VIC_REALWORLD_ASSETS",
+            "root_env": "ICLWORLD_REALWORLD_ASSETS",
             "relative_path": "plasticbox.usda",
             "sha256": "b1825745f4814f6ae5ae5ca51f687d281c0cb70ed1fbe3f33b9e16e94d4a3c90",
             "source_rotation": [
@@ -333,7 +333,7 @@
         },
         "pink_cube": {
           "source_asset": {
-            "root_env": "VIC_ROBODOJO_ASSETS",
+            "root_env": "ICLWORLD_ROBODOJO_ASSETS",
             "relative_path": "Object/RoboDojo/Rigid/small_cube/00007/object.usdz",
             "sha256": "5e884b3ea23bca1706aabbc53f7d6cfe66cafc57fd70ddfc5ba031d5107ec583",
             "source_rotation": [
@@ -383,12 +383,12 @@
     }
   },
   "gaps": {
-    "E05": "triangle mesh missing",
-    "E02": "four-hole thin blocks missing",
-    "E06": "six-cell egg tray missing",
-    "E18": "two-drawer toy with mechanisms missing",
-    "E26": "polka-dot dome bell mechanism missing",
-    "E32": "clutter incomplete; 111_callbell rejected: handheld stem bell, not dome desk bell; bottle labels approximate; ABC-specific source layout pending"
+    "iclworld_robot_05": "triangle mesh missing",
+    "iclworld_robot_02": "four-hole thin blocks missing",
+    "iclworld_robot_06": "six-cell egg tray missing",
+    "iclworld_robot_18": "two-drawer toy with mechanisms missing",
+    "iclworld_robot_26": "polka-dot dome bell mechanism missing",
+    "iclworld_robot_32": "clutter incomplete; 111_callbell rejected: handheld stem bell, not dome desk bell; bottle labels approximate; ABC-specific source layout pending"
   },
   "formal_release_ready": false
 }

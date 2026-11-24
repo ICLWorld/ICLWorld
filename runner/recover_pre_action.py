@@ -13,7 +13,7 @@ def validate_context(capture,events,deadline):
   content=message.get('content',[])
   if isinstance(content,list):
    names.extend(x.get('name','') for x in content if x.get('type')=='tool_use')
- assert names and all(n.removeprefix('mcp__vic__').removeprefix('mcp_vic_') in allowed for n in names),'Source contains a non-viewing tool invocation'
+ assert names and all(n.removeprefix('mcp__iclworld__').removeprefix('mcp_iclworld_') in allowed for n in names),'Source contains a non-viewing tool invocation'
  assert hashlib.sha256(json.dumps(capture['body']).encode()).hexdigest()==capture['request_sha256'],'Captured request identity mismatch'
 
 def resolve(root,model,case,origin):

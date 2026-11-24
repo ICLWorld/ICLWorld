@@ -4,8 +4,8 @@ import hashlib
 import json
 from collections import Counter
 
-IMAGE_TOOLS = {'mcp__vic__observe','mcp__vic__action_batch','mcp__vic__demo_frames',
-               'mcp__vic__history','mcp__vic__depth_points','mcp__vic__done','mcp__vic__giveup'}
+IMAGE_TOOLS = {'mcp__iclworld__observe','mcp__iclworld__action_batch','mcp__iclworld__demo_frames',
+               'mcp__iclworld__history','mcp__iclworld__depth_points','mcp__iclworld__done','mcp__iclworld__giveup'}
 
 
 def fingerprint(block):

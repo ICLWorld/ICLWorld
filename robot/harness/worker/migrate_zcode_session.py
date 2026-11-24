@@ -91,8 +91,8 @@ def no_other_clients(room,allow=()):
 @contextmanager
 def checked(args,phase='before'):
     import httpx
-    from vic_sdk.embodied_recovery import checked_barrier,failure_class
-    from vic_sdk.native_structured_supervisor import provider_drained,unresolved_tool_input
+    from iclworld_sdk.embodied_recovery import checked_barrier,failure_class
+    from iclworld_sdk.native_structured_supervisor import provider_drained,unresolved_tool_input
     need(socket.gethostname()==args.host,'wrong slot hostname')
     root=args.campaign.resolve(strict=True);room=root/'pools'/args.pool/'rooms'/args.case/'agent';out=room/'cli'
     need(root==args.campaign and room==room.resolve(strict=True),'invalid canonical campaign or room')
@@ -202,8 +202,8 @@ def apply(args):
     with checked(args,'held')as(after,owner,room):
         need(after['identity']==before['identity'] and after['action_count']==before['action_count'] and after['attempt']==before['attempt'],'world changed at CLI exit')
         provider=out/'profile/home/.zcode/v2/provider_config.json';conf=read(provider)
-        need(conf['config']['defaultModelSelection']==dict(providerId='vic',modelId=run.MODELS['zcode']),'native model selection changed')
-        rules=conf['config']['providerConfigRules']['providerRules'];need(len(rules)==1 and rules[0]['providerId']=='vic','unexpected provider config')
+        need(conf['config']['defaultModelSelection']==dict(providerId='iclworld',modelId=run.MODELS['zcode']),'native model selection changed')
+        rules=conf['config']['providerConfigRules']['providerRules'];need(len(rules)==1 and rules[0]['providerId']=='iclworld','unexpected provider config')
         settings=rules[0]['config'];need(settings['api']['type']=='anthropic-messages','wrong native protocol')
         token=settings['access']['apiKey'];oldbase=settings['api']['baseUrl']
         need(oldbase.startswith('http://127.0.0.1:') and len(token)>=32,'original local relay invalid')
@@ -213,7 +213,7 @@ def apply(args):
         settings['api']['baseUrl']=f'http://127.0.0.1:{relay.server_port}'
         run.save(provider,conf)
         runtime=out/'profile/home/.zcode/cli/config.json';rc=read(runtime)
-        mcp=rc['mcp']['servers']['vic'];mcp['args'][0]=str(Path(run.__file__).with_name('lazy_mcp_gui.py'))
+        mcp=rc['mcp']['servers']['iclworld'];mcp['args'][0]=str(Path(run.__file__).with_name('lazy_mcp_gui.py'))
         if '--compact-depth'not in mcp['args']:mcp['args'].append('--compact-depth')
         if '--image-ledger'not in mcp['args']:mcp['args']+=['--image-ledger',str(out/'image-ledger.jsonl')]
         run.save(runtime,rc)

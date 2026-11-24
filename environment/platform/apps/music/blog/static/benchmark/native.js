@@ -1,8 +1,8 @@
 const run = location.pathname.match(/^\/native\/music\/([a-f0-9]{32})/)?.[1];
-const token = sessionStorage.getItem(`vic-music:${run}`) || "";
+const token = sessionStorage.getItem(`iclworld-music:${run}`) || "";
 let state = JSON.parse(document.querySelector("#music-state").textContent);
 const libraryPath = `/native/music/${run}/`;
-const libraryKey = `vic-music:${run}:song-list-url`;
+const libraryKey = `iclworld-music:${run}:song-list-url`;
 if (location.pathname === libraryPath) sessionStorage.setItem(libraryKey, location.pathname + location.search);
 const savedList = sessionStorage.getItem(libraryKey);
 if (savedList) {

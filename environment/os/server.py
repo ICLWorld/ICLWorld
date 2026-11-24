@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Deterministic desktop service and versioned OS-ICL authoring API."""
+"""Deterministic desktop service and versioned ICLWorld OS authoring API."""
 
 from __future__ import annotations
 
@@ -315,13 +315,13 @@ class Handler(BaseHTTPRequestHandler):
 
 def main() -> None:
     global PUBLIC_BASE_URL
-    parser = argparse.ArgumentParser(description="Run the OS-ICL desktop simulator")
+    parser = argparse.ArgumentParser(description="Run the ICLWorld OS desktop simulator")
     parser.add_argument("--host", default=os.environ.get("OS_ICL_HOST", os.environ.get("VIBE_HOST", "0.0.0.0")))
     parser.add_argument("--port", type=int, default=int(os.environ.get("OS_ICL_PORT", os.environ.get("VIBE_PORT", "8790"))))
     args = parser.parse_args()
     PUBLIC_BASE_URL = os.environ.get("OS_ICL_PUBLIC_URL", os.environ.get("VIBE_PUBLIC_URL", f"http://127.0.0.1:{args.port}"))
     server = ThreadingHTTPServer((args.host, args.port), Handler)
-    print(f"OS-ICL Desktop running at http://127.0.0.1:{args.port}", flush=True)
+    print(f"ICLWorld OS Desktop running at http://127.0.0.1:{args.port}", flush=True)
     try:
         server.serve_forever()
     except KeyboardInterrupt:

@@ -1,5 +1,5 @@
-asset_path: /home/descfly/VideoICL/isaaclab_tasks_20261016/assets/embodiments/robotwin-r5/ur5-wsg/source.resolved.urdf
-usd_dir: /home/descfly/VideoICL/isaaclab_tasks_20261016/assets/embodiments/robotwin-r5/ur5-wsg
+asset_path: /home/descfly/ICLWorld/isaaclab_tasks_20261016/assets/embodiments/robotwin-r5/ur5-wsg/source.resolved.urdf
+usd_dir: /home/descfly/ICLWorld/isaaclab_tasks_20261016/assets/embodiments/robotwin-r5/ur5-wsg
 usd_file_name: robot.usd
 force_usd_conversion: true
 make_instanceable: false

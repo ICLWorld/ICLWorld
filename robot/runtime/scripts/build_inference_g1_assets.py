@@ -2,7 +2,7 @@
 """Deterministic G1 inference-only meshes. Does not modify base assets or demos.
 
 Replacement bodies retain mass, contact
-coefficients and start pose; only E02/E35 use documented proportional resizing.
+coefficients and start pose; only iclworld_robot_02/iclworld_robot_35 use documented proportional resizing.
 Authored meshes are new rigid visual/collision
 instances, not label substitutions. Concave silhouettes use convex components;
 the spool is a compound annulus, never a solid convex hull.
@@ -11,9 +11,9 @@ from __future__ import annotations
 import argparse, copy, hashlib, json, math, re, shutil
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-BASE=ROOT/'configs/initial-admission-e13-e25-20261030/e13-hframe-v2-bindings.candidate.json'
+BASE=ROOT/'configs/initial-admission-robot_13-robot_25-20261030/iclworld_robot_13-hframe-v2-bindings.candidate.json'
 OUT=ROOT/'inference-generalization-v1'
-G1=['E01','E02','E08','E13','E14','E15','E16','E17','E18','E21','E22','E24','E25','E27','E30','E34','E35','E38','E39','E47']
+G1=['iclworld_robot_01','iclworld_robot_02','iclworld_robot_08','iclworld_robot_13','iclworld_robot_14','iclworld_robot_15','iclworld_robot_16','iclworld_robot_17','iclworld_robot_18','iclworld_robot_21','iclworld_robot_22','iclworld_robot_24','iclworld_robot_25','iclworld_robot_27','iclworld_robot_30','iclworld_robot_34','iclworld_robot_35','iclworld_robot_38','iclworld_robot_39','iclworld_robot_47']
 COLORS={'red':(.8,.055,.035),'blue':(.035,.2,.8),'green':(.08,.55,.14),'yellow':(.95,.72,.035),'black':(.07,.07,.09)}
 SILVER=(.64,.68,.72); PAPER=(.88,.85,.72); DARK=(.07,.08,.1)
 def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
@@ -160,30 +160,30 @@ def shape(kind,color):
  return m
 
 TASK_KINDS={
-'E01':{'burger':'burger','fries':'fries','drink':'drink'},
-'E08':{'left_shoe':'left_shoe','right_shoe':'right_shoe'},'E13':{'phone':'tablet'},
-'E25':{'spoon':'spoon','knife':'knife','fork':'fork'},'E27':{'spoon':'spoon','fork':'fork'},'E34':{'spoon':'spoon','knife':'knife','fork':'fork'}}
+'iclworld_robot_01':{'burger':'burger','fries':'fries','drink':'drink'},
+'iclworld_robot_08':{'left_shoe':'left_shoe','right_shoe':'right_shoe'},'iclworld_robot_13':{'phone':'tablet'},
+'iclworld_robot_25':{'spoon':'spoon','knife':'knife','fork':'fork'},'iclworld_robot_27':{'spoon':'spoon','fork':'fork'},'iclworld_robot_34':{'spoon':'spoon','knife':'knife','fork':'fork'}}
 def replacements(task,objects):
  if task in TASK_KINDS:return TASK_KINDS[task]
- if task=='E02':return {k:'soap' for k in objects}
- if task in ('E14','E35'):return {k:'book' for k in objects}
- if task=='E15':return {k:'airplane' for k in objects}
- if task=='E16':return {k:'car' for k in objects if k!='tray'}
- if task=='E17':return {k:'triangle_pastry' if 'triangle' in k else 'square_pastry' for k in objects if k!='stand'}
- if task in ('E18','E22'):return {k:('apple' if 'red' in k else 'pear' if 'green' in k else 'jar') for k in objects if k in ('red','green','blue','red_block','green_block','blue_block')}
- if task=='E21':return {k:'candle' for k in objects if k!='tray'}
- if task=='E24':return {k:'yarn' for k in ('red','green','blue')}
- if task=='E38':return {k:'spool' for k in ('red','green','blue')}
- if task=='E39':return {k:'arrow' for k in objects}
- if task=='E47':return {f'card{i}':'ticket_red' if i in (1,3,5) else 'ticket_black' for i in range(1,6)}
- if task=='E30':return {}
+ if task=='iclworld_robot_02':return {k:'soap' for k in objects}
+ if task in ('iclworld_robot_14','iclworld_robot_35'):return {k:'book' for k in objects}
+ if task=='iclworld_robot_15':return {k:'airplane' for k in objects}
+ if task=='iclworld_robot_16':return {k:'car' for k in objects if k!='tray'}
+ if task=='iclworld_robot_17':return {k:'triangle_pastry' if 'triangle' in k else 'square_pastry' for k in objects if k!='stand'}
+ if task in ('iclworld_robot_18','iclworld_robot_22'):return {k:('apple' if 'red' in k else 'pear' if 'green' in k else 'jar') for k in objects if k in ('red','green','blue','red_block','green_block','blue_block')}
+ if task=='iclworld_robot_21':return {k:'candle' for k in objects if k!='tray'}
+ if task=='iclworld_robot_24':return {k:'yarn' for k in ('red','green','blue')}
+ if task=='iclworld_robot_38':return {k:'spool' for k in ('red','green','blue')}
+ if task=='iclworld_robot_39':return {k:'arrow' for k in objects}
+ if task=='iclworld_robot_47':return {f'card{i}':'ticket_red' if i in (1,3,5) else 'ticket_black' for i in range(1,6)}
+ if task=='iclworld_robot_30':return {}
  raise ValueError(task)
 
 def cabinet(base,out,assets_root):
  old=base['mechanisms'][0]['mechanical_asset'];source=assets_root/old['relative_path']
  if sha(source)!=old['sha256']:raise ValueError('Cabinet source SHA mismatch')
  text=source.read_text(); dependencies=[]
- targetdir=out/'assets/g1/E30';targetdir.mkdir(parents=True,exist_ok=True)
+ targetdir=out/'assets/g1/iclworld_robot_30';targetdir.mkdir(parents=True,exist_ok=True)
  # Flat source USD retains all original joint/rigid/collision content verbatim.
  # Add an inset raised frame to the stationary cabinet's visual layer only;
  # interior, drawer pull, contact shapes, joint friction and travel stay exact.
@@ -206,13 +206,13 @@ def cabinet(base,out,assets_root):
   src=assets_root/dep['relative_path']
   if sha(src)!=dep['sha256']:raise ValueError(f'Cabinet dependency mismatch {src}')
   dest=targetdir/dep['relative_path'];dest.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(src,dest)
-  dependencies.append({'relative_path':'g1/E30/'+dep['relative_path'],'sha256':sha(dest)})
+  dependencies.append({'relative_path':'g1/iclworld_robot_30/'+dep['relative_path'],'sha256':sha(dest)})
  dest=targetdir/'cabinet_g1_frame.usda';dest.write_text(text)
- new=copy.deepcopy(old);new.update(root_env='VIC_INFERENCE_ASSETS',relative_path='g1/E30/'+dest.name,sha256=sha(dest),dependencies=dependencies)
+ new=copy.deepcopy(old);new.update(root_env='ICLWORLD_INFERENCE_ASSETS',relative_path='g1/iclworld_robot_30/'+dest.name,sha256=sha(dest),dependencies=dependencies)
  new.pop('path',None);new['id']='cabinet_g1_frame';new['source_modified']=True
  new['inference_adaptation']='New framed cabinet visual instance; original collision, joints, handles, friction and travel retained byte-for-byte.'
  base['mechanisms'][0]['mechanical_asset']=new
- return {'task':'E30','asset':new['relative_path'],'sha256':new['sha256'],'original_sha256':old['sha256'],'kind':'framed_two_tier_cabinet','physics':'retained_source_joint_and_collision_definitions','native_verified':False}
+ return {'task':'iclworld_robot_30','asset':new['relative_path'],'sha256':new['sha256'],'original_sha256':old['sha256'],'kind':'framed_two_tier_cabinet','physics':'retained_source_joint_and_collision_definitions','native_verified':False}
 
 def bind_shoe_containment(obj, mesh):
  """Use every authored mesh vertex, including trim, in the loaded local frame.
@@ -238,23 +238,23 @@ def build(basepath=BASE,out=OUT):
    obj=b['objects'][oid];old=copy.deepcopy(obj.get('source_asset',obj.get('mechanical_asset')))
    # Only envelope changes approved for required rectangular soap/book shapes.
    # Base XY/bottom/pose and goal semantics stay untouched.
-   if task=='E02':obj['size']=[obj['size'][0],obj['size'][1]*.8,obj['size'][2]]
-   if task=='E35':obj['size']=[obj['size'][0],obj['size'][1]*.75,obj['size'][2]*.3]
+   if task=='iclworld_robot_02':obj['size']=[obj['size'][0],obj['size'][1]*.8,obj['size'][2]]
+   if task=='iclworld_robot_35':obj['size']=[obj['size'][0],obj['size'][1]*.75,obj['size'][2]*.3]
    col=color_for(oid)
-   if task=='E35':col=(.2,.32,.58) # same design and colour at all three scales
+   if task=='iclworld_robot_35':col=(.2,.32,.58) # same design and colour at all three scales
    m=shape(kind,col);m.normalize(obj['size'])
    p=out/'assets/g1'/task/f'{oid}.usda';p.parent.mkdir(parents=True,exist_ok=True);p.write_text(m.text())
    obj.pop('mechanical_asset',None)
    for k in ['recolor','rgba','reviewed_collision_settings','adaptation_note']:obj.pop(k,None)
-   obj['source_asset']={'root_env':'VIC_INFERENCE_ASSETS','relative_path':f'g1/{task}/{oid}.usda','sha256':sha(p),'dependencies':[],'source_rotation':[1,0,0,0]}
-   if task=='E08':bind_shoe_containment(obj,m)
-   provenance.append({'task':task,'object':oid,'kind':kind,'original_source':old,'asset':f'g1/{task}/{oid}.usda','sha256':sha(p),'half_extents':obj['size'],'parts':len(m.parts),'collision_parts':sum(x['collision'] for x in m.parts),'physics':'new_compound_convex_geometry_base_mass_friction_pose_retained','size_adaptation':('rectangular_soap_y_0.8' if task=='E02' else 'uniform_book_y_0.75_z_0.3' if task=='E35' else 'base_envelope_retained'),'native_verified':False})
-  if task=='E08':
-   for variant in b['variants'].values():variant['semantic']['source_acceptance_geometry']='E08-source-geometry-v1'
-  if task=='E30':provenance.append(cabinet(b,out,ROOT.parent/'deployment/real-text300-20261030/asset_roots/VIC_MECHANISM_ASSETS'))
- patch={'schema':'videoicl-inference-g1-patch-v1','base_sha256':sha(basepath),'tasks':tasks}
+   obj['source_asset']={'root_env':'ICLWORLD_INFERENCE_ASSETS','relative_path':f'g1/{task}/{oid}.usda','sha256':sha(p),'dependencies':[],'source_rotation':[1,0,0,0]}
+   if task=='iclworld_robot_08':bind_shoe_containment(obj,m)
+   provenance.append({'task':task,'object':oid,'kind':kind,'original_source':old,'asset':f'g1/{task}/{oid}.usda','sha256':sha(p),'half_extents':obj['size'],'parts':len(m.parts),'collision_parts':sum(x['collision'] for x in m.parts),'physics':'new_compound_convex_geometry_base_mass_friction_pose_retained','size_adaptation':('rectangular_soap_y_0.8' if task=='iclworld_robot_02' else 'uniform_book_y_0.75_z_0.3' if task=='iclworld_robot_35' else 'base_envelope_retained'),'native_verified':False})
+  if task=='iclworld_robot_08':
+   for variant in b['variants'].values():variant['semantic']['source_acceptance_geometry']='iclworld_robot_08-source-geometry-v1'
+  if task=='iclworld_robot_30':provenance.append(cabinet(b,out,ROOT.parent/'deployment/real-text300-20261030/asset_roots/ICLWORLD_MECHANISM_ASSETS'))
+ patch={'schema':'iclworld-inference-g1-patch-v1','base_sha256':sha(basepath),'tasks':tasks}
  (out/'g1-bindings-patch.json').write_text(json.dumps(patch,indent=2,ensure_ascii=False)+'\n')
- (out/'g1-asset-provenance.json').write_text(json.dumps({'schema':'videoicl-g1-asset-provenance-v1','generator':str(Path(__file__).relative_to(ROOT)),'generator_sha256':sha(__file__),'policy':'Inference-only assets; G0, environment, demo and ABC goal semantics unchanged. Native physics acceptance is separate, never inferred from mesh generation.','assets':provenance},indent=2)+'\n')
+ (out/'g1-asset-provenance.json').write_text(json.dumps({'schema':'iclworld-g1-asset-provenance-v1','generator':str(Path(__file__).relative_to(ROOT)),'generator_sha256':sha(__file__),'policy':'Inference-only assets; G0, environment, demo and ABC goal semantics unchanged. Native physics acceptance is separate, never inferred from mesh generation.','assets':provenance},indent=2)+'\n')
  return patch,provenance
 if __name__=='__main__':
  p=argparse.ArgumentParser();p.add_argument('--base',type=Path,default=BASE);p.add_argument('--out',type=Path,default=OUT);a=p.parse_args();patch,prov=build(a.base,a.out);print(json.dumps({'tasks':len(patch['tasks']),'replacement_assets':len(prov),'out':str(a.out)}))

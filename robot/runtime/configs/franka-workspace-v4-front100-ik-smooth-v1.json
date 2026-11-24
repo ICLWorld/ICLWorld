@@ -77,12 +77,12 @@
       "Harness uses physical grasp center; Panda hand +Z 103.4 mm",
       "Gravity disabled to approximate upstream per-tick gravity compensation",
       "Native gripper limits respected; upstream out-of-range targets are clipped",
-      "Independent E31 B/C engineering camera v2: original native camera link/light centre; OpenGL local X tilt -25 degrees; wrist vertical FOV 55 degrees; near clip 20 mm. Head, physical gains and joint limits unchanged; reference/horizon changes are separately versioned. Not comparable to original camera-profile results."
+      "Independent iclworld_robot_31 B/C engineering camera v2: original native camera link/light centre; OpenGL local X tilt -25 degrees; wrist vertical FOV 55 degrees; near clip 20 mm. Head, physical gains and joint limits unchanged; reference/horizon changes are separately versioned. Not comparable to original camera-profile results."
     ]
   },
   "asset": {
     "path": "assets/embodiments/robotwin-r5/franka-panda/robot.usd",
-    "env": "VIC_FRANKA_ROBOTWIN_USD",
+    "env": "ICLWORLD_FRANKA_ROBOTWIN_USD",
     "format": "usd",
     "source_embodiment": "franka-panda"
   },

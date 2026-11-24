@@ -19,7 +19,7 @@ import traceback
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
-if os.environ.get('VIC_ENGINEERING_COOPERATIVE_REFERENCES')=='1':
+if os.environ.get('ICLWORLD_ENGINEERING_COOPERATIVE_REFERENCES')=='1':
     engineering_vendor=ROOT/'engineering-vendor'
     if not engineering_vendor.is_dir():
         raise RuntimeError('Cooperative engineering requires its verified private dependency directory')
@@ -35,8 +35,8 @@ def normalize_cases(rows, *, base, default_bindings=None, default_robot='franka'
         if not isinstance(item, dict):
             raise ValueError('Each room case must be an object')
         task, variant, seed = item.get('task'), item.get('variant', 'A'), item.get('seed', 0)
-        if not isinstance(task, str) or not re.fullmatch(r'E(?:0[1-9]|[1-4][0-9]|50)', task):
-            raise ValueError('Task must be E01-E50')
+        if not isinstance(task, str) or not re.fullmatch(r'iclworld_robot_(?:0[1-9]|[1-4][0-9]|50)', task):
+            raise ValueError('Task must be iclworld_robot_01-iclworld_robot_50')
         if variant not in ('A', 'B', 'C') or type(seed) is not int or seed < 0:
             raise ValueError('Invalid case variant or seed')
         identity = item.get('episode_id', f'room-{index:02d}-{task}-{variant}-s{seed}')
@@ -113,7 +113,7 @@ def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--cases', type=Path)
     p.add_argument('--bindings', type=Path)
-    p.add_argument('--tasks', nargs='+', default=['E05', 'E06'])
+    p.add_argument('--tasks', nargs='+', default=['iclworld_robot_05', 'iclworld_robot_06'])
     p.add_argument('--rooms', type=int)
     p.add_argument('--robot', default='franka')
     p.add_argument('--variant', choices=['A', 'B', 'C'], default='A')
@@ -155,17 +155,17 @@ def main():
     cases = parse_cases(args)
     execution_preflight=None
     if args.execution_control:
-        # E09's independent full-workflow reference may exceed its former
+        # iclworld_robot_09's independent full-workflow reference may exceed its former
         # engineering-only6000 cap. Formal evaluation caps are separate.
-        engineering_max=12000 if args.execution_control=='positive'and args.tasks==['E09']else 10000
+        engineering_max=12000 if args.execution_control=='positive'and args.tasks==['iclworld_robot_09']else 10000
         if not 1<=args.execution_settle_ticks<=1000 or not 1<=args.execution_action_budget<=engineering_max:
             p.error('Execution controls require 1..1000 settle ticks and 1..'+str(engineering_max)+' physical actions')
         if args.start_gate or args.verify_terminal_cache or args.verify_render_isolation or args.legacy_shared_render or args.legacy_unlinked_lights:
             p.error('Execution controls cannot be combined with capacity/cache/render diagnostic modes')
-        from videoicl_isaaclab.execution_design_probe import validate_execution_cases
+        from iclworld_isaaclab.execution_design_probe import validate_execution_cases
         execution_preflight=validate_execution_cases(cases,args.execution_control)
-    from videoicl_isaaclab.embodiments import select
-    from videoicl_isaaclab.room_pool import RoomPool, filter_room_collisions, global_scene_signature
+    from iclworld_isaaclab.embodiments import select
+    from iclworld_isaaclab.room_pool import RoomPool, filter_room_collisions, global_scene_signature
     profiles = {c['episode_id']: select(c['task'], c['robot']) for c in cases}
     if args.execution_control and args.camera_resolution:
         if any(tuple(args.camera_resolution)!=(profile.config['cameras']['head']['width'],profile.config['cameras']['head']['height']) for profile in profiles.values()):
@@ -173,7 +173,7 @@ def main():
     signatures = {room: global_scene_signature(profile.config) for room, profile in profiles.items()}
     if len({s['sha256'] for s in signatures.values()}) != 1:
         raise ValueError('Case profiles have incompatible shared physics, timing or lighting')
-    preflight = dict(schema='videoicl-room-pool-cases-v2', room_count=len(cases),
+    preflight = dict(schema='iclworld-room-pool-cases-v2', room_count=len(cases),
                      cases=cases, global_signature=next(iter(signatures.values())))
     if execution_preflight is not None:
         preflight['execution_controls']=execution_preflight
@@ -202,10 +202,10 @@ def main():
         import isaaclab.sim as sim
         from isaaclab.utils.math import quat_apply
         from PIL import Image
-        from videoicl_isaaclab.control import Controller
-        from videoicl_isaaclab.realworld_scenes import load
-        from videoicl_isaaclab.realworld_evaluator_selector import create_evaluator
-        from videoicl_isaaclab.scene import TabletopScene
+        from iclworld_isaaclab.control import Controller
+        from iclworld_isaaclab.realworld_scenes import load
+        from iclworld_isaaclab.realworld_evaluator_selector import create_evaluator
+        from iclworld_isaaclab.scene import TabletopScene
         first = profiles[cases[0]['episode_id']]
         options = {k: first.config['physics'][k] for k in ('enable_stabilization',) if k in first.config['physics']}
         context = sim.SimulationContext(sim.SimulationCfg(dt=first.config['physics']['dt'], device=args.device,
@@ -215,7 +215,7 @@ def main():
         # Configure before scene creation; an old/new mixed cohort is rejected.
         specs = {case['episode_id']: load(case['task'], case['variant'], case['seed'], Path(case['bindings'])) for case in cases}
         import carb.settings
-        from videoicl_isaaclab.execution_design_render import configure_render_for_specs
+        from iclworld_isaaclab.execution_design_render import configure_render_for_specs
         render_receipt = configure_render_for_specs(specs.values(), carb.settings.get_settings())
         (out/'execution-render.private.json').write_text(json.dumps(render_receipt, indent=2)+'\n')
         for index, case in enumerate(cases):
@@ -227,10 +227,10 @@ def main():
                 root_path=f'/World/Rooms/room_{index:02d}',
                 origin=((index % columns)*args.spacing, (index // columns)*args.spacing, 0.),
                 include_overview=args.include_overview, light_isolation=not args.legacy_unlinked_lights)
-        from videoicl_isaaclab.execution_design_e13_contact_diagnostic import enabled as e13_diagnostic_enabled,attach as attach_e13_diagnostic,install as install_e13_diagnostic
+        from iclworld_isaaclab.execution_design_robot_13_contact_diagnostic import enabled as iclworld_robot_13_diagnostic_enabled,attach as attach_robot_13_diagnostic,install as install_robot_13_diagnostic
         for scene in scenes.values():
-            if e13_diagnostic_enabled(scene.spec,args.execution_control,os.environ):attach_e13_diagnostic(scene)
-        from videoicl_isaaclab.execution_design_render_cadence import configure as configure_engineering_cadence
+            if iclworld_robot_13_diagnostic_enabled(scene.spec,args.execution_control,os.environ):attach_robot_13_diagnostic(scene)
+        from iclworld_isaaclab.execution_design_render_cadence import configure as configure_engineering_cadence
         cadence_receipt=configure_engineering_cadence(scenes,execution_control=args.execution_control,environ=os.environ)
         (out/'engineering-render-cadence.private.json').write_text(json.dumps(cadence_receipt,indent=2)+'\n')
         groups = filter_room_collisions(context.stage, [s.root_path for s in scenes.values()])
@@ -247,7 +247,7 @@ def main():
             for scene in scenes.values():scene.update_physics(context.get_physics_dt())
         for room, scene in scenes.items():
             controllers[room] = Controller(scene, context)
-        for room,controller in controllers.items():install_e13_diagnostic(controller,out/'contact-diagnostics'/room)
+        for room,controller in controllers.items():install_robot_13_diagnostic(controller,out/'contact-diagnostics'/room)
         pool = RoomPool(context, controllers, render_isolation=not args.legacy_shared_render)
         for _ in range(args.settle_ticks):pool.tick()
         for room, controller in controllers.items():
@@ -262,7 +262,7 @@ def main():
         for scene in scenes.values():scene.initialize_cameras(context.device)
         for room in controllers:pool.render_room(room, passes=args.capture_passes)
         if args.execution_control:
-            from videoicl_isaaclab.execution_design_probe import run_controls
+            from iclworld_isaaclab.execution_design_probe import run_controls
             report=run_controls(pool,controllers,cases,out,control=args.execution_control,
                 settle_ticks=args.execution_settle_ticks,capture_passes=args.capture_passes)
             print(json.dumps(report,default=lambda value:value.tolist() if hasattr(value,'tolist') else str(value)),flush=True)
@@ -352,7 +352,7 @@ def main():
             and all(c['delivery_valid'] for c in r['cameras'].values()) for r in rows)
         render_parity = None
         if args.verify_render_isolation:
-            from videoicl_isaaclab.rig import visible_rooms_render
+            from iclworld_isaaclab.rig import visible_rooms_render
             first_room = cases[0]['episode_id'];c = controllers[first_room];scene = c.scene
             roots = [s.root_path for s in scenes.values()]
             parity_dir=out/'render-parity';parity_dir.mkdir()
@@ -420,7 +420,7 @@ def main():
                 metrics=metrics,passed=frozen_before==frozen_after and all(
                     row['mae']<=1. for label,views in metrics.items() if label.startswith('isolated-') for row in views.values()))
             (out/'render-parity.private.json').write_text(json.dumps(render_parity,indent=2)+'\n')
-        report = dict(schema='videoicl-mixed-room-pool-probe-v2', passed=bool(passed), pid=os.getpid(),
+        report = dict(schema='iclworld-mixed-room-pool-probe-v2', passed=bool(passed), pid=os.getpid(),
             kit_processes_launched=1, physics_context_count=1, room_count=len(rows),
             shared_clock_verified=clock_ok, measured_ticks=elapsed_ticks, measured_physics_seconds=elapsed_clock,
             barrier_action_verified=all(r['receipt']['step_after']==1 for r in rows),
@@ -436,7 +436,7 @@ def main():
             physical_worlds_independently_paused=False, task_success_tested=False, final_agent_interface_tested=False,
             scope='native engineering controls and capacity only; GUI-only model evaluation not tested', rooms=rows,
             runtime_source_sha256={str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest()
-                for p in sorted((ROOT/'videoicl_isaaclab').glob('*.py'))})
+                for p in sorted((ROOT/'iclworld_isaaclab').glob('*.py'))})
         (out/'probe.private.json').write_text(json.dumps(report, indent=2)+'\n')
         print(json.dumps(report), flush=True)
         code = 0 if passed else 2
@@ -447,7 +447,7 @@ def main():
         measurements = sampler.close()
         (out/'gpu-monitor.private.json').write_text(json.dumps(measurements, indent=2)+'\n')
         sys.stdout.flush();sys.stderr.flush()
-        if os.environ.get('VIC_SKIP_APP_CLOSE') == '1':os._exit(code)
+        if os.environ.get('ICLWORLD_SKIP_APP_CLOSE') == '1':os._exit(code)
         if app is not None:app.close(wait_for_replicator=False)
     return code
 

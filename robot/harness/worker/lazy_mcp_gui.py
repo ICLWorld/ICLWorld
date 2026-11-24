@@ -17,10 +17,10 @@ p.add_argument('--image-ledger', type=Path)
 p.add_argument('--compact-depth', action='store_true')
 a = p.parse_args()
 for name in tuple(sys.modules):
-    if name == 'vic_sdk' or name.startswith('vic_sdk.'):
+    if name == 'iclworld_sdk' or name.startswith('iclworld_sdk.'):
         del sys.modules[name]
 sys.path.insert(0,str(a.sdk))
-from vic_sdk.embodied_codex_mcp import NativeStructuredTools, make_server
+from iclworld_sdk.embodied_codex_mcp import NativeStructuredTools, make_server
 from public_read_identity import install as install_read_identity
 NativeStructuredTools, make_server = install_read_identity(NativeStructuredTools, make_server)
 if a.compact_depth:

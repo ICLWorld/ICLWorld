@@ -81,7 +81,7 @@
   },
   "asset": {
     "path": "assets/embodiments/robotwin-r5/franka-panda/robot.usd",
-    "env": "VIC_FRANKA_ROBOTWIN_USD",
+    "env": "ICLWORLD_FRANKA_ROBOTWIN_USD",
     "format": "usd",
     "source_embodiment": "franka-panda"
   },
@@ -347,6 +347,6 @@
   },
   "author_recording": {
     "grasp_table_clearance": true,
-    "note": "E29 private trial: raise reviewed TCP only as needed to clear actual original finger collision toes above real tabletop; unchanged source handle geometry, orientation, contacts and independent score."
+    "note": "iclworld_robot_29 private trial: raise reviewed TCP only as needed to clear actual original finger collision toes above real tabletop; unchanged source handle geometry, orientation, contacts and independent score."
   }
 }

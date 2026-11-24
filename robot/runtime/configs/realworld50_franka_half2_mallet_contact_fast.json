@@ -81,7 +81,7 @@
   },
   "asset": {
     "path": "assets/embodiments/robotwin-r5/franka-panda/robot.usd",
-    "env": "VIC_FRANKA_ROBOTWIN_USD",
+    "env": "ICLWORLD_FRANKA_ROBOTWIN_USD",
     "format": "usd",
     "source_embodiment": "franka-panda"
   },
@@ -347,7 +347,7 @@
   },
   "author_recording": {
     "grasp_table_clearance": true,
-    "note": "Private E29 fast native contact stroke:12mm measured clearance then one18mm continuous stroke stopped by real key contact; actual separation and original scorer preserved.",
+    "note": "Private iclworld_robot_29 fast native contact stroke:12mm measured clearance then one18mm continuous stroke stopped by real key contact; actual separation and original scorer preserved.",
     "level_mallet_before_strikes": true,
     "continuous_orientation": true,
     "max_angular_speed_rad_s": 0.35,

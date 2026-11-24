@@ -12,11 +12,11 @@ import sys
 import threading
 
 root=Path(__file__).resolve().parent
-sys.path[:0]=[str(root/'VideoICLBench/scripts/harbor'),str(root/'VideoICLBench/packages/sdk')]
+sys.path[:0]=[str(root/'iclworld_harness/scripts/harbor'),str(root/'iclworld_harness/packages/sdk')]
 from run_embodied_pool import start_room_budgets
 from serve_embodied import load_assignment
-from vic_sdk.embodied_codex_mcp import NativeStructuredTools, NATIVE_TOOL_INSTRUCTIONS, NATIVE_MODEL_INSTRUCTIONS
-from vic_sdk.native_agent import private_json
+from iclworld_sdk.embodied_codex_mcp import NativeStructuredTools, NATIVE_TOOL_INSTRUCTIONS, NATIVE_MODEL_INSTRUCTIONS
+from iclworld_sdk.native_agent import private_json
 
 def worker_for_new_room(engine, room):
     """Pin the released worker before the first CLI attempt in this world."""
@@ -43,7 +43,7 @@ def worker_for_new_room(engine, room):
             path = worker/name
             if not path.resolve().is_relative_to(worker.resolve()) or hashlib.sha256(path.read_bytes()).hexdigest()!=expected:
                 raise ValueError('Worker release file mismatch')
-    expected = os.environ.get('VIC_VERIFIED_WORKER_VERSION')
+    expected = os.environ.get('ICLWORLD_VERIFIED_WORKER_VERSION')
     verified_glm_upgrade = (engine in ('dsh', 'zcode') and expected == 'bd56c6883f078ae308d35d8238cceff4067c48809f678a3f56669fc782e80a8d' and version == '2ff6baa4010970479330ac130445551baeae35ce4838f43b1f455ca1e84debfb')
     if expected is not None and expected != version and not verified_glm_upgrade:
         raise ValueError('Admitted worker version changed before room startup')
@@ -77,7 +77,7 @@ def main():
     room.mkdir(mode=0o700)
     connection_file=a.folder/'connection.private.json'
     conn=json.loads(connection_file.read_text())
-    browser_path=os.environ.get('VIC_BROWSER_PATH')
+    browser_path=os.environ.get('ICLWORLD_BROWSER_PATH')
     spec,instruction,media,rule=load_assignment(a.case,a.condition)
     identity=conn['identity']
     if (spec['task_id'],spec['variant'],spec['seed'])!=(identity['task_id'],identity['variant'],identity['seed']):
@@ -127,7 +127,7 @@ def main():
     (room/'prompt-1.txt').write_text(instruction+'\n\nInitial public observation and assigned demonstration metadata:\n'+json.dumps(public,ensure_ascii=False,separators=(',',':')))
     script = worker_for_new_room(a.engine, room)
     start_room_budgets([connection_file])
-    key_file=Path(os.environ.pop('VIC_POOL_AUTHFILE'))
+    key_file=Path(os.environ.pop('ICLWORLD_POOL_AUTHFILE'))
     with key_file.open('rb') as key:
         command=model_worker_command(script,a,room)
         child=subprocess.run(command,stdin=key)

@@ -69,7 +69,7 @@ def configure(profile: Path, workspace: Path, model: str, server: dict,
             **decision_alias,
             'chat-compression-default': {'modelConfig': {'model': model}},
         }},
-        'tools': {'core': []}, 'mcp': {'allowed': ['vic']}, 'mcpServers': {'vic': mcp},
+        'tools': {'core': []}, 'mcp': {'allowed': ['iclworld']}, 'mcpServers': {'iclworld': mcp},
         'agents': {'enabled': False, 'overrides': {'codebase_investigator': {'enabled': False}, 'cli_help': {'enabled': False}}},
         'skills': {'enabled': False}, 'hooksConfig': {'enabled': False},
         'telemetry': {'enabled': False}, 'ide': {'enabled': False},
@@ -92,7 +92,7 @@ def configure(profile: Path, workspace: Path, model: str, server: dict,
                 effort_mapping_source='native_modelConfigs.customAliases[model].modelConfig.generateContentConfig.thinkingConfig.thinkingLevel' if requested_effort else None,
                 requested_context_window=requested, context_window=CONTEXT_WINDOW,
                 compact_tokens=compact, compression_threshold=compact / CONTEXT_WINDOW,
-                compact_owner='native_gemini_cli', builtin_tools=[], mcp_servers=['vic'],
+                compact_owner='native_gemini_cli', builtin_tools=[], mcp_servers=['iclworld'],
                 resume_snapshot_retained=False,
                 settings_path=str(profile / '.gemini/settings.json'), credentials_included=False,
                 compatibility_notes=['MCP isError images become error text in0.32.1; parity pending',
@@ -107,7 +107,7 @@ def command(profile, workspace, model, *, binary=None, resume=None):
         raise ValueError('Gemini resume must retain configured workspace/model')
     cmd = [str(binary or 'gemini'), '--model', model, '--prompt',
            'Follow the episode task supplied on stdin.', '--output-format', 'stream-json',
-           '--approval-mode', 'default', '--allowed-mcp-server-names', 'vic']
+           '--approval-mode', 'default', '--allowed-mcp-server-names', 'iclworld']
     if resume:
         if resume == 'latest' or not isinstance(resume, str):
             raise ValueError('Gemini requires the exact native session UUID')
@@ -130,7 +130,7 @@ def command(profile, workspace, model, *, binary=None, resume=None):
     if not hook.is_file() or not hook.with_name('gemini_resume_hook.mjs').is_file():
         raise FileNotFoundError('Gemini native-resume compatibility files missing')
     env['NODE_OPTIONS'] = '--import=' + hook.as_uri()
-    env['VIC_GEMINI_RESUME_AUDIT'] = str(profile.parent / 'resume-compat-audit.private.jsonl')
+    env['ICLWORLD_GEMINI_RESUME_AUDIT'] = str(profile.parent / 'resume-compat-audit.private.jsonl')
     if provider.get('api_version'):
         env['GOOGLE_GENAI_API_VERSION'] = provider['api_version']
     return cmd, env

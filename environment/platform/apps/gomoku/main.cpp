@@ -582,11 +582,11 @@ int main(int argc, char* args[]) {
 
 	if (SDL_Init(SDL_INIT_VIDEO) < 0 || TTF_Init() == -1) return -1;
 	window = SDL_CreateWindow("Gomoku AI Benchmark", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 1280, 960, SDL_WINDOW_SHOWN);
-	renderer = SDL_CreateRenderer(window, -1, std::getenv("VIC_BENCH_DIRECTORY") ? SDL_RENDERER_SOFTWARE : SDL_RENDERER_ACCELERATED);
-	font = TTF_OpenFont("simhei.ttf", std::getenv("VIC_BENCH_DIRECTORY") ? 24 : 36);
+	renderer = SDL_CreateRenderer(window, -1, std::getenv("ICLWORLD_BENCH_DIRECTORY") ? SDL_RENDERER_SOFTWARE : SDL_RENDERER_ACCELERATED);
+	font = TTF_OpenFont("simhei.ttf", std::getenv("ICLWORLD_BENCH_DIRECTORY") ? 24 : 36);
 	if (!font) std::cout << "Warning: simhei.ttf not found!" << std::endl;
 
-	if (const char* directory=std::getenv("VIC_BENCH_DIRECTORY")) benchmark_scene(directory);
+	if (const char* directory=std::getenv("ICLWORLD_BENCH_DIRECTORY")) benchmark_scene(directory);
 	else game_start();
 
 	if (font) TTF_CloseFont(font);

@@ -4,13 +4,13 @@ import json
 import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "runtime-overlay"))
-from videoicl_isaaclab.pool_rpc import PoolRPCWorker, atomic_json
+from iclworld_isaaclab.pool_rpc import PoolRPCWorker, atomic_json
 
 
 def test_ready_room_can_advance_while_peer_waits(tmp_path):
     now = [0.]
     batches = []
-    rooms = {room: {"identity": {"run_id": room, "task_id": "E01", "variant": "C",
+    rooms = {room: {"identity": {"run_id": room, "task_id": "iclworld_robot_01", "variant": "C",
                                   "seed": 4201, "suite": "test", "epoch": "test"},
                     "fingerprints": {}}
              for room in ("ready", "waiting")}

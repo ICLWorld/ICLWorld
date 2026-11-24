@@ -18,7 +18,7 @@ else:
 import uuid
 
 TOOLS = {'observe','action_batch','depth_points','demo_frames','history','done','giveup'}
-CA = os.environ.get('VIC_PROVIDER_CA_BUNDLE')
+CA = os.environ.get('ICLWORLD_PROVIDER_CA_BUNDLE')
 
 
 class MissingUpstreamHTTPStatus(RuntimeError):
@@ -27,7 +27,7 @@ class MissingUpstreamHTTPStatus(RuntimeError):
 
 def response_observer(status, content_type, encoding, route, record):
     """Reuse native Responses completion validation without changing wire bytes."""
-    from vic_sdk.tls_relay import ResponseOutcomeObserver
+    from iclworld_sdk.tls_relay import ResponseOutcomeObserver
 
     class Observer(ResponseOutcomeObserver):
         def _value(self, value):
@@ -56,8 +56,8 @@ def response_observer(status, content_type, encoding, route, record):
 
 
 def make_relay(engine, model, token, key, out, timing):
-    from vic_sdk.episode_api_admission import register_api_request_start, EpisodeApiClosed
-    from vic_sdk.api_timing import append_timing_event
+    from iclworld_sdk.episode_api_admission import register_api_request_start, EpisodeApiClosed
+    from iclworld_sdk.api_timing import append_timing_event
     curl = shutil.which('curl')
     if not curl: raise FileNotFoundError('curl')
     from provider_routes import route_for, upstream_url
@@ -82,7 +82,7 @@ def make_relay(engine, model, token, key, out, timing):
             names=set()
             for tool in data.get('tools',[]):
                 for item in tool.get('functionDeclarations',tool.get('function_declarations',[tool.get('function',tool)])):
-                    names.add(item.get('name','').removeprefix('mcp__vic__').removeprefix('mcp_vic_').removeprefix('vic_'))
+                    names.add(item.get('name','').removeprefix('mcp__iclworld__').removeprefix('mcp_iclworld_').removeprefix('iclworld_'))
             counting=route.path.endswith(('count_tokens','countTokens'))
             compact=not names and (out/'decision-admitted').is_file() and (
                 (engine=='codex' and route.path.endswith('/compact'))
@@ -150,7 +150,7 @@ def make_relay(engine, model, token, key, out, timing):
                     from upstream_budget_metadata import metadata as upstream_budget_metadata
                     rec.update(upstream_budget_metadata(body,model))
                 except Exception:
-                    rec['actual_upstream_budget_metadata']={'schema':'videoicl-actual-upstream-budget-metadata-v1','status':'unknown'}
+                    rec['actual_upstream_budget_metadata']={'schema':'iclworld-actual-upstream-budget-metadata-v1','status':'unknown'}
                 if engine=='dsh':
                     try:
                         from transport_phases import begin

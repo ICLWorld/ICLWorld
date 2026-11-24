@@ -3,7 +3,7 @@ import json
 import os
 from pathlib import Path
 import sys
-from vic_sdk import native_agent as native
+from iclworld_sdk import native_agent as native
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from transport_audit import audit_timeout
 from capture_proxy import capture_proxy
@@ -13,7 +13,7 @@ from timeout_transport import review_events
 
 original_run=native.run
 # Isolated no-rule adapter: suppress SDK auto-assigned OS video, without changing grading.
-if os.environ.get('MATRIX_NO_RULE')=='1':
+if os.environ.get('ICLWORLD_NO_RULE')=='1':
     import inspect
     src=inspect.getsource(original_run)
     needle='if not args.demo and not getattr(args, "rule_file", None):'
@@ -25,21 +25,21 @@ if os.environ.get('MATRIX_NO_RULE')=='1':
 original_command=native.cli_command
 original_evaluate=native.evaluate_result
 original_summarize=native.summarize
-ENGINE=os.environ['MATRIX_ENGINE']
+ENGINE=os.environ['ICLWORLD_ENGINE']
 HERE=Path(__file__).resolve().parent
 
 def cli_command(engine,profile,workspace,model,server,**kwargs):
     cfg_file=Path(server['args'][-1]);cfg=json.loads(cfg_file.read_text())
-    cfg['capture_root']=os.environ['MATRIX_CAPTURE_ROOT'];cfg['rule_diagnostic']=False
+    cfg['capture_root']=os.environ['ICLWORLD_CAPTURE_ROOT'];cfg['rule_diagnostic']=False
     save(cfg_file,cfg)
-    server={'command':sys.executable,'args':[str(HERE/'checkpoint_mcp.py'),'--config',str(cfg_file),'--capture-root',os.environ['MATRIX_CAPTURE_ROOT']]}
+    server={'command':sys.executable,'args':[str(HERE/'checkpoint_mcp.py'),'--config',str(cfg_file),'--capture-root',os.environ['ICLWORLD_CAPTURE_ROOT']]}
     # Refresh native MCP configuration to point at the checkpoint-only wrapper.
     if ENGINE=='codex':
         text=(profile/'config.toml').read_text()
-        old=json.dumps(['-m','vic_sdk.computer_mcp','--config',str(cfg_file)])
+        old=json.dumps(['-m','iclworld_sdk.computer_mcp','--config',str(cfg_file)])
         (profile/'config.toml').write_text(text.replace(old,json.dumps(server['args'])))
         return original_command(engine,profile,workspace,model,server,**kwargs)
-    save(profile/'mcp.json',{'mcpServers':{'vic':server}})
+    save(profile/'mcp.json',{'mcpServers':{'iclworld':server}})
     if ENGINE=='claude':
         cmd,env=original_command(engine,profile,workspace,model,server,**kwargs)
         cmd+=['--effort','high']
@@ -47,7 +47,7 @@ def cli_command(engine,profile,workspace,model,server,**kwargs):
         n=cmd.index('--max-budget-usd');del cmd[n:n+2]
         return cmd,env
     save(profile/'server.json',server)
-    return [sys.executable,str(HERE/'harness_entry.py'),ENGINE,str(profile),str(workspace),model,str(profile/'server.json')],dict(native.clean_env(),MATRIX_CLI_ROOT=os.environ['MATRIX_CLI_ROOT'],ICLWORLD_API_MODEL_ID=api_model_id(model))
+    return [sys.executable,str(HERE/'harness_entry.py'),ENGINE,str(profile),str(workspace),model,str(profile/'server.json')],dict(native.clean_env(),ICLWORLD_CLI_ROOT=os.environ['ICLWORLD_CLI_ROOT'],ICLWORLD_API_MODEL_ID=api_model_id(model))
 
 def summarize(engine,output,profile,session_id=None):
     if ENGINE in ('codex','claude'):return original_summarize(engine,output,profile,session_id)
@@ -63,12 +63,12 @@ def summarize(engine,output,profile,session_id=None):
     return result
 
 def evaluate(args,cfg,meta,result):
-    meta.update(api_model_requested=api_model_id(args.model),native_harness=ENGINE,protocol='videoicl-frames-text-mcq-v2-20261101',reasoning_effort_requested='high',open_ended_diagnosis=False)
-    if os.environ.get('MATRIX_NO_RULE')=='1':
+    meta.update(api_model_requested=api_model_id(args.model),native_harness=ENGINE,protocol='iclworld-frames-text-mcq-v2-20261101',reasoning_effort_requested='high',open_ended_diagnosis=False)
+    if os.environ.get('ICLWORLD_NO_RULE')=='1':
         assert cfg.get('demo_video') is None
         meta.update(input_condition='no_rule',demo_representation='none')
     save(Path(cfg['output_dir'])/'manifest.json',meta)
-    capture=Path(os.environ['MATRIX_CAPTURE_ROOT'])
+    capture=Path(os.environ['ICLWORLD_CAPTURE_ROOT'])
     if (capture/'boundary-violation.json').exists():
         result.update(outcome='evaluation_error',evaluation_error={'type':'boundary_violation'})
         return result
@@ -100,14 +100,14 @@ def run(args):
     if args.rule_diagnostic:raise ValueError('Open-ended diagnosis is forbidden')
     provider=json.loads(args.credentials.read_text())[args.engine]
     output=args.output_root.resolve();output.mkdir(parents=True,exist_ok=True)
-    os.environ['MATRIX_CAPTURE_ROOT']=str(output)
+    os.environ['ICLWORLD_CAPTURE_ROOT']=str(output)
     upstream=provider['base_url'].removesuffix('/v1')
     with capture_proxy(upstream,provider['api_key'],output,api_model_id(args.model)) as (base,key):
         args.base_url=base+('/v1' if ENGINE=='codex' else '')
-        os.environ['MATRIX_PROXY_KEY']=key;args.api_key_env='MATRIX_PROXY_KEY'
+        os.environ['ICLWORLD_PROXY_KEY']=key;args.api_key_env='ICLWORLD_PROXY_KEY'
         return original_run(args)
 
 native.run=run;native.cli_command=cli_command;native.summarize=summarize;native.evaluate_result=evaluate
-if os.environ.get('MATRIX_NO_RULE')=='1':
+if os.environ.get('ICLWORLD_NO_RULE')=='1':
     original_run.__globals__.update(cli_command=cli_command,summarize=summarize,evaluate_result=evaluate)
 if __name__=='__main__':native.main()

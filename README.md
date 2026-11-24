@@ -45,7 +45,7 @@ Copy `providers.example.json` to a private configuration file and set the refere
 .venv/bin/python scripts/experiment.py main --dataset work/dataset \
   --work work/main --dry-run
 
-# The default six-model I table and fixed R/E subsets: 1,920 trials.
+# The default six-model Resample table and fixed Replay/Relocate subsets: 1,920 trials.
 # Add --models my-model to run any model configured in your provider file.
 .venv/bin/python scripts/experiment.py main --dataset work/dataset \
   --work work/main --providers providers.private.json --workers 8
@@ -75,7 +75,7 @@ The dataset root contains `TASK_REFERENCE_EN.md`, covering all 160 task families
 
 ## 🧭 Generalization levels
 
-Tasks are evaluated at three levels, named as in the paper: **Replay** (R) restores the demonstrated situation, **Resample** (I) samples a new instance independently of the demonstration from the same distribution and environment, and **Relocate** (E) moves the task to the counterpart environment while keeping the goal and the rule.
+Tasks are evaluated at three levels, named as in the paper: **Replay** restores the demonstrated situation, **Resample** samples a new instance independently of the demonstration from the same distribution and environment, and **Relocate** moves the task to the counterpart environment while keeping the goal and the rule. Code, metadata and file names use the same words (`replay`, `resample`, `relocate`).
 
 ## 📝 Citation
 

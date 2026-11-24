@@ -38,9 +38,9 @@ def tool_boundary(body, *, formal):
         else:
             declared.append(tool.get('function',tool).get('name',''))
     safe={'exit_plan_mode','list_mcp_resource_templates','list_mcp_resources','read_mcp_resource'}
-    invalid=[n for n in declared if not isinstance(n,str) or not (n.startswith(('mcp__vic__','mcp_vic_')) or n in safe)]
+    invalid=[n for n in declared if not isinstance(n,str) or not (n.startswith(('mcp__iclworld__','mcp_iclworld_')) or n in safe)]
     required={'computer_observe','computer_act','computer_sequence','demo_info','demo_frame','demo_frames','finish'}
-    raw={n.removeprefix('mcp__vic__').removeprefix('mcp_vic_') for n in declared if isinstance(n,str)}
+    raw={n.removeprefix('mcp__iclworld__').removeprefix('mcp_iclworld_') for n in declared if isinstance(n,str)}
     # Native CLIs also issue tool-free title/loop-detection requests. They cannot
     # operate the application and must not replace the agent's QA checkpoint.
     missing=required-raw if formal and declared else set()
@@ -48,7 +48,7 @@ def tool_boundary(body, *, formal):
 
 @contextmanager
 def capture_proxy(upstream, api_key, output, model, *, images_lift=False):
-    engine=os.environ.get('MATRIX_ENGINE','')
+    engine=os.environ.get('ICLWORLD_ENGINE','')
     label=os.environ.get('ICLWORLD_MODEL_LABEL',model)
     output=Path(output);local_key=secrets.token_urlsafe(32);lock=threading.Lock();events=output/'transport.jsonl'
     client=httpx.Client(timeout=httpx.Timeout(300,connect=30,write=900 if engine=='codex' else 300),trust_env=False)
@@ -133,7 +133,7 @@ def capture_proxy(upstream, api_key, output, model, *, images_lift=False):
                         save(output/'boundary-violation.json',{'type':'lossless_png_encoding','error':str(error),'time':time.time()})
                         self.send_error(409,'boundary_violation: lossless PNG encoding');return
                 if images_lift:
-                    from vic_sdk.anthropic_image_proxy import lift_tool_images
+                    from iclworld_sdk.anthropic_image_proxy import lift_tool_images
                     body,_=lift_tool_images(body)
                 if engine=='zcode':
                     from glm_request_guard import inspect_request

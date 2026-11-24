@@ -4,7 +4,7 @@ if (match)
     document.querySelector("#news-app").textContent = "新闻服务暂不可用：" + e.message;
   });
 async function start(id) {
-  const key = `vic-news:${id}`,
+  const key = `iclworld-news:${id}`,
     token = location.hash.slice(1) || sessionStorage.getItem(key) || "";
   sessionStorage.setItem(key, token);
   let state,
@@ -120,7 +120,7 @@ async function start(id) {
     const all = state.items.filter((x) => page==='hidden'?state.domain.objects[x.id].hidden:!state.domain.objects[x.id].hidden),
       items = all.filter((x) => (x.name + " " + x.text).includes(query)&&(!scopeId||x.scope_id===scopeId)&&(!period||x.period===period)&&(page!=='read'||state.domain.objects[x.id].read)&&(!sourceId||state.world.sources?.find(s=>s.id===sourceId)?.members.includes(x.id))&&(!dateFrom||x.created_at.slice(0,10)>=dateFrom)&&(!dateTo||x.created_at.slice(0,10)<=dateTo)),
       obj = state.domain.objects[selected];
-    document.querySelector("#news-app").innerHTML = `<header class="news-header"><a href="#" data-page="home" class="news-brand">VIC<span>NEWS</span></a><nav>${Object.entries(
+    document.querySelector("#news-app").innerHTML = `<header class="news-header"><a href="#" data-page="home" class="news-brand">ICLWorld<span>NEWS</span></a><nav>${Object.entries(
       names,
     )
       .map(
@@ -129,7 +129,7 @@ async function start(id) {
       )
       .join(
         "",
-      )}</nav><span class="news-account">周予安 · 编辑部</span></header><main class="news-main"><div class="news-breadcrumb">VIC News / ${names[page] || "文章详情"}</div>${notice ? `<div class="news-notice" role="status">${esc(notice)}</div>` : ""}
+      )}</nav><span class="news-account">周予安 · 编辑部</span></header><main class="news-main"><div class="news-breadcrumb">ICLWorld News / ${names[page] || "文章详情"}</div>${notice ? `<div class="news-notice" role="status">${esc(notice)}</div>` : ""}
   ${editorialBrief()}${(editorial && (page==='home'||page==='projects'||page==='detail'))?'':scopeFilter()}${
     editorial && page === "projects" ? projects() : page === "home"
       ? `<section class="news-hero"><div><span class="news-overline">THE DAILY PERSPECTIVE</span><h1>在日常里，<br>看见城市的变化。</h1><p>关注公共生活，记录身边值得阅读的故事。</p><button data-page="articles">浏览全部文章 →</button></div>${cover(0)}</section><div class="news-section-title"><h2>编辑精选</h2><button data-page="articles">查看全部 →</button></div><div class="news-grid">${all.slice(0, 3).map(articleCard).join("")}</div>`
@@ -139,7 +139,7 @@ async function start(id) {
           ? editorHTML()
           : `<div class="news-section-title"><div><span class="news-overline">YOUR READING DESK</span><h1>${names[page] || "全部文章"}</h1></div><form id="newsSearch"><input aria-label="搜索文章" name="q" value="${esc(query)}" placeholder="搜索标题或正文"><button>搜索</button></form></div><div class="news-grid">${(page === "reading" ? items.filter((x) => editorial ? state.world.selections[x.scope_id]?.includes(x.id) : state.domain.collections.reading_list?.includes(x.id)) : page === "favorites" ? items.filter((x) => state.domain.collections.favorites?.includes(x.id)) : items).map(articleCard).join("") || '<div class="news-empty">这里还没有文章。前往全部文章浏览与整理。</div>'}</div>${!editorial && state.task_id === 30 && page === "articles" ? `<div class="news-reading-save"><span>待加入 ${reading.size} 篇文章</span><button id="saveReading">保存阅读清单</button></div>` : ""}`
   }
-  <footer class="news-footer">VIC News　·　阅读与记录</footer></main>`;
+  <footer class="news-footer">ICLWorld News　·　阅读与记录</footer></main>`;
     document.querySelectorAll("[data-page]").forEach(
       (el) =>
         (el.onclick = (e) => {

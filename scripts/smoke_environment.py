@@ -12,13 +12,13 @@ def request(path,body=None,method=None):
 identity=request('/release/identity');assert identity['release_sha256']==hashlib.sha256((root/'environment/release-lock.json').read_bytes()).hexdigest()
 rows=json.loads((a.dataset/'metadata/main.json').read_text())
 if a.all:
- baselines={(c['kind'],str(c['task_id'])):c for c in rows if c['generalization']=='I'}
+ baselines={(c['kind'],str(c['task_id'])):c for c in rows if c['generalization']=='resample'}
  chosen=[]
  for task in json.loads((a.dataset/'metadata/tasks.json').read_text()):
   c=dict(baselines[(task['kind'],str(task['task_id']))],variant=task['variant'],name=task['name']+'-i',task=task['name'])
   chosen.append(c)
- chosen.extend(c for c in rows if c['generalization']!='I')
-else:chosen=[next(c for c in rows if c['kind']==k and c['generalization']==g) for k in ['web','os'] for g in ['I','R','E']]
+ chosen.extend(c for c in rows if c['generalization']!='resample')
+else:chosen=[next(c for c in rows if c['kind']==k and c['generalization']==g) for k in ['web','os'] for g in ['resample','replay','relocate']]
 report=[];a.output.mkdir(parents=True,exist_ok=True)
 def run_case(c):
  item={'task':c['name'],'kind':c['kind'],'generalization':c['generalization']};run=None
@@ -27,7 +27,7 @@ def run_case(c):
   if c['kind']=='web':payload.update(task_id=c['task_id'],suite='v2',mode='eval',runtime='browser');prefix='/v1/runs'
   else:payload['case_id']=c['task_id'];prefix='/os-api/runs'
   r=c.get('replay_source') or {}
-  if c['generalization']=='R':payload.update(dict(replay_run_id=r['run_id'],replay_epoch=r['epoch'],replay_example=r['example']) if c['kind']=='web' else dict(replay_recording_id=r['recording'],replay_example=r['example']))
+  if c['generalization']=='replay':payload.update(dict(replay_run_id=r['run_id'],replay_epoch=r['epoch'],replay_example=r['example']) if c['kind']=='web' else dict(replay_recording_id=r['recording'],replay_example=r['example']))
   run=request(prefix,payload);assert run['seed']==c['actual_seed'];sid=run['id'];item['run_id']=sid
   if c['kind']=='web':assert run['manifest']['task_digest']==c['task_digest'];assert run['manifest']['implementation']['implementation_digest']==identity['implementation']['implementation_digest']
   else:assert run['benchmark_version']==c['benchmark_version']

@@ -21,8 +21,8 @@ def aggregate(model,**filters):
 def cell(v):return f"{v['correct']}/{v['valid']}/{v['planned']} ({100*v['accuracy']:.1f}%)" if v['valid'] else f"0/0/{v['planned']} (—)"
 tables={};markdown=['# ICLWorld Web/OS results','', 'Cells: correct / valid completed / planned (completed accuracy).','']
 if contract['suite']=='main':
- columns=[item for k in ['web','os'] for item in [(f'{k} {d}',dict(kind=k,difficulty=d,generalization='I')) for d in ['easy','medium','hard']]+[(f'{k} avg',dict(kind=k,generalization='I'))]]+[('I avg',dict(generalization='I'))]
- specs=[('Main I',columns),('Generalization',[(g,dict(generalization=g)) for g in ['R','I','E']]+[('avg',{})])]
+ columns=[item for k in ['web','os'] for item in [(f'{k} {d}',dict(kind=k,difficulty=d,generalization='resample')) for d in ['easy','medium','hard']]+[(f'{k} avg',dict(kind=k,generalization='resample'))]]+[('I avg',dict(generalization='resample'))]
+ specs=[('Main I',columns),('Generalization',[(g,dict(generalization=g)) for g in ['replay','resample','relocate']]+[('avg',{})])]
 else:
  specs=[('Ablations',[('None C',dict(condition='none',variant='C'))]+[(f'Video {v}',dict(condition='video',variant=v)) for v in 'ABC']+[(f'QA {v}',dict(condition='qa',variant=v)) for v in 'ABC'])]
 for name,columns in specs:

@@ -63,7 +63,7 @@ class ProtocolTests(unittest.TestCase):
         server=ThreadingHTTPServer(('127.0.0.1',0),Handler);thread=threading.Thread(target=server.serve_forever,daemon=True);thread.start()
         payload={'model':'custom-vision-model','messages':[{'role':'user','content':'public task'}],'stream':True,'reasoning_effort':'high'}
         try:
-            with tempfile.TemporaryDirectory() as tmp,patch.dict(os.environ,{'MATRIX_ENGINE':'codex','ICLWORLD_MODEL_LABEL':'my-model'}):
+            with tempfile.TemporaryDirectory() as tmp,patch.dict(os.environ,{'ICLWORLD_ENGINE':'codex','ICLWORLD_MODEL_LABEL':'my-model'}):
                 with capture_proxy('http://127.0.0.1:'+str(server.server_port),'unit-test-key',Path(tmp),'custom-vision-model') as (base,key):
                     response=httpx.post(base+'/v1/chat/completions',headers={'Authorization':'Bearer '+key},json=payload,timeout=10,trust_env=False)
                     self.assertEqual(response.status_code,200);self.assertEqual(response.content,stream)

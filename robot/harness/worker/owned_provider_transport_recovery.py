@@ -18,7 +18,7 @@ def classify(out, summary, stderr, env_error, sid):
             return None
         att=error.get('attribution') or {}
         if not (att.get('source')=='provider' and att.get('providerErrorCode')=='upstream_generation_incomplete'
-                and att.get('errorPhase')=='stream' and att.get('providerId')=='vic' and
+                and att.get('errorPhase')=='stream' and att.get('providerId')=='iclworld' and
                 att.get('providerKind')=='anthropic' and att.get('modelId')=='glm-5.3-flash' and att.get('transport')=='sse'):
             return None
         matched.append(e)

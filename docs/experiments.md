@@ -2,13 +2,13 @@
 
 ## Main and generalization
 
-R, I and E are the Replay, Resample and Relocate levels of the paper. I (Resample) is the independent and identically distributed (IID) condition: for a fixed task and rule, demonstration and evaluation instances are independently sampled from the same task distribution. R (Replay) restores the demonstrated situation, and E (Relocate) moves the task to the counterpart environment. The dataset README defines these conditions and the difficulty criteria for all three domains.
+Replay, Resample and Relocate are the three generalization levels of the paper; code, metadata and file names use `replay`, `resample` and `relocate`. Resample is the independent and identically distributed (IID) level: for a fixed task and rule, demonstration and evaluation instances are independently sampled from the same task distribution. Replay restores the demonstrated situation, and Relocate moves the task to the counterpart environment. The dataset README defines these levels and the difficulty criteria for all three domains.
 
 The paper evaluates six models, each in a native agent CLI: Claude Opus 5.5 (Claude Code), GPT-6 Astra (Codex), Qwen3.8-Max (Claude Code), GLM-5.3-Flash (ZCode), Kimi K3 (Kimi Code) and DeepSeek-V4.1-Flash (DeepSeek Harness, DSH). All request high reasoning effort through their native runtimes.
 
-Each model has 320 trials: 110 I configurations × video/text (220), 13 R configurations × video/text (26), and 37 E configurations × video/text (74). R and E are fixed stratified subsets, so their aggregate differences do not isolate a causal generalization effect. The main table is I only, split by Web/OS and easy/medium/hard. Completed accuracy is correct / valid completed; coverage must be reported separately against the fixed denominator.
+Each model has 320 trials: 110 Resample configurations × video/text (220), 13 Replay configurations × video/text (26), and 37 Relocate configurations × video/text (74). Replay and Relocate are fixed stratified subsets, so their aggregate differences do not isolate a causal generalization effect. The main table is Resample only, split by Web/OS and easy/medium/hard. Completed accuracy is correct / valid completed; coverage must be reported separately against the fixed denominator.
 
-I and E use seed 4201. R replays the demonstration's frozen initial state: Web seed 0 and OS seed 1001. The dataset binds replay state and source video by SHA-256. Each execution has a 3,600-second wall budget and 800 input actions. A/B/C variants retain their own graders.
+Resample and Relocate use seed 4201. Replay replays the demonstration's frozen initial state: Web seed 0 and OS seed 1001. The dataset binds replay state and source video by SHA-256. Each execution has a 3,600-second wall budget and 800 input actions. A/B/C variants retain their own graders.
 
 ## Ablations
 

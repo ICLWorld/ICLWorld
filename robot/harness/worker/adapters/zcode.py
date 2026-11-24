@@ -16,7 +16,7 @@ if __package__:
                       _model_context_window, MAX_MODEL_CONTEXT_WINDOW)
 else:  # Invoked directly only as the stdin-to-native-argv exec carrier.
     import importlib.util
-    _spec = importlib.util.spec_from_file_location('vic_native_dsh_helpers', Path(__file__).with_name('dsh.py'))
+    _spec = importlib.util.spec_from_file_location('iclworld_native_dsh_helpers', Path(__file__).with_name('dsh.py'))
     _helpers = importlib.util.module_from_spec(_spec)
     _spec.loader.exec_module(_helpers)
     _empty, _events = _helpers._empty, _helpers._events
@@ -58,11 +58,11 @@ def configure(profile: Path, workspace: Path, model, server, provider, options=N
     userhome = profile / 'home'
     provider_path = userhome / '.zcode/v2/provider_config.json'
     provider_config = dict(schemaVersion=1, config=dict(
-        providerConfigRules=dict(providerRules=[dict(providerId='vic', providerName='VideoICL',
+        providerConfigRules=dict(providerRules=[dict(providerId='iclworld', providerName='ICLWorld',
             config=dict(group='standard-personal', access=dict(type='api-key', apiKey=key),
                         api=dict(type=protocols[protocol], baseUrl=base), personalModelIds=[model]))]),
         modelConfigRules=dict(providerModelRules=[], manualProviderModelRules=[]),
-        defaultModelSelection=dict(providerId='vic', modelId=model)))
+        defaultModelSelection=dict(providerId='iclworld', modelId=model)))
     requested_effort = opt.get('effort')
     if requested_effort is not None:
         if not isinstance(requested_effort, str) or not requested_effort.strip():
@@ -78,7 +78,7 @@ def configure(profile: Path, workspace: Path, model, server, provider, options=N
     window = _model_context_window(requested_window)
     properties['contextWindow'] = window
     provider_config['config']['modelConfigRules']['providerModelRules'] = [
-        dict(providerId='vic', modelId=model, config=dict(properties=properties))]
+        dict(providerId='iclworld', modelId=model, config=dict(properties=properties))]
     # Optional full native rules remain supported without guessing reasoning maps.
     if opt.get('native_model_rules') is not None:
         rules = opt['native_model_rules']
@@ -91,7 +91,7 @@ def configure(profile: Path, workspace: Path, model, server, provider, options=N
         # official ceiling and preserve explicitly smaller native limits.
         for group in rules.values():
             for rule in group:
-                if rule.get('providerId') != 'vic' or rule.get('modelId') != model:
+                if rule.get('providerId') != 'iclworld' or rule.get('modelId') != model:
                     continue
                 prop = rule.get('config', {}).get('properties', {})
                 if prop.get('contextWindow') is not None:
@@ -100,9 +100,9 @@ def configure(profile: Path, workspace: Path, model, server, provider, options=N
         provider_config['config']['modelConfigRules'].update(rules)
         target_rules = provider_config['config']['modelConfigRules']
         target = next((rule for group in target_rules.values() for rule in group
-                       if rule.get('providerId') == 'vic' and rule.get('modelId') == model), None)
+                       if rule.get('providerId') == 'iclworld' and rule.get('modelId') == model), None)
         if target is None:
-            target = dict(providerId='vic', modelId=model, config=dict(properties={}))
+            target = dict(providerId='iclworld', modelId=model, config=dict(properties={}))
             target_rules['providerModelRules'].append(target)
         target.setdefault('config', {}).setdefault('properties', {})['contextWindow'] = window
         target['config']['properties'].setdefault('inputFormat', {})['supportsImage'] = True
@@ -113,7 +113,7 @@ def configure(profile: Path, workspace: Path, model, server, provider, options=N
     runtime = dict(modelStream=dict(idleTimeoutMs=stream_idle_ms),
         features=dict(mcp=True, subagent=False, memory=False, skill=False, compact=True),
         memory=dict(use=False), plugins=dict(enabled=False), skills=dict(enabled=False),
-        hooks=dict(enabled=False), mcp=dict(servers=dict(vic=dict(
+        hooks=dict(enabled=False), mcp=dict(servers=dict(iclworld=dict(
             type='stdio', command=server['command'], args=list(server.get('args', [])),
             env=dict(server.get('env', {})), cwd=str(workspace), enabled=True,
             isolation='session', timeoutMs=opt.get('mcp_timeout_ms', 2147483647)))))

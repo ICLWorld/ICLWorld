@@ -18,7 +18,7 @@ def need(ok,why):
 
 
 def proof(room,identity):
-    from vic_sdk.native_structured_supervisor import unresolved_tool_input
+    from iclworld_sdk.native_structured_supervisor import unresolved_tool_input
     room=Path(room).resolve(strict=True);lease=room/'program/owner'
     need(lease.is_dir() and not lease.is_symlink(),'not a plain original lease')
     files=list(lease.iterdir());need(len(files)==1 and files[0].name=='identity.private.json','unexpected lease contents')
@@ -43,8 +43,8 @@ def proof(room,identity):
 
 
 def reconcile(owner,identity,room,*,expected):
-    from vic_sdk.embodied_recovery import checked_barrier
-    from vic_sdk.native_structured_supervisor import provider_drained
+    from iclworld_sdk.embodied_recovery import checked_barrier
+    from iclworld_sdk.native_structured_supervisor import provider_drained
     need(proof(room,identity)==expected,'lease/journal changed before lock')
     recovery_id=uuid.uuid4().hex
     r=owner.post('/api/private/recovery/begin',json=dict(identity=identity,recovery_id=recovery_id));r.raise_for_status()

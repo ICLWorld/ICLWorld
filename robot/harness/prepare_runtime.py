@@ -15,8 +15,8 @@ def main():
     target = args.out.resolve()
     if target.exists() or target.is_relative_to(source):
         parser.error("--out must be a new directory outside --base-runtime")
-    if not (source / "videoicl_isaaclab" / "realworld_scenes.py").is_file():
-        parser.error("--base-runtime must be a complete VideoICL native runtime")
+    if not (source / "iclworld_isaaclab" / "realworld_scenes.py").is_file():
+        parser.error("--base-runtime must be a complete ICLWorld native runtime")
     root = Path(__file__).resolve().parent
     source_map = json.loads((root / "SOURCE_MAP.json").read_text())["files"]
     shutil.copytree(source, target, symlinks=True)

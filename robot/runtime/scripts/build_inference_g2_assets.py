@@ -13,9 +13,9 @@ import math
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-BASE = ROOT / 'configs/initial-admission-e13-e25-20261030/e13-hframe-v2-bindings.candidate.json'
+BASE = ROOT / 'configs/initial-admission-robot_13-robot_25-20261030/iclworld_robot_13-hframe-v2-bindings.candidate.json'
 OUT = ROOT / 'inference-generalization-v1'
-TASKS = ('E04','E05','E06','E07','E09','E11','E20','E36','E41','E49')
+TASKS = ('iclworld_robot_04','iclworld_robot_05','iclworld_robot_06','iclworld_robot_07','iclworld_robot_09','iclworld_robot_11','iclworld_robot_20','iclworld_robot_36','iclworld_robot_41','iclworld_robot_49')
 PHOTOS = ('astronaut.png','camera.png','coins.png','moon.png','hubble_deep_field.jpg')
 COLORS = {'red':(.77,.035,.025),'green':(.2,.55,.055),'blue':(.025,.18,.75),'yellow':(.95,.7,.035)}
 
@@ -118,7 +118,7 @@ def prop(kind,color,photo=None):
         for x in (-.14,.14):m.box('Eye'+('L' if x<0 else 'R'),(.035,.008,.035),(.07,.035,.025),(x,-.445,.65))
     elif kind=='button':
         # Four genuine visual through-holes; convex contact disk retained because
-        # E20 uses stacking/placement and never threads the holes.
+        # iclworld_robot_20 uses stacking/placement and never threads the holes.
         n=48;grid=40;pts=[];faces=[];holes=[(x,y) for x in (-.27,.27) for y in (-.27,.27)]
         for iy in range(grid):
             for ix in range(grid):
@@ -146,28 +146,28 @@ def prop(kind,color,photo=None):
 def replacements(task,objects):
     for name,obj in objects.items():
         kind=None;color=tuple(obj.get('rgba',(0.8,0.5,0.2,1))[:3]);photo=None
-        if task=='E04' and name.endswith('_cup'):
+        if task=='iclworld_robot_04' and name.endswith('_cup'):
             c=name.split('_')[0];kind={'red':'apple','green':'pear','blue':'jar'}[c];color=COLORS[c]
-        elif task=='E05' and name in ('cube','sphere','triangle'):
+        elif task=='iclworld_robot_05' and name in ('cube','sphere','triangle'):
             kind={'cube':'gift','sphere':'orange','triangle':'pastry'}[name];color=(.95,.37,.025)
-        elif task=='E06' and name in ('purple','pink','lightpink'):kind='tangerine';color=(.96,.39,.02)
-        elif task=='E07' and name.startswith('block'):kind='matryoshka'
-        elif task=='E09' and '_' in name:
+        elif task=='iclworld_robot_06' and name in ('purple','pink','lightpink'):kind='tangerine';color=(.96,.39,.02)
+        elif task=='iclworld_robot_07' and name.startswith('block'):kind='matryoshka'
+        elif task=='iclworld_robot_09' and '_' in name:
             c,shape=name.split('_',1)
             if c in COLORS and shape in ('circle','square','triangle'):kind='cookie_'+shape;color=COLORS[c]
-        elif task=='E11' and name.endswith('_block'):
+        elif task=='iclworld_robot_11' and name.endswith('_block'):
             kind={'red_block':'apple','blue_block':'orange','yellow_block':'lemon','green_block':'pear'}[name]
             color={'apple':COLORS['red'],'orange':(.95,.37,.02),'lemon':(.93,.79,.015),'pear':COLORS['green']}[kind]
-        elif task=='E20' and ('_supply_' in name or name in ('yellow_initial','blue_initial')):kind='button';color=COLORS[name.split('_')[0]]
-        elif task=='E36' and name in ('red','pink','lightpink','blue'):kind='apple';color=COLORS['red']
-        elif task=='E41' and (name.endswith('_ref') or name.endswith('_piece')):kind='eraser'
-        elif task=='E49' and name.startswith('card'):kind='photo';photo=PHOTOS[int(name[4:])-1]
+        elif task=='iclworld_robot_20' and ('_supply_' in name or name in ('yellow_initial','blue_initial')):kind='button';color=COLORS[name.split('_')[0]]
+        elif task=='iclworld_robot_36' and name in ('red','pink','lightpink','blue'):kind='apple';color=COLORS['red']
+        elif task=='iclworld_robot_41' and (name.endswith('_ref') or name.endswith('_piece')):kind='eraser'
+        elif task=='iclworld_robot_49' and name.startswith('card'):kind='photo';photo=PHOTOS[int(name[4:])-1]
         if kind:yield name,obj,kind,color,photo
 
 def build(base=BASE,out=OUT):
     tasks=json.loads(base.read_text())['tasks'];assets=out/'assets/g2';assets.mkdir(parents=True,exist_ok=True)
-    patch={'schema':'videoicl.inference-object-patch.v1','group':'G2','tasks':{}}
-    provenance={'schema':'videoicl.g2-assets.v1','base_sha256':sha(base),'authorship':'Procedural rigid meshes from build_inference_g2_assets.py; no demo modifications.','tasks':{},'photos':[]}
+    patch={'schema':'iclworld.inference-object-patch.v1','group':'G2','tasks':{}}
+    provenance={'schema':'iclworld.g2-assets.v1','base_sha256':sha(base),'authorship':'Procedural rigid meshes from build_inference_g2_assets.py; no demo modifications.','tasks':{},'photos':[]}
     for photo in PHOTOS:
         p=assets/'photo_sources'/photo
         if not p.is_file():raise FileNotFoundError('Pinned upstream photo missing: '+str(p))
@@ -176,18 +176,18 @@ def build(base=BASE,out=OUT):
         binding=copy.deepcopy(tasks[task]);changed=[]
         for name,obj,kind,color,photo in replacements(task,binding['objects']):
             old=copy.deepcopy(obj);half=list(obj['size'])
-            if task=='E11':
+            if task=='iclworld_robot_11':
                 half[2]=.02
                 if 'center_z' in obj:obj['center_z']+=half[2]-obj['size'][2]
                 obj['size']=half
             filename=f'{task}_{name}.usda';path=assets/filename
             model=prop(kind,color,'photo_sources/'+photo if photo else None);model.write(path,half)
             obj.pop('mechanical_asset',None);obj.pop('reviewed_collision_settings',None)
-            obj['source_asset']={'root_env':'VIC_INFERENCE_ASSETS','relative_path':'g2/'+filename,'sha256':sha(path),'source_rotation':[1,0,0,0]}
+            obj['source_asset']={'root_env':'ICLWORLD_INFERENCE_ASSETS','relative_path':'g2/'+filename,'sha256':sha(path),'source_rotation':[1,0,0,0]}
             if photo:obj['source_asset']['dependencies']=[{'relative_path':'g2/photo_sources/'+photo,'sha256':sha(assets/'photo_sources'/photo)}]
             obj['recolor']=False
             obj['inference_object']={'group':'G2','category':kind,'legacy_identity':name}
-            if task=='E49':
+            if task=='iclworld_robot_49':
                 obj['identity_attributes']['source_face']='photograph_'+photo
                 obj['identity_attributes']['photograph']=photo
             changed.append({'id':name,'category':kind,'original_source':old.get('source_asset',old.get('mechanical_asset')),'asset':obj['source_asset'],'original_half_extents':old['size'],'half_extents':half,'collision':'closed convex rigid hull','native_validation':'pending'})

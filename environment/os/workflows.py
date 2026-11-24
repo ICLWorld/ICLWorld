@@ -1,4 +1,4 @@
-"""OS-ICL v2 resource graph. Policy/oracles remain in trusted Python only."""
+"""ICLWorld OS v2 resource graph. Policy/oracles remain in trusted Python only."""
 from __future__ import annotations
 
 import copy

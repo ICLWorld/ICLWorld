@@ -2,7 +2,7 @@
 """Controller-side verifier: private endpoint configuration is never mounted to the agent."""
 import json,os,urllib.request,math
 from pathlib import Path
-cfg=json.loads(Path(os.environ['VIDEOICL_VERIFIER_CONFIG']).read_text())
+cfg=json.loads(Path(os.environ['ICLWORLD_VERIFIER_CONFIG']).read_text())
 if cfg.get('result_path'):
  result=json.loads(Path(cfg['result_path']).read_text())
 else:

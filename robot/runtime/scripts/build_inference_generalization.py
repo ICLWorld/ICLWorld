@@ -16,7 +16,7 @@ def read(path):return json.loads(Path(path).read_text())
 
 def validate_catalog(catalog):
     tasks=catalog.get('tasks',{})
-    if set(tasks)!={f'E{i:02}' for i in range(1,51)}:raise ValueError('All 50 task identities required')
+    if set(tasks)!={f'iclworld_robot_{i:02}' for i in range(1,51)}:raise ValueError('All 50 task identities required')
     counts={g:sum(t.get('group')==g for t in tasks.values()) for g in ('G0','G1','G2')}
     if counts!={'G0':20,'G1':20,'G2':10}:raise ValueError('Expected disjoint 20/20/10 partition')
     for task,t in tasks.items():
@@ -41,10 +41,10 @@ def compile_bindings(base,catalog,patches,*,g2_profile,g2_profile_sha256):
             checks.append(dict(task_id=task,group='G0',unchanged=True,binding_sha256=digest(old)));continue
         new=deepcopy(merged[task])
         comparison_variants=deepcopy(new.get('variants'))
-        if task=='E08' and isinstance(comparison_variants,dict):
+        if task=='iclworld_robot_08' and isinstance(comparison_variants,dict):
             for variant in comparison_variants.values():
                 semantic=variant.get('semantic',{})
-                if semantic.get('source_acceptance_geometry')=='E08-source-geometry-v1':
+                if semantic.get('source_acceptance_geometry')=='iclworld_robot_08-source-geometry-v1':
                     semantic.pop('source_acceptance_geometry')
         if comparison_variants!=old.get('variants'):
             raise ValueError(task+': replacement may not silently change ABC semantics, goals or initial poses')
@@ -63,13 +63,13 @@ def compile_bindings(base,catalog,patches,*,g2_profile,g2_profile_sha256):
             for field in ('embodiment','head_view'):
                 if new.get(field)!=old.get(field):raise ValueError(task+': G1 environment changed')
         else:new['embodiment']='ur5_wsg'
-        new['inference_generalization']=dict(schema='videoicl-inference-task-v1',group=item['group'],
+        new['inference_generalization']=dict(schema='iclworld-inference-task-v1',group=item['group'],
             instruction=item['inference_prompt'],demo_unchanged=True,
             robot_profile=g2_profile if item['group']=='G2' else None,
             robot_profile_sha256=g2_profile_sha256 if item['group']=='G2' else None,
             source_task_binding_sha256=digest(old))
-        if task=='E24':
-            new['inference_generalization']['rule_profile']='e24-yarn-insertion-v1'
+        if task=='iclworld_robot_24':
+            new['inference_generalization']['rule_profile']='iclworld_robot_24-yarn-insertion-v1'
         result['tasks'][task]=new
         checks.append(dict(task_id=task,group=item['group'],changed_objects=changed,mechanism_changed=mechanism_changed,
             abc_semantics_preserved=True,binding_sha256=digest(new)))
@@ -80,12 +80,12 @@ def compile_bindings(base,catalog,patches,*,g2_profile,g2_profile_sha256):
 
 def main():
     p=argparse.ArgumentParser(description=__doc__)
-    p.add_argument('--base',type=Path,default=ROOT/'configs/initial-admission-e13-e25-20261030/e13-hframe-v2-bindings.candidate.json')
+    p.add_argument('--base',type=Path,default=ROOT/'configs/initial-admission-robot_13-robot_25-20261030/iclworld_robot_13-hframe-v2-bindings.candidate.json')
     p.add_argument('--catalog',type=Path,default=DEFAULT/'catalog.private.json')
     p.add_argument('--g1-patch',type=Path,default=DEFAULT/'g1-bindings-patch.json')
     p.add_argument('--g2-patch',type=Path,default=DEFAULT/'g2-bindings-patch.json')
     p.add_argument('--g2-profile',type=Path,required=True)
-    p.add_argument('--geometry-acceptance-v2',dest='geometry_acceptance_v2',action='store_true',default=True,help='E08/E33 source geometry acceptance (default)')
+    p.add_argument('--geometry-acceptance-v2',dest='geometry_acceptance_v2',action='store_true',default=True,help='iclworld_robot_08/iclworld_robot_33 source geometry acceptance (default)')
     p.add_argument('--legacy-acceptance-geometry',dest='geometry_acceptance_v2',action='store_false',help='Reproduce the historical AABB acceptance; never use for new runs')
     p.add_argument('--out',type=Path,default=DEFAULT/'acceptance-v2/inference-bindings.json')
     a=p.parse_args();profile=read(a.g2_profile)
@@ -99,17 +99,17 @@ def main():
     if a.geometry_acceptance_v2:
         if a.out.parent.resolve()==DEFAULT.resolve():
             raise ValueError('Acceptance upgrade requires a new candidate output path in a separate directory')
-        from videoicl_isaaclab.e08_source_geometry import augment_e08_bindings
-        from videoicl_isaaclab.e33_source_geometry import augment_e33_bindings
-        out=augment_e33_bindings(augment_e08_bindings(out,ROOT),ROOT)
+        from iclworld_isaaclab.iclworld_robot_08_source_geometry import augment_robot_08_bindings
+        from iclworld_isaaclab.iclworld_robot_33_source_geometry import augment_robot_33_bindings
+        out=augment_robot_33_bindings(augment_robot_08_bindings(out,ROOT),ROOT)
         for check in checks:
-            if check['task_id'] in ('E08','E33'):
+            if check['task_id'] in ('iclworld_robot_08','iclworld_robot_33'):
                 check['binding_sha256']=digest(out['tasks'][check['task_id']])
                 check['acceptance_geometry_upgrade']=True
                 check['physical_scene_unchanged_by_acceptance_upgrade']=True
-                if check['task_id']=='E33':
+                if check['task_id']=='iclworld_robot_33':
                     check['unchanged']=False
-        out['acceptance_geometry_revision']='source-geometry-v2-E08-E33'
+        out['acceptance_geometry_revision']='source-geometry-v2-iclworld_robot_08-iclworld_robot_33'
     a.out.parent.mkdir(parents=True,exist_ok=True);a.out.write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n')
     (a.out.parent/'binding-compilation-checks.json').write_text(json.dumps(dict(checked_tasks=50,variants=150,checks=checks),indent=2)+'\n')
     public={task:dict(task_id=task,group=x['group'],instruction=x['inference_prompt']) for task,x in read(a.catalog)['tasks'].items() if x['group']!='G0'}

@@ -1,6 +1,6 @@
 """Content-safe metadata for already-final request bytes. Never rewrites bytes."""
 import hashlib,json,math,re
-SCHEMA='videoicl-actual-upstream-budget-metadata-v1'
+SCHEMA='iclworld-actual-upstream-budget-metadata-v1'
 MAX_TELEMETRY_JSON_BYTES=64*1048576
 MAX_SAFE_NUMBER=9007199254740991
 MISSING=object()

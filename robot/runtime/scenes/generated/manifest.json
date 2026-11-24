@@ -1,5 +1,5 @@
 {
-  "schema": "videoicl-generated-scene-manifest-v1",
+  "schema": "iclworld-generated-scene-manifest-v1",
   "taxonomy_sha256": "20cbe212cee82998855102172b0b25843659b71f1cf5779f3063169dc360ed14",
   "task_count": 40,
   "variant_count": 120,

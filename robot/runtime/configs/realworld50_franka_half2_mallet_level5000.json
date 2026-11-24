@@ -81,7 +81,7 @@
   },
   "asset": {
     "path": "assets/embodiments/robotwin-r5/franka-panda/robot.usd",
-    "env": "VIC_FRANKA_ROBOTWIN_USD",
+    "env": "ICLWORLD_FRANKA_ROBOTWIN_USD",
     "format": "usd",
     "source_embodiment": "franka-panda"
   },
@@ -347,7 +347,7 @@
   },
   "author_recording": {
     "grasp_table_clearance": true,
-    "note": "E29 private: calibrated table-clear TCP, true physical stronger grip within original force limits, and real continuous wrist leveling before tapping original source keys. No source/scorer changes.",
+    "note": "iclworld_robot_29 private: calibrated table-clear TCP, true physical stronger grip within original force limits, and real continuous wrist leveling before tapping original source keys. No source/scorer changes.",
     "level_mallet_before_strikes": true,
     "continuous_orientation": true,
     "max_angular_speed_rad_s": 0.35,

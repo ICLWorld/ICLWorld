@@ -1,12 +1,12 @@
 {
   "schema": "realworld50-source-bindings-v1",
   "tasks": {
-    "E03": {
+    "iclworld_robot_03": {
       "scene_adapter": "full50-source-v1",
       "objects": {
         "red": {
           "source_asset": {
-            "root_env": "VIC_MECHANISM_ASSETS",
+            "root_env": "ICLWORLD_MECHANISM_ASSETS",
             "relative_path": "hollow_cup.usda",
             "sha256": "c9d82475379f3bc83666d97222a3c55a39f3334f97eb9ed02df4efab84183b5b",
             "dependencies": [
@@ -56,7 +56,7 @@
         },
         "green": {
           "source_asset": {
-            "root_env": "VIC_MECHANISM_ASSETS",
+            "root_env": "ICLWORLD_MECHANISM_ASSETS",
             "relative_path": "hollow_cup.usda",
             "sha256": "c9d82475379f3bc83666d97222a3c55a39f3334f97eb9ed02df4efab84183b5b",
             "dependencies": [
@@ -106,7 +106,7 @@
         },
         "blue": {
           "source_asset": {
-            "root_env": "VIC_MECHANISM_ASSETS",
+            "root_env": "ICLWORLD_MECHANISM_ASSETS",
             "relative_path": "hollow_cup.usda",
             "sha256": "c9d82475379f3bc83666d97222a3c55a39f3334f97eb9ed02df4efab84183b5b",
             "dependencies": [
@@ -1147,12 +1147,12 @@
         "No object teleportation, attachment, or prescribed joint trajectory. Source-derived geometry and process scoring require actual native contact validation."
       ]
     },
-    "E19": {
+    "iclworld_robot_19": {
       "scene_adapter": "full50-source-v1",
       "objects": {
         "sprite_bottle": {
           "source_asset": {
-            "root_env": "VIC_MECHANISM_ASSETS",
+            "root_env": "ICLWORLD_MECHANISM_ASSETS",
             "relative_path": "open_sprite_bottle.usda",
             "sha256": "9052baafd28e5b66dcbc4d2f94932cd51a66f9f15df7afe57c2716e465b704cb",
             "dependencies": [
@@ -1199,7 +1199,7 @@
         },
         "water_bottle": {
           "source_asset": {
-            "root_env": "VIC_MECHANISM_ASSETS",
+            "root_env": "ICLWORLD_MECHANISM_ASSETS",
             "relative_path": "open_water_bottle.usda",
             "sha256": "a1063067fb4ff0db03ba5436820756f9149f6eb45b5c9c5973ef5d6274eff71f",
             "dependencies": [
@@ -1246,7 +1246,7 @@
         },
         "cola_bottle": {
           "source_asset": {
-            "root_env": "VIC_MECHANISM_ASSETS",
+            "root_env": "ICLWORLD_MECHANISM_ASSETS",
             "relative_path": "open_cola_bottle.usda",
             "sha256": "3214c273e9c79040687cfc96144c8af580b4c50eccd0a2aa8b1dec401b6b70e8",
             "dependencies": [
@@ -1293,7 +1293,7 @@
         },
         "cap_yellow": {
           "source_asset": {
-            "root_env": "VIC_MECHANISM_ASSETS",
+            "root_env": "ICLWORLD_MECHANISM_ASSETS",
             "relative_path": "sprite_removable_cap.usda",
             "sha256": "1486a6aee643e5994844720f169e1a13c19af2a450eada38361c310e4609cfc0",
             "dependencies": [
@@ -1348,7 +1348,7 @@
         },
         "cap_white": {
           "source_asset": {
-            "root_env": "VIC_MECHANISM_ASSETS",
+            "root_env": "ICLWORLD_MECHANISM_ASSETS",
             "relative_path": "water_removable_cap.usda",
             "sha256": "8a584f2a88472a959642cf99d2f0a3d5507a0ea0b621cb971c6c0021ab38fc9f",
             "dependencies": [
@@ -1403,7 +1403,7 @@
         },
         "cap_red": {
           "source_asset": {
-            "root_env": "VIC_MECHANISM_ASSETS",
+            "root_env": "ICLWORLD_MECHANISM_ASSETS",
             "relative_path": "cola_removable_cap.usda",
             "sha256": "a8d1a023e305cc173e0bda92a4c52f7f2f20731a32894b4fbab2a2669f840c4a",
             "dependencies": [
@@ -1930,12 +1930,12 @@
         "No object teleportation, attachment, or prescribed joint trajectory. Source-derived geometry and process scoring require actual native contact validation."
       ]
     },
-    "E24": {
+    "iclworld_robot_24": {
       "scene_adapter": "full50-source-v1",
       "objects": {
         "box": {
           "mechanical_asset": {
-            "root_env": "VIC_MECHANISM_ASSETS",
+            "root_env": "ICLWORLD_MECHANISM_ASSETS",
             "relative_path": "open_source_storage_box.usda",
             "sha256": "b70d3aea3eccf90089cc839ee631bd7ccbabfd26a1c2a7d2d696d0746df6de21",
             "dependencies": [
@@ -1982,7 +1982,7 @@
         },
         "lid": {
           "source_asset": {
-            "root_env": "VIC_MECHANISM_ASSETS",
+            "root_env": "ICLWORLD_MECHANISM_ASSETS",
             "relative_path": "removable_box_lid.usda",
             "sha256": "180837493663657fecabc2cbfb1f3ffeedfc96c700ae4ae4a1c82eae5c412fde",
             "dependencies": [
@@ -2024,7 +2024,7 @@
         },
         "blue": {
           "source_asset": {
-            "root_env": "VIC_MECHANISM_ASSETS",
+            "root_env": "ICLWORLD_MECHANISM_ASSETS",
             "relative_path": "hollow_cup.usda",
             "sha256": "c9d82475379f3bc83666d97222a3c55a39f3334f97eb9ed02df4efab84183b5b",
             "dependencies": [
@@ -2073,7 +2073,7 @@
         },
         "green": {
           "source_asset": {
-            "root_env": "VIC_MECHANISM_ASSETS",
+            "root_env": "ICLWORLD_MECHANISM_ASSETS",
             "relative_path": "hollow_cup.usda",
             "sha256": "c9d82475379f3bc83666d97222a3c55a39f3334f97eb9ed02df4efab84183b5b",
             "dependencies": [
@@ -2122,7 +2122,7 @@
         },
         "red": {
           "source_asset": {
-            "root_env": "VIC_MECHANISM_ASSETS",
+            "root_env": "ICLWORLD_MECHANISM_ASSETS",
             "relative_path": "hollow_cup.usda",
             "sha256": "c9d82475379f3bc83666d97222a3c55a39f3334f97eb9ed02df4efab84183b5b",
             "dependencies": [

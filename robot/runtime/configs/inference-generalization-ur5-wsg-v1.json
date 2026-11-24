@@ -79,12 +79,12 @@
   },
   "asset": {
     "path": "assets/embodiments/robotwin-r5/ur5-wsg/robot.usd",
-    "env": "VIC_UR5_WSG_USD",
+    "env": "ICLWORLD_UR5_WSG_USD",
     "format": "usd",
     "source_embodiment": "ur5-wsg"
   },
   "layout": {
-    "id": "videoicl-g2-ur5-slate-table-v1",
+    "id": "iclworld-g2-ur5-slate-table-v1",
     "kind": "robotwin",
     "task_rotation": [
       0.7071067811865476,
@@ -232,7 +232,7 @@
     }
   },
   "cameras": {
-    "profile": "videoicl-g2-ur5-wsg-tcp-visible-v1",
+    "profile": "iclworld-g2-ur5-wsg-tcp-visible-v1",
     "head": {
       "width": 640,
       "height": 480,

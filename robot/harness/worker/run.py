@@ -12,8 +12,8 @@ import time
 
 from transport import make_relay, TOOLS
 
-SDK=Path(__file__).resolve().parents[1]/'VideoICLBench/packages/sdk'
-GUI_PY=Path(os.environ.get('VIC_GUI_PYTHON', sys.executable))
+SDK=Path(__file__).resolve().parents[1]/'iclworld_harness/packages/sdk'
+GUI_PY=Path(os.environ.get('ICLWORLD_GUI_PYTHON', sys.executable))
 MODELS={'qwen':'qwen3.8-max','gemini':'gemini-4-argon','dsh':'deepseek-v4.1-flash-1017','zcode':'glm-5.3-flash','kimi':'kimi-k3','codex':'gpt-6-astra','claude':'claude-opus-5-5'}
 CLAUDE_ENGINES = ('qwen', 'claude')
 BATCH_INSTRUCTIONS = (
@@ -37,7 +37,7 @@ def hold(out,reason):
 
 def run(args):
     import httpx
-    from vic_sdk.embodied_recovery import checked_barrier
+    from iclworld_sdk.embodied_recovery import checked_barrier
     engine=args.engine
     settings=worker_settings(args)
     model=settings['model']
@@ -78,10 +78,10 @@ def run(args):
     if engine in CLAUDE_ENGINES:
         binary=Path(settings['binary'])
         save(profile/'settings.json',{'autoCompactEnabled':True})
-        save(profile/'mcp.json',{'mcpServers':{'vic':{k:mcp[k] for k in ('command','args')}}})
+        save(profile/'mcp.json',{'mcpServers':{'iclworld':{k:mcp[k] for k in ('command','args')}}})
         save(profile/'claude-runtime.private.json',{'mcp':mcp,'base_url':base,'token':token})
         if engine=='claude':
-            from vic_sdk.claude_structured import configure
+            from iclworld_sdk.claude_structured import configure
             configure(profile,binary,model)
     else:
         module,binary=adapter_runtime(engine, settings['binary'])
@@ -148,7 +148,7 @@ def worker_settings(args):
 
 
 def cli_binary(engine, override=None):
-    name = 'VIC_CLI_' + engine.upper()
+    name = 'ICLWORLD_CLI_' + engine.upper()
     path = override or os.environ.get(name)
     if not path:
         raise ValueError(name + ' must point to the installed native CLI')
@@ -164,8 +164,8 @@ def adapter_runtime(engine, binary=None):
 
 def wait_for_provider(owner, identity, timing_path):
     """After natural CLI exit wait for the original relay's still-live requests."""
-    from vic_sdk.embodied_recovery import checked_barrier
-    from vic_sdk.native_structured_supervisor import provider_drained
+    from iclworld_sdk.embodied_recovery import checked_barrier
+    from iclworld_sdk.native_structured_supervisor import provider_drained
     while True:
         response = owner.get('/api/private/state')
         response.raise_for_status()
@@ -183,7 +183,7 @@ def wait_for_provider(owner, identity, timing_path):
 
 def continue_existing(*,engine,room,owner,session,previous_attempt):
     """Called only by the owner-checked, exclusive companion. Reuses the original relay."""
-    from vic_sdk.embodied_recovery import checked_barrier
+    from iclworld_sdk.embodied_recovery import checked_barrier
     if engine not in (*CLAUDE_ENGINES,'gemini','kimi','dsh','zcode','codex') or not session or previous_attempt < 1:
         raise ValueError('Unsupported existing CLI session')
     room=Path(room).resolve()
@@ -213,11 +213,11 @@ def continue_existing(*,engine,room,owner,session,previous_attempt):
 
 
 def attempt_loop(*,engine,room,out,owner,identity,binary,module,prompt,session=None,review_attempt=None,qwen_config=None,relay=None,start_attempt=1,session_recovery_record=None):
-    from vic_sdk.native_structured_supervisor import native_terminal_proven,unresolved_tool_input
-    from vic_sdk.embodied_recovery import checked_barrier,recover_control,failure_class
-    from vic_sdk.embodied_agent import checked_evaluation
-    from vic_sdk import claude_structured as claude
-    from vic_sdk.native_agent import summarize as cc_summary
+    from iclworld_sdk.native_structured_supervisor import native_terminal_proven,unresolved_tool_input
+    from iclworld_sdk.embodied_recovery import checked_barrier,recover_control,failure_class
+    from iclworld_sdk.embodied_agent import checked_evaluation
+    from iclworld_sdk import claude_structured as claude
+    from iclworld_sdk.native_agent import summarize as cc_summary
     if type(start_attempt) is not int or start_attempt < 1:
         raise ValueError('Invalid starting CLI attempt')
     if start_attempt != 1:
@@ -361,7 +361,7 @@ if __name__=='__main__':
     if args.check_config:
         settings=worker_settings(args)
         if args.engine=='codex':
-            from vic_sdk.direct_tools import validate_context_window
+            from iclworld_sdk.direct_tools import validate_context_window
             if not settings['model_catalog'] or not settings['model_catalog_sha256']:
                 p.error('Codex requires --codex-model-catalog and --codex-model-catalog-sha256')
             validate_context_window(settings['model_catalog'],settings['model_catalog_sha256'],

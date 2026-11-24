@@ -30,7 +30,7 @@
   },
   "asset": {
     "path": "",
-    "env": "VIC_ARX_X5_USD",
+    "env": "ICLWORLD_ARX_X5_USD",
     "format": "usd"
   },
   "layout": {
@@ -64,7 +64,7 @@
       "restitution": 0
     },
     "background": {
-      "assets_env": "VIC_ROBODOJO_ASSETS",
+      "assets_env": "ICLWORLD_ROBODOJO_ASSETS",
       "room": "Room/Simple_Room_nolight/simple_room_nolight.usd",
       "room_scale": [
         0.5,

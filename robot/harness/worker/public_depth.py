@@ -44,7 +44,7 @@ def unpack(public):
 
 def install(reference_cls,reference_factory):
     from mcp.types import CallToolResult, TextContent
-    from vic_sdk.robodawn_turn_context import _model_measurement_projection
+    from iclworld_sdk.robodawn_turn_context import _model_measurement_projection
 
     class Tools(reference_cls):
         def result(self,saved,*,include_images=True):

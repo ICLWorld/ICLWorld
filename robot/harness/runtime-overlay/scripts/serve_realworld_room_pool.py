@@ -16,8 +16,8 @@ import uuid
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from probe_realworld_room_pool import normalize_cases, GPUSampler
-from videoicl_isaaclab.room_pool import RoomPool, filter_room_collisions, global_scene_signature
-from videoicl_isaaclab.pool_rpc import PoolRPCWorker, atomic_json
+from iclworld_isaaclab.room_pool import RoomPool, filter_room_collisions, global_scene_signature
+from iclworld_isaaclab.pool_rpc import PoolRPCWorker, atomic_json
 
 
 def write_kit_settings_evidence(settings, output, *, requested_kit_args):
@@ -40,7 +40,7 @@ def write_kit_settings_evidence(settings, output, *, requested_kit_args):
             values[path]=value
         except Exception as exc:
             values[path]=None;errors[path]=repr(exc)
-    evidence=dict(schema='videoicl-effective-kit-settings-v1',
+    evidence=dict(schema='iclworld-effective-kit-settings-v1',
         phase='after_app_launcher_before_stage_construction',pid=os.getpid(),
         captured_unix=time.time(),requested_kit_args=requested_kit_args,
         effective_settings=values,read_errors=errors,
@@ -115,7 +115,7 @@ def prepare_initial_progress(pool, controllers, output, *, physics_dt,
                              initial_window_ticks, max_extra_settle_seconds=2.):
     """Persist every room before bounded extra physics and baseline sealing."""
     import math
-    from videoicl_isaaclab.realworld_progress_evidence import initial_diagnostics, seal_initial
+    from iclworld_isaaclab.realworld_progress_evidence import initial_diagnostics, seal_initial
     output=Path(output)
     folder=output/'initial-progress'
     folder.mkdir(parents=True,exist_ok=True,mode=0o700)
@@ -142,7 +142,7 @@ def prepare_initial_progress(pool, controllers, output, *, physics_dt,
         pool.tick();extra_ticks+=1
         diagnostics={room:initial_diagnostics(c.evaluator,room_id=room) for room,c in controllers.items()}
     diagnostics=snapshot('post-settle')
-    metadata=dict(schema='videoicl-initial-progress-diagnostics-v2',
+    metadata=dict(schema='iclworld-initial-progress-diagnostics-v2',
         shared_tick=pool.physics_ticks,initial_window_ticks=initial_window_ticks,
         extra_physics_ticks=extra_ticks,max_extra_settle_seconds=max_extra_settle_seconds,
         initial_diagnostics=before,final_diagnostics=diagnostics,
@@ -161,7 +161,7 @@ def prepare_initial_progress(pool, controllers, output, *, physics_dt,
         seal_initial(controller.evaluator)
         initial_snapshots[room]=controller.evaluator.result()['progress_evidence']['initial']
     atomic_json(output/'initial-progress-evidence.private.json',dict(
-        schema='videoicl-sealed-initial-progress-v2',shared_tick=pool.physics_ticks,
+        schema='iclworld-sealed-initial-progress-v2',shared_tick=pool.physics_ticks,
         measured_initial_window_ticks=initial_window_ticks,extra_physics_ticks=extra_ticks,
         rooms=initial_snapshots))
     return metadata
@@ -171,7 +171,7 @@ def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--cases', type=Path, required=True)
     p.add_argument('--out', type=Path, required=True)
-    p.add_argument('--suite', default='videoicl-realworld50')
+    p.add_argument('--suite', default='iclworld-realworld50')
     p.add_argument('--epoch', required=True)
     p.add_argument('--barrier-timeout', type=float, required=True)
     p.add_argument('--barrier-policy',choices=['wait','fail_after_timeout'],default='wait')
@@ -203,7 +203,7 @@ def main():
     raw = payload['cases'] if isinstance(payload, dict) else payload
     cases = normalize_cases(raw, base=args.cases.resolve().parent)
     identity = identities(cases, raw, suite=args.suite, epoch=args.epoch)
-    from videoicl_isaaclab.embodiments import select
+    from iclworld_isaaclab.embodiments import select
     profiles = {case['episode_id']: select(case['task'], case['robot']) for case in cases}
     signatures = [global_scene_signature(profile.config) for profile in profiles.values()]
     if len({s['sha256'] for s in signatures}) != 1:
@@ -232,11 +232,11 @@ def main():
         import math
         from PIL import Image
         import isaaclab.sim as sim
-        from videoicl_isaaclab.scene import TabletopScene
-        from videoicl_isaaclab.control import Controller
-        from videoicl_isaaclab.realworld_scenes import load, public_metadata
-        from videoicl_isaaclab.realworld_evaluator_selector import create_evaluator
-        from videoicl_isaaclab.realworld_progress_evidence import seal_initial
+        from iclworld_isaaclab.scene import TabletopScene
+        from iclworld_isaaclab.control import Controller
+        from iclworld_isaaclab.realworld_scenes import load, public_metadata
+        from iclworld_isaaclab.realworld_evaluator_selector import create_evaluator
+        from iclworld_isaaclab.realworld_progress_evidence import seal_initial
         first = profiles[cases[0]['episode_id']]
         options = {k: first.config['physics'][k] for k in ('enable_stabilization',) if k in first.config['physics']}
         context = sim.SimulationContext(sim.SimulationCfg(dt=first.config['physics']['dt'], device=args.device,
@@ -246,7 +246,7 @@ def main():
         # Configure before scene creation; an old/new mixed cohort is rejected.
         specs = {case['episode_id']: load(case['task'], case['variant'], case['seed'], Path(case['bindings'])) for case in cases}
         import carb.settings
-        from videoicl_isaaclab.execution_design_render import configure_render_for_specs
+        from iclworld_isaaclab.execution_design_render import configure_render_for_specs
         render_receipt = configure_render_for_specs(specs.values(), carb.settings.get_settings())
         (out/'execution-render.private.json').write_text(json.dumps(render_receipt, indent=2)+'\n')
         for index, case in enumerate(cases):
@@ -306,7 +306,7 @@ def main():
                     images[name] = base64.b64encode(buffer.getvalue()).decode()
                     calibration[name] = scenes[room].rgb_camera_calibration(name)
                     if 'distance_to_image_plane' in camera.data.output:
-                        from videoicl_isaaclab.sensor_depth import encode_depth_packet
+                        from iclworld_isaaclab.sensor_depth import encode_depth_packet
                         packet=encode_depth_packet(camera.data.output['distance_to_image_plane'].cpu().numpy(),
                             rgb_bytes=buffer.getvalue(), observation_tick=pool.physics_ticks)
                         if (packet['height'],packet['width']) != image.shape[:2]:
@@ -325,7 +325,7 @@ def main():
             return images
 
         hashes = {str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest()
-                  for p in sorted((ROOT/'videoicl_isaaclab').glob('*.py'))}
+                  for p in sorted((ROOT/'iclworld_isaaclab').glob('*.py'))}
         rooms = {}
         for case in cases:
             room = case['episode_id'];scene = scenes[room]
@@ -366,7 +366,7 @@ def main():
     finally:
         atomic_json(out/'gpu-monitor.private.json', sampler.close())
         sys.stdout.flush();sys.stderr.flush()
-        if os.environ.get('VIC_SKIP_APP_CLOSE') == '1':os._exit(code)
+        if os.environ.get('ICLWORLD_SKIP_APP_CLOSE') == '1':os._exit(code)
         if app is not None:app.close(wait_for_replicator=False)
     return code
 

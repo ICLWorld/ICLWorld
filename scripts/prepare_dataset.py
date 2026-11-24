@@ -23,13 +23,13 @@ def prepare(dataset,out):
   p=dataset/x['path'];q=out/rel;q.parent.mkdir(parents=True,exist_ok=True)
   try:os.link(p,q)
   except OSError:shutil.copy2(p,q)
- # Materialize the recorded initial state for each declared Web R condition.
+ # Materialize the recorded initial state for each declared Web Replay level.
  bindings={(b['native_task_id'],b['variant']): b['task_name'] for b in layout['task_bindings'] if b['native_domain']=='web'}
  released_video_hashes={v['path']:v['sha256'] for v in layout['assets'].values()}
  replay_index=out/'metadata/web-replays.json';enabled=[]
  for r in json.loads(replay_index.read_text()):
   row=keyed[(bindings[(str(r['task_id']),r['variant'])],r['variant'])]
-  entry=next((g for g in row['generalization'] if g['condition']=='R'),None)
+  entry=next((g for g in row['generalization'] if g['level']=='replay'),None)
   if entry is None:continue
   rel,=entry['resource_dependencies'];p=(dataset/rel).resolve()
   if not p.is_relative_to(dataset):raise ValueError('Invalid Web replay path')

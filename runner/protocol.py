@@ -4,7 +4,7 @@ import hashlib
 import json
 from pathlib import Path
 
-PROTOCOL = 'videoicl-frames-text-mcq-v2-20261101'
+PROTOCOL = 'iclworld-frames-text-mcq-v2-20261101'
 MODELS = {
     'gpt-6-astra': ('codex', 'gpt-6-astra'),
     'claude-opus-5-5': ('claude', 'claude-opus-5-5'),
@@ -68,7 +68,7 @@ def execution_prompt(instruction, condition, rule=None):
             raise ValueError('Rule text must not enter the video condition')
         prefix = ('请先查看指定示范视频的多个时间点，学习目标中要求的转换方法、分类对应关系、'
                   '选择顺序或停止条件，再完成任务。无需口头说明你归纳的方法。\n')
-    return (prefix + instruction.strip() + '\n只通过 vic 的截图和坐标键鼠工具操作应用。'
+    return (prefix + instruction.strip() + '\n只通过 iclworld 的截图和坐标键鼠工具操作应用。'
             '不要读取内部状态、源码或评分答案。完成或无法继续时调用 finish。'
             f'总时限 {TIMEOUT} 秒，最多 {MAX_ACTIONS} 个输入动作。')
 

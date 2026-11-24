@@ -1,7 +1,7 @@
 """Independent video QA using native CLI adapters and public-only MCP tools."""
 import argparse,hashlib,json,os,secrets,subprocess,sys,threading
 from pathlib import Path
-ROOT=Path(__file__).resolve().parents[1];SDK=ROOT/'harness/VideoICLBench/packages/sdk'
+ROOT=Path(__file__).resolve().parents[1];SDK=ROOT/'harness/iclworld_harness/packages/sdk'
 sys.path[:0]=[str(ROOT/'harness/worker'),str(SDK)]
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def put(p,v):p.write_text(json.dumps(v,ensure_ascii=False,indent=2)+'\n');p.chmod(0o600)
@@ -18,7 +18,7 @@ def main():
  from run import worker_settings,adapter_runtime
  settings=worker_settings(a)
  from provider_routes import https_origin
- os.environ['VIC_UPSTREAM_ORIGIN']=a.api_base;https_origin('VIC_UPSTREAM_ORIGIN');os.environ['VIC_PROVIDER_DIRECT']='1'
+ os.environ['ICLWORLD_UPSTREAM_ORIGIN']=a.api_base;https_origin('ICLWORLD_UPSTREAM_ORIGIN');os.environ['ICLWORLD_PROVIDER_DIRECT']='1'
  if not a.execute:print(json.dumps({'qa_id':a.qa_id,'settings':settings,'video_sha256':sha(video),'model_requests':0}));return
  key=os.environ.get(a.key_env)
  if not key:raise ValueError('Set the API key environment variable')
@@ -41,14 +41,14 @@ def main():
   module,binary=adapter_runtime(a.engine,a.binary)
   instructions='Watch the assigned video with demo_info and demo_frames, then call qa_question and submit one uppercase A/B/C/D through qa_answer. First valid answer is final. This is independent video QA; no simulation, physical actions, text rule or correctness feedback is available.'
   if a.engine=='codex':
-   import vic_sdk.embodied_codex_mcp as roles
+   import iclworld_sdk.embodied_codex_mcp as roles
    roles.NATIVE_MODEL_INSTRUCTIONS=instructions;roles.NATIVE_TOOL_INSTRUCTIONS=instructions
   module.configure(profile,work,a.model,mcp,provider,settings)
   cmd,env=module.command(profile,work,a.model,binary=binary)
   env.update(PATH=os.environ['PATH'],NO_PROXY='localhost,127.0.0.1',HOME=str(profile))
   with (out/'stdout.jsonl').open('xb') as stdout,(out/'stderr.log').open('xb') as stderr:
    child=subprocess.run(cmd,cwd=work,env=env,input=instructions.encode(),stdout=stdout,stderr=stderr)
-  from vic_sdk.api_timing import ApiTimingLedger
+  from iclworld_sdk.api_timing import ApiTimingLedger
   ledger=ApiTimingLedger(timing).snapshot();answer=out/'first-valid-answer.private.json'
   put(out/'result.json',{'identity':ident,'CLI_exit_code':child.returncode,'answer_recorded':answer.is_file(),'answer_sha256':sha(answer) if answer.is_file() else None,'api_timing':ledger,'simulation_starts':0,'graded':False})
  finally:relay.shutdown();relay.server_close();thread.join()

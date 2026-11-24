@@ -1,5 +1,5 @@
 {
-  "schema": "videoicl-workbench-readiness-v1",
+  "schema": "iclworld-workbench-readiness-v1",
   "source_sha256": "89b875f17e837fa32d41b87ff0e6ecc8d9027c5fddb63100e7f286368f4b72c6",
   "equivalent_source_fingerprints": [],
   "tasks": [

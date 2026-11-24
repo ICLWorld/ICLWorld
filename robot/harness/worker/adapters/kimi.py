@@ -44,7 +44,7 @@ def configure(profile,workspace,model,server,provider,options):
         '[models.evaluation-model]','provider = "evaluation-provider"','model = '+q(model),'max_context_size = '+str(window),
         'capabilities = ["image_in", "thinking", "tool_use"]','[thinking]',
         'enabled = '+('false'if _get(options,'effort','high')=='off'else'true'),'effort = '+q(_get(options,'effort','high')),'keep = "all"',
-        '[tools]','enabled = ["mcp__vic__*"]','[loop_control]','max_steps_per_turn = 1000','max_attempts_per_step = 3',
+        '[tools]','enabled = ["mcp__iclworld__*"]','[loop_control]','max_steps_per_turn = 1000','max_attempts_per_step = 3',
         'reserved_context_size = '+str(window-compact),'compaction_trigger_ratio = '+repr(ratio),
         '[mcp]','startup_timeout_ms = 60000','tool_timeout_ms = '+str(int(server.get('tool_timeout_sec',3600)*1000)),
         '[database]','global_search = false','[experimental]','micro_compaction = false','[image]','max_edge_px = 2000',
@@ -52,9 +52,9 @@ def configure(profile,workspace,model,server,provider,options):
     _private(profile/'config.toml',config);_private(profile/'tui.toml','[upgrade]\nauto_install = false\n')
     mcp=dict(command=str(server['command']),args=list(map(str,server.get('args',[]))),deferred=False)
     if server.get('env'):mcp['env']=server['env']
-    _private(profile/'mcp.json',{'mcpServers':{'vic':mcp}})
-    _private(profile/'agent.md','---\nname: videoicl-gui-only\ndescription: GUI-only evaluation agent\ntools:\n  - mcp__vic__*\nsubagents: []\n---\nUse only the supplied GUI MCP tools. Follow the user task and public controls.\n')
-    receipt=dict(identity,requested_context_window=requested_window,session_id=old.get('session_id'),native_compaction=True,native_tools=[],mcp_servers=['vic'],credentials_included=False,package='@moonshot-ai/kimi-code',media_patch_required=False)
+    _private(profile/'mcp.json',{'mcpServers':{'iclworld':mcp}})
+    _private(profile/'agent.md','---\nname: iclworld-gui-only\ndescription: GUI-only evaluation agent\ntools:\n  - mcp__iclworld__*\nsubagents: []\n---\nUse only the supplied GUI MCP tools. Follow the user task and public controls.\n')
+    receipt=dict(identity,requested_context_window=requested_window,session_id=old.get('session_id'),native_compaction=True,native_tools=[],mcp_servers=['iclworld'],credentials_included=False,package='@moonshot-ai/kimi-code',media_patch_required=False)
     if not old:_private(profile/'kimi-attempt.json',_cursor(None,None,b''))
     _private(profile/'kimi-adapter.json',receipt);return receipt
 

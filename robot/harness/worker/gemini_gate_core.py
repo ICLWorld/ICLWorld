@@ -23,7 +23,7 @@ import threading
 import time
 import uuid
 
-SCHEMA = 'videoicl-api-concurrency-v1'
+SCHEMA = 'iclworld-api-concurrency-v1'
 MAX_SLOTS = 50
 _FIELDS = {'schema', 'scope', 'limit', 'legacy_reserved', 'lock_directory',
            'filesystem_atomic_mkdir_verified'}
@@ -93,7 +93,7 @@ def _claim_directory(path, scope):
     except FileExistsError:
         return None
     # If writing ownership fails, leave the directory reserved: do not guess.
-    owner = dict(schema='videoicl-api-concurrency-owner-v1', token=token,
+    owner = dict(schema='iclworld-api-concurrency-owner-v1', token=token,
                  scope=scope, pid=os.getpid(), hostname=socket.gethostname(),
                  created_unix=time.time())
     flags = os.O_CREAT | os.O_EXCL | os.O_WRONLY | getattr(os, 'O_NOFOLLOW', 0)
@@ -110,7 +110,7 @@ def _release_directory(path, token, scope):
         if path.is_symlink() or owner_path.is_symlink():
             raise ValueError('Symlink is not a lease')
         owner = json.loads(_visibility_retry(owner_path.read_bytes, 'owner_read'))
-        if (owner.get('schema') != 'videoicl-api-concurrency-owner-v1'
+        if (owner.get('schema') != 'iclworld-api-concurrency-owner-v1'
                 or owner.get('token') != token or owner.get('scope') != scope):
             raise ValueError('Ownership mismatch')
     except (OSError, ValueError, AttributeError) as exc:
