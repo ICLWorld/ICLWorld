@@ -2,9 +2,9 @@
 
 ## Main and generalization
 
-I denotes the independent and identically distributed (IID) condition: for a fixed task and rule, demonstration and evaluation instances are independently sampled from the same task distribution. R denotes reproduction and E denotes environment generalization. The dataset README defines these conditions and the difficulty criteria for all three domains.
+R, I and E are the Replay, Resample and Relocate levels of the paper. I (Resample) is the independent and identically distributed (IID) condition: for a fixed task and rule, demonstration and evaluation instances are independently sampled from the same task distribution. R (Replay) restores the demonstrated situation, and E (Relocate) moves the task to the counterpart environment. The dataset README defines these conditions and the difficulty criteria for all three domains.
 
-The paper evaluates six model groups: Qwen3.8-max/Claude Code, Kimi-k3/Kimi CLI, GLM5.3-flash/ZCode, DeepSeek-v4.1-flash/DSH, gpt-6-astra/Codex, and claude-opus-5-5/Claude Code. All request high reasoning effort through their native runtimes.
+The paper evaluates six models, each in a native agent CLI: Claude Opus 5.5 (Claude Code), GPT-6 Astra (Codex), Qwen3.8-Max (Claude Code), GLM-5.3-Flash (ZCode), Kimi K3 (Kimi Code) and DeepSeek-V4.1-Flash (DeepSeek Harness, DSH). All request high reasoning effort through their native runtimes.
 
 Each model has 320 trials: 110 I configurations × video/text (220), 13 R configurations × video/text (26), and 37 E configurations × video/text (74). R and E are fixed stratified subsets, so their aggregate differences do not isolate a causal generalization effect. The main table is I only, split by Web/OS and easy/medium/hard. Completed accuracy is correct / valid completed; coverage must be reported separately against the fixed denominator.
 
@@ -20,7 +20,7 @@ QA consumes the complete actual viewing prefix before the first action. It is no
 
 ## Model configuration and results
 
-API access is supplied by the experimenter. Each entry in the provider configuration defines a local model label, native `engine`, API `api_model`, endpoint `base_url`, and API-key environment variable `key_env`. Model labels can be added freely and selected with `--models`; provider endpoints are not hardcoded. The supported native engines are Codex, Claude Code, Kimi CLI, DSH and ZCode. Additional engines can be implemented through the runner adapter interface.
+API access is supplied by the experimenter. Each entry in the provider configuration defines a local model label, native `engine`, API `api_model`, endpoint `base_url`, and API-key environment variable `key_env`. Model labels can be added freely and selected with `--models`; provider endpoints are not hardcoded. The supported native engines are Codex, Claude Code, Kimi Code, DSH and ZCode. Additional engines can be implemented through the runner adapter interface.
 
 The launcher records the selected configuration and refuses to mix changed configurations into an existing workspace. Use a separate workspace for a different model or protocol configuration. API keys are never part of the release.
 
