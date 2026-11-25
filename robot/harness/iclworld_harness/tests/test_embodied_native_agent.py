@@ -1,4 +1,5 @@
 """Native harness + actual Chrome over synthetic HTTP; no model calls."""
+import functools
 import hashlib
 import json
 from pathlib import Path
@@ -10,6 +11,17 @@ import pytest
 
 from iclworld_sdk.embodied_agent import run, checked_evaluation
 from test_embodied_gui_mcp import IDENTITY, gui_controller, chrome_path
+
+
+@functools.lru_cache(maxsize=1)
+def default_browser():
+    """Local Chrome on macOS, otherwise Playwright's bundled Chromium."""
+    mac = Path("/Applications/Google Chrome.app/Contents/MacOS/Google Chrome")
+    if mac.is_file():
+        return mac
+    from playwright.sync_api import sync_playwright
+    with sync_playwright() as p:
+        return Path(p.chromium.executable_path)
 
 
 @pytest.fixture
@@ -101,7 +113,7 @@ else:
         binary=cli, effort="high", code_mode=False, max_budget_usd=3.,
         codex_model_catalog=catalog,codex_model_catalog_sha256=catalog_sha,
         preflight=False, allow_unvalidated_environment=False,
-        browser_path=Path(controller.get("browser_path", "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome")),
+        browser_path=Path(controller.get("browser_path") or default_browser()),
         max_gui_inputs=200, claude_compact_percent=None, serial_tools=False)
 
 

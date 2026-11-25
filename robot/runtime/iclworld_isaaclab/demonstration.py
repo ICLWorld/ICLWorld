@@ -768,45 +768,38 @@ class Demonstration:
             return solve_robot_33_transfer(self)
         if not self.scene.spec.get('goals'):
             raise ValueError('Generated demo requires at least one goal')
-        resume=getattr(self,'_engineering_robot_25_remaining',None)
-        if resume is not None:
-            from .execution_design_robot_25_remaining import validate_resume
-            validate_resume(self,resume)
-            home_xy={side:np.asarray(resume['home_xy'][side],float)for side in('left','right')}
-            initial_generated_hand=resume['active_hand']
-        else:
-            home_xy = {s: self.tip(s)[:2].copy() for s in ('left', 'right')}
-            from .execution_design_robot_16_parking import remember_empty_home
-            remember_empty_home(self)
-            if not self.smooth:self.calibrate_generated_axes()
-            self.note('initial')
-            self.act('RELEASE', 'RELEASE')
-            if (getattr(self,'_execution_design_reference_authorized',False)
-                    and self.scene.spec.get('id')=='iclworld_robot_11'
-                    and self.scene.spec.get('execution_design',{}).get('revision')=='embodied50-execution-v3-20261102'):
-                from .execution_design_robot_11_reference import move_empty_tray
-                move_empty_tray(self)
-            initial_generated_hand=None
-            if self.scene.spec.get('task_adapter','').startswith(('realworld','full50')):
-                active=self.scene.spec.get('expert_arm','left')
-                if getattr(self,'_execution_design_reference_authorized',False):
-                    from .execution_design_generated_route import initial_back25_hand
-                    active=initial_back25_hand(self,active)
-                    if (self.scene.spec.get('id') in ('iclworld_robot_27','iclworld_robot_34') and
-                            self.scene.spec.get('execution_design',{}).get('revision')=='embodied50-execution-v3-20261102'):
-                        from .execution_design_cutlery_transfer import initial_pickup_hand
-                        active=initial_pickup_hand(self)
-                initial_generated_hand=active
-                idle='right' if active=='left' else 'left'
-                # Move the real idle arm out of the transfer volume. Leaving its
-                # wrist at the centre made the loaded arm hit it above the table.
-                self.stage='park-idle-'+idle
-                base=self.scene.world_to_task(np.asarray(self.scene.embodiment.config['robots'][idle]['position'])+np.asarray(getattr(self.scene,'origin',(0.,0.,0.))))
-                recording=self.scene.embodiment.config.get('author_recording',{})
-                park_z=float(recording.get('idle_park_z',1.25))
-                if not recording.get('idle_park_direct',False):
-                    self.move_generated({idle:[*self.tip(idle)[:2],park_z]},tolerance=.006)
-                self.move_generated({idle:[base[0]+.15,base[1]+(.22 if idle=='left' else -.22),park_z]},tolerance=.006)
+        home_xy = {s: self.tip(s)[:2].copy() for s in ('left', 'right')}
+        from .execution_design_robot_16_parking import remember_empty_home
+        remember_empty_home(self)
+        if not self.smooth:self.calibrate_generated_axes()
+        self.note('initial')
+        self.act('RELEASE', 'RELEASE')
+        if (getattr(self,'_execution_design_reference_authorized',False)
+                and self.scene.spec.get('id')=='iclworld_robot_11'
+                and self.scene.spec.get('execution_design',{}).get('revision')=='embodied50-execution-v3-20261102'):
+            from .execution_design_robot_11_reference import move_empty_tray
+            move_empty_tray(self)
+        initial_generated_hand=None
+        if self.scene.spec.get('task_adapter','').startswith(('realworld','full50')):
+            active=self.scene.spec.get('expert_arm','left')
+            if getattr(self,'_execution_design_reference_authorized',False):
+                from .execution_design_generated_route import initial_back25_hand
+                active=initial_back25_hand(self,active)
+                if (self.scene.spec.get('id') in ('iclworld_robot_27','iclworld_robot_34') and
+                        self.scene.spec.get('execution_design',{}).get('revision')=='embodied50-execution-v3-20261102'):
+                    from .execution_design_cutlery_transfer import initial_pickup_hand
+                    active=initial_pickup_hand(self)
+            initial_generated_hand=active
+            idle='right' if active=='left' else 'left'
+            # Move the real idle arm out of the transfer volume. Leaving its
+            # wrist at the centre made the loaded arm hit it above the table.
+            self.stage='park-idle-'+idle
+            base=self.scene.world_to_task(np.asarray(self.scene.embodiment.config['robots'][idle]['position'])+np.asarray(getattr(self.scene,'origin',(0.,0.,0.))))
+            recording=self.scene.embodiment.config.get('author_recording',{})
+            park_z=float(recording.get('idle_park_z',1.25))
+            if not recording.get('idle_park_direct',False):
+                self.move_generated({idle:[*self.tip(idle)[:2],park_z]},tolerance=.006)
+            self.move_generated({idle:[base[0]+.15,base[1]+(.22 if idle=='left' else -.22),park_z]},tolerance=.006)
         # Keep the carry waypoint below the UR5 shoulder singularity.  The
         # initial pose is higher, but 0.90 m leaves enough clearance for these
         # 44 mm boxes while keeping the loaded gripper in its stable workspace.
@@ -852,8 +845,6 @@ class Demonstration:
             reverse=reverse_order)
         if self.scene.spec.get('expert_preserve_goal_order'):
             goals=list(self.scene.spec['goals'])
-        if resume is not None:
-            goals=[goal for goal in goals if goal['object']not in resume['completed_objects']]
         if measured_route_enabled and self.scene.spec['id'] in ('iclworld_robot_04','iclworld_robot_07','iclworld_robot_16','iclworld_robot_25'):
             from .execution_design_robot_07_reference import plan_transfers
             goals=plan_transfers(self,goals)  # local reference queue; source goals stay immutable
@@ -1385,8 +1376,6 @@ class Demonstration:
         for _ in range(5):
             self.act()
         self.note('final')
-        if resume is not None:
-            return dict(remaining_generated_goals_executed=[goal['object']for goal in goals],engineering_only=True)
         score = self.c.evaluator.result()
         if not score['success']:
             from .execution_design_pose_negative import allow_original_terminal_failure

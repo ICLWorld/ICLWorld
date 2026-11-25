@@ -146,7 +146,7 @@ def run_segment(author,segment,parameters):
             or checkpoint.get('diagnostic_only')is not True or source.get('steps')!=boundary[0]
             or((continuing or small_steps)and(source.get('physics_ticks')!=boundary[1]
                 or not getattr(author.c,'_engineering_checkpoint_readback_passed',False)))):
-        raise ValueError('Pinned E15B/I/4201 native214 diagnostic boundary required')
+        raise ValueError('Pinned iclworld_robot_15 B/resample/4201 native214 diagnostic boundary required')
     objects={obj['id']:obj for obj in spec['objects']};red=objects['red_t']
     if red.get('source_asset',{}).get('sha256')!='98bae9ae3dddf67e58004695930c09f3d36f715dfa2bf5d65d1ed2b7179fa493':
         raise ValueError('Original iclworld_robot_15 red T source geometry required')

@@ -1057,7 +1057,7 @@
         "dependencies": [
           {
             "relative_path": "hollow_cup_parts/visual.provenance.json",
-            "sha256": "05fd6654565137dcd24b97aae850b989c2cceabae8fe0b49104ebc801df2c9f8"
+            "sha256": "9cfd13b69ccfa5af0921160e7b9449fdb93c5b09c0daf5f813efbf0aaa7aab40"
           },
           {
             "relative_path": "hollow_cup_parts/visual.usda",
@@ -1099,7 +1099,7 @@
         "dependencies": [
           {
             "relative_path": "hollow_cup_parts/visual.provenance.json",
-            "sha256": "05fd6654565137dcd24b97aae850b989c2cceabae8fe0b49104ebc801df2c9f8"
+            "sha256": "9cfd13b69ccfa5af0921160e7b9449fdb93c5b09c0daf5f813efbf0aaa7aab40"
           },
           {
             "relative_path": "hollow_cup_parts/visual.usda",
@@ -1141,7 +1141,7 @@
         "dependencies": [
           {
             "relative_path": "hollow_cup_parts/visual.provenance.json",
-            "sha256": "05fd6654565137dcd24b97aae850b989c2cceabae8fe0b49104ebc801df2c9f8"
+            "sha256": "9cfd13b69ccfa5af0921160e7b9449fdb93c5b09c0daf5f813efbf0aaa7aab40"
           },
           {
             "relative_path": "hollow_cup_parts/visual.usda",

@@ -1668,7 +1668,7 @@
               },
               {
                 "relative_path": "pulp_tray_parts/pulp_six.provenance.json",
-                "sha256": "6653522447f6c01c2ab2f02fc3fd22f05a80f8e4eaedfbb36ab08a4a55386b2f"
+                "sha256": "7c274489d1a7219dbe6dbde2d49f5bbd867c92e28dd0fa7950861841018a53d3"
               },
               {
                 "relative_path": "pulp_tray_parts/pulp_six.usda",
@@ -2344,7 +2344,7 @@
               },
               {
                 "relative_path": "desk_bell_parts/base.provenance.json",
-                "sha256": "d1f4b954f00f17284ed15fa89aa84d9a1cd371512707837f91f430fdac3f8ced"
+                "sha256": "adb14e57daddaa528ec69298366d8de793ede25597bb763a49df894752bb789d"
               },
               {
                 "relative_path": "desk_bell_parts/base.usda",
@@ -2360,7 +2360,7 @@
               },
               {
                 "relative_path": "desk_bell_parts/plunger.provenance.json",
-                "sha256": "d2e3ad625e9074aab4baa276fd3531a08460dde43ac8aecfacd3290f3b8fa449"
+                "sha256": "5b4f04b197093d96df07d889b21d154ddae01ec988096eed72cd8a59f603b10b"
               },
               {
                 "relative_path": "desk_bell_parts/plunger.usda",
@@ -2459,7 +2459,7 @@
               },
               {
                 "relative_path": "desk_bell_parts/base.provenance.json",
-                "sha256": "d1f4b954f00f17284ed15fa89aa84d9a1cd371512707837f91f430fdac3f8ced"
+                "sha256": "adb14e57daddaa528ec69298366d8de793ede25597bb763a49df894752bb789d"
               },
               {
                 "relative_path": "desk_bell_parts/base.usda",
@@ -2475,7 +2475,7 @@
               },
               {
                 "relative_path": "desk_bell_parts/plunger.provenance.json",
-                "sha256": "d2e3ad625e9074aab4baa276fd3531a08460dde43ac8aecfacd3290f3b8fa449"
+                "sha256": "5b4f04b197093d96df07d889b21d154ddae01ec988096eed72cd8a59f603b10b"
               },
               {
                 "relative_path": "desk_bell_parts/plunger.usda",
@@ -18641,7 +18641,7 @@
               },
               {
                 "relative_path": "five_group_post_board_parts/visual.provenance.json",
-                "sha256": "dc1fb1a0f9f45f9262560945a6fdd236ca2cd29beecea7d76906f22c3549a104"
+                "sha256": "b132e958cd702a514266bb92ebacd189bd88e74359693fa5c615a8e0d26b5b5c"
               },
               {
                 "relative_path": "five_group_post_board_parts/visual.usda",
@@ -25143,7 +25143,7 @@
               },
               {
                 "relative_path": "five_group_post_board_parts/visual.provenance.json",
-                "sha256": "dc1fb1a0f9f45f9262560945a6fdd236ca2cd29beecea7d76906f22c3549a104"
+                "sha256": "b132e958cd702a514266bb92ebacd189bd88e74359693fa5c615a8e0d26b5b5c"
               },
               {
                 "relative_path": "five_group_post_board_parts/visual.usda",
@@ -29037,7 +29037,7 @@
               },
               {
                 "relative_path": "four_socket_power_strip_parts/source_adapted.provenance.json",
-                "sha256": "ddf012365a21e983892d07cfcf27aad9d0ea11f4a50f4021d93f814751ef3fc4"
+                "sha256": "a4f109059e40931953b642adc1da3f13da9bb130e528be5e6ae4a58c294868c1"
               },
               {
                 "relative_path": "four_socket_power_strip_parts/source_adapted.usda",
@@ -29084,7 +29084,7 @@
               },
               {
                 "relative_path": "two_pin_charger_parts/source_adapted.provenance.json",
-                "sha256": "e0d6f5c921ae6cc56f7ed7080128911abe9f44a040ca52821287329256877b84"
+                "sha256": "430e006c54dc28444704f83b502b775d02e2be30a1efe06931543048cc97d05f"
               },
               {
                 "relative_path": "two_pin_charger_parts/source_adapted.usda",
@@ -29135,7 +29135,7 @@
               },
               {
                 "relative_path": "two_pin_charger_parts/source_adapted.provenance.json",
-                "sha256": "e0d6f5c921ae6cc56f7ed7080128911abe9f44a040ca52821287329256877b84"
+                "sha256": "430e006c54dc28444704f83b502b775d02e2be30a1efe06931543048cc97d05f"
               },
               {
                 "relative_path": "two_pin_charger_parts/source_adapted.usda",
@@ -30619,7 +30619,7 @@
               },
               {
                 "relative_path": "two_tier_cake_stand_parts/visual.provenance.json",
-                "sha256": "a5f038c3e1dc4813025ffffef324ada04845f64a028f429e77626ce26263666c"
+                "sha256": "6be6535b1686d8f062874f614a54990b59115eca926ba13b2de05a1802ab4142"
               },
               {
                 "relative_path": "two_tier_cake_stand_parts/visual.usda",
@@ -31516,7 +31516,7 @@
               },
               {
                 "relative_path": "open_source_storage_box_parts/source_adapted.provenance.json",
-                "sha256": "4346e5417dd97ed62baa9159284b18d4f1ab9f24fe633b843b01ccbf98d8cce4"
+                "sha256": "42ac46e1fbc7a8436a7856ebce76940b26de719b89f8b9e4bcce908ac0c84a9a"
               },
               {
                 "relative_path": "open_source_storage_box_parts/source_adapted.usda",
@@ -31563,7 +31563,7 @@
               },
               {
                 "relative_path": "removable_box_lid_parts/source_adapted.provenance.json",
-                "sha256": "e1858fbe153369d302270b4ff1af36b4f52509bb0cadd973f1d54b3104ae6b46"
+                "sha256": "e61c3cbda6e22e2a0c1e53235fbb15c776ffb7ac340ba8d28ca86f5f86efed5c"
               },
               {
                 "relative_path": "removable_box_lid_parts/source_adapted.usda",
@@ -31601,7 +31601,7 @@
             "dependencies": [
               {
                 "relative_path": "hollow_cup_parts/visual.provenance.json",
-                "sha256": "05fd6654565137dcd24b97aae850b989c2cceabae8fe0b49104ebc801df2c9f8"
+                "sha256": "9cfd13b69ccfa5af0921160e7b9449fdb93c5b09c0daf5f813efbf0aaa7aab40"
               },
               {
                 "relative_path": "hollow_cup_parts/visual.usda",
@@ -31650,7 +31650,7 @@
             "dependencies": [
               {
                 "relative_path": "hollow_cup_parts/visual.provenance.json",
-                "sha256": "05fd6654565137dcd24b97aae850b989c2cceabae8fe0b49104ebc801df2c9f8"
+                "sha256": "9cfd13b69ccfa5af0921160e7b9449fdb93c5b09c0daf5f813efbf0aaa7aab40"
               },
               {
                 "relative_path": "hollow_cup_parts/visual.usda",
@@ -31699,7 +31699,7 @@
             "dependencies": [
               {
                 "relative_path": "hollow_cup_parts/visual.provenance.json",
-                "sha256": "05fd6654565137dcd24b97aae850b989c2cceabae8fe0b49104ebc801df2c9f8"
+                "sha256": "9cfd13b69ccfa5af0921160e7b9449fdb93c5b09c0daf5f813efbf0aaa7aab40"
               },
               {
                 "relative_path": "hollow_cup_parts/visual.usda",
@@ -33301,7 +33301,7 @@
             "dependencies": [
               {
                 "relative_path": "hollow_cup_parts/visual.provenance.json",
-                "sha256": "05fd6654565137dcd24b97aae850b989c2cceabae8fe0b49104ebc801df2c9f8"
+                "sha256": "9cfd13b69ccfa5af0921160e7b9449fdb93c5b09c0daf5f813efbf0aaa7aab40"
               },
               {
                 "relative_path": "hollow_cup_parts/visual.usda",
@@ -33351,7 +33351,7 @@
             "dependencies": [
               {
                 "relative_path": "hollow_cup_parts/visual.provenance.json",
-                "sha256": "05fd6654565137dcd24b97aae850b989c2cceabae8fe0b49104ebc801df2c9f8"
+                "sha256": "9cfd13b69ccfa5af0921160e7b9449fdb93c5b09c0daf5f813efbf0aaa7aab40"
               },
               {
                 "relative_path": "hollow_cup_parts/visual.usda",
@@ -33401,7 +33401,7 @@
             "dependencies": [
               {
                 "relative_path": "hollow_cup_parts/visual.provenance.json",
-                "sha256": "05fd6654565137dcd24b97aae850b989c2cceabae8fe0b49104ebc801df2c9f8"
+                "sha256": "9cfd13b69ccfa5af0921160e7b9449fdb93c5b09c0daf5f813efbf0aaa7aab40"
               },
               {
                 "relative_path": "hollow_cup_parts/visual.usda",
@@ -34442,7 +34442,7 @@
               },
               {
                 "relative_path": "open_sprite_bottle_parts/visual.provenance.json",
-                "sha256": "bc753f6b1a0cc006183ee6e14342d9783fc38f95404c7976e200d7ba464f775a"
+                "sha256": "26bae374cb09b8ba465682d4171491f7a734493413ea62ae8f69e12c610a6bfd"
               },
               {
                 "relative_path": "open_sprite_bottle_parts/visual.usda",
@@ -34489,7 +34489,7 @@
               },
               {
                 "relative_path": "open_water_bottle_parts/visual.provenance.json",
-                "sha256": "bf450cd22f60c9f55d0adb0fd3edfcd07230a40a6f442bd499902a702f8d86d0"
+                "sha256": "fc446e9f0048f04b6439bbe94e3cef0cd02591cd75297fb852a8ff79837e0c69"
               },
               {
                 "relative_path": "open_water_bottle_parts/visual.usda",
@@ -34536,7 +34536,7 @@
               },
               {
                 "relative_path": "open_cola_bottle_parts/visual.provenance.json",
-                "sha256": "a48ab01ba6276bc8775be59a2ff3db6d593376fc2337d7efdd5edc4c99e61999"
+                "sha256": "769ffc69cd6f07cb310fdf05bd3b0b4e8125d39d92bb6c8c32da4b480f537226"
               },
               {
                 "relative_path": "open_cola_bottle_parts/visual.usda",
@@ -34583,7 +34583,7 @@
               },
               {
                 "relative_path": "sprite_removable_cap_parts/visual.provenance.json",
-                "sha256": "25f0fd03cd74f9436f11bd1651a3a234d3c3aa2f70de52535e0d1c947f84e5cf"
+                "sha256": "f3bf84d4d68a983ab07e68f530d041c2f094f1d9f3ee47aed88e1dcd5e7d42c7"
               },
               {
                 "relative_path": "sprite_removable_cap_parts/visual.usda",
@@ -34638,7 +34638,7 @@
               },
               {
                 "relative_path": "water_removable_cap_parts/visual.provenance.json",
-                "sha256": "532927c5dadab6ca29993598458874efb0bcf2e2d6d2f1692c719705613e0865"
+                "sha256": "ca83a925e7c5c1f262d5f72771df8ce2f56291a313c7a1315ac202f7638f7407"
               },
               {
                 "relative_path": "water_removable_cap_parts/visual.usda",
@@ -34693,7 +34693,7 @@
               },
               {
                 "relative_path": "cola_removable_cap_parts/visual.provenance.json",
-                "sha256": "1a425b4a4bb771b5ed8f738148aac8ae5c783a21d5e68fcefa7efce20e0dcfb5"
+                "sha256": "4bc2f514e461d31dfb4e2dace092fd27704fca95333b9d66fa6e79a399ffa822"
               },
               {
                 "relative_path": "cola_removable_cap_parts/visual.usda",
@@ -35216,7 +35216,7 @@
               },
               {
                 "relative_path": "three_level_mug_tree_parts/visual.provenance.json",
-                "sha256": "afe8873d1e0aa6daf4248331c0dea00f4534d063bf357d6fcf224aa55a7f49df"
+                "sha256": "cdd2b647fea9286f2e7d923d2de5c2a99359d94fe9362bc1a97a17b9f845585f"
               },
               {
                 "relative_path": "three_level_mug_tree_parts/visual.usda",
@@ -35253,7 +35253,7 @@
             "dependencies": [
               {
                 "relative_path": "hollow_cup_parts/visual.provenance.json",
-                "sha256": "05fd6654565137dcd24b97aae850b989c2cceabae8fe0b49104ebc801df2c9f8"
+                "sha256": "9cfd13b69ccfa5af0921160e7b9449fdb93c5b09c0daf5f813efbf0aaa7aab40"
               },
               {
                 "relative_path": "hollow_cup_parts/visual.usda",
@@ -35303,7 +35303,7 @@
             "dependencies": [
               {
                 "relative_path": "hollow_cup_parts/visual.provenance.json",
-                "sha256": "05fd6654565137dcd24b97aae850b989c2cceabae8fe0b49104ebc801df2c9f8"
+                "sha256": "9cfd13b69ccfa5af0921160e7b9449fdb93c5b09c0daf5f813efbf0aaa7aab40"
               },
               {
                 "relative_path": "hollow_cup_parts/visual.usda",
@@ -35353,7 +35353,7 @@
             "dependencies": [
               {
                 "relative_path": "hollow_cup_parts/visual.provenance.json",
-                "sha256": "05fd6654565137dcd24b97aae850b989c2cceabae8fe0b49104ebc801df2c9f8"
+                "sha256": "9cfd13b69ccfa5af0921160e7b9449fdb93c5b09c0daf5f813efbf0aaa7aab40"
               },
               {
                 "relative_path": "hollow_cup_parts/visual.usda",
@@ -37471,7 +37471,7 @@
               },
               {
                 "relative_path": "threaded_screw_parts/slotted_threaded_screw.provenance.json",
-                "sha256": "0c6b1d7e8358b6e8e46dcb1249cf50ae84ae8dc23301c96d8579a61f5d18dd7a"
+                "sha256": "d0da563d30ac7b583d7a5d23b2709cdb555a7242a58935402dd25fc0810a07a3"
               },
               {
                 "relative_path": "threaded_screw_parts/slotted_threaded_screw.usda",
@@ -37483,7 +37483,7 @@
               },
               {
                 "relative_path": "threaded_screw_parts/threaded_socket.provenance.json",
-                "sha256": "933dc779aff76576212deb15e3fc66f137d8731cc58c449886db15e478075ef9"
+                "sha256": "99085e13fc96b9898020af0cfa71892c01c34dc9ec181bcd2ca494db1df1a506"
               },
               {
                 "relative_path": "threaded_screw_parts/threaded_socket.usda",
@@ -37524,7 +37524,7 @@
               },
               {
                 "relative_path": "threaded_screw_parts/slotted_threaded_screw.provenance.json",
-                "sha256": "0c6b1d7e8358b6e8e46dcb1249cf50ae84ae8dc23301c96d8579a61f5d18dd7a"
+                "sha256": "d0da563d30ac7b583d7a5d23b2709cdb555a7242a58935402dd25fc0810a07a3"
               },
               {
                 "relative_path": "threaded_screw_parts/slotted_threaded_screw.usda",
@@ -37568,7 +37568,7 @@
               },
               {
                 "relative_path": "threaded_screw_parts/slotted_threaded_screw.provenance.json",
-                "sha256": "0c6b1d7e8358b6e8e46dcb1249cf50ae84ae8dc23301c96d8579a61f5d18dd7a"
+                "sha256": "d0da563d30ac7b583d7a5d23b2709cdb555a7242a58935402dd25fc0810a07a3"
               },
               {
                 "relative_path": "threaded_screw_parts/slotted_threaded_screw.usda",
@@ -37580,7 +37580,7 @@
               },
               {
                 "relative_path": "threaded_screw_parts/threaded_socket.provenance.json",
-                "sha256": "933dc779aff76576212deb15e3fc66f137d8731cc58c449886db15e478075ef9"
+                "sha256": "99085e13fc96b9898020af0cfa71892c01c34dc9ec181bcd2ca494db1df1a506"
               },
               {
                 "relative_path": "threaded_screw_parts/threaded_socket.usda",
@@ -37621,7 +37621,7 @@
               },
               {
                 "relative_path": "threaded_screw_parts/slotted_threaded_screw.provenance.json",
-                "sha256": "0c6b1d7e8358b6e8e46dcb1249cf50ae84ae8dc23301c96d8579a61f5d18dd7a"
+                "sha256": "d0da563d30ac7b583d7a5d23b2709cdb555a7242a58935402dd25fc0810a07a3"
               },
               {
                 "relative_path": "threaded_screw_parts/slotted_threaded_screw.usda",
@@ -38591,7 +38591,7 @@
               },
               {
                 "relative_path": "binder_clip_v3b_parts/JawNegative.provenance.json",
-                "sha256": "380a951e40eeede1a91919daf94cd4aa42728b8609be0313e16ce9087df94182"
+                "sha256": "000e01dc1140462b570339b5576b84e5d6f3885fbd9abeaf2e165042c96aa751"
               },
               {
                 "relative_path": "binder_clip_v3b_parts/JawNegative.usda",
@@ -38611,7 +38611,7 @@
               },
               {
                 "relative_path": "binder_clip_v3b_parts/JawPositive.provenance.json",
-                "sha256": "92fc5dbb6475381d6f4ba1656e07b04b902912b2386c58148cf5bc35d78d0bb4"
+                "sha256": "624a8aeec7e53c541b0d254808ad7033ac5b1d1274ed2fbfd47070e6b128dbe9"
               },
               {
                 "relative_path": "binder_clip_v3b_parts/JawPositive.usda",
@@ -38631,7 +38631,7 @@
               },
               {
                 "relative_path": "binder_clip_v3b_parts/Spine.provenance.json",
-                "sha256": "ca94892e4d8e5f0114d851c46096930ddb68f6bef329244e258103fa59de4568"
+                "sha256": "8508fc940fd6105cb3ec1f595665f8d72f89ce1b14108eabe168fe9b95d50379"
               },
               {
                 "relative_path": "binder_clip_v3b_parts/Spine.usda",
@@ -38843,7 +38843,7 @@
               },
               {
                 "relative_path": "binder_clip_v3b_parts/JawNegative.provenance.json",
-                "sha256": "380a951e40eeede1a91919daf94cd4aa42728b8609be0313e16ce9087df94182"
+                "sha256": "000e01dc1140462b570339b5576b84e5d6f3885fbd9abeaf2e165042c96aa751"
               },
               {
                 "relative_path": "binder_clip_v3b_parts/JawNegative.usda",
@@ -38863,7 +38863,7 @@
               },
               {
                 "relative_path": "binder_clip_v3b_parts/JawPositive.provenance.json",
-                "sha256": "92fc5dbb6475381d6f4ba1656e07b04b902912b2386c58148cf5bc35d78d0bb4"
+                "sha256": "624a8aeec7e53c541b0d254808ad7033ac5b1d1274ed2fbfd47070e6b128dbe9"
               },
               {
                 "relative_path": "binder_clip_v3b_parts/JawPositive.usda",
@@ -38883,7 +38883,7 @@
               },
               {
                 "relative_path": "binder_clip_v3b_parts/Spine.provenance.json",
-                "sha256": "ca94892e4d8e5f0114d851c46096930ddb68f6bef329244e258103fa59de4568"
+                "sha256": "8508fc940fd6105cb3ec1f595665f8d72f89ce1b14108eabe168fe9b95d50379"
               },
               {
                 "relative_path": "binder_clip_v3b_parts/Spine.usda",
@@ -39095,7 +39095,7 @@
               },
               {
                 "relative_path": "binder_clip_v3b_parts/JawNegative.provenance.json",
-                "sha256": "380a951e40eeede1a91919daf94cd4aa42728b8609be0313e16ce9087df94182"
+                "sha256": "000e01dc1140462b570339b5576b84e5d6f3885fbd9abeaf2e165042c96aa751"
               },
               {
                 "relative_path": "binder_clip_v3b_parts/JawNegative.usda",
@@ -39115,7 +39115,7 @@
               },
               {
                 "relative_path": "binder_clip_v3b_parts/JawPositive.provenance.json",
-                "sha256": "92fc5dbb6475381d6f4ba1656e07b04b902912b2386c58148cf5bc35d78d0bb4"
+                "sha256": "624a8aeec7e53c541b0d254808ad7033ac5b1d1274ed2fbfd47070e6b128dbe9"
               },
               {
                 "relative_path": "binder_clip_v3b_parts/JawPositive.usda",
@@ -39135,7 +39135,7 @@
               },
               {
                 "relative_path": "binder_clip_v3b_parts/Spine.provenance.json",
-                "sha256": "ca94892e4d8e5f0114d851c46096930ddb68f6bef329244e258103fa59de4568"
+                "sha256": "8508fc940fd6105cb3ec1f595665f8d72f89ce1b14108eabe168fe9b95d50379"
               },
               {
                 "relative_path": "binder_clip_v3b_parts/Spine.usda",
@@ -40206,7 +40206,7 @@
               },
               {
                 "relative_path": "cardboard_crease_parts/BasePanel.provenance.json",
-                "sha256": "8a09ff81e340d5f54b6c7cadacbba9bd8065c1045dd621f64c66dd83a7c01579"
+                "sha256": "e9304be3eac5e87bb49a12611864b8956465f04bbaf822aec2ade0486c81759c"
               },
               {
                 "relative_path": "cardboard_crease_parts/BasePanel.usda",
@@ -40218,7 +40218,7 @@
               },
               {
                 "relative_path": "cardboard_crease_parts/FoldPanel.provenance.json",
-                "sha256": "65badfdf28af2a79f524bc66fa1ac4b7b7bb13a16a628afaaff464e9168a087a"
+                "sha256": "8da7f9ca338262e072f2a74fc7b7115aaafb34179baaccbe40c28c62ede993cc"
               },
               {
                 "relative_path": "cardboard_crease_parts/FoldPanel.usda",
@@ -40825,7 +40825,7 @@
               },
               {
                 "relative_path": "binder_clip_v3b_parts/JawNegative.provenance.json",
-                "sha256": "380a951e40eeede1a91919daf94cd4aa42728b8609be0313e16ce9087df94182"
+                "sha256": "000e01dc1140462b570339b5576b84e5d6f3885fbd9abeaf2e165042c96aa751"
               },
               {
                 "relative_path": "binder_clip_v3b_parts/JawNegative.usda",
@@ -40845,7 +40845,7 @@
               },
               {
                 "relative_path": "binder_clip_v3b_parts/JawPositive.provenance.json",
-                "sha256": "92fc5dbb6475381d6f4ba1656e07b04b902912b2386c58148cf5bc35d78d0bb4"
+                "sha256": "624a8aeec7e53c541b0d254808ad7033ac5b1d1274ed2fbfd47070e6b128dbe9"
               },
               {
                 "relative_path": "binder_clip_v3b_parts/JawPositive.usda",
@@ -40865,7 +40865,7 @@
               },
               {
                 "relative_path": "binder_clip_v3b_parts/Spine.provenance.json",
-                "sha256": "ca94892e4d8e5f0114d851c46096930ddb68f6bef329244e258103fa59de4568"
+                "sha256": "8508fc940fd6105cb3ec1f595665f8d72f89ce1b14108eabe168fe9b95d50379"
               },
               {
                 "relative_path": "binder_clip_v3b_parts/Spine.usda",
@@ -42507,7 +42507,7 @@
             "dependencies": [
               {
                 "relative_path": "hollow_cup_parts/visual.provenance.json",
-                "sha256": "05fd6654565137dcd24b97aae850b989c2cceabae8fe0b49104ebc801df2c9f8"
+                "sha256": "9cfd13b69ccfa5af0921160e7b9449fdb93c5b09c0daf5f813efbf0aaa7aab40"
               },
               {
                 "relative_path": "hollow_cup_parts/visual.usda",

@@ -9,8 +9,8 @@
       "title": "套餐订单履约",
       "difficulty": "hard",
       "support_mask": [
-        "I",
-        "E"
+        "resample",
+        "relocate"
       ],
       "main_condition": "resample",
       "input_change_description": "换批次、订单目标及所需取放材料，保留 A/B/C 局部规则",
@@ -137,9 +137,9 @@
       "title": "三色块叠放",
       "difficulty": "medium",
       "support_mask": [
-        "R",
-        "I",
-        "E"
+        "replay",
+        "resample",
+        "relocate"
       ],
       "main_condition": "resample",
       "input_change_description": "新对象实例和初始排列；对应关系、顺序或数量规则不变",
@@ -254,9 +254,9 @@
       "title": "三色杯套叠",
       "difficulty": "hard",
       "support_mask": [
-        "R",
-        "I",
-        "E"
+        "replay",
+        "resample",
+        "relocate"
       ],
       "main_condition": "resample",
       "input_change_description": "新对象实例和初始排列；对应关系、顺序或数量规则不变",
@@ -371,9 +371,9 @@
       "title": "彩杯与图形配对",
       "difficulty": "easy",
       "support_mask": [
-        "R",
-        "I",
-        "E"
+        "replay",
+        "resample",
+        "relocate"
       ],
       "main_condition": "resample",
       "input_change_description": "同色新杯，三个图形区换位置；颜色—图形映射不变",
@@ -488,9 +488,9 @@
       "title": "形状块与图形配对",
       "difficulty": "medium",
       "support_mask": [
-        "R",
-        "I",
-        "E"
+        "replay",
+        "resample",
+        "relocate"
       ],
       "main_condition": "resample",
       "input_change_description": "新实例与不同形状区布局",
@@ -609,9 +609,9 @@
       "title": "蛋托孔位布局",
       "difficulty": "medium",
       "support_mask": [
-        "R",
-        "I",
-        "E"
+        "replay",
+        "resample",
+        "relocate"
       ],
       "main_condition": "resample",
       "input_change_description": "新托盘/新球的初始摆位，保持六孔拓扑与左右定义",
@@ -726,9 +726,9 @@
       "title": "五块尺寸排序",
       "difficulty": "medium",
       "support_mask": [
-        "R",
-        "I",
-        "E"
+        "replay",
+        "resample",
+        "relocate"
       ],
       "main_condition": "resample",
       "input_change_description": "更换五个尺寸值与初始排列，保持五个大小秩次",
@@ -843,9 +843,9 @@
       "title": "鞋盒内朝向摆放",
       "difficulty": "medium",
       "support_mask": [
-        "R",
-        "I",
-        "E"
+        "replay",
+        "resample",
+        "relocate"
       ],
       "main_condition": "resample",
       "input_change_description": "新对象实例和初始排列；对应关系、顺序或数量规则不变",
@@ -960,8 +960,8 @@
       "title": "分类教具配套出库",
       "difficulty": "hard",
       "support_mask": [
-        "I",
-        "E"
+        "resample",
+        "relocate"
       ],
       "main_condition": "resample",
       "input_change_description": "换批次、订单目标及所需取放材料，保留 A/B/C 局部规则",
@@ -1088,9 +1088,9 @@
       "title": "按属性选择并套柱",
       "difficulty": "hard",
       "support_mask": [
-        "R",
-        "I",
-        "E"
+        "replay",
+        "resample",
+        "relocate"
       ],
       "main_condition": "resample",
       "input_change_description": "新对象实例和初始排列；对应关系、顺序或数量规则不变",
@@ -1205,9 +1205,9 @@
       "title": "四格布局变换入框",
       "difficulty": "medium",
       "support_mask": [
-        "R",
-        "I",
-        "E"
+        "replay",
+        "resample",
+        "relocate"
       ],
       "main_condition": "resample",
       "input_change_description": "不同初始布局作为变换输入",
@@ -1322,8 +1322,8 @@
       "title": "插排孔位选择",
       "difficulty": "hard",
       "support_mask": [
-        "R",
-        "E"
+        "replay",
+        "relocate"
       ],
       "main_condition": "replay",
       "input_change_description": "同一演示对象、初始关系和执行目标；不设置 I",
@@ -1443,9 +1443,9 @@
       "title": "手机支架姿态",
       "difficulty": "easy",
       "support_mask": [
-        "R",
-        "I",
-        "E"
+        "replay",
+        "resample",
+        "relocate"
       ],
       "main_condition": "resample",
       "input_change_description": "新对象实例和初始排列；对应关系、顺序或数量规则不变",
@@ -1560,9 +1560,9 @@
       "title": "拆塔与层序重排",
       "difficulty": "medium",
       "support_mask": [
-        "R",
-        "I",
-        "E"
+        "replay",
+        "resample",
+        "relocate"
       ],
       "main_condition": "resample",
       "input_change_description": "新对象实例和初始排列；对应关系、顺序或数量规则不变",
@@ -1677,9 +1677,9 @@
       "title": "T形块属性交换",
       "difficulty": "medium",
       "support_mask": [
-        "R",
-        "I",
-        "E"
+        "replay",
+        "resample",
+        "relocate"
       ],
       "main_condition": "resample",
       "input_change_description": "不同T形件位置/朝向构成新的待变换输入",
@@ -1794,9 +1794,9 @@
       "title": "三件布局搬入托盘",
       "difficulty": "medium",
       "support_mask": [
-        "R",
-        "I",
-        "E"
+        "replay",
+        "resample",
+        "relocate"
       ],
       "main_condition": "resample",
       "input_change_description": "不同源托盘布局",
@@ -1911,8 +1911,8 @@
       "title": "展示架补货与开场准备",
       "difficulty": "hard",
       "support_mask": [
-        "I",
-        "E"
+        "resample",
+        "relocate"
       ],
       "main_condition": "resample",
       "input_change_description": "换批次、订单目标及所需取放材料，保留 A/B/C 局部规则",
@@ -2039,9 +2039,9 @@
       "title": "抽屉取球并关回",
       "difficulty": "medium",
       "support_mask": [
-        "R",
-        "I",
-        "E"
+        "replay",
+        "resample",
+        "relocate"
       ],
       "main_condition": "resample",
       "input_change_description": "指定颜色球的新实例藏在不同位置，仍需关回抽屉",
@@ -2156,9 +2156,9 @@
       "title": "饮料瓶与瓶盖配对",
       "difficulty": "hard",
       "support_mask": [
-        "R",
-        "I",
-        "E"
+        "replay",
+        "resample",
+        "relocate"
       ],
       "main_condition": "resample",
       "input_change_description": "同三种瓶型的新实例及盖子混排",
@@ -2273,8 +2273,8 @@
       "title": "耗材盘补量后封装交付",
       "difficulty": "hard",
       "support_mask": [
-        "I",
-        "E"
+        "resample",
+        "relocate"
       ],
       "main_condition": "resample",
       "input_change_description": "换批次、订单目标及所需取放材料，保留 A/B/C 局部规则",
@@ -2401,9 +2401,9 @@
       "title": "按颜色顺序装四格盘",
       "difficulty": "medium",
       "support_mask": [
-        "R",
-        "I",
-        "E"
+        "replay",
+        "resample",
+        "relocate"
       ],
       "main_condition": "resample",
       "input_change_description": "新对象实例和初始排列；对应关系、顺序或数量规则不变",
@@ -2518,9 +2518,9 @@
       "title": "围绕玩具车摆放色块",
       "difficulty": "easy",
       "support_mask": [
-        "R",
-        "I",
-        "E"
+        "replay",
+        "resample",
+        "relocate"
       ],
       "main_condition": "resample",
       "input_change_description": "改变车头朝向及初始块位置，目标相对于车的坐标定义",
@@ -2635,9 +2635,9 @@
       "title": "按层位将彩杯套上杯架",
       "difficulty": "hard",
       "support_mask": [
-        "R",
-        "I",
-        "E"
+        "replay",
+        "resample",
+        "relocate"
       ],
       "main_condition": "resample",
       "input_change_description": "新对象实例和初始排列；对应关系、顺序或数量规则不变",
@@ -2752,9 +2752,9 @@
       "title": "彩杯按序装盒并盖盖",
       "difficulty": "medium",
       "support_mask": [
-        "R",
-        "I",
-        "E"
+        "replay",
+        "resample",
+        "relocate"
       ],
       "main_condition": "resample",
       "input_change_description": "新对象实例和初始排列；对应关系、顺序或数量规则不变",
@@ -2869,9 +2869,9 @@
       "title": "餐具朝向与盘边布局",
       "difficulty": "medium",
       "support_mask": [
-        "R",
-        "I",
-        "E"
+        "replay",
+        "resample",
+        "relocate"
       ],
       "main_condition": "resample",
       "input_change_description": "新对象实例和初始排列；对应关系、顺序或数量规则不变",
@@ -2986,9 +2986,9 @@
       "title": "数字牌与按铃次数",
       "difficulty": "medium",
       "support_mask": [
-        "R",
-        "I",
-        "E"
+        "replay",
+        "resample",
+        "relocate"
       ],
       "main_condition": "resample",
       "input_change_description": "更换两个数字，范围1至5，和不超过10；计数方法不变",
@@ -3104,9 +3104,9 @@
       "title": "盘旁勺叉摆放",
       "difficulty": "medium",
       "support_mask": [
-        "R",
-        "I",
-        "E"
+        "replay",
+        "resample",
+        "relocate"
       ],
       "main_condition": "resample",
       "input_change_description": "新对象实例和初始排列；对应关系、顺序或数量规则不变",
@@ -3221,9 +3221,9 @@
       "title": "用平铲选取食物装盘",
       "difficulty": "hard",
       "support_mask": [
-        "R",
-        "I",
-        "E"
+        "replay",
+        "resample",
+        "relocate"
       ],
       "main_condition": "resample",
       "input_change_description": "新对象实例和初始排列；对应关系、顺序或数量规则不变",
@@ -3338,8 +3338,8 @@
       "title": "琴槌敲击音阶顺序",
       "difficulty": "hard",
       "support_mask": [
-        "R",
-        "E"
+        "replay",
+        "relocate"
       ],
       "main_condition": "replay",
       "input_change_description": "同一演示对象、初始关系和执行目标；不设置 I",
@@ -3459,9 +3459,9 @@
       "title": "双层抽屉开合状态",
       "difficulty": "easy",
       "support_mask": [
-        "R",
-        "I",
-        "E"
+        "replay",
+        "resample",
+        "relocate"
       ],
       "main_condition": "resample",
       "input_change_description": "不同柜体实例与初始开合状态，保持上下层语义",
@@ -3576,9 +3576,9 @@
       "title": "碗碟组合",
       "difficulty": "medium",
       "support_mask": [
-        "R",
-        "I",
-        "E"
+        "replay",
+        "resample",
+        "relocate"
       ],
       "main_condition": "resample",
       "input_change_description": "新对象实例和初始排列；对应关系、顺序或数量规则不变",
@@ -3693,9 +3693,9 @@
       "title": "杂乱桌面目标取放",
       "difficulty": "easy",
       "support_mask": [
-        "R",
-        "I",
-        "E"
+        "replay",
+        "resample",
+        "relocate"
       ],
       "main_condition": "resample",
       "input_change_description": "新杂乱布局中的同类目标实例，非改选另一目标类别",
@@ -3812,9 +3812,9 @@
       "title": "指定饮料瓶投入垃圾桶",
       "difficulty": "easy",
       "support_mask": [
-        "R",
-        "I",
-        "E"
+        "replay",
+        "resample",
+        "relocate"
       ],
       "main_condition": "resample",
       "input_change_description": "同类别新瓶实例和初始布局，选择类别不变",
@@ -3929,9 +3929,9 @@
       "title": "挑选餐具放入收纳盘",
       "difficulty": "easy",
       "support_mask": [
-        "R",
-        "I",
-        "E"
+        "replay",
+        "resample",
+        "relocate"
       ],
       "main_condition": "resample",
       "input_change_description": "同类新餐具与初始排列，指定格位语义不变",
@@ -4046,9 +4046,9 @@
       "title": "按尺寸关系叠三块",
       "difficulty": "medium",
       "support_mask": [
-        "R",
-        "I",
-        "E"
+        "replay",
+        "resample",
+        "relocate"
       ],
       "main_condition": "resample",
       "input_change_description": "更换三个尺寸值，保持秩次",
@@ -4163,9 +4163,9 @@
       "title": "按数量装球",
       "difficulty": "medium",
       "support_mask": [
-        "R",
-        "I",
-        "E"
+        "replay",
+        "resample",
+        "relocate"
       ],
       "main_condition": "resample",
       "input_change_description": "新对象实例和初始排列；对应关系、顺序或数量规则不变",
@@ -4280,8 +4280,8 @@
       "title": "用螺丝刀拆指定螺丝",
       "difficulty": "hard",
       "support_mask": [
-        "R",
-        "E"
+        "replay",
+        "relocate"
       ],
       "main_condition": "replay",
       "input_change_description": "同一演示对象、初始关系和执行目标；不设置 I",
@@ -4401,9 +4401,9 @@
       "title": "彩环按序套同一根柱",
       "difficulty": "hard",
       "support_mask": [
-        "R",
-        "I",
-        "E"
+        "replay",
+        "resample",
+        "relocate"
       ],
       "main_condition": "resample",
       "input_change_description": "新对象实例和初始排列；对应关系、顺序或数量规则不变",
@@ -4518,8 +4518,8 @@
       "title": "参照工装校正与成品交付",
       "difficulty": "hard",
       "support_mask": [
-        "I",
-        "E"
+        "resample",
+        "relocate"
       ],
       "main_condition": "resample",
       "input_change_description": "换批次、订单目标及所需取放材料，保留 A/B/C 局部规则",
@@ -4646,9 +4646,9 @@
       "title": "在指定图形处夹长尾夹",
       "difficulty": "hard",
       "support_mask": [
-        "R",
-        "I",
-        "E"
+        "replay",
+        "resample",
+        "relocate"
       ],
       "main_condition": "resample",
       "input_change_description": "新对象实例和初始排列；对应关系、顺序或数量规则不变",
@@ -4763,9 +4763,9 @@
       "title": "为不同长度木条接续一段",
       "difficulty": "medium",
       "support_mask": [
-        "R",
-        "I",
-        "E"
+        "replay",
+        "resample",
+        "relocate"
       ],
       "main_condition": "resample",
       "input_change_description": "三组全新的长度值，保持短中长对应",
@@ -4880,9 +4880,9 @@
       "title": "用铲沿推球到图形区域",
       "difficulty": "hard",
       "support_mask": [
-        "R",
-        "I",
-        "E"
+        "replay",
+        "resample",
+        "relocate"
       ],
       "main_condition": "resample",
       "input_change_description": "新对象实例和初始排列；对应关系、顺序或数量规则不变",
@@ -4997,9 +4997,9 @@
       "title": "用导向条让球经过图形区域",
       "difficulty": "hard",
       "support_mask": [
-        "R",
-        "I",
-        "E"
+        "replay",
+        "resample",
+        "relocate"
       ],
       "main_condition": "resample",
       "input_change_description": "新球起点和目标标记布局；导向条须重新布置",
@@ -5114,8 +5114,8 @@
       "title": "纸板折成不同夹角",
       "difficulty": "hard",
       "support_mask": [
-        "R",
-        "E"
+        "replay",
+        "relocate"
       ],
       "main_condition": "replay",
       "input_change_description": "同一演示对象、初始关系和执行目标；不设置 I",
@@ -5235,9 +5235,9 @@
       "title": "把杯中球倒入指定图形格",
       "difficulty": "hard",
       "support_mask": [
-        "R",
-        "I",
-        "E"
+        "replay",
+        "resample",
+        "relocate"
       ],
       "main_condition": "resample",
       "input_change_description": "新对象实例和初始排列；对应关系、顺序或数量规则不变",
@@ -5352,9 +5352,9 @@
       "title": "平铲承托送至图形区域",
       "difficulty": "hard",
       "support_mask": [
-        "R",
-        "I",
-        "E"
+        "replay",
+        "resample",
+        "relocate"
       ],
       "main_condition": "resample",
       "input_change_description": "新对象实例和初始排列；对应关系、顺序或数量规则不变",
@@ -5469,8 +5469,8 @@
       "title": "翻牌后选择红黑牌入盒",
       "difficulty": "hard",
       "support_mask": [
-        "R",
-        "E"
+        "replay",
+        "relocate"
       ],
       "main_condition": "replay",
       "input_change_description": "同一演示对象、初始关系和执行目标；不设置 I",
@@ -5590,8 +5590,8 @@
       "title": "按数量翻牌插入卡座",
       "difficulty": "hard",
       "support_mask": [
-        "R",
-        "E"
+        "replay",
+        "relocate"
       ],
       "main_condition": "replay",
       "input_change_description": "同一演示对象、初始关系和执行目标；不设置 I",
@@ -5711,8 +5711,8 @@
       "title": "三张牌按顺序分盘",
       "difficulty": "hard",
       "support_mask": [
-        "R",
-        "E"
+        "replay",
+        "relocate"
       ],
       "main_condition": "replay",
       "input_change_description": "同一演示对象、初始关系和执行目标；不设置 I",
@@ -5832,8 +5832,8 @@
       "title": "长尾夹夹牌送入彩盘",
       "difficulty": "hard",
       "support_mask": [
-        "R",
-        "E"
+        "replay",
+        "relocate"
       ],
       "main_condition": "replay",
       "input_change_description": "同一演示对象、初始关系和执行目标；不设置 I",

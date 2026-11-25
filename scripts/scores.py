@@ -21,8 +21,8 @@ def aggregate(model,**filters):
 def cell(v):return f"{v['correct']}/{v['valid']}/{v['planned']} ({100*v['accuracy']:.1f}%)" if v['valid'] else f"0/0/{v['planned']} (—)"
 tables={};markdown=['# ICLWorld Web/OS results','', 'Cells: correct / valid completed / planned (completed accuracy).','']
 if contract['suite']=='main':
- columns=[item for k in ['web','os'] for item in [(f'{k} {d}',dict(kind=k,difficulty=d,generalization='resample')) for d in ['easy','medium','hard']]+[(f'{k} avg',dict(kind=k,generalization='resample'))]]+[('I avg',dict(generalization='resample'))]
- specs=[('Main I',columns),('Generalization',[(g,dict(generalization=g)) for g in ['replay','resample','relocate']]+[('avg',{})])]
+ columns=[item for k in ['web','os'] for item in [(f'{k} {d}',dict(kind=k,difficulty=d,generalization='resample')) for d in ['easy','medium','hard']]+[(f'{k} avg',dict(kind=k,generalization='resample'))]]+[('Resample avg',dict(generalization='resample'))]
+ specs=[('Main (Resample)',columns),('Generalization',[(g,dict(generalization=g)) for g in ['replay','resample','relocate']]+[('avg',{})])]
 else:
  specs=[('Ablations',[('None C',dict(condition='none',variant='C'))]+[(f'Video {v}',dict(condition='video',variant=v)) for v in 'ABC']+[(f'QA {v}',dict(condition='qa',variant=v)) for v in 'ABC'])]
 for name,columns in specs:
@@ -34,7 +34,7 @@ for name,columns in specs:
 markdown+=['## Execution process score','','| Model | Average |','|---|---|']
 for m in contract['models']:
  scores=[r['process'] for r in records if r['model']==m and r['condition']!='qa' and r['process'] is not None];markdown.append(f"| {m} | {sum(scores)/len(scores):.4f} |" if scores else f'| {m} | — |')
-markdown+=['',f"Valid completion: {sum(r['valid'] for r in records)}/{len(records)}. Ungraded receipts requiring review: {len(review)}.",'','R/E are stratified subsets; aggregate differences are not a causal generalization comparison.']
+markdown+=['',f"Valid completion: {sum(r['valid'] for r in records)}/{len(records)}. Ungraded receipts requiring review: {len(review)}.",'','Replay and Relocate are stratified subsets; aggregate differences are not a causal generalization comparison.']
 report='\n'.join(markdown)+'\n'
 if a.output:
  a.output.mkdir(parents=True,exist_ok=True);(a.output/'RESULTS.md').write_text(report);(a.output/'scores.json').write_text(json.dumps(dict(tables=tables,review_required=review),indent=2)+'\n')

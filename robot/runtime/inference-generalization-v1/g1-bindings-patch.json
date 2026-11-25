@@ -3783,7 +3783,7 @@
               },
               {
                 "relative_path": "two_tier_cake_stand_parts/visual.provenance.json",
-                "sha256": "a5f038c3e1dc4813025ffffef324ada04845f64a028f429e77626ce26263666c"
+                "sha256": "6be6535b1686d8f062874f614a54990b59115eca926ba13b2de05a1802ab4142"
               },
               {
                 "relative_path": "two_tier_cake_stand_parts/visual.usda",
@@ -4747,7 +4747,7 @@
             ],
             "kind": "articulation",
             "root_env": "ICLWORLD_MECHANISM_ASSETS",
-            "path": "/home/descfly/ICLWorld/realworld50_20261027/converted_assets_mechanisms_v1/cabinet_side_by_side_v4.usda",
+            "path": "source-file:cabinet_side_by_side_v4.usda",
             "relative_path": "cabinet_side_by_side_v4.usda",
             "sha256": "ab98338cd57d597917f8b249a992caa4f7a274a6daf0cf290fe0fb4e7ad6999c",
             "joint_count": 7,
@@ -4785,7 +4785,7 @@
               "Merge original surfaces only within each source semantic board to preserve measured thickness; use one convex collider per real board. Keep each handle segment separate and preserve every cavity.",
               "Explicit passive PhysX joint friction 0.5 on each prismatic drawer joint; no drive/spring or state writes added."
             ],
-            "source_urdf": "/home/descfly/robotwin-eval/assets-shared/objects/036_cabinet/46653/mobility.urdf",
+            "source_urdf": "source-file:mobility.urdf",
             "source_urdf_sha256": "3905eaebdce2c7bee60612ba30633d63a373f4cfbda33d27737c7abc9f2da209",
             "dependencies": [
               {
@@ -7876,7 +7876,7 @@
               },
               {
                 "relative_path": "open_source_storage_box_parts/source_adapted.provenance.json",
-                "sha256": "4346e5417dd97ed62baa9159284b18d4f1ab9f24fe633b843b01ccbf98d8cce4"
+                "sha256": "42ac46e1fbc7a8436a7856ebce76940b26de719b89f8b9e4bcce908ac0c84a9a"
               },
               {
                 "relative_path": "open_source_storage_box_parts/source_adapted.usda",
@@ -7923,7 +7923,7 @@
               },
               {
                 "relative_path": "removable_box_lid_parts/source_adapted.provenance.json",
-                "sha256": "e1858fbe153369d302270b4ff1af36b4f52509bb0cadd973f1d54b3104ae6b46"
+                "sha256": "e61c3cbda6e22e2a0c1e53235fbb15c776ffb7ac340ba8d28ca86f5f86efed5c"
               },
               {
                 "relative_path": "removable_box_lid_parts/source_adapted.usda",
@@ -10635,7 +10635,7 @@
             "root_env": "ICLWORLD_INFERENCE_ASSETS",
             "relative_path": "g1/iclworld_robot_30/cabinet_g1_frame.usda",
             "sha256": "dc467993be2d89ef1573cb9e3e700f09ad30e52a9a3993dadf32821427ab7004",
-            "source_urdf": "/home/descfly/robotwin-eval/assets-shared/objects/036_cabinet/46653/mobility.urdf",
+            "source_urdf": "source-file:mobility.urdf",
             "source_urdf_sha256": "3905eaebdce2c7bee60612ba30633d63a373f4cfbda33d27737c7abc9f2da209",
             "source_scale": 0.162,
             "source_url": "https://robotwin-platform.github.io/doc/tasks/put_object_cabinet.html",
@@ -12872,7 +12872,7 @@
               },
               {
                 "relative_path": "five_group_post_board_parts/visual.provenance.json",
-                "sha256": "dc1fb1a0f9f45f9262560945a6fdd236ca2cd29beecea7d76906f22c3549a104"
+                "sha256": "b132e958cd702a514266bb92ebacd189bd88e74359693fa5c615a8e0d26b5b5c"
               },
               {
                 "relative_path": "five_group_post_board_parts/visual.usda",

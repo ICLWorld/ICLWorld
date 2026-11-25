@@ -1,8 +1,4 @@
 {
-  "assets/embodiments/robotwin-r5/conversion.private.json": {
-    "store": "code",
-    "sha256": "42e84ae7019cbb9ea127924d1cf23462ad9c977636c542ffd396061fea951541"
-  },
   "assets/embodiments/robotwin-r5/franka-panda/.asset_hash": {
     "store": "data",
     "sha256": "86cb9eff8b96fd1cfb4f508175e61a1bea993c1dd34699d1a612b0871acee8de"
@@ -53,7 +49,7 @@
   },
   "assets/embodiments/robotwin-r5/franka-panda/config.yaml": {
     "store": "code",
-    "sha256": "8316c480b195b47cfb7ca588bd282b7103414cc3e4d35b2a50ff904393db0909"
+    "sha256": "58d111c74a4a6f7e115b49f081cbd64f7db4116882b9e802833d599b9184eb6d"
   },
   "assets/embodiments/robotwin-r5/franka-panda/configuration/robot_base.usd": {
     "store": "data",
@@ -70,10 +66,6 @@
   "assets/embodiments/robotwin-r5/franka-panda/configuration/robot_sensor.usd": {
     "store": "data",
     "sha256": "50333b31803728423d511f550d236d9d63f11ed2642d955cca62f86edaf36165"
-  },
-  "assets/embodiments/robotwin-r5/franka-panda/conversion.private.json": {
-    "store": "code",
-    "sha256": "d6943a3ca76f7666ed7a523528a3964f4f575529e8cacee812dc49f2ea02af51"
   },
   "assets/embodiments/robotwin-r5/franka-panda/mesh_aliases/_2202c3148_link5.glb": {
     "store": "data",
@@ -141,7 +133,7 @@
   },
   "assets/embodiments/robotwin-r5/ur5-wsg/config.yaml": {
     "store": "code",
-    "sha256": "e2bee96f27db08a554c7ccdb9544f591cf34f55e5dc669d61806bbaba120c1ba"
+    "sha256": "e0d4c94d26ea207cd5e4b2d44d2438326d0aef4de28b78f1c92a153225f71f93"
   },
   "assets/embodiments/robotwin-r5/ur5-wsg/configuration/robot_base.usd": {
     "store": "data",
@@ -158,10 +150,6 @@
   "assets/embodiments/robotwin-r5/ur5-wsg/configuration/robot_sensor.usd": {
     "store": "data",
     "sha256": "3beff4e9b3cdc0d6f61d23a1f7e8dd48edf75cca5416646034c2312564d16369"
-  },
-  "assets/embodiments/robotwin-r5/ur5-wsg/conversion.private.json": {
-    "store": "code",
-    "sha256": "d791a50e37681b8ed9a7330d8e16247c02e746465c8062d3934a112ad465a2e6"
   },
   "assets/embodiments/robotwin-r5/ur5-wsg/mesh_aliases/WSG_FMF.stl": {
     "store": "data",
@@ -207,14 +195,6 @@
     "store": "code",
     "sha256": "ab7b4e8857065ccd73fb2cfba6b0135d56cc118e055dc71f804880206355448f"
   },
-  "configs/franka-taskview-v3-workspace-low.json": {
-    "store": "code",
-    "sha256": "152060fb842bca0d8e2caa8f49729a6598199bbee03164d4cb38c56b3d827473"
-  },
-  "configs/franka-taskview-v3-workspace-offset.json": {
-    "store": "code",
-    "sha256": "71da135e08db58292670372baf4aee33f8f4fee93060332e2b293eba46545110"
-  },
   "configs/franka-workspace-v4-front100-ik-smooth-v1.json": {
     "store": "code",
     "sha256": "2df13b5a9b78002b7519c2ea25b63c8e22d1cb4e90d2db83247b95f9d56a08ba"
@@ -222,202 +202,6 @@
   "configs/franka-workspace-v4-front100.json": {
     "store": "code",
     "sha256": "0956a01d3dcf7bb71c75976bf6d37b47123683f46bbbf9d3cb2ee3875d031a35"
-  },
-  "configs/franka-wrist-taskview-v2.json": {
-    "store": "code",
-    "sha256": "f5b1f53fede4e2425f9df5c55da3967ae85e906537a479431754964b50f12190"
-  },
-  "configs/half1_grid_long_axis_grasp_trial.json": {
-    "store": "code",
-    "sha256": "0be69e7539c6a2f4cc030d13b2affdaacc110cb63f2103a3a219853715e97823"
-  },
-  "configs/half1_measured_cup_wall_grasp_trial.json": {
-    "store": "code",
-    "sha256": "d95f4ee9db740bde82af74d1a7b888fdf0456a0a8819b5a82240e081b9731d74"
-  },
-  "configs/half1_structural_low_clearance_trial.json": {
-    "store": "code",
-    "sha256": "753dc75ef6560a933a8045d8bcd5dd11e920453af94801ec638d2e12f61072ad"
-  },
-  "configs/iclworld_robot_01_fries_box_body_grasp_trial.json": {
-    "store": "code",
-    "sha256": "e8295c9fb7dc55313f93f9b190d3003489b31780b2fb3eb71ef1f7dc33931fe4"
-  },
-  "configs/iclworld_robot_01_high_drink_body_grasp_trial.json": {
-    "store": "code",
-    "sha256": "255fd5581108d276a06ad5b0474bbeabde0b9c8ceb8bb3394e939dd3b1a8e75e"
-  },
-  "configs/iclworld_robot_01_level_box_body_grasp_trial.json": {
-    "store": "code",
-    "sha256": "4bebb397f9db9f0c23fc968c9bf05d23e37d29446f62bc7aaf946d0f68e3c78f"
-  },
-  "configs/iclworld_robot_02_source_close_framing_trial.json": {
-    "store": "code",
-    "sha256": "610c0bcc279afd225db15fb2acbb3a62f82c1ce87242b2c6a54c1e9efdc5de3d"
-  },
-  "configs/iclworld_robot_03_high_rim_level_grasp_trial.json": {
-    "store": "code",
-    "sha256": "c0eb778a182ee459a876358d695427a62ae71fc3f8850092630787e5c9eceba4"
-  },
-  "configs/iclworld_robot_05_triangle_base_vertex_grasp_trial.json": {
-    "store": "code",
-    "sha256": "1cecfe414a8b3e5add0deffc5471bc60e82c90d762d0092c3d88c776227f4911"
-  },
-  "configs/iclworld_robot_12_cn_source_adapted_candidate_v1.json": {
-    "store": "code",
-    "sha256": "9224eeb5e9828034b8e8a6630a497726f374b100315b416789d05ba57089b6bd"
-  },
-  "configs/iclworld_robot_12_cn_source_adapted_candidate_v2.json": {
-    "store": "code",
-    "sha256": "044664f85cc65f148424a4da1f2eee8bf118e7036bbd3a2fedf896f4463cb49f"
-  },
-  "configs/iclworld_robot_12_cn_source_adapted_candidate_v3.json": {
-    "store": "code",
-    "sha256": "77b5e816c90abf3a11444df0a1dc1440be103d602420f2557497ad525e82295e"
-  },
-  "configs/iclworld_robot_12_cn_source_adapted_candidate_v4.json": {
-    "store": "code",
-    "sha256": "3c75f08091a7d2d757019702c5d5d05f8957cbae50c4eb5f41eac86c7bc687ef"
-  },
-  "configs/iclworld_robot_12_cn_source_adapted_candidate_v5.json": {
-    "store": "code",
-    "sha256": "b2342bd174c480f245db58aed07c546240c3dab70c53a4d2c1aa5ff768b3ca60"
-  },
-  "configs/iclworld_robot_12_cn_source_fast_author_candidate_v5.json": {
-    "store": "code",
-    "sha256": "4557bdf87b09b53865f881f26faa4b7276eccad275d9d7d9e62e15bf0a5a4828"
-  },
-  "configs/iclworld_robot_12_cn_source_final_candidate_v7.json": {
-    "store": "code",
-    "sha256": "f375d06fa9f20674553ed5f273d37277bbee1ca5a82d4035a9c0909c7b4c37e8"
-  },
-  "configs/iclworld_robot_12_cn_source_initial_facing_candidate_v6.json": {
-    "store": "code",
-    "sha256": "5fa8f2207380377a844b4311065fcec9634c0dd5dcef0bab74b5c06021048a20"
-  },
-  "configs/iclworld_robot_12_franka_precision_clearance_speed2_v6.json": {
-    "store": "code",
-    "sha256": "b56238eff5d30f617b21cff6b87847e9dd81381aacaf6c4d5dd046d0dfccb8f5"
-  },
-  "configs/iclworld_robot_12_franka_precision_clearance_v5.json": {
-    "store": "code",
-    "sha256": "232bf45519825367a31784875ae0fb20372de98f35dd0a86765bace75c03e9bf"
-  },
-  "configs/iclworld_robot_12_franka_precision_native_v3.json": {
-    "store": "code",
-    "sha256": "0144c4e6d56808c4df9b00e74972184adfce41b88a94d50a6b6c5c76b3b3c4a3"
-  },
-  "configs/iclworld_robot_12_franka_precision_native_v4.json": {
-    "store": "code",
-    "sha256": "8af0eb4423651ad68337a06b5128914fdcb4f46196ff430073104df9117c0571"
-  },
-  "configs/iclworld_robot_12_horizontal_consistent_grasp_candidate_v2.json": {
-    "store": "code",
-    "sha256": "cd097731ae1a8f92efb0a061b83f74d57242764fda3f128928ed5e8bcc461283"
-  },
-  "configs/iclworld_robot_12_horizontal_jaw_author_candidate_v1.json": {
-    "store": "code",
-    "sha256": "0daf983d53331a4de87389088e30da56c87b16ca4063f074e5381660a94f793b"
-  },
-  "configs/iclworld_robot_13_franka_reach50_contact_supported_v11.json": {
-    "store": "code",
-    "sha256": "8c189010d0bb53d827c4572a52e990cd2c511040ea665307150b60fe69a7a229"
-  },
-  "configs/iclworld_robot_13_franka_reach50_continuous_orientation_v10.json": {
-    "store": "code",
-    "sha256": "2f324fd14c55d332d9d7569c0c3620c77472488d70ab40ccb8540acc2734ea75"
-  },
-  "configs/iclworld_robot_13_franka_reach50_gentle_achieved_wrist_v9.json": {
-    "store": "code",
-    "sha256": "2ec7d60d67111529143d907946dd9050555690a98d10342c233d03dac2c31a96"
-  },
-  "configs/iclworld_robot_13_franka_reach50_gentle_empty_wrist_v8.json": {
-    "store": "code",
-    "sha256": "d0090574908f765cabd00d3a3753b126f0c5da53a1f1b90ff92cf0158ae2de26"
-  },
-  "configs/iclworld_robot_13_franka_reach50_gentle_grasp_v5.json": {
-    "store": "code",
-    "sha256": "643245ba446a0e1a17e34527349f81738495dbfd49f0fd744ba23f23e6d62303"
-  },
-  "configs/iclworld_robot_13_franka_reach50_gentle_safe_retreat_v7.json": {
-    "store": "code",
-    "sha256": "ceb0de9403406aac6054c2b92f16ad5687694b3cb3435af8acb6ef8b070e0c88"
-  },
-  "configs/iclworld_robot_13_franka_reach50_gentle_slow_rotation_v6.json": {
-    "store": "code",
-    "sha256": "c8635a43d71d049660fe5857ffc83dce44fb00694877b2d2e09b921a95dc6a21"
-  },
-  "configs/iclworld_robot_13_franka_reach50_slow_grasp_v4.json": {
-    "store": "code",
-    "sha256": "be5841e5cb970b3298a600056393c60015b65a6b09b891690880bca2ee56fa41"
-  },
-  "configs/iclworld_robot_13_franka_reach50_symmetric_grasp_v13.json": {
-    "store": "code",
-    "sha256": "c573e3aa0b2ef5d9483040ba337ee35ea78124b0595e080d4941fd18deea910a"
-  },
-  "configs/iclworld_robot_13_phone_center_gentle_grasp_probe_v6.json": {
-    "store": "code",
-    "sha256": "cd490479919c8be56d2434f2db7e7d9ea8124be7d3fb6c3f12d71a3a6e9a9886"
-  },
-  "configs/iclworld_robot_13_phone_left_grasp_probe_v1.json": {
-    "store": "code",
-    "sha256": "6c42a66e49642622f4bcc288bb0a2b11f78f505841305d86387ba79705af4413"
-  },
-  "configs/iclworld_robot_13_phone_offset_supported_v12.json": {
-    "store": "code",
-    "sha256": "a7c9be2d5dbfb699ceb632e1d4f7a614a6c0e2335125b5eb7bcb3710aa74334f"
-  },
-  "configs/iclworld_robot_13_phone_straight_frame_grasp_probe_v3.json": {
-    "store": "code",
-    "sha256": "729d6bd5ceb9933e344d262345b7dc8797ca086cbee336a5312735b615473ec2"
-  },
-  "configs/iclworld_robot_13_phone_usb_end_grasp_probe_v2.json": {
-    "store": "code",
-    "sha256": "e39e52de7015dbcc31de65afb49af8c663df6ced826bc09e95f7b2b7c5393ebf"
-  },
-  "configs/iclworld_robot_13_stand_hframe_candidate_v2.json": {
-    "store": "code",
-    "sha256": "2e3f7b925fd3095c0738ea8894c966491690b90812d85de4ffe981fd476f182e"
-  },
-  "configs/iclworld_robot_13_stand_rectangle_silver_candidate_v1.json": {
-    "store": "code",
-    "sha256": "78a7d1dd91d89159f51a84c7a8821e2f406bb4bc09fe168a93bbaaf2aac15dc0"
-  },
-  "configs/iclworld_robot_14_top_plate_grasp_trial.json": {
-    "store": "code",
-    "sha256": "6fcb10c3eb6ef0df5fd2be3a60e082a07251251fa965d4ae8c603fe878f39cc3"
-  },
-  "configs/iclworld_robot_23_opposite_rim_grasp_trial.json": {
-    "store": "code",
-    "sha256": "8ba2ba9a46683aedcaf0f97e645fb7e7fc19607a3b1460b61dffb467f73d800e"
-  },
-  "configs/iclworld_robot_25_spoon_neck_grasp_trial.json": {
-    "store": "code",
-    "sha256": "73864b469d1ed0e7bba69d5712df0255d29273c7b970c964dd4c9c75f175ea5b"
-  },
-  "configs/iclworld_robot_25_spoon_neck_left_arm_trial.json": {
-    "store": "code",
-    "sha256": "97689d791ceab41ba6b02f42a5aaa8c4bdae9e7377d6870de95c4d3f717049ef"
-  },
-  "configs/iclworld_robot_39-execution-design-v3-probe.json": {
-    "store": "code",
-    "sha256": "75174b7c308afa5c28c838574b4877879383d8512a096ed516688d5608596f03"
-  },
-  "configs/iclworld_robot_39-franka-control-inherit-v1.json": {
-    "store": "code",
-    "sha256": "9cc44dbffbaa9b9ca073e14e7d47241e99240ceaaea714719279fb032d9b86c7"
-  },
-  "configs/iclworld_robot_50-payload-contact-hold-v1.json": {
-    "store": "code",
-    "sha256": "60823cd1bfcce1a9b35152958ac776256e7a98da78c027266ae386ea20a0741b"
-  },
-  "configs/iclworld_robot_50-slow-gripper-reference-v1.json": {
-    "store": "code",
-    "sha256": "07b078395a251b1867ed91b4d8012b1b056169478fab0613622e4f2c90bb5fac"
-  },
-  "configs/inference-generalization-ur5-wsg-ik-smooth-v1.json": {
-    "store": "code",
-    "sha256": "86380973b46ab2abf061625288d0946b9d9e8e8d16e7f0a7ff2874245f27177c"
   },
   "configs/inference-generalization-ur5-wsg-v1.json": {
     "store": "code",
@@ -427,113 +211,9 @@
     "store": "code",
     "sha256": "1694d03f4792029abfd49b441cec9c8643519fa5a119fbb3fa80b67f79e696fd"
   },
-  "configs/realworld50_franka.json": {
-    "store": "code",
-    "sha256": "bb4bee511bd078d8e78ee7063774e1c87a563fb68ae19887dc217543016412c2"
-  },
-  "configs/realworld50_franka_downward_clearance5_fast2.json": {
-    "store": "code",
-    "sha256": "70f5ada62434309135b16f5d957c16eeb65e96d618ebdd59d4c4b03f94f5292b"
-  },
-  "configs/realworld50_franka_downward_full_open5.json": {
-    "store": "code",
-    "sha256": "b7c94b867b7a545065d583904a3d994d21b4b7b8e883997d7d23b1b8249796ce"
-  },
-  "configs/realworld50_franka_half2_mallet_contact_fast.json": {
-    "store": "code",
-    "sha256": "c11bb866cffeac53b677e1f0f7f0b44fbef1c9807e9703c56c385debc18e72e9"
-  },
-  "configs/realworld50_franka_half2_mallet_level5000.json": {
-    "store": "code",
-    "sha256": "39ec8728a5f88b43e0af297716aad9de53f07124e8e7e7eb1c94e80f6b22d7a1"
-  },
-  "configs/realworld50_franka_half2_mallet_table_clearance.json": {
-    "store": "code",
-    "sha256": "311ff26e24bb5481713af1bcdc0e4ece6ee789d26a771ee70b96267a3c084fc1"
-  },
-  "configs/realworld50_franka_half2_original_mount25.json": {
-    "store": "code",
-    "sha256": "3e922598b075ccfcd8ca3798fe2c04475c3a37d833caa5d5a93bde7d2fa58a1a"
-  },
-  "configs/realworld50_franka_half2_robot_31_continuous.json": {
-    "store": "code",
-    "sha256": "7672ded51f1caf0b519b5029d161d453744aa265d005438bba12cd97f47734a4"
-  },
-  "configs/realworld50_franka_half2_robot_31_grip5000.json": {
-    "store": "code",
-    "sha256": "3efd97e5d6e62ffad2432a6cb4a412a348c1a8eaead0c91e3559e5fe4135a2a7"
-  },
-  "configs/realworld50_franka_half2_robot_31_handoff.json": {
-    "store": "code",
-    "sha256": "13d1897ce0241449c938e73b70be4028b085b13ceda15ad360ade8f92866af17"
-  },
-  "configs/realworld50_franka_half2_robot_31_handoff_mplib.json": {
-    "store": "code",
-    "sha256": "b205efd96537a3b2374b5a2735b3eedb62c86a2de9352974e4d557adcc4704dc"
-  },
-  "configs/realworld50_franka_half2_speed2.json": {
-    "store": "code",
-    "sha256": "f23e08242f6b1286645caa034917c934b05cc6e7c2cdd7b85944bf87a90604a1"
-  },
-  "configs/realworld50_franka_half2_speed2_ff.json": {
-    "store": "code",
-    "sha256": "fd910f635791d1045fef84ffa2543ba8dcfbafacf4d7bbf19d5caf309d07f744"
-  },
-  "configs/realworld50_franka_half2_stow.json": {
-    "store": "code",
-    "sha256": "c9b9b2bb66933083dd8435dfb6904754f8ecfe568e55ae9c85a490c7803e403b"
-  },
-  "configs/realworld50_franka_orientation_partial5_fast2.json": {
-    "store": "code",
-    "sha256": "ff0f7b9f75ebcfecf2e11bb146aea9c454bc132893e28465b0f8be1c2f21b465"
-  },
-  "configs/realworld50_franka_reach_v3.json": {
-    "store": "code",
-    "sha256": "d544316fd5e08fd1b34127a7236c0951500cc938c7ceb2673601074292de49da"
-  },
-  "configs/realworld50_franka_recording25.json": {
-    "store": "code",
-    "sha256": "60ffe896627e484a30c4d4ea37d189562cb998aadb5d22f29737df4e6183adb0"
-  },
-  "configs/realworld50_franka_recording25_fast.json": {
-    "store": "code",
-    "sha256": "effe921fcbf8b0b0f9455b8f47ae898c789f6fd7e0eb9afcff0e2fd15ba58509"
-  },
-  "configs/realworld50_franka_recording25_gentle5.json": {
-    "store": "code",
-    "sha256": "b71df6a1d2ab683d5b6e61172db7fc365bc6b30fff4d9d71eff4c3c8fb88b9d3"
-  },
-  "configs/realworld50_franka_recording25_reach50.json": {
-    "store": "code",
-    "sha256": "bee3ac9f72f0b58e609a7f0baeded17c391fe9eee19e62d4810473bcb532935f"
-  },
-  "configs/realworld50_franka_recording25_reach50_fast.json": {
-    "store": "code",
-    "sha256": "42f4df90ecb03fcc093268efffde65af51f1465267214b5f691c130c8a750e9d"
-  },
-  "configs/realworld_asset_bindings.json": {
-    "store": "code",
-    "sha256": "abcd00ab3e4dd26087d7eac45807d8b6e76c78e769e9ced4ed7958f8f2302251"
-  },
-  "configs/realworld_full50_bindings.json": {
-    "store": "code",
-    "sha256": "24d65596192a6232a906b6d3aeaeca16380101830c3fbff98011ddc6b3d6a116"
-  },
-  "configs/realworld_half1_left_arm_trial.json": {
-    "store": "code",
-    "sha256": "cc2301091a888da4b541450cff69c0ca8d55a79ea80ca61b5c2bf9a38e9fd4da"
-  },
-  "configs/realworld_half1_per_goal_arms_trial.json": {
-    "store": "code",
-    "sha256": "9561fc66e188007c29221c5211cf0956b47badb09eb27cfbff141c42626c6395"
-  },
   "configs/source_geometry/iclworld_robot_33/iclworld_robot_33-acceptance-geometry.json": {
     "store": "code",
     "sha256": "ae354ce0ae88edaa8ffe3e6e0c046274360098f6b65efa3fa0e13bad06ed9943"
-  },
-  "configs/source_geometry/iclworld_robot_33/iclworld_robot_33-geometry-build-evidence.json": {
-    "store": "code",
-    "sha256": "c44f01de6adafa1c0e54c37c7ae98ec9650e937c96f8ccf35349e836fc6749b9"
   },
   "configs/source_geometry/iclworld_robot_33/iclworld_robot_33-original-bin-triangles.npz": {
     "store": "data",
@@ -551,21 +231,9 @@
     "store": "code",
     "sha256": "5b749599b45f487d410ecb517c727215e2beb3da3d6a22a130b644837872a4a3"
   },
-  "configs/thin-franka-gripper-reference-skin50-diagnostic-v1.json": {
-    "store": "code",
-    "sha256": "9eb0d3cacc88d597ab6e12511b5cbc9b13eb8db00c9f0dd837772d3fb36e1d31"
-  },
-  "configs/thin-franka-gripper-reference-v1.json": {
-    "store": "code",
-    "sha256": "24ec327c6a59b72dcfc7300f588fd45db579d69156322e097f69411cf582bc5c"
-  },
-  "configs/workbench_ready.json": {
-    "store": "code",
-    "sha256": "55fe2288be38d2fffb5266adc12c5bbc4fd2c700fb1106ad07e9822bd74070ca"
-  },
   "execution-design-v2/catalog.private.json": {
     "store": "code",
-    "sha256": "40ad9b2af1b80c759887eec1687b80f9cd0fdf9e5bd4d718a9fc028067f5ca4f"
+    "sha256": "6d4ffa47de33ffdc0e1069762dd1eece9e41ba4912e3d4227ef8505b6a910469"
   },
   "execution-design-v2/source.md": {
     "store": "code",
@@ -1009,7 +677,7 @@
   },
   "execution-design-v3/assets/iclworld_robot_30/instances.private.json": {
     "store": "code",
-    "sha256": "d6a7e2651b14bca7101848e16a390ce68d4a0f3331cdf46a94270dbb118087a6"
+    "sha256": "54942c9b3513ae53dccde13ef025bf056122304c5252e264e29174ae34910ce3"
   },
   "execution-design-v3/assets/iclworld_robot_40/clip_width_0.usda": {
     "store": "data",
@@ -1037,7 +705,7 @@
   },
   "execution-design-v3/catalog.private.json": {
     "store": "code",
-    "sha256": "dc0d68588117abaa76663bcf18eadb9a63fe09b1059d204d4dda6af5caef6dc2"
+    "sha256": "b0e2ef6c5e2316f6c535e54fe36212ad2f7303ea6c178e911e068bdf9dff8b59"
   },
   "execution-design-v3/source.md": {
     "store": "code",
@@ -1121,7 +789,7 @@
   },
   "iclworld_isaaclab/demonstration.py": {
     "store": "code",
-    "sha256": "977f2c56785c8eb42f3faa02cd6df14fc9fcfd3a08308ca93d07d866c8957cfa"
+    "sha256": "2940ac7b3c3fb4714e2aa8ab6628dcea6b0a9a3701b1bb5eb903befc017d93af"
   },
   "iclworld_isaaclab/embodiments.py": {
     "store": "code",
@@ -1141,7 +809,7 @@
   },
   "iclworld_isaaclab/engineering_checkpoint_reference.py": {
     "store": "code",
-    "sha256": "36507eecfe750cad9ba0f87b3bd57952c95c847720eea25b1a328fd8105d7811"
+    "sha256": "be8ec6b651f262438e8ee863493621ff99eb358a6e0e1f39b4c59c8904439f79"
   },
   "iclworld_isaaclab/engineering_contact_warmup.py": {
     "store": "code",
@@ -1159,13 +827,9 @@
     "store": "code",
     "sha256": "9dd669802bbf1be98bfe07f72a331e3c5fa9ee258127f150b5bf42ded42cd8a8"
   },
-  "iclworld_isaaclab/engineering_front25_server_source.py": {
-    "store": "code",
-    "sha256": "8ce38d95d849753e31a81615c3e224eed9ddc93d018262e8d42bab3d20c965f3"
-  },
   "iclworld_isaaclab/engineering_front25_suffix.py": {
     "store": "code",
-    "sha256": "d3f2838d0f1002e0d13803f35d324cf76f2475bf996d435948ff78ad8e6e8d67"
+    "sha256": "5125be3069b8ae58e9e9012805bb32b8f527a5777a79de03b360650051e63ea8"
   },
   "iclworld_isaaclab/engineering_gripper_reference_fixture.py": {
     "store": "code",
@@ -1186,14 +850,6 @@
   "iclworld_isaaclab/engineering_pose_fixture.py": {
     "store": "code",
     "sha256": "759cdb5670c649171cd14c72598b36e6716ead15bddd3445816cc88db6f0f077"
-  },
-  "iclworld_isaaclab/engineering_render_checkpoint_fixture.py": {
-    "store": "code",
-    "sha256": "2557fd6884cc2682f4291bf670d21e9296cddab1143def994ae9e7c93749589b"
-  },
-  "iclworld_isaaclab/engineering_robot_24_layout_fixture.py": {
-    "store": "code",
-    "sha256": "ad09a33070bf3086e80270a2519ad818a627302dc9289998f0a303f9c653f59a"
   },
   "iclworld_isaaclab/engineering_robot_28_cooking_fixture.py": {
     "store": "code",
@@ -1745,7 +1401,7 @@
   },
   "iclworld_isaaclab/execution_design_robot_09_ring_hull.py": {
     "store": "code",
-    "sha256": "5fb6cc1798db7df70c0bfac8c68eb6d7a69980b0de63fd627839c1511e7d7cc4"
+    "sha256": "eaf2b3bf81aa04c444adb135bbf62421e9e0b58b08e01abb796ad4fcb28e3896"
   },
   "iclworld_isaaclab/execution_design_robot_09_sweep.py": {
     "store": "code",
@@ -2075,10 +1731,6 @@
     "store": "code",
     "sha256": "4073b5aad8e87f891d1bd481c2ff9f8f755a8879addf26e88e79850186325756"
   },
-  "iclworld_isaaclab/execution_design_robot_25_b_return.py": {
-    "store": "code",
-    "sha256": "32e7b0c34952f56e366f0f1f7f4c396ad514269b65e894955bb78bd9e8c7ef47"
-  },
   "iclworld_isaaclab/execution_design_robot_25_b_transport.py": {
     "store": "code",
     "sha256": "da8ea4abe14c087477630ee0c0ad97b938946006e2d957b4e42c8808fac93e6d"
@@ -2091,10 +1743,6 @@
     "store": "code",
     "sha256": "bd7cb8c5156735767f6723c6b6ffe4a92d574a91c9039ab89747d74ff49aeffe"
   },
-  "iclworld_isaaclab/execution_design_robot_25_c_return.py": {
-    "store": "code",
-    "sha256": "699b1de6a79a37acc21c28cdcdf6041f375a3e28ac195c521bc0b5c06791f015"
-  },
   "iclworld_isaaclab/execution_design_robot_25_functional.py": {
     "store": "code",
     "sha256": "057f2e70e68521948aab759edc0a65033a0b1568a19ed96375b070bcb1794ead"
@@ -2106,10 +1754,6 @@
   "iclworld_isaaclab/execution_design_robot_25_reference.py": {
     "store": "code",
     "sha256": "c58f40f25c9ebd53eddeeb91e9add25ab47e9c4d310ae98af7dc2b9adf584dd1"
-  },
-  "iclworld_isaaclab/execution_design_robot_25_remaining.py": {
-    "store": "code",
-    "sha256": "baff5e7989c33891ece61a28a2ee0033d01f090e597c9dd2bddaf1e2131e9ed6"
   },
   "iclworld_isaaclab/execution_design_robot_28_backstop.py": {
     "store": "code",
@@ -2489,7 +2133,7 @@
   },
   "iclworld_isaaclab/execution_design_segments_robot_15_recover.py": {
     "store": "code",
-    "sha256": "182ed94d4b6c967ffbeefa2bbaa914aefb7b0497c9511579c64f2dc125391120"
+    "sha256": "cd31b1f418e2a0fa71dda0c1fc923101104cde39fcd58ff5720172062b89dff7"
   },
   "iclworld_isaaclab/execution_design_segments_robot_17.py": {
     "store": "code",
@@ -2721,7 +2365,7 @@
   },
   "iclworld_isaaclab/remaining90_robot_26_instance.py": {
     "store": "code",
-    "sha256": "14e3fbcf91ad396e22e30f0364373766905dff508ed1b954513897c5cae6b897"
+    "sha256": "5bf1c798cad20719d52ae7fc3e8ea305ad3961866b5e2f96646050e7fc2e8aaf"
   },
   "iclworld_isaaclab/rig.py": {
     "store": "code",
@@ -3715,41 +3359,25 @@
     "store": "code",
     "sha256": "ac3baf51cfe14a1c2686ca0257d0cc7ce569fb4f6ba8386d4bd439a452d2ccc0"
   },
-  "inference-generalization-v1/binding-compilation-checks.json": {
-    "store": "code",
-    "sha256": "c0ee9ecc4a94f376152df73ff19e8d68dcc0fbadde03ed6064edef79619fa2d5"
-  },
   "inference-generalization-v1/catalog.private.json": {
     "store": "code",
     "sha256": "6771ce4306720c961da73022ec02e376ec3259649ceee2064d5aa35e6b1ec002"
   },
   "inference-generalization-v1/g1-asset-provenance.json": {
     "store": "code",
-    "sha256": "96819e4df88d5eaa53e077f1f371944cade87d78ae91199adba30aa7cfe059c1"
+    "sha256": "39df91c8813e58bbeeab6a14b3974b7e9e421a96780477a5989ed9c31583080b"
   },
   "inference-generalization-v1/g1-bindings-patch.json": {
     "store": "code",
-    "sha256": "2f352dc055b175a1cda0dc096f0421b95cd46fda0c69682345dcb0548137acbe"
-  },
-  "inference-generalization-v1/g1-static-validation.json": {
-    "store": "code",
-    "sha256": "126e698c3d1ee2005341f7d43047fe0324ffc087b873b9474b44987eb3f04275"
+    "sha256": "ddfd6ad1792bacc16cfe5a990962c161c1873f5bbd7922af2aae5fbcffed4591"
   },
   "inference-generalization-v1/g2-bindings-patch.json": {
     "store": "code",
-    "sha256": "4be633e82f8256c5ca960162b1093f985cce6bcbf996a00e7848261f9aea6692"
-  },
-  "inference-generalization-v1/g2-usd-validation.json": {
-    "store": "code",
-    "sha256": "66d539cafe0c46d720ad53f91703cb6850f998866a35fb5b3ab40dc0a9310924"
+    "sha256": "a4ba84a2c132162487625dfaad42574e15f686300c260eb1f01e9c6c564e3567"
   },
   "inference-generalization-v1/inference-bindings.json": {
     "store": "code",
-    "sha256": "41eb98a99e75bc10858bc6409b3a31569004c0c51568f05ea70d9e250d27211f"
-  },
-  "inference-generalization-v1/public-prompts.json": {
-    "store": "code",
-    "sha256": "094efd994ce56d2180d1e946a64919f9b3c9b2712458a8188db29f97bed54cb9"
+    "sha256": "8392f27db8bb7884878818204c5c2ddab2a365ab04d86cc219042e8f6f6b546a"
   },
   "scenes/generated/manifest.json": {
     "store": "code",
@@ -3770,10 +3398,6 @@
   "scripts/probe_realworld_room_pool.py": {
     "store": "code",
     "sha256": "f853bdc77515b4ab46c3bf391372235d9444a9b66d5d2ac55a3dad35858c67a0"
-  },
-  "scripts/run_gpu.sh": {
-    "store": "code",
-    "sha256": "f2a85b606b35a999a2125efc839f2f1eab8f592ff61da9abd3de46d1d287cb1a"
   },
   "scripts/serve_realworld_room_pool.py": {
     "store": "code",

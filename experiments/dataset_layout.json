@@ -3960,6 +3960,290 @@
       "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/ycb_flat_screwdriver_textures/965328159d1f256305be2e181bb9eac0ac57ebaf4c37adadc1cb3cec49d5298a.png",
       "sha256": "965328159d1f256305be2e181bb9eac0ac57ebaf4c37adadc1cb3cec49d5298a"
     },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/binder_clip_v3b_parts/JawNegative.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/binder_clip_v3b_parts/JawNegative.provenance.json",
+      "sha256": "000e01dc1140462b570339b5576b84e5d6f3885fbd9abeaf2e165042c96aa751"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/binder_clip_v3b_parts/JawPositive.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/binder_clip_v3b_parts/JawPositive.provenance.json",
+      "sha256": "624a8aeec7e53c541b0d254808ad7033ac5b1d1274ed2fbfd47070e6b128dbe9"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/binder_clip_v3b_parts/Spine.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/binder_clip_v3b_parts/Spine.provenance.json",
+      "sha256": "8508fc940fd6105cb3ec1f595665f8d72f89ce1b14108eabe168fe9b95d50379"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-10_68dce12e87.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-10_68dce12e87.provenance.json",
+      "sha256": "2857d1e80285d205d62648a6067c3cfaa72837870ad3a6806fbc1ad660364f41"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-12_79b09e5e06.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-12_79b09e5e06.provenance.json",
+      "sha256": "ef5063ba906f5a369f02485aa7bafa3c1db5eaa5adb47b1ae86f7927bf449091"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-13_a6c36e409a.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-13_a6c36e409a.provenance.json",
+      "sha256": "2e54da930f8c54b74a24d19cebb2d3a0b1a52b896bd4c8415a092e24c8f6f266"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-14_ea092c7412.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-14_ea092c7412.provenance.json",
+      "sha256": "6bac089801fbc835e08fe114ffd50a9c6e22b1294d79d5b7ee76e3fe64286eaa"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-15_a1d99d2b4e.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-15_a1d99d2b4e.provenance.json",
+      "sha256": "750f423ed0802a7df4118e60850b681222d3901aa9d16d230247599218f85566"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-16_0e9c9148af.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-16_0e9c9148af.provenance.json",
+      "sha256": "1913f6c04d9548c8b213f052371837b6129ae2a304895a30e4ee62ad9b673415"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-18_707f7e877e.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-18_707f7e877e.provenance.json",
+      "sha256": "a4a9f224b6660fc148c91547c8a41675ddeefa18439901f81fe16c58d4362f4f"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-21_42bbe8c65d.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-21_42bbe8c65d.provenance.json",
+      "sha256": "ad714299a452727a8068e8eb62a94367206f3bb13b257a43aae40bacaf7cf77e"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-22_0d59695df1.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-22_0d59695df1.provenance.json",
+      "sha256": "1f803291b8f747da387ac65e1480ff91f7181dde66b871262fcb85c516b7c66e"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-23_2107a3ec25.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-23_2107a3ec25.provenance.json",
+      "sha256": "170784278b08ae82255b84bb6b068ee519e3e51ee688c4f11ccb20d029603f2c"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-24_85d73e462a.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-24_85d73e462a.provenance.json",
+      "sha256": "d7e925e4139a73cf6f51ab4004e5b6e4385540ddea226b5702cbce3b09efcfc7"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-25_2714beabaa.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-25_2714beabaa.provenance.json",
+      "sha256": "f1955a1f031e54ec60fb98bcf14104f3f475de04e53aca0c134f5f77e7250cb9"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-26_62cca5dddf.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-26_62cca5dddf.provenance.json",
+      "sha256": "dc4998651edcd3acb1be3d41eee67110622061f754317b44b1e5e6cfebd96d09"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-27_b6e74521f8.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-27_b6e74521f8.provenance.json",
+      "sha256": "1e6c2ba10363373f42e73fcf682ba002e9ce09e3e7ac1c4060b0be6a0e2ffc94"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-28_f6869e6846.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-28_f6869e6846.provenance.json",
+      "sha256": "138aeb41220ee645f861440524600735d0c8ef4002243a5442739121592fb3df"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-30_ffeaff9e5f.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-30_ffeaff9e5f.provenance.json",
+      "sha256": "b4dbf5cc363be1422a59f61d0d257c7bb896b5c3cb56ffb323d1477d493dd0f4"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-31_116be40019.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-31_116be40019.provenance.json",
+      "sha256": "3b3fc6c3094ae4190de3cce319d08d322fb577d99bd292b626d2fcfbb0f2a14c"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-32_6fb8f1fa04.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-32_6fb8f1fa04.provenance.json",
+      "sha256": "bde003cf4928ba8253afda76fe34e6081bf19ddc2ce16c925f9dcbc8d80423c8"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-34_c466c13307.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-34_c466c13307.provenance.json",
+      "sha256": "f36eb13b1fc0a26262f395e72fb82932bf932f51c122a4691ca213aabb9d9a39"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-37_58d52948b3.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-37_58d52948b3.provenance.json",
+      "sha256": "766cfeaa82e0ec5560e6d1b97ec2fdc21dbd3f960887aab0a35c592b608c9518"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-38_093ff2ba12.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-38_093ff2ba12.provenance.json",
+      "sha256": "6f9e5d616c6e1f239296c7cba98e274bb31ef9023bc35cce8b7e9695283a10af"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-39_c259d55326.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-39_c259d55326.provenance.json",
+      "sha256": "f850eeea7e5b69e04407ad42cb509e9bdda27a1b8ecda7bbeaa142b52732c907"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-3_acab24e2b6.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-3_acab24e2b6.provenance.json",
+      "sha256": "9f831854096e3740356096679ae070fb0de2eb6975c2941eba6514bf0dc097c8"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-40_d491b734c1.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-40_d491b734c1.provenance.json",
+      "sha256": "8a1fe3b351a53aa134af54ee53674e6855576996b04bcf74698f2c07fa4d5152"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-41_e2e866efa8.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-41_e2e866efa8.provenance.json",
+      "sha256": "28af1b5e3f4c77120b5ea6af3582fe0a277f2037e06e1f1b1783b5216e99dbac"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-42_c443a61775.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-42_c443a61775.provenance.json",
+      "sha256": "f7bfdef9000112a39b0ead46c618a6a0c9a0a862e78da5336166190e2d305aa7"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-43_03d3195e41.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-43_03d3195e41.provenance.json",
+      "sha256": "08628e9b0e7eb969e2a99b92f1d97d57b9b36d3c8ac53a7922cdb2905e65da33"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-44_7b0e860cd5.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-44_7b0e860cd5.provenance.json",
+      "sha256": "7383b02c4ab17d49bf02f5593d8eb398d6f2185085332770e3280b9a2d31a6f6"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-46_f4540e83c5.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-46_f4540e83c5.provenance.json",
+      "sha256": "5abbd022b9d95796fe6875718cd38976fb917c8d510ce093925d5d5f90790f5c"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-47_023624550f.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-47_023624550f.provenance.json",
+      "sha256": "07ae2b3898729b3171df7be304095a4f0e52733fa1743590ee264e659c4d5817"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-48_f6b220a741.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-48_f6b220a741.provenance.json",
+      "sha256": "2922805bc0fc161ffc63fa44db7235cc4d0c05acf739b23e3f42bf17263c9f5c"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-4_28176b29d8.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-4_28176b29d8.provenance.json",
+      "sha256": "f5b6e9f71ff6cf369c37ff46feca1b2e28608278d8268d2c6a473ac7c5760420"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-50_7d43a19b21.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-50_7d43a19b21.provenance.json",
+      "sha256": "677123a43b4290d34c04c019c235c6e8bc885f6730952be7b18596cb3b9b53f0"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-53_867c96df86.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-53_867c96df86.provenance.json",
+      "sha256": "b1b3ecd5edf199b4f865bf21a6653b3bc1bf141448d03b81578d19f1ac2413b9"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-54_f01e5d3bbe.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-54_f01e5d3bbe.provenance.json",
+      "sha256": "1d028d4c0adb93a82929dce122ce941610340302c9b8aba0976abf86b2a40f70"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-55_29f6d289ae.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-55_29f6d289ae.provenance.json",
+      "sha256": "9d661431a2224f818ad7740b3d36c2f38eebcd328e27a7a74ce85cf44426b5b4"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-56_22d175e34f.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-56_22d175e34f.provenance.json",
+      "sha256": "c9a9b802c4c4ffeef5b2f2ff4a84ddd47b1a9c80502c5be4681e516ad9c89b05"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-57_818122b13b.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-57_818122b13b.provenance.json",
+      "sha256": "66e186e23ccf3d76c09c7ab661b82db535c429deef9a59e91b50bba6f9272256"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-58_502eb5fcce.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-58_502eb5fcce.provenance.json",
+      "sha256": "3f2ac06dfbd5a49aa616b43429a1b42d10d19ddd188ea06c08d84cac4fb14d40"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-59_5dcb87bcb6.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-59_5dcb87bcb6.provenance.json",
+      "sha256": "90a2c328edb926187a5134f4b08964e455f7960f3f5caaae45ca3883dfd08356"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-60_6ed63d7430.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-60_6ed63d7430.provenance.json",
+      "sha256": "383b21403c2b136ba11451a636a121f6609fe303c4e128d7038648cb629347fb"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-62_3541927aa0.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-62_3541927aa0.provenance.json",
+      "sha256": "6b99672aa64d3217c7577011202ef16811e04b80106022f98efb3d0c36c18599"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-63_84c39aea3b.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-63_84c39aea3b.provenance.json",
+      "sha256": "c34bd89f4727f33d89ef5446bcb9463eaf05cde48236b7bf18c7da060a5ff282"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-64_75810dd9c1.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-64_75810dd9c1.provenance.json",
+      "sha256": "d2f9bb6171a8ee0d4f0ff73eb1ffd58843b3004d062752848cde1ce7f4e04a64"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-6_b1a6b63988.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-6_b1a6b63988.provenance.json",
+      "sha256": "21daf075261e5eaf0d6dc147afa7d5d6f472389a6e6f77b20dcb1e82fbfa4961"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-7_af226926ee.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-7_af226926ee.provenance.json",
+      "sha256": "739745ef487d2b89586d2e66e5dfe5733c83c5ea89b0767e15659ab29f1f975c"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-9_aa50a5b628.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cabinet_three_drawers_parts/original-9_aa50a5b628.provenance.json",
+      "sha256": "c0045513f4d57d6bffc094999968096205263b44d3aea6932f8a18a30b509901"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cardboard_crease_parts/BasePanel.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cardboard_crease_parts/BasePanel.provenance.json",
+      "sha256": "e9304be3eac5e87bb49a12611864b8956465f04bbaf822aec2ade0486c81759c"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cardboard_crease_parts/FoldPanel.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cardboard_crease_parts/FoldPanel.provenance.json",
+      "sha256": "8da7f9ca338262e072f2a74fc7b7115aaafb34179baaccbe40c28c62ede993cc"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cola_removable_cap_parts/visual.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/cola_removable_cap_parts/visual.provenance.json",
+      "sha256": "4bc2f514e461d31dfb4e2dace092fd27704fca95333b9d66fa6e79a399ffa822"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/desk_bell_parts/base.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/desk_bell_parts/base.provenance.json",
+      "sha256": "adb14e57daddaa528ec69298366d8de793ede25597bb763a49df894752bb789d"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/desk_bell_parts/plunger.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/desk_bell_parts/plunger.provenance.json",
+      "sha256": "5b4f04b197093d96df07d889b21d154ddae01ec988096eed72cd8a59f603b10b"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/five_group_post_board_parts/visual.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/five_group_post_board_parts/visual.provenance.json",
+      "sha256": "b132e958cd702a514266bb92ebacd189bd88e74359693fa5c615a8e0d26b5b5c"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/four_socket_power_strip_parts/source_adapted.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/four_socket_power_strip_parts/source_adapted.provenance.json",
+      "sha256": "a4f109059e40931953b642adc1da3f13da9bb130e528be5e6ae4a58c294868c1"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/hollow_cup_parts/visual.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/hollow_cup_parts/visual.provenance.json",
+      "sha256": "9cfd13b69ccfa5af0921160e7b9449fdb93c5b09c0daf5f813efbf0aaa7aab40"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/open_cola_bottle_parts/visual.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/open_cola_bottle_parts/visual.provenance.json",
+      "sha256": "769ffc69cd6f07cb310fdf05bd3b0b4e8125d39d92bb6c8c32da4b480f537226"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/open_source_storage_box_parts/source_adapted.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/open_source_storage_box_parts/source_adapted.provenance.json",
+      "sha256": "42ac46e1fbc7a8436a7856ebce76940b26de719b89f8b9e4bcce908ac0c84a9a"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/open_sprite_bottle_parts/visual.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/open_sprite_bottle_parts/visual.provenance.json",
+      "sha256": "26bae374cb09b8ba465682d4171491f7a734493413ea62ae8f69e12c610a6bfd"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/open_water_bottle_parts/visual.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/open_water_bottle_parts/visual.provenance.json",
+      "sha256": "fc446e9f0048f04b6439bbe94e3cef0cd02591cd75297fb852a8ff79837e0c69"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/pulp_tray_parts/pulp_six.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/pulp_tray_parts/pulp_six.provenance.json",
+      "sha256": "7c274489d1a7219dbe6dbde2d49f5bbd867c92e28dd0fa7950861841018a53d3"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/removable_box_lid_parts/source_adapted.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/removable_box_lid_parts/source_adapted.provenance.json",
+      "sha256": "e61c3cbda6e22e2a0c1e53235fbb15c776ffb7ac340ba8d28ca86f5f86efed5c"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/sprite_removable_cap_parts/visual.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/sprite_removable_cap_parts/visual.provenance.json",
+      "sha256": "f3bf84d4d68a983ab07e68f530d041c2f094f1d9f3ee47aed88e1dcd5e7d42c7"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/threaded_screw_parts/slotted_threaded_screw.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/threaded_screw_parts/slotted_threaded_screw.provenance.json",
+      "sha256": "d0da563d30ac7b583d7a5d23b2709cdb555a7242a58935402dd25fc0810a07a3"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/threaded_screw_parts/threaded_socket.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/threaded_screw_parts/threaded_socket.provenance.json",
+      "sha256": "99085e13fc96b9898020af0cfa71892c01c34dc9ec181bcd2ca494db1df1a506"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/three_level_mug_tree_parts/visual.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/three_level_mug_tree_parts/visual.provenance.json",
+      "sha256": "cdd2b647fea9286f2e7d923d2de5c2a99359d94fe9362bc1a97a17b9f845585f"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/two_pin_charger_parts/source_adapted.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/two_pin_charger_parts/source_adapted.provenance.json",
+      "sha256": "430e006c54dc28444704f83b502b775d02e2be30a1efe06931543048cc97d05f"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/two_tier_cake_stand_parts/visual.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/two_tier_cake_stand_parts/visual.provenance.json",
+      "sha256": "6be6535b1686d8f062874f614a54990b59115eca926ba13b2de05a1802ab4142"
+    },
+    "robot/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/water_removable_cap_parts/visual.provenance.json": {
+      "path": "asset/rua/environment/asset_roots/ICLWORLD_MECHANISM_ASSETS/water_removable_cap_parts/visual.provenance.json",
+      "sha256": "ca83a925e7c5c1f262d5f72771df8ce2f56291a313c7a1315ac202f7638f7407"
+    },
     "robot/environment/asset_roots/ICLWORLD_REALWORLD_ASSETS/bowl.usda": {
       "path": "asset/rua/environment/asset_roots/ICLWORLD_REALWORLD_ASSETS/bowl.usda",
       "sha256": "0547e8b413326e663a6d00096b536b0f61c42835d4bef6c2e1be6f95a885f110"

@@ -54,12 +54,6 @@ def restore_requested(controllers, cases, control, *, _request_override=None, _r
     if checkpoint.get('schema') == 'engineering-robot_44-guide-material-migration-v1':
         from .engineering_robot_44_guide_material_fixture import materialize
         checkpoint = materialize(controller, checkpoint)
-    if checkpoint.get('schema') == 'engineering-render-cadence-migration-v1':
-        from .engineering_render_checkpoint_fixture import materialize
-        checkpoint = materialize(controller, checkpoint)
-    if checkpoint.get('schema') == 'engineering-robot_24-lid-layout-migration-v1':
-        from .engineering_robot_24_layout_fixture import materialize
-        checkpoint = materialize(controller, checkpoint, request)
     if checkpoint.get('schema') in ('engineering-robot_50-contact-hold-migration-v1','engineering-practical-card-contact-hold-migration-v1'):
         from .engineering_robot_50_contact_hold_fixture import materialize
         checkpoint = materialize(controller, checkpoint)
@@ -106,9 +100,6 @@ def restore_requested(controllers, cases, control, *, _request_override=None, _r
         from .engineering_robot_45_balls_fixture import materialize
         checkpoint=materialize(controller,checkpoint)
     if checkpoint.get('schema')=='iclworld-historical-approximate-engineering-segment-v1':
-        if checkpoint.get('server_source'):
-            from .engineering_front25_server_source import hydrate
-            checkpoint = hydrate(controller, checkpoint)
         if checkpoint.get('restore_policy') is not None:
             from .engineering_front25_quasistatic_fixture import convert
         else:

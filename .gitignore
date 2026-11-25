@@ -16,9 +16,6 @@ node_modules/
 !/experiments/native_layout/robot/environment/bindings/resample-reviewed-objects-robot_41-explicit-scale-v2.private.json
 !/experiments/native_layout/robot/environment/bindings/resample-reviewed-objects.private.json
 !/experiments/native_layout/robot/environment/bindings/replay-original.private.json
-!/robot/runtime/assets/embodiments/robotwin-r5/conversion.private.json
-!/robot/runtime/assets/embodiments/robotwin-r5/franka-panda/conversion.private.json
-!/robot/runtime/assets/embodiments/robotwin-r5/ur5-wsg/conversion.private.json
 !/robot/runtime/execution-design-v2/catalog.private.json
 !/robot/runtime/execution-design-v3/assets/iclworld_robot_30/instances.private.json
 !/robot/runtime/execution-design-v3/assets/iclworld_robot_40/instances.private.json

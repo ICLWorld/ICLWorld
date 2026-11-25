@@ -74,14 +74,8 @@ def solve(author,checkpoint,request):
         module_name='execution_design_robot_20_a_red'
     elif task=='iclworld_robot_20' and entry in('iclworld_robot_20_c_finish_blue_transfer_from321','iclworld_robot_20_c_reacquire_supported_blue_from1'):
         module_name='execution_design_robot_20_c_transfer'
-    elif task=='iclworld_robot_25' and entry=='iclworld_robot_25_c_empty_return_from591':
-        module_name='execution_design_robot_25_c_return'
     elif task=='iclworld_robot_25' and entry=='iclworld_robot_25_a_release_spoon_from600':
         module_name='execution_design_robot_25_a_spoon_release'
-    elif task=='iclworld_robot_25' and entry in('iclworld_robot_25_b_empty_return_from792','iclworld_robot_25_b_empty_return_from636'):
-        module_name='execution_design_robot_25_b_return'
-    elif task=='iclworld_robot_25' and entry in('iclworld_robot_25_a_finish_remaining_from586','iclworld_robot_25_a_finish_after_knife_relay186','iclworld_robot_25_b_finish_remaining_from636','iclworld_robot_25_b_finish_after_return'):
-        module_name='execution_design_robot_25_remaining'
     elif task=='iclworld_robot_17' and entry in ('iclworld_robot_17_a_resume_after_lower_first','iclworld_robot_17_b_resume_after_lower_first'):
         module_name='execution_design_segments_robot_17'
     elif task=='iclworld_robot_17' and entry=='iclworld_robot_17_a_release_box_nudge_regrasp_223':

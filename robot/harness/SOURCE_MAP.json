@@ -8,7 +8,7 @@
       "published_sha256": "c6e4d26fe3be04f379368972d100f488c81ce0d2eb65a3b3d7d2408906e3855c"
     },
     "pool_verified.py": {
-      "published_sha256": "179f91e71c49e6b07cdd756925a52485a397ad5b8ce1f44b1ec7a095e82a3ded"
+      "published_sha256": "f3cf136fb24e706a14a2d3f32409b4c83a5a4ec5a3ecb0b4fada85207719c32d"
     },
     "cases.example.json": {
       "published_sha256": "ce7c3fc0a159b1377b058a4f1dcec68c09e027cefecb2cf51da0f84bb8d72850"
@@ -140,13 +140,13 @@
       "published_sha256": "4c86866d17f603f62c780cad75bac4146a7dfae977d5b6d16ea0c781cb42dd78"
     },
     "iclworld_harness/tests/test_embodied_gui_mcp.py": {
-      "published_sha256": "1b1f706906226b30f0bba23c21da5ac48f05406934fb8e7a367c684ed1ea6678"
+      "published_sha256": "8d80068c5f7cbac6fa9dc04dec6f83649e51a1d89f983af10efe70160496a395"
     },
     "iclworld_harness/tests/test_embodied_scoring.py": {
-      "published_sha256": "ce72a504704f84eda8048ba5ecb26e6fe673a37479eef09c84d276c7241de070"
+      "published_sha256": "083cb4174a4223f8c0adc28b16eb9be8bbecb7feda96b92e38d0b988184e7e1a"
     },
     "iclworld_harness/tests/test_embodied_native_agent.py": {
-      "published_sha256": "4b1d15dbae76e0dfb6988e289874ca54864fef341f7f0297fe300a1c0953d7f6"
+      "published_sha256": "65443c2913934a7cfd40a8d35ae84966050ce4a26d881f04edd55b2246cb1faa"
     },
     "iclworld_harness/packages/sdk/iclworld_sdk/embodied_public_observation.py": {
       "published_sha256": "01501c021b61453ede2f4d741d23ffe62815e7f267faa98a7e6cca7f7677e617"
@@ -302,7 +302,7 @@
       "published_sha256": "e37918455ba4c6f96006022b586e9a9081ac40524fc66b0fc3c62f17ca459bc2"
     },
     "iclworld_harness/scripts/harbor/probe_embodied_gui.py": {
-      "published_sha256": "408ab3ed88fa870477578b86d1a21d2c323acdc556440a3a97453139c62ffc31"
+      "published_sha256": "ef07f97aab82a7e26f1329e16a05d847c71379fbd3fd7a51eec380c0eb00c11c"
     },
     "iclworld_harness/apps/portal/public/embodied/index.html": {
       "published_sha256": "62ab1d887091218cfa61d0470c430901474456208981e97112be3bc2c7c5cbb3"

@@ -404,7 +404,7 @@ def main():
                 drain_rooms();break
             if args.probe_only:
                 command=[args.gui_python,ROOT/'scripts/harbor/probe_embodied_gui.py',
-                    '--connection',folder/'connection.private.json','--task-dir',package,'--out',folder/'probe',
+                    '--connection',folder/'connection.private.json','--out',folder/'probe',
                     '--timeout',args.timeout,'--profile',args.probe_profile]
                 if args.browser_path: command+=['--browser-path',args.browser_path]
                 models.append(launch('probe-'+case['episode_id'],command))

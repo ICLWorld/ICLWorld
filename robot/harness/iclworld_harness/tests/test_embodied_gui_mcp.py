@@ -247,7 +247,7 @@ def test_actual_chrome_screenshot_and_six_gui_inputs_are_one_native_commit(brows
     assert first['remaining_gui_inputs'] == 30 and first['max_robot_actions'] == 6
     assert set(first) == {'frame_id','width','height','remaining_seconds',
         'remaining_gui_inputs','max_robot_actions','episode_status','observation',
-        'public_observation','camera_views'}
+        'public_observation','camera_views','action_batch'}
     assert first['public_observation']['robot_feedback']['arms']['left']['tcp_position'] == [.1,.2,.3]
     assert 'PRIVATE_' not in json.dumps(first)
     assert first['public_observation']['action_schema']['step_mm']['maximum'] == 50
@@ -283,8 +283,9 @@ def test_common_key_spellings_and_eleven_edits_are_one_physical_commit(browser,g
 def test_keyboard_cannot_bypass_one_commit_per_act(browser, gui_controller, key):
     first = metadata(browser.observe())
     with pytest.raises(ValueError, match='at most one robot commit'):
+        # Focus Commit itself (the batch queue sits between the fields and Commit).
         browser.act(first['frame_id'], [click(browser, '#commit'),
-            click(browser, '#rotation-deg'), dict(kind='key',key='Tab'), dict(kind='key',key=key)])
+            click(browser, '#queue-clear'), dict(kind='key',key='Tab'), dict(kind='key',key=key)])
     assert len(action_posts(gui_controller)) == 1
     assert browser.frame is None
     fresh = metadata(browser.observe())

@@ -89,8 +89,10 @@ def main():
         path = Path(connection[name])
         return (path if path.is_absolute() else args.connection.parent/path).read_text().strip()
     demo = connection.get('demo')
-    response_timeout = float(connection.get('native_response_timeout_seconds',
-        connection.get('barrier_timeout_seconds',300)+120))+30
+    native_response = connection.get('native_response_timeout_seconds',
+        connection.get('barrier_timeout_seconds',300)+120)
+    # None means no per-response limit (barrier policy "wait"); the probe stays bounded by --timeout.
+    response_timeout = float(args.timeout if native_response is None else native_response)+30
     config = dict(control_url=connection['control_url'], actor_token=token('actor_token_file'),
         run_id=identity['run_id'], output_dir=str(out), condition=connection['condition'],
         max_actions=connection['max_actions'], max_gui_inputs=100,
