@@ -186,7 +186,7 @@ def build(base=BASE,out=OUT):
             obj['source_asset']={'root_env':'ICLWORLD_INFERENCE_ASSETS','relative_path':'g2/'+filename,'sha256':sha(path),'source_rotation':[1,0,0,0]}
             if photo:obj['source_asset']['dependencies']=[{'relative_path':'g2/photo_sources/'+photo,'sha256':sha(assets/'photo_sources'/photo)}]
             obj['recolor']=False
-            obj['inference_object']={'group':'G2','category':kind,'legacy_identity':name}
+            obj['inference_object']={'group':'G2','category':kind}
             if task=='iclworld_robot_49':
                 obj['identity_attributes']['source_face']='photograph_'+photo
                 obj['identity_attributes']['photograph']=photo

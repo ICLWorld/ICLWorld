@@ -5130,8 +5130,7 @@
                 "/Asset/Joints/joint_2"
               ],
               "mechanism": "PhysxJointAPI.physxJoint:jointFriction"
-            },
-            "supersedes": "cabinet_2_tier_v2"
+            }
           },
           "position": [
             0.04,
@@ -6797,8 +6796,7 @@
                 "/Asset/Joints/RightSlide"
               ],
               "mechanism": "PhysxJointAPI.physxJoint:jointFriction"
-            },
-            "supersedes": "cabinet_side_by_side_v3"
+            }
           },
           "position": [
             -0.01,

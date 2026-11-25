@@ -475,7 +475,7 @@ def mutate(state, action, case):
             processing={**result,'test_file':test_file['id'],'test_sha256':digest(test_file['content'])}
         elif kind == "sign":
             processing={"identity":"Workspace Local CA", "signed_artifact":prior_artifact["id"],
-                        "signature":hmac.new(b'OS-ICL virtual signing authority',prior_artifact["content"].encode(),hashlib.sha256).hexdigest()}
+                        "signature":hmac.new(b'ICLWorld OS virtual signing authority',prior_artifact["content"].encode(),hashlib.sha256).hexdigest()}
         elif kind == "redact":
             import re
             redacted=[]
@@ -900,7 +900,7 @@ def job_error(state, job, case):
             if current["kind"]=="sign":
                 signed=get_file(state,current["artifact"])["provenance"]["processing"]
                 original=get_file(state,signed["signed_artifact"])
-                expected=hmac.new(b'OS-ICL virtual signing authority',original["content"].encode(),hashlib.sha256).hexdigest()
+                expected=hmac.new(b'ICLWorld OS virtual signing authority',original["content"].encode(),hashlib.sha256).hexdigest()
                 if not hmac.compare_digest(signed["signature"],expected):
                     return "Build signature does not match its signed artifact. Rebuild and sign the corrected output."
             current=next((j for j in state["jobs"] if j["name"]==current["dependency"]),None)
@@ -1188,7 +1188,7 @@ def evaluate(episode):
             if kind == "sign":
                 signed=p["processing"]
                 original=get_file(state,signed["signed_artifact"])
-                signature=hmac.new(b'OS-ICL virtual signing authority',original["content"].encode(),hashlib.sha256).hexdigest()
+                signature=hmac.new(b'ICLWorld OS virtual signing authority',original["content"].encode(),hashlib.sha256).hexdigest()
                 checks["build_signature_valid"]=hmac.compare_digest(signed["signature"],signature)
             chain.append(match)
         checks["delivery"] = len(chain) == len(case["pipeline"]) and get_file(state, chain[-1]["artifact"])["parent"] == delivery

@@ -9,7 +9,7 @@ from .config import ROOT, DATA
 def catalog(source):
     result=json.loads((Path(source)/'iclworld-catalog.json').read_text())
     pinned=json.loads((ROOT/'tasks/os/catalog.json').read_text())
-    if result['commit']!=pinned['commit'] or result['implementation']['fingerprint']!=pinned['implementation']['fingerprint']:
+    if result['implementation']['fingerprint']!=pinned['implementation']['fingerprint']:
         raise ValueError('OS release does not match the platform catalogue')
     return result
 
@@ -20,10 +20,7 @@ def demo_root(source=None, data=None):
 def recording_current(release, entry):
     if entry.get('design_version') != release['design_version']:
         return False
-    fingerprint=entry.get('fingerprint')
-    return (fingerprint == release['implementation']['fingerprint']
-            or entry.get('case_id') in release.get('recording_compatibility',{}).get(fingerprint,[])
-            or {0:'A',1:'B',2:'C'}.get(entry.get('convention')) in release.get('recording_variant_compatibility',{}).get(fingerprint,{}).get(entry.get('case_id'),[]))
+    return entry.get('fingerprint') == release['implementation']['fingerprint']
 
 
 def demonstrations(source, data=None, *, approved_only=False):

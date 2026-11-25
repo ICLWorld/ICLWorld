@@ -45,8 +45,7 @@ from typing import Any
 CATALOG_PATH = Path(__file__).resolve().parents[1] / "configs" / "realworld50_catalog.json"
 _CATALOG_BYTES = CATALOG_PATH.read_bytes()
 _CATALOG = json.loads(_CATALOG_BYTES)
-DATASET_REPOSITORY = "Aoraku/VideoICL-Embodied-RealWorld50"
-DATASET_REVISION = _CATALOG["dataset_revision"]
+DATASET_REPOSITORY = "Aoraku/ICLWorld"
 CATALOG_SHA256 = hashlib.sha256(_CATALOG_BYTES).hexdigest()
 TASKS = tuple(item["id"] for item in _CATALOG["tasks"])
 VARIANTS = ("A", "B", "C")
@@ -90,14 +89,12 @@ def public_assignment(task: str) -> str:
 
 
 def provenance(task: str, variant: str | None = None) -> dict[str, Any]:
-    """Bind a task or variant to the frozen dataset and original video hashes."""
+    """Bind a task or variant to its released demonstration videos in the ICLWorld dataset."""
     item = _task(task)
     videos = item["variants"] if variant is None else [_variant(task, variant)]
-    fields = ("video_id", "variant", "relative_path", "sha256", "sheet",
-              "source_kind", "source_commit", "source_date", "supersedes_filename")
+    fields = ("video_id", "variant", "relative_path", "sha256")
     return {
         "dataset_repository": DATASET_REPOSITORY,
-        "dataset_revision": DATASET_REVISION,
         "catalog_sha256": CATALOG_SHA256,
         "task_id": task,
         "videos": [{k: deepcopy(v[k]) for k in fields if k in v} for v in videos],
@@ -220,10 +217,9 @@ def check_pilot(task: str, variant: str, observation: Mapping[str, Any]) -> dict
         "success": all(checks.values()),
         "checks": checks,
         "failed_checks": [name for name, passed in checks.items() if not passed],
-        "dataset_revision": DATASET_REVISION,
     }
 
 
 __all__ = ["TASKS", "VARIANTS", "PILOT_TASKS", "DATASET_REPOSITORY",
-           "DATASET_REVISION", "CATALOG_SHA256", "metadata", "variant_rule",
+           "CATALOG_SHA256", "metadata", "variant_rule",
            "public_assignment", "provenance", "check_pilot"]

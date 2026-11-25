@@ -53,8 +53,7 @@
           ],
           "inference_object": {
             "group": "G2",
-            "category": "pear",
-            "legacy_identity": "green_cup"
+            "category": "pear"
           }
         },
         "blue_cup": {
@@ -104,8 +103,7 @@
           ],
           "inference_object": {
             "group": "G2",
-            "category": "jar",
-            "legacy_identity": "blue_cup"
+            "category": "jar"
           }
         },
         "red_cup": {
@@ -155,8 +153,7 @@
           ],
           "inference_object": {
             "group": "G2",
-            "category": "apple",
-            "legacy_identity": "red_cup"
+            "category": "apple"
           }
         }
       },
@@ -484,8 +481,7 @@
           "identity_fidelity": "solid_cube_category_matches_source; metric_edge_estimate_32mm_plusminus6mm_unmeasured",
           "inference_object": {
             "group": "G2",
-            "category": "gift",
-            "legacy_identity": "cube"
+            "category": "gift"
           }
         },
         "sphere": {
@@ -526,8 +522,7 @@
           "sphere_radius": 0.014,
           "inference_object": {
             "group": "G2",
-            "category": "orange",
-            "legacy_identity": "sphere"
+            "category": "orange"
           }
         },
         "triangle": {
@@ -582,8 +577,7 @@
           "identity_fidelity": "solid_triangular_prism_category_matches_source; exact proportions_and_bevels_unverified",
           "inference_object": {
             "group": "G2",
-            "category": "pastry",
-            "legacy_identity": "triangle"
+            "category": "pastry"
           }
         }
       },
@@ -894,8 +888,7 @@
           "kind": "sphere",
           "inference_object": {
             "group": "G2",
-            "category": "tangerine",
-            "legacy_identity": "purple"
+            "category": "tangerine"
           }
         },
         "pink": {
@@ -933,8 +926,7 @@
           "kind": "sphere",
           "inference_object": {
             "group": "G2",
-            "category": "tangerine",
-            "legacy_identity": "pink"
+            "category": "tangerine"
           }
         },
         "lightpink": {
@@ -972,8 +964,7 @@
           "kind": "sphere",
           "inference_object": {
             "group": "G2",
-            "category": "tangerine",
-            "legacy_identity": "lightpink"
+            "category": "tangerine"
           }
         },
         "eggtray": {
@@ -1657,8 +1648,7 @@
           "semantic_identity": "block1",
           "inference_object": {
             "group": "G2",
-            "category": "matryoshka",
-            "legacy_identity": "block1"
+            "category": "matryoshka"
           }
         },
         "block2": {
@@ -1706,8 +1696,7 @@
           "semantic_identity": "block2",
           "inference_object": {
             "group": "G2",
-            "category": "matryoshka",
-            "legacy_identity": "block2"
+            "category": "matryoshka"
           }
         },
         "block3": {
@@ -1755,8 +1744,7 @@
           "semantic_identity": "block3",
           "inference_object": {
             "group": "G2",
-            "category": "matryoshka",
-            "legacy_identity": "block3"
+            "category": "matryoshka"
           }
         },
         "block4": {
@@ -1804,8 +1792,7 @@
           "semantic_identity": "block4",
           "inference_object": {
             "group": "G2",
-            "category": "matryoshka",
-            "legacy_identity": "block4"
+            "category": "matryoshka"
           }
         },
         "block5": {
@@ -1853,8 +1840,7 @@
           "semantic_identity": "block5",
           "inference_object": {
             "group": "G2",
-            "category": "matryoshka",
-            "legacy_identity": "block5"
+            "category": "matryoshka"
           }
         }
       },
@@ -2335,8 +2321,7 @@
           },
           "inference_object": {
             "group": "G2",
-            "category": "cookie_square",
-            "legacy_identity": "red_square"
+            "category": "cookie_square"
           }
         },
         "red_triangle": {
@@ -2379,8 +2364,7 @@
           },
           "inference_object": {
             "group": "G2",
-            "category": "cookie_triangle",
-            "legacy_identity": "red_triangle"
+            "category": "cookie_triangle"
           }
         },
         "red_circle": {
@@ -2423,8 +2407,7 @@
           },
           "inference_object": {
             "group": "G2",
-            "category": "cookie_circle",
-            "legacy_identity": "red_circle"
+            "category": "cookie_circle"
           }
         },
         "green_square": {
@@ -2467,8 +2450,7 @@
           },
           "inference_object": {
             "group": "G2",
-            "category": "cookie_square",
-            "legacy_identity": "green_square"
+            "category": "cookie_square"
           }
         },
         "green_triangle": {
@@ -2511,8 +2493,7 @@
           },
           "inference_object": {
             "group": "G2",
-            "category": "cookie_triangle",
-            "legacy_identity": "green_triangle"
+            "category": "cookie_triangle"
           }
         },
         "green_circle": {
@@ -2555,8 +2536,7 @@
           },
           "inference_object": {
             "group": "G2",
-            "category": "cookie_circle",
-            "legacy_identity": "green_circle"
+            "category": "cookie_circle"
           }
         },
         "blue_square": {
@@ -2599,8 +2579,7 @@
           },
           "inference_object": {
             "group": "G2",
-            "category": "cookie_square",
-            "legacy_identity": "blue_square"
+            "category": "cookie_square"
           }
         },
         "blue_triangle": {
@@ -2643,8 +2622,7 @@
           },
           "inference_object": {
             "group": "G2",
-            "category": "cookie_triangle",
-            "legacy_identity": "blue_triangle"
+            "category": "cookie_triangle"
           }
         },
         "blue_circle": {
@@ -2687,8 +2665,7 @@
           },
           "inference_object": {
             "group": "G2",
-            "category": "cookie_circle",
-            "legacy_identity": "blue_circle"
+            "category": "cookie_circle"
           }
         }
       },
@@ -3684,8 +3661,7 @@
           ],
           "inference_object": {
             "group": "G2",
-            "category": "apple",
-            "legacy_identity": "red_block"
+            "category": "apple"
           }
         },
         "blue_block": {
@@ -3724,8 +3700,7 @@
           ],
           "inference_object": {
             "group": "G2",
-            "category": "orange",
-            "legacy_identity": "blue_block"
+            "category": "orange"
           }
         },
         "yellow_block": {
@@ -3764,8 +3739,7 @@
           ],
           "inference_object": {
             "group": "G2",
-            "category": "lemon",
-            "legacy_identity": "yellow_block"
+            "category": "lemon"
           }
         },
         "green_block": {
@@ -3804,8 +3778,7 @@
           ],
           "inference_object": {
             "group": "G2",
-            "category": "pear",
-            "legacy_identity": "green_block"
+            "category": "pear"
           }
         }
       },
@@ -4494,8 +4467,7 @@
           "color": "yellow",
           "inference_object": {
             "group": "G2",
-            "category": "button",
-            "legacy_identity": "yellow_supply_1"
+            "category": "button"
           }
         },
         "yellow_supply_2": {
@@ -4537,8 +4509,7 @@
           "color": "yellow",
           "inference_object": {
             "group": "G2",
-            "category": "button",
-            "legacy_identity": "yellow_supply_2"
+            "category": "button"
           }
         },
         "yellow_supply_3": {
@@ -4580,8 +4551,7 @@
           "color": "yellow",
           "inference_object": {
             "group": "G2",
-            "category": "button",
-            "legacy_identity": "yellow_supply_3"
+            "category": "button"
           }
         },
         "yellow_supply_4": {
@@ -4623,8 +4593,7 @@
           "color": "yellow",
           "inference_object": {
             "group": "G2",
-            "category": "button",
-            "legacy_identity": "yellow_supply_4"
+            "category": "button"
           }
         },
         "red_supply_1": {
@@ -4666,8 +4635,7 @@
           "color": "red",
           "inference_object": {
             "group": "G2",
-            "category": "button",
-            "legacy_identity": "red_supply_1"
+            "category": "button"
           }
         },
         "red_supply_2": {
@@ -4709,8 +4677,7 @@
           "color": "red",
           "inference_object": {
             "group": "G2",
-            "category": "button",
-            "legacy_identity": "red_supply_2"
+            "category": "button"
           }
         },
         "red_supply_3": {
@@ -4752,8 +4719,7 @@
           "color": "red",
           "inference_object": {
             "group": "G2",
-            "category": "button",
-            "legacy_identity": "red_supply_3"
+            "category": "button"
           }
         },
         "red_supply_4": {
@@ -4795,8 +4761,7 @@
           "color": "red",
           "inference_object": {
             "group": "G2",
-            "category": "button",
-            "legacy_identity": "red_supply_4"
+            "category": "button"
           }
         },
         "blue_supply_1": {
@@ -4838,8 +4803,7 @@
           "color": "blue",
           "inference_object": {
             "group": "G2",
-            "category": "button",
-            "legacy_identity": "blue_supply_1"
+            "category": "button"
           }
         },
         "blue_supply_2": {
@@ -4881,8 +4845,7 @@
           "color": "blue",
           "inference_object": {
             "group": "G2",
-            "category": "button",
-            "legacy_identity": "blue_supply_2"
+            "category": "button"
           }
         },
         "blue_supply_3": {
@@ -4924,8 +4887,7 @@
           "color": "blue",
           "inference_object": {
             "group": "G2",
-            "category": "button",
-            "legacy_identity": "blue_supply_3"
+            "category": "button"
           }
         },
         "blue_supply_4": {
@@ -4967,8 +4929,7 @@
           "color": "blue",
           "inference_object": {
             "group": "G2",
-            "category": "button",
-            "legacy_identity": "blue_supply_4"
+            "category": "button"
           }
         },
         "yellow_initial": {
@@ -5010,8 +4971,7 @@
           "color": "yellow",
           "inference_object": {
             "group": "G2",
-            "category": "button",
-            "legacy_identity": "yellow_initial"
+            "category": "button"
           }
         },
         "blue_initial": {
@@ -5053,8 +5013,7 @@
           "color": "blue",
           "inference_object": {
             "group": "G2",
-            "category": "button",
-            "legacy_identity": "blue_initial"
+            "category": "button"
           }
         }
       },
@@ -5866,8 +5825,7 @@
           "kind": "sphere",
           "inference_object": {
             "group": "G2",
-            "category": "apple",
-            "legacy_identity": "red"
+            "category": "apple"
           }
         },
         "pink": {
@@ -5908,8 +5866,7 @@
           "kind": "sphere",
           "inference_object": {
             "group": "G2",
-            "category": "apple",
-            "legacy_identity": "pink"
+            "category": "apple"
           }
         },
         "lightpink": {
@@ -5950,8 +5907,7 @@
           "kind": "sphere",
           "inference_object": {
             "group": "G2",
-            "category": "apple",
-            "legacy_identity": "lightpink"
+            "category": "apple"
           }
         },
         "blue": {
@@ -5992,8 +5948,7 @@
           "kind": "sphere",
           "inference_object": {
             "group": "G2",
-            "category": "apple",
-            "legacy_identity": "blue"
+            "category": "apple"
           }
         }
       },
@@ -6337,8 +6292,7 @@
           "recolor": false,
           "inference_object": {
             "group": "G2",
-            "category": "eraser",
-            "legacy_identity": "short_ref"
+            "category": "eraser"
           }
         },
         "medium_ref": {
@@ -6375,8 +6329,7 @@
           "recolor": false,
           "inference_object": {
             "group": "G2",
-            "category": "eraser",
-            "legacy_identity": "medium_ref"
+            "category": "eraser"
           }
         },
         "long_ref": {
@@ -6413,8 +6366,7 @@
           "recolor": false,
           "inference_object": {
             "group": "G2",
-            "category": "eraser",
-            "legacy_identity": "long_ref"
+            "category": "eraser"
           }
         },
         "long_piece": {
@@ -6451,8 +6403,7 @@
           "recolor": false,
           "inference_object": {
             "group": "G2",
-            "category": "eraser",
-            "legacy_identity": "long_piece"
+            "category": "eraser"
           }
         },
         "short_piece": {
@@ -6489,8 +6440,7 @@
           "recolor": false,
           "inference_object": {
             "group": "G2",
-            "category": "eraser",
-            "legacy_identity": "short_piece"
+            "category": "eraser"
           }
         },
         "medium_piece": {
@@ -6527,8 +6477,7 @@
           "recolor": false,
           "inference_object": {
             "group": "G2",
-            "category": "eraser",
-            "legacy_identity": "medium_piece"
+            "category": "eraser"
           }
         }
       },
@@ -7138,8 +7087,7 @@
           "recolor": false,
           "inference_object": {
             "group": "G2",
-            "category": "photo",
-            "legacy_identity": "card1"
+            "category": "photo"
           }
         },
         "card2": {
@@ -7203,8 +7151,7 @@
           "recolor": false,
           "inference_object": {
             "group": "G2",
-            "category": "photo",
-            "legacy_identity": "card2"
+            "category": "photo"
           }
         },
         "card3": {
@@ -7268,8 +7215,7 @@
           "recolor": false,
           "inference_object": {
             "group": "G2",
-            "category": "photo",
-            "legacy_identity": "card3"
+            "category": "photo"
           }
         },
         "card4": {
@@ -7333,8 +7279,7 @@
           "recolor": false,
           "inference_object": {
             "group": "G2",
-            "category": "photo",
-            "legacy_identity": "card4"
+            "category": "photo"
           }
         },
         "card5": {
@@ -7398,8 +7343,7 @@
           "recolor": false,
           "inference_object": {
             "group": "G2",
-            "category": "photo",
-            "legacy_identity": "card5"
+            "category": "photo"
           }
         },
         "green_plate": {

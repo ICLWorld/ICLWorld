@@ -24,7 +24,6 @@
     "none"
   ],
   "instruction_hash_scheme": "sha256_utf8_exact_file_bytes",
-  "dataset_revision": "89f009bb76ee5ffb58ee66ec584e519c86f3d4b6",
   "qa_enabled": false,
   "budget": {
     "status": "diagnostic_unfrozen",

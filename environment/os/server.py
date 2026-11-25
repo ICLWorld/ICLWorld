@@ -158,7 +158,7 @@ class Handler(BaseHTTPRequestHandler):
                     return self.send_json({"error":"Legacy task retired"},410)
                 return self.send_json(self.v2_payload(session))
         if parsed.path == "/api/health":
-            return self.send_json({"ok":True,"service":"iclworld-os","benchmark_version":workflows.VERSION,"catalogue_version":"36.1-dev","cases":36,"legacy_cases":0})
+            return self.send_json({"ok":True,"service":"iclworld-os","benchmark_version":workflows.VERSION,"catalogue_version":"36.1-dev","cases":36})
         if parsed.path.startswith("/artifacts/"):
             name = Path(parsed.path[len("/artifacts/"):]).name
             return self.serve_file(VIDEOS / name)

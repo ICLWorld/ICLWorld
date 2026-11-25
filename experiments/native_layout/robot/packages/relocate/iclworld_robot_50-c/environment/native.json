@@ -37,6 +37,5 @@
     "time_limit_enabled": false,
     "time_limit_seconds": null,
     "deadline_unix": null
-  },
-  "dataset_revision": "89f009bb76ee5ffb58ee66ec584e519c86f3d4b6"
+  }
 }

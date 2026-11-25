@@ -40,6 +40,5 @@
   "demo_sim": {
     "path": "../../../evaluation/media/79aae9149a7fed58856fd89b964f2eb677949b9b073961886901d4597c48c533.mp4",
     "sha256": "7d36e632a5b99a4c84243275580342051dc530ef77d427452fa0c6e68181ddd6"
-  },
-  "dataset_revision": "89f009bb76ee5ffb58ee66ec584e519c86f3d4b6"
+  }
 }

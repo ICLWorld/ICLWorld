@@ -31,7 +31,6 @@ from iclworld_apps.domain import initialize as initialize_domain
 def create_app(database_url=None, data_dir=None, secret=None, browser=None):
     for required in (
         "tasks/catalog.json",
-        "sources.lock.json",
         "apps/portal/dist/index.html",
     ):
         if not (ROOT / required).is_file():
@@ -400,7 +399,6 @@ def create_app(database_url=None, data_dir=None, secret=None, browser=None):
             initial=generalization.decorate(initial,body.generalization,replay)
         run_id = uuid.uuid4().hex
         actor = secrets.token_urlsafe(32)
-        source_lock = json.loads((ROOT / "sources.lock.json").read_text())
         run = Run(
             id=run_id,
             task_id=body.task_id,
@@ -419,9 +417,6 @@ def create_app(database_url=None, data_dir=None, secret=None, browser=None):
                 initial_digest=hashlib.sha256(
                     json.dumps(initial, sort_keys=True).encode()
                 ).hexdigest(),
-                source_commits={
-                    x["module"]: x["commit"] for x in source_lock["sources"]
-                },
                 implementation=implementation,
                 surface="native-task-workspace"
                 if body.runtime == "browser"

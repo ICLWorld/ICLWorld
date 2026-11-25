@@ -1094,8 +1094,7 @@
             "/Asset/Joints/joint_2"
           ],
           "mechanism": "PhysxJointAPI.physxJoint:jointFriction"
-        },
-        "supersedes": "cabinet_2_tier_v2"
+        }
       },
       "source_sha256": "56082a1b788f9def5d08dc3dcb91713d7641f88b5a1edd0cb28db4f827d60542",
       "new_collision_components": 5,
@@ -2227,8 +2226,7 @@
             "/Asset/Joints/joint_2"
           ],
           "mechanism": "PhysxJointAPI.physxJoint:jointFriction"
-        },
-        "supersedes": "cabinet_2_tier_v2"
+        }
       },
       "source_sha256": "56082a1b788f9def5d08dc3dcb91713d7641f88b5a1edd0cb28db4f827d60542",
       "new_collision_components": 5,
@@ -3360,8 +3358,7 @@
             "/Asset/Joints/joint_2"
           ],
           "mechanism": "PhysxJointAPI.physxJoint:jointFriction"
-        },
-        "supersedes": "cabinet_2_tier_v2"
+        }
       },
       "source_sha256": "56082a1b788f9def5d08dc3dcb91713d7641f88b5a1edd0cb28db4f827d60542",
       "new_collision_components": 5,

@@ -16,7 +16,7 @@ from __future__ import annotations
 from collections.abc import Mapping
 import math
 
-from .realworld_contracts import TASKS, VARIANTS, PILOT_TASKS, DATASET_REVISION, check_pilot
+from .realworld_contracts import TASKS, VARIANTS, PILOT_TASKS, check_pilot
 
 
 POSITION_TOLERANCE_M = .02
@@ -281,7 +281,7 @@ def _guided_path(obs,target):
 
 def _result(task,variant,checks):
     return dict(task=task,variant=variant,success=all(checks.values()),checks=checks,
-                failed_checks=[k for k,v in checks.items() if not v],dataset_revision=DATASET_REVISION,
+                failed_checks=[k for k,v in checks.items() if not v],
                 evidence_scope='semantic validation of native-adapter observations; not scene or asset certification')
 
 

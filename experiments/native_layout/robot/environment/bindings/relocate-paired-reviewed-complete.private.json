@@ -1099,8 +1099,7 @@
                 "/Asset/Joints/joint_2"
               ],
               "mechanism": "PhysxJointAPI.physxJoint:jointFriction"
-            },
-            "supersedes": "cabinet_2_tier_v2"
+            }
           },
           "position": [
             0.04,

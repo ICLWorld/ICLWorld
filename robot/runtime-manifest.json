@@ -209,7 +209,7 @@
   },
   "configs/realworld50_catalog.json": {
     "store": "code",
-    "sha256": "1694d03f4792029abfd49b441cec9c8643519fa5a119fbb3fa80b67f79e696fd"
+    "sha256": "c78c6fcfcd6a8aedd5d333314dac0b576608c121d4b3d520ca3464f806612e0a"
   },
   "configs/source_geometry/iclworld_robot_33/iclworld_robot_33-acceptance-geometry.json": {
     "store": "code",
@@ -233,7 +233,7 @@
   },
   "execution-design-v2/catalog.private.json": {
     "store": "code",
-    "sha256": "6d4ffa47de33ffdc0e1069762dd1eece9e41ba4912e3d4227ef8505b6a910469"
+    "sha256": "107137f7a75c2ed802fa34be413019c1a054eb0e47af853471414ca142241e1a"
   },
   "execution-design-v2/source.md": {
     "store": "code",
@@ -677,7 +677,7 @@
   },
   "execution-design-v3/assets/iclworld_robot_30/instances.private.json": {
     "store": "code",
-    "sha256": "54942c9b3513ae53dccde13ef025bf056122304c5252e264e29174ae34910ce3"
+    "sha256": "47578fd47adedbacdba56cce5afca86a7968f3dc481641171dfdf42092c4029b"
   },
   "execution-design-v3/assets/iclworld_robot_40/clip_width_0.usda": {
     "store": "data",
@@ -705,7 +705,7 @@
   },
   "execution-design-v3/catalog.private.json": {
     "store": "code",
-    "sha256": "b0e2ef6c5e2316f6c535e54fe36212ad2f7303ea6c178e911e068bdf9dff8b59"
+    "sha256": "f4244b04ff7ac0f5d32f920ff20c1e19b998a94cfb93cabaf610f16ce6818ab2"
   },
   "execution-design-v3/source.md": {
     "store": "code",
@@ -2289,7 +2289,7 @@
   },
   "iclworld_isaaclab/realworld_contracts.py": {
     "store": "code",
-    "sha256": "c3d5ffd4333ffdb9d7257c989ba9ed5a0139b50e71b000f0aeeb30c22c4c06b3"
+    "sha256": "9e4bb36264bdd00bd7c0f799547972fe831eacec552e130beec21ee0105771d0"
   },
   "iclworld_isaaclab/realworld_evaluator_selector.py": {
     "store": "code",
@@ -2329,7 +2329,7 @@
   },
   "iclworld_isaaclab/realworld_semantic_checks.py": {
     "store": "code",
-    "sha256": "b47fa3f4acfd9dbc1c7720f7d810d1e44ae2703c6142cafe1c31fce6b228a75f"
+    "sha256": "c3e662bec4a7539458c6c80da2798263143c20326f2e8cba8e1991ea48202f37"
   },
   "iclworld_isaaclab/realworld_source_card_geometry.py": {
     "store": "code",
@@ -3369,15 +3369,15 @@
   },
   "inference-generalization-v1/g1-bindings-patch.json": {
     "store": "code",
-    "sha256": "ddfd6ad1792bacc16cfe5a990962c161c1873f5bbd7922af2aae5fbcffed4591"
+    "sha256": "54eef78cc83cd9c66a2b280f44042f7800281d3527cb4e96cd6584dbae8cbaa6"
   },
   "inference-generalization-v1/g2-bindings-patch.json": {
     "store": "code",
-    "sha256": "a4ba84a2c132162487625dfaad42574e15f686300c260eb1f01e9c6c564e3567"
+    "sha256": "676a05ded4367d1b92844abfff9c7f2b6d2c57bf17a3387243a1c73c70a485dc"
   },
   "inference-generalization-v1/inference-bindings.json": {
     "store": "code",
-    "sha256": "8392f27db8bb7884878818204c5c2ddab2a365ab04d86cc219042e8f6f6b546a"
+    "sha256": "cce6636f07d59a5105fef7c02a264682951393749f1841b9f5bfcae0b5776c4f"
   },
   "scenes/generated/manifest.json": {
     "store": "code",
@@ -3393,7 +3393,7 @@
   },
   "scripts/build_inference_g2_assets.py": {
     "store": "code",
-    "sha256": "e64d900f5f5f2acabfc30f68175076ecdb1f96752d7a96906f543453b262ce91"
+    "sha256": "5b7dcbfbb711562779d4d8fb9cdfd8527c03d54cfda6fa3073734a2a08705495"
   },
   "scripts/probe_realworld_room_pool.py": {
     "store": "code",

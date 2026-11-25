@@ -118,8 +118,6 @@ def main():
         context = sim.SimulationContext(sim.SimulationCfg(dt=physics['dt'], device=args.device,
             enable_scene_query_support=True, physx=sim.PhysxCfg(**physx)))
         spec = load(native['task_id'], native['variant'], native['seed'], args.bindings)
-        if spec.get('provenance', {}).get('dataset_revision') != native.get('dataset_revision'):
-            raise ValueError('Harbor task and native runtime dataset revisions differ')
         scene = TabletopScene(spec, embodiment=args.robot)
         context.reset()
         for robot in scene.robots.values():

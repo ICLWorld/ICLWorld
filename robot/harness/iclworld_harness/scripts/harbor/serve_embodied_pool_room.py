@@ -45,8 +45,6 @@ def main():
     identity = Identity(**record['identity'])
     if (identity.task_id, identity.variant, identity.seed) != (native['task_id'], native['variant'], native['seed']):
         raise ValueError('Assigned Harbor task differs from the native pool room')
-    if record.get('fingerprints', {}).get('provenance', {}).get('dataset_revision') != native.get('dataset_revision'):
-        raise ValueError('Harbor and native dataset revisions differ')
     validated = (native.get('readiness') in ('available', 'ready')
         and native.get('native_interaction_validated') is True and native.get('budget', {}).get('status') == 'frozen')
     if not args.allow_unvalidated_environment:

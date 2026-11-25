@@ -5,8 +5,8 @@ VERSION = 'single-rule-checkpoint-20261102'
 
 def web(initial, final, variant, events, result, evaluate):
     if initial.get('assessment_version') != VERSION:
-        from .process_scoring_rule_gated_legacy import web as legacy
-        return legacy(initial, final, variant, events, result, evaluate)
+        from .process_scoring_rule_gated import web as base
+        return base(initial, final, variant, events, result, evaluate)
     checks = result['checks']
     integrity = [c for c in checks if c['id'].startswith(('input:', 'unchanged:', 'delivery:source:'))]
     safe = all(c['passed'] for c in integrity)

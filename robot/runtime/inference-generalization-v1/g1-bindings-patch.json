@@ -5941,8 +5941,7 @@
                 "/Asset/Joints/RightSlide"
               ],
               "mechanism": "PhysxJointAPI.physxJoint:jointFriction"
-            },
-            "supersedes": "cabinet_side_by_side_v3"
+            }
           },
           "position": [
             -0.01,
@@ -11718,7 +11717,6 @@
               ],
               "mechanism": "PhysxJointAPI.physxJoint:jointFriction"
             },
-            "supersedes": "cabinet_2_tier_v2",
             "inference_adaptation": "New framed cabinet visual instance; original collision, joints, handles, friction and travel retained byte-for-byte."
           },
           "position": [

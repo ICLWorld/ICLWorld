@@ -21,8 +21,8 @@ def contract(episode):
 
 
 def install(namespace):
-    from os_outcome_scoring_legacy import install as install_legacy
-    install_legacy(namespace)
+    from os_outcome_scoring_base import install as install_base
+    install_base(namespace)
     original_preserve = namespace['preservation']
     original_goal = namespace['check_goal']
     original_evaluate = namespace['evaluate']

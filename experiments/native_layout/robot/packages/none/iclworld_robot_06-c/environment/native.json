@@ -23,7 +23,6 @@
   "input_conditions": [
     "none"
   ],
-  "dataset_revision": "89f009bb76ee5ffb58ee66ec584e519c86f3d4b6",
   "instruction_hash_scheme": "sha256_utf8_exact_file_bytes",
   "qa_enabled": false,
   "budget": {

@@ -147,7 +147,7 @@ def _domain(goal,episode):
         job=next(j for j in s['jobs'] if j['id']==goal['job'] and j['status']=='Completed')
         details=_file(s,job['artifact'])['provenance']['processing']
         signed=_file(s,details['signed_artifact'])
-        expected=hmac.new(b'OS-ICL virtual signing authority',signed['content'].encode(),hashlib.sha256).hexdigest()
+        expected=hmac.new(b'ICLWorld OS virtual signing authority',signed['content'].encode(),hashlib.sha256).hexdigest()
         return hmac.compare_digest(details['signature'],expected)
     if name == 'local_redaction':
         job=next(j for j in s['jobs'] if j['id']==goal['job'] and j['status']=='Completed')
