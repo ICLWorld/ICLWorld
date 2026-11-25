@@ -4,7 +4,7 @@ Qingle Liu, Jieming Li, Pei-lin Li, Shenghan Zheng, Ruize Yang, Sunqi Fan, Deyao
 
 Tsinghua University · † Corresponding author
 
-🌐 [Project page](https://iclworld.github.io) · 📄 arXiv (coming soon) · 🤗 [Dataset](https://huggingface.co/datasets/Aoraku/ICLWorld) · 💻 [Code](https://github.com/ICLWorld/ICLWorld)
+🌐 [Project page](https://iclworld.github.io) · 📄 [arXiv](https://arxiv.org/abs/2611.32649) · 🤗 [Dataset](https://huggingface.co/datasets/Aoraku/ICLWorld) · 💻 [Code](https://github.com/ICLWorld/ICLWorld)
 
 ICLWorld evaluates whether interactive agents can learn customized rules from context and apply them in interactive environments. Human video demonstrations and matched textual rules specify task-specific conventions, including counterfactual conventions that differ from common priors. Execution, rule-version ablations, generalization, and independent multiple-choice diagnosis measure complementary aspects of in-context learning.
 
@@ -84,7 +84,7 @@ Tasks are evaluated at three levels, named as in the paper: **Replay** restores 
   title   = {ICLWorld: Benchmarking In-Context Learning of Agents from Digital to Physical Worlds},
   author  = {Liu, Qingle and Li, Jieming and Li, Pei-lin and Zheng, Shenghan and Yang, Ruize and
              Fan, Sunqi and Hong, Deyao and Gao, Huan-ang and Guo, Meng-Hao and Yang, Shuojin},
-  journal = {arXiv preprint},
+  journal = {arXiv preprint arXiv:2611.32649},
   year    = {2026}
 }
 ```
